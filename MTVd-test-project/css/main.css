@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    background: url('../images/Main_Background.png');
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    z-index: 1;
+}
+header {
+    position: relative;
+    top: 39px;
+    height: 588px;
+}
+.header-box {
+    background: url('../images/Header-box-background-White.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: -webkit-calc(100% - 200px);
+    margin: 0 auto;
+}
+.about {
+    background-color: #f7fcff;
+    width: 100%;
+}
+.news {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+.latest-news {
+    background-color: #ffffff;
+}
+.footer {
+    background: url('../images/footer-background.png');
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    background-position-y: 100px;
+    background-color: #111113;
+}

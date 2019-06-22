@@ -1,0 +1,46 @@
+
+.scroller{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60px;
+    height: 175px;
+    z-index: 300;
+    position: fixed;
+    right: -19px;
+    top: 254px;
+    overflow: hidden;
+}
+.scale{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+.scroller-part a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'SFProDisplay-Regular';
+    color: #252a33;
+    letter-spacing: 0.93px;
+    font-weight: 400;
+    line-height: 54px;
+    opacity: 100%;
+}
+.scroller-part a:hover {
+    color: lightgreen;
+}
+.pointer-keeper{
+    display: flex;
+    flex-direction: column;
+}
+.pointer{
+    width: 39px;
+    height: 4px;
+    background-color: #f73646;
+    overflow: hidden;
+    position: relative;
+    top: 59px;
+}

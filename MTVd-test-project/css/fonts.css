@@ -1,0 +1,41 @@
+@font-face{
+    font-family: 'SFProDisplay-Black';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFProDisplay-Black.eot');
+    src: url('../fonts/SFProDisplay-Black.ttf');
+}
+@font-face{
+    font-family: 'SFProDisplay-Bold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFProDisplay-Bold.eot');
+    src: url('../fonts/SFProDisplay-Bold.ttf');
+    src: url('../fonts/SFProDisplay-Bold.woff');
+    src: url('../fonts/SFProDisplay-Bold.woff2');
+}
+@font-face{
+    font-family: 'SFProDisplay-Heavy';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFProDisplay-Heavy.eot');
+    src: url('../fonts/SFProDisplay-Heavy.ttf');
+}
+@font-face{
+    font-family: 'SFProDisplay-Regular';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFProDisplay-Regular.eot');
+    src: url('../fonts/SFProDisplay-Regular.ttf');
+    src: url('../fonts/SFProDisplay-Regular.woff');
+    src: url('../fonts/SFProDisplay-Regular.woff2');
+}
+@font-face{
+    font-family: 'SFProDisplay-Semibold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/SFProDisplay-Semibold.eot');
+    src: url('../fonts/SFProDisplay-Semibold.ttf');
+    src: url('../fonts/SFProDisplay-Semibold.woff');
+    src: url('../fonts/SFProDisplay-Semibold.woff2');
+}
