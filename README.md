@@ -9,15 +9,15 @@ After you finish your project, or if review stage is requested by managers, you 
 
 ## Technical stack
 
-* Git client - use any client which fits your needs, it could be either *git-cli* or *GitKraken*.
-* Dev IDE - *Visual Studio Code* is preferred, alternatively you can use *Web Strom*.
-* All another software stack is project-dependant.
+  * Git client - use any client which fits your needs, it could be either *git-cli* or *GitKraken*.
+  * Dev IDE - *Visual Studio Code* is preferred, alternatively you can use *Web Strom*.
+  * All another software stack is project-dependant.
 
 ## Contacts
 
 If you need any advice or assistance, please send your questions to our main telegram channel: *Futuro Camp*
 As an alternative, you can use main emails or mentors:
 
-* Volo - *v.maslow@futuro.team*
-* Denis - *muha2399@gmail.com*
-* Vitalii - *v.koliesnik@futuro.team*
+  * Volo - *v.maslow@futuro.team*
+  * Denis - *muha2399@gmail.com*
+  * Vitalii - *v.koliesnik@futuro.team*
