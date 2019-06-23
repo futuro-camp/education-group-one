@@ -3439,4 +3439,818 @@ ul li:nth-child(3) h1 {
 }
 
 /* #endregion */
+/* #region Form */
+.form {
+  height: 49.76562vw;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 23.59375vw 0 0 35.3125vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+form h1 {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 1.71875vw;
+  font-weight: 800;
+  letter-spacing: 0.03906vw;
+  line-height: 2.5vw;
+  text-transform: uppercase;
+}
+
+.first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35.54688vw;
+  margin-top: 3.32031vw;
+}
+
+input {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(219, 219, 219, 0.4);
+  padding-bottom: 0.19531vw;
+}
+
+input::-webkit-input-placeholder {
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.02734vw;
+  line-height: 1.25vw;
+  text-transform: uppercase;
+}
+
+input:-ms-input-placeholder {
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.02734vw;
+  line-height: 1.25vw;
+  text-transform: uppercase;
+}
+
+input::-ms-input-placeholder {
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.02734vw;
+  line-height: 1.25vw;
+  text-transform: uppercase;
+}
+
+input::placeholder {
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.02734vw;
+  line-height: 1.25vw;
+  text-transform: uppercase;
+}
+
+.name {
+  width: 17.42188vw;
+}
+
+.email {
+  margin: 0 0 0 0.70312vw;
+  width: 17.42188vw;
+}
+
+.message {
+  width: 35.625vw;
+  margin-top: 2.34375vw;
+}
+
+.submit {
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.03906vw;
+  line-height: 0.9375vw;
+  text-transform: uppercase;
+  padding: 0.9375vw 3.67188vw 0.82031vw;
+  margin-top: 3.125vw;
+  background-color: #f76612;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1920px) {
+  .form {
+    height: 66.35417vw;
+  }
+  form {
+    padding: 31.45833vw 0 0 30.20833vw;
+  }
+  form h1 {
+    font-size: 2.29167vw;
+    letter-spacing: 0.05208vw;
+    line-height: 3.33333vw;
+  }
+  .first-row {
+    width: 47.39583vw;
+    margin-top: 4.42708vw;
+  }
+  input {
+    padding-bottom: 0.26042vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 0.83333vw;
+    letter-spacing: 0.03646vw;
+    line-height: 1.66667vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 0.83333vw;
+    letter-spacing: 0.03646vw;
+    line-height: 1.66667vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 0.83333vw;
+    letter-spacing: 0.03646vw;
+    line-height: 1.66667vw;
+  }
+  input::placeholder {
+    font-size: 0.83333vw;
+    letter-spacing: 0.03646vw;
+    line-height: 1.66667vw;
+  }
+  .name {
+    width: 23.22917vw;
+  }
+  .email {
+    margin: 0 0 0 0.9375vw;
+    width: 23.22917vw;
+  }
+  .message {
+    width: 47.5vw;
+    margin-top: 3.125vw;
+  }
+  .submit {
+    font-size: 0.83333vw;
+    letter-spacing: 0.05208vw;
+    line-height: 1.25vw;
+    padding: 1.25vw 4.89583vw 1.09375vw;
+    margin-top: 4.16667vw;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .form {
+    height: 75.83333vw;
+  }
+  form {
+    padding: 35.95238vw 0 0 27.38095vw;
+  }
+  form h1 {
+    font-size: 2.61905vw;
+    letter-spacing: 0.05952vw;
+    line-height: 3.80952vw;
+  }
+  .first-row {
+    width: 54.16667vw;
+    margin-top: 5.05952vw;
+  }
+  input {
+    padding-bottom: 0.29762vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 0.95238vw;
+    letter-spacing: 0.04167vw;
+    line-height: 1.90476vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 0.95238vw;
+    letter-spacing: 0.04167vw;
+    line-height: 1.90476vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 0.95238vw;
+    letter-spacing: 0.04167vw;
+    line-height: 1.90476vw;
+  }
+  input::placeholder {
+    font-size: 0.95238vw;
+    letter-spacing: 0.04167vw;
+    line-height: 1.90476vw;
+  }
+  .name {
+    width: 26.54762vw;
+  }
+  .email {
+    margin: 0 0 0 1.07143vw;
+    width: 26.54762vw;
+  }
+  .message {
+    width: 54.28571vw;
+    margin-top: 3.57143vw;
+  }
+  .submit {
+    font-size: 0.95238vw;
+    letter-spacing: 0.05952vw;
+    line-height: 1.42857vw;
+    padding: 1.42857vw 5.59524vw 1.25vw;
+    margin-top: 4.7619vw;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .form {
+    height: 88.47222vw;
+  }
+  form {
+    padding: 41.94444vw 0 0 31.94444vw;
+  }
+  form h1 {
+    font-size: 3.05556vw;
+    letter-spacing: 0.06944vw;
+    line-height: 4.44444vw;
+  }
+  .first-row {
+    width: 63.19444vw;
+    margin-top: 5.90278vw;
+  }
+  input {
+    padding-bottom: 0.34722vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.11111vw;
+    letter-spacing: 0.04861vw;
+    line-height: 2.22222vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.11111vw;
+    letter-spacing: 0.04861vw;
+    line-height: 2.22222vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.11111vw;
+    letter-spacing: 0.04861vw;
+    line-height: 2.22222vw;
+  }
+  input::placeholder {
+    font-size: 1.11111vw;
+    letter-spacing: 0.04861vw;
+    line-height: 2.22222vw;
+  }
+  .name {
+    width: 30.97222vw;
+  }
+  .email {
+    margin: 0 0 0 1.25vw;
+    width: 30.97222vw;
+  }
+  .message {
+    width: 63.33333vw;
+    margin-top: 4.16667vw;
+  }
+  .submit {
+    font-size: 1.11111vw;
+    letter-spacing: 0.06944vw;
+    line-height: 1.66667vw;
+    padding: 1.66667vw 6.52778vw 1.45833vw;
+    margin-top: 5.55556vw;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .form {
+    height: 93.26501vw;
+  }
+  form {
+    padding: 44.21669vw 0 0 28.25769vw;
+  }
+  form h1 {
+    font-size: 3.22108vw;
+    letter-spacing: 0.07321vw;
+    line-height: 4.68521vw;
+  }
+  .first-row {
+    width: 66.61786vw;
+    margin-top: 6.22255vw;
+  }
+  input {
+    padding-bottom: 0.36603vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.1713vw;
+    letter-spacing: 0.05124vw;
+    line-height: 2.34261vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.1713vw;
+    letter-spacing: 0.05124vw;
+    line-height: 2.34261vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.1713vw;
+    letter-spacing: 0.05124vw;
+    line-height: 2.34261vw;
+  }
+  input::placeholder {
+    font-size: 1.1713vw;
+    letter-spacing: 0.05124vw;
+    line-height: 2.34261vw;
+  }
+  .name {
+    width: 32.65007vw;
+  }
+  .email {
+    margin: 0 0 0 1.31772vw;
+    width: 32.65007vw;
+  }
+  .message {
+    width: 66.76428vw;
+    margin-top: 4.39239vw;
+  }
+  .submit {
+    font-size: 1.1713vw;
+    letter-spacing: 0.07321vw;
+    line-height: 1.75695vw;
+    padding: 1.75695vw 6.88141vw 1.53734vw;
+    margin-top: 5.85652vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .form {
+    height: 98.59375vw;
+  }
+  form {
+    padding: 46.25vw 0 0 23.4375vw;
+  }
+  form h1 {
+    font-size: 3.4375vw;
+    letter-spacing: 0.07812vw;
+    line-height: 5vw;
+  }
+  .first-row {
+    width: 71.09375vw;
+    margin-top: 6.64062vw;
+  }
+  input {
+    padding-bottom: 0.39062vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.25vw;
+    letter-spacing: 0.05469vw;
+    line-height: 2.5vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.25vw;
+    letter-spacing: 0.05469vw;
+    line-height: 2.5vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.25vw;
+    letter-spacing: 0.05469vw;
+    line-height: 2.5vw;
+  }
+  input::placeholder {
+    font-size: 1.25vw;
+    letter-spacing: 0.05469vw;
+    line-height: 2.5vw;
+  }
+  .name {
+    width: 34.84375vw;
+  }
+  .email {
+    margin: 0 0 0 1.40625vw;
+    width: 34.84375vw;
+  }
+  .message {
+    width: 71.25vw;
+    margin-top: 4.6875vw;
+  }
+  .submit {
+    font-size: 1.25vw;
+    letter-spacing: 0.07812vw;
+    line-height: 1.875vw;
+    padding: 1.875vw 7.34375vw 1.64062vw;
+    margin-top: 6.25vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form {
+    height: 124.41406vw;
+  }
+  form {
+    padding: 58.98438vw 0 0 16.79688vw;
+  }
+  form h1 {
+    font-size: 4.29688vw;
+    letter-spacing: 0.09766vw;
+    line-height: 6.25vw;
+  }
+  .first-row {
+    width: 88.86719vw;
+    margin-top: 8.30078vw;
+  }
+  input {
+    padding-bottom: 0.48828vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.5625vw;
+    letter-spacing: 0.06836vw;
+    line-height: 3.125vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.5625vw;
+    letter-spacing: 0.06836vw;
+    line-height: 3.125vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.5625vw;
+    letter-spacing: 0.06836vw;
+    line-height: 3.125vw;
+  }
+  input::placeholder {
+    font-size: 1.5625vw;
+    letter-spacing: 0.06836vw;
+    line-height: 3.125vw;
+  }
+  .name {
+    width: 43.55469vw;
+  }
+  .email {
+    margin: 0 0 0 1.75781vw;
+    width: 43.55469vw;
+  }
+  .message {
+    width: 89.0625vw;
+    margin-top: 5.85938vw;
+  }
+  .submit {
+    font-size: 1.5625vw;
+    letter-spacing: 0.09766vw;
+    line-height: 2.34375vw;
+    padding: 2.34375vw 9.17969vw 2.05078vw;
+    margin-top: 7.8125vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .form {
+    height: 108.7vw;
+  }
+  form {
+    padding: 45.3vw 0 0 4vw;
+  }
+  form h1 {
+    font-size: 4.4vw;
+    letter-spacing: 0.1vw;
+    line-height: 6.4vw;
+  }
+  .first-row {
+    width: 91vw;
+    margin-top: 8.5vw;
+  }
+  input {
+    padding-bottom: 0.5vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 1.6vw;
+    letter-spacing: 0.07vw;
+    line-height: 3.2vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 1.6vw;
+    letter-spacing: 0.07vw;
+    line-height: 3.2vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 1.6vw;
+    letter-spacing: 0.07vw;
+    line-height: 3.2vw;
+  }
+  input::placeholder {
+    font-size: 1.6vw;
+    letter-spacing: 0.07vw;
+    line-height: 3.2vw;
+  }
+  .name {
+    width: 44.6vw;
+  }
+  .email {
+    margin: 0 0 0 1.8vw;
+    width: 44.6vw;
+  }
+  .message {
+    width: 91.2vw;
+    margin-top: 6vw;
+  }
+  .submit {
+    font-size: 1.6vw;
+    letter-spacing: 0.1vw;
+    line-height: 2.4vw;
+    padding: 2.4vw 9.4vw 2.1vw;
+    margin-top: 8vw;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .form {
+    height: 317.78169vw;
+  }
+  form {
+    padding: 176.40845vw 0 0 5.28169vw;
+  }
+  form h1 {
+    font-size: 7.74648vw;
+    letter-spacing: 0.17606vw;
+    line-height: 11.26761vw;
+  }
+  .first-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 89.43662vw;
+    margin-top: 14.96479vw;
+  }
+  input {
+    padding-bottom: 0.88028vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 2.8169vw;
+    letter-spacing: 0.12324vw;
+    line-height: 5.6338vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 2.8169vw;
+    letter-spacing: 0.12324vw;
+    line-height: 5.6338vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 2.8169vw;
+    letter-spacing: 0.12324vw;
+    line-height: 5.6338vw;
+  }
+  input::placeholder {
+    font-size: 2.8169vw;
+    letter-spacing: 0.12324vw;
+    line-height: 5.6338vw;
+  }
+  .name {
+    width: 89.43662vw;
+  }
+  .email {
+    margin: 10.56338vw 0 0 0;
+    width: 89.43662vw;
+  }
+  .message {
+    width: 89.43662vw;
+    margin-top: 10.56338vw;
+  }
+  .submit {
+    font-size: 2.8169vw;
+    letter-spacing: 0.17606vw;
+    line-height: 4.22535vw;
+    padding: 4.22535vw 16.5493vw 3.69718vw;
+    margin-top: 14.08451vw;
+  }
+}
+
+/* #endregion */
+/* #region Footer */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 3.125vw 2.53906vw;
+}
+
+footer .logo {
+  width: 2.57812vw;
+}
+
+footer p {
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: "Product Sans";
+  font-size: 0.625vw;
+  font-weight: 400;
+  letter-spacing: 0.02734vw;
+  line-height: 1.25vw;
+  width: 21.05469vw;
+  margin-left: 29.45313vw;
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4.45312vw;
+  margin-left: 36.21094vw;
+}
+
+.second-third-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media screen and (max-width: 1920px) {
+  footer {
+    margin: 0 4.16667vw 3.38542vw;
+  }
+  footer .logo {
+    width: 3.4375vw;
+  }
+  footer p {
+    font-size: 0.83333vw;
+    letter-spacing: 0.03646vw;
+    line-height: 1.66667vw;
+    width: 28.07292vw;
+    margin-left: 22.60417vw;
+  }
+  .links {
+    width: 5.9375vw;
+    margin-left: 31.61458vw;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  footer {
+    margin: 0 4.7619vw 3.86905vw;
+  }
+  footer .logo {
+    width: 3.92857vw;
+  }
+  footer p {
+    font-size: 0.95238vw;
+    letter-spacing: 0.04167vw;
+    line-height: 1.90476vw;
+    width: 32.08333vw;
+    margin-left: 18.69048vw;
+  }
+  .links {
+    width: 6.78571vw;
+    margin-left: 14.70238vw;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  footer {
+    margin: 0 5.55556vw 4.51389vw;
+  }
+  footer .logo {
+    width: 4.58333vw;
+  }
+  footer p {
+    font-size: 1.11111vw;
+    letter-spacing: 0.04861vw;
+    line-height: 2.22222vw;
+    width: 37.43056vw;
+    margin-left: 21.80556vw;
+  }
+  .links {
+    width: 7.91667vw;
+    margin-left: 17.15278vw;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  footer {
+    margin: 0 5.85652vw 4.75842vw;
+  }
+  footer .logo {
+    width: 4.83163vw;
+  }
+  footer p {
+    font-size: 1.1713vw;
+    letter-spacing: 0.05124vw;
+    line-height: 2.34261vw;
+    width: 39.45827vw;
+    margin-left: 17.56955vw;
+  }
+  .links {
+    width: 8.34553vw;
+    margin-left: 18.08199vw;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  footer {
+    margin: 0 6.25vw 6.01562vw;
+  }
+  footer .logo {
+    width: 5.15625vw;
+  }
+  footer p {
+    font-size: 1.25vw;
+    letter-spacing: 0.05469vw;
+    line-height: 2.5vw;
+    width: 42.10938vw;
+    margin-left: 12.03125vw;
+  }
+  .links {
+    width: 8.90625vw;
+    margin-left: 19.29688vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer {
+    margin: 0 3.90625vw 6.34766vw;
+  }
+  footer .logo {
+    width: 6.44531vw;
+  }
+  footer p {
+    font-size: 1.5625vw;
+    letter-spacing: 0.06836vw;
+    line-height: 3.125vw;
+    width: 52.63672vw;
+    margin-left: 6.44531vw;
+  }
+  .links {
+    width: 11.13281vw;
+    margin-left: 14.55078vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 4vw 7vw;
+  }
+  footer .logo {
+    width: 6.6vw;
+  }
+  footer p {
+    font-size: 1.6vw;
+    letter-spacing: 0.07vw;
+    line-height: 3.2vw;
+    width: 53.9vw;
+    margin-left: 0;
+  }
+  .links {
+    width: 11.4vw;
+    margin-left: 26vw;
+  }
+  .second-third-elements {
+    margin-top: 4.5vw;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  footer {
+    margin: 0 5.28169vw 3.16901vw;
+  }
+  footer .logo {
+    width: 11.61972vw;
+  }
+  footer p {
+    font-size: 2.8169vw;
+    letter-spacing: 0.12324vw;
+    line-height: 5.6338vw;
+    width: 59.85915vw;
+  }
+  .links {
+    display: none;
+    width: 20.07042vw;
+    margin-left: 0vw;
+  }
+  .second-third-elements {
+    margin-top: 4.5vw;
+  }
+}
+
+/* #endregion */
 /*# sourceMappingURL=style.css.map */
