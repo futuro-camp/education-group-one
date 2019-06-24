@@ -1,6 +1,13 @@
 * {
     margin: 0 0;
     box-sizing: border-box;
+    list-style-type: none;
+}
+ul {
+    padding-left: 0px;
+}
+li {
+    padding-left: 0px;
 }
 body {
     /* background-color: darkolivegreen; */
@@ -376,7 +383,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 593px;
 }
 .text-registration p {
@@ -470,6 +477,9 @@ header {
     flex-direction: column;
     justify-content: space-between;
 }
+.advantages {
+    list-style-type: none;
+}
 .advantages-question p {
     font-family: 'ProductSansCrillyc';
     font-size:  16px;
@@ -510,6 +520,7 @@ header {
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    padding-left: 0px;
 }
 .white-box-text-tablet {
     display: none;
@@ -517,7 +528,7 @@ header {
 .white-box-text-mobile{
     display: none;
 }
-.white-cascade-box a {
+.white-cascade-box li a:first-child {
     font-family: 'Roboto-Medium';
     font-size: 24px;
     color: #121212;
@@ -532,6 +543,9 @@ header {
 }
 .white-cascade-box:hover {
     z-index: 20;
+}
+.white-cascade-box-header {
+    padding-left: 0px;
 }
 .white-box-row-keeper{
     display: flex;
@@ -605,7 +619,7 @@ header {
     flex-wrap: nowrap;
 }
 .gray-cascade-box-header {
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: 60px;
 }
 .gray-box-text-tablet {
@@ -614,7 +628,7 @@ header {
 .gray-box-text-mobile {
     display: none;
 }
-.gray-cascade-box-header a {
+.gray-cascade-box-header li{
     font-family: 'Roboto-Medium';
     font-size: 24px;
     color: #ffffff;
@@ -745,11 +759,11 @@ header {
 .upper-input-row input {
     width: 446px;
     font-family: 'ProductSansCrillyc';
-    font-size:  16px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 32px;
     font-weight: 400;
-    letter-spacing: 0.027vw;
+    letter-spacing: 0.7px;
     text-transform: uppercase;
     background-color: transparent;
     border: none;
@@ -773,7 +787,7 @@ header {
 .lower-input-row input {
     width: 912px;
     font-family: 'ProductSansCrillyc';
-    font-size:  16px;
+    font-size: 16px;
     color: #ffffff;
     line-height: 32px;
     font-weight: 400;
@@ -826,11 +840,11 @@ footer {
     z-index: 14;
 }
 .footer-logo-wrapper{
-    /*width: 66px;*/
-    /* height: 20px; */
-    /* margin-top: 182px; */
-    /* margin-left: 80px; */
-    /* margin-bottom: 82px; */
+    width: 66px;
+    height: 20px;
+    margin-top: 182px;
+    margin-left: 80px;
+    margin-bottom: 82px;
 }
 .footer-logo-wrapper a {
     margin-left: 80px;
