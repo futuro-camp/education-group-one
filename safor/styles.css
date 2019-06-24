@@ -903,6 +903,7 @@ footer {
     /* height: 59px; */
     display: flex;
     justify-content: center;
+    white-space: pre-line;
     /* top: 1274px; */
     /* right: 1121px; */
     /* position: absolute; */
