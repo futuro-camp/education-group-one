@@ -705,9 +705,15 @@
         margin-left: 71px;
     }
     .orange-box-content {
-        width: 288px;
+        width: calc(100% - 88px);
         margin-left: 71px;
         margin-right: 17px;
+    }
+    .right-phone {
+        left: 93px;
+    }
+    .left-phone {
+        left: 84px;
     }
     /* FOOTER */
     .right-footer {
@@ -717,5 +723,8 @@
     }
     .social {
         display: unset;
+        margin-top: 61px;
+        width: 100%;
+        margin-left: 0px;
     }
 }
