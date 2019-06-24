@@ -188,8 +188,8 @@
         margin-right: 67px;
     }
     /* FOOTER */
-    .middle {
-        margin-right: 0px;
+    .right-column {
+
     }
 }
 @media only screen and (max-width: 1200px) {
@@ -212,8 +212,7 @@
     }
     .right-footer{
         margin-left: 40px;
-        display: flex;
-        flex-direction: row;
+        width: calc(100% - 80px);
         justify-content: space-between;
     }
     .footer-text {
@@ -435,11 +434,12 @@
         align-items: flex-start;
     }
     .headline {
-        margin-right: 179px;
-        margin-left: 40px;
+        width: calc(100% - 61px);
+        margin-right: 31px;
+        margin-left: 30px;
     }
     .headline-text {
-        max-width: 781px;
+        width: calc(100% - 61px);
     }
     .video-box-line-first{
         margin-left: 40px;
@@ -448,9 +448,9 @@
         margin-left: 40px;
     }
     .video-description{
-        min-width: 508px;
+        width: calc(100% - 61px);
         margin-left: 30px;
-        margin-right: 190px;
+        margin-right: 31px;
     }
     /* MIDDLE BOX */
     .middle-content-box {
@@ -461,10 +461,13 @@
         height: 1402px;
     }
     .orange-box-content {
-        width: 572px;
-        margin-right: 390px;
-        margin-left: 30px;
+        width: calc(100% - 60px);
+        margin-right: 29px;
+        margin-left: 31px;
         height: 1133px;
+    }
+    .text-install-registration {
+        z-index: 15;
     }
     .text-secure-box {
         margin-top: 311px;
@@ -599,7 +602,7 @@
 @media only screen and (max-width: 759px) {
     /* UPPER BLOCK */
     .headline {
-        margin-right: 16px;
+        margin-right: 30px;
         margin-left: 30px;
     }
     .headline-text{
@@ -682,6 +685,14 @@
         width: 671px;
     }
     /* FOOTER BLOCK */
+    .right-footer {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: calc(100% - 30px);
+    }
+    .social {
+        display: none;
+    }
 }
 @media only screen and (max-width: 569px) {
     /* UPPER BLOCK */
@@ -697,5 +708,14 @@
         width: 288px;
         margin-left: 71px;
         margin-right: 17px;
+    }
+    /* FOOTER */
+    .right-footer {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: calc(100% - 30px);
+    }
+    .social {
+        display: unset;
     }
 }
