@@ -1,5 +1,3 @@
-/* #region math */
-/* #endregion */
 /* #region fonts*/
 @font-face {
   font-family: "Product Sans";
@@ -7,8 +5,6 @@
 }
 
 /* #endregion */
-/*#region DELETE! */
-/*#endregion*/
 /*#region body*/
 * {
   margin: 0;
@@ -304,6 +300,7 @@ header img {
   line-height: 2.5vw;
   text-transform: uppercase;
   width: 18.67188vw;
+  margin-top: 0;
 }
 
 .off {
@@ -357,22 +354,6 @@ header img {
 .first-section hr:nth-child(7) {
   top: 22.92969vw;
   border-top: 1px solid rgba(151, 151, 151, 0.7);
-}
-
-#friend-and-family-br {
-  display: none;
-}
-
-#safe-lives-br {
-  display: none;
-}
-
-#switching-your-br {
-  display: none;
-}
-
-#active-br {
-  display: none;
 }
 
 @media screen and (max-width: 1920px) {
@@ -501,9 +482,6 @@ header img {
   }
   .first-section hr:nth-child(7) {
     top: 40.76389vw;
-  }
-  #friend-and-family-br {
-    display: initial;
   }
 }
 
@@ -677,9 +655,6 @@ header img {
   .first-section hr:nth-child(7) {
     top: 53.3vw;
   }
-  #friend-and-family-br {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 759px) {
@@ -724,12 +699,6 @@ header img {
   .first-section hr:nth-child(7) {
     top: 88.55634vw;
   }
-  #safe-lives-br {
-    display: initial;
-  }
-  #active-br {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 567px) {
@@ -770,12 +739,6 @@ header img {
   }
   .first-section hr:nth-child(7) {
     top: 79.46667vw;
-  }
-  #switching-your-br {
-    display: initial;
-  }
-  #safe-lives-br {
-    display: none;
   }
 }
 
@@ -938,11 +901,11 @@ header img {
   line-height: 1.25vw;
 }
 
-.second-section .text p:nth-child(2) {
+.second-section .text li:nth-child(2) {
   margin-top: 1.25vw;
 }
 
-.second-section .text p:nth-child(3) {
+.second-section .text li:nth-child(3) {
   margin-left: 3.20312vw;
   width: 11.71875vw;
 }
@@ -982,10 +945,10 @@ header img {
     letter-spacing: 0.03646vw;
     line-height: 1.66667vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 1.66667vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-left: 4.27083vw;
     width: 15.625vw;
   }
@@ -1026,10 +989,10 @@ header img {
     letter-spacing: 0.04167vw;
     line-height: 1.90476vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 1.90476vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-left: 4.88095vw;
     width: 17.85714vw;
   }
@@ -1070,10 +1033,10 @@ header img {
     letter-spacing: 0.04861vw;
     line-height: 2.22222vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 2.22222vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-left: 5.69444vw;
     width: 20.83333vw;
   }
@@ -1114,10 +1077,10 @@ header img {
     letter-spacing: 0.05124vw;
     line-height: 2.34261vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 2.34261vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-left: 6.00293vw;
     width: 21.96193vw;
   }
@@ -1158,10 +1121,10 @@ header img {
     letter-spacing: 0.05469vw;
     line-height: 2.5vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 2.5vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-left: 6.40625vw;
     width: 23.4375vw;
   }
@@ -1204,10 +1167,10 @@ header img {
     letter-spacing: 0.06836vw;
     line-height: 3.125vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 3.125vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-top: 3.125vw;
     margin-left: 0;
     width: auto;
@@ -1249,10 +1212,10 @@ header img {
     letter-spacing: 0.07vw;
     line-height: 3.2vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 3.2vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-top: 3.2vw;
   }
 }
@@ -1292,10 +1255,10 @@ header img {
     letter-spacing: 0.12324vw;
     line-height: 5.6338vw;
   }
-  .second-section .text p:nth-child(2) {
+  .second-section .text li:nth-child(2) {
     margin-top: 5.6338vw;
   }
-  .second-section .text p:nth-child(3) {
+  .second-section .text li:nth-child(3) {
     margin-top: 5.6338vw;
   }
 }
@@ -1338,11 +1301,11 @@ header img {
     letter-spacing: initial;
     line-height: 5.33333vw;
   }
-  .second-section .text p:nth-child(2) {
-    margin-top: 8.53333vw;
+  .second-section .text li:nth-child(2) {
+    margin-top: 5.33333vw;
   }
-  .second-section .text p:nth-child(3) {
-    margin-top: 8.53333vw;
+  .second-section .text li:nth-child(3) {
+    margin-top: 5.33333vw;
   }
 }
 
@@ -1378,11 +1341,11 @@ header img {
     font-size: 3.33333vw;
     line-height: 5.55556vw;
   }
-  .second-section .text p:nth-child(2) {
-    margin-top: 8.88889vw;
+  .second-section .text li:nth-child(2) {
+    margin-top: 5.55556vw;
   }
-  .second-section .text p:nth-child(3) {
-    margin-top: 8.88889vw;
+  .second-section .text li:nth-child(3) {
+    margin-top: 5.55556vw;
   }
 }
 
@@ -1418,11 +1381,11 @@ header img {
     font-size: 3.75vw;
     line-height: 6.25vw;
   }
-  .second-section .text p:nth-child(2) {
-    margin-top: 10vw;
+  .second-section .text li:nth-child(2) {
+    margin-top: 6.25vw;
   }
-  .second-section .text p:nth-child(3) {
-    margin-top: 10vw;
+  .second-section .text li:nth-child(3) {
+    margin-top: 6.25vw;
   }
 }
 
@@ -1536,10 +1499,6 @@ header img {
   margin: 4.84375vw 0 0 47.89062vw;
   width: 12.34375vw;
   height: 12.65625vw;
-}
-
-#your-br {
-  display: none;
 }
 
 @media screen and (max-width: 1920px) {
@@ -1997,7 +1956,7 @@ header img {
     width: 56.33803vw;
   }
   .third-section ul li:nth-child(1) {
-    width: 41.72535vw;
+    width: 44.01408vw;
     margin-top: 6.51408vw;
   }
   .third-section ul li:nth-child(2) {
@@ -2035,12 +1994,6 @@ header img {
     margin: 14.08451vw 0 0 35.73944vw;
     width: 58.97887vw;
     height: 60.38732vw;
-  }
-  #secure-br {
-    display: none;
-  }
-  #your-br {
-    display: initial;
   }
 }
 
@@ -2103,12 +2056,6 @@ header img {
     margin: 16vw 0 0 43.73333vw;
     width: 52vw;
     height: 53.33333vw;
-  }
-  #secure-br {
-    display: initial;
-  }
-  #your-br {
-    display: none;
   }
 }
 
@@ -2270,10 +2217,6 @@ ul li:nth-child(3) h1 {
   font-weight: 400;
   letter-spacing: 0.03906vw;
   line-height: 0.9375vw;
-}
-
-#from-the-city-br {
-  display: none;
 }
 
 @media screen and (max-width: 1920px) {
@@ -2527,9 +2470,7 @@ ul li:nth-child(3) h1 {
     font-size: 3.2vw;
     letter-spacing: initial;
     line-height: 5.33333vw;
-  }
-  #from-the-city-br {
-    display: initial;
+    margin-top: 2.93333vw;
   }
 }
 
@@ -2557,6 +2498,7 @@ ul li:nth-child(3) h1 {
   .forth-section p {
     font-size: 3.33333vw;
     line-height: 5.55556vw;
+    margin-top: 3.05556vw;
   }
 }
 
@@ -2584,6 +2526,7 @@ ul li:nth-child(3) h1 {
   .forth-section p {
     font-size: 3.75vw;
     line-height: 6.25vw;
+    margin-top: 3.4375vw;
   }
 }
 
@@ -3171,9 +3114,6 @@ ul li:nth-child(3) h1 {
   .black-rect ul li:nth-child(odd) {
     margin-top: 6vw;
   }
-  #get-br {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 759px) {
@@ -3308,21 +3248,6 @@ ul li:nth-child(3) h1 {
   }
   .black-rect ul li:nth-child(1) {
     margin-top: 0;
-  }
-  #propolsals-br {
-    display: none;
-  }
-  #technologies-br {
-    display: none;
-  }
-  #funds-br {
-    display: none;
-  }
-  #trip-br {
-    display: none;
-  }
-  #calling-br {
-    display: none;
   }
 }
 
@@ -3466,6 +3391,7 @@ form h1 {
   letter-spacing: 0.03906vw;
   line-height: 2.5vw;
   text-transform: uppercase;
+  width: 15.70313vw;
 }
 
 .first-row {
@@ -3524,6 +3450,11 @@ input::placeholder {
   text-transform: uppercase;
 }
 
+input:focus {
+  outline: none;
+  border-bottom: 1px solid rgba(247, 102, 18, 0.4);
+}
+
 .name {
   width: 17.42188vw;
 }
@@ -3552,6 +3483,11 @@ input::placeholder {
   opacity: 1;
 }
 
+.submit:hover {
+  color: #f76612;
+  background-color: #fff;
+}
+
 @media screen and (max-width: 1920px) {
   .form {
     height: 66.35417vw;
@@ -3563,6 +3499,7 @@ input::placeholder {
     font-size: 2.29167vw;
     letter-spacing: 0.05208vw;
     line-height: 3.33333vw;
+    width: 20.9375vw;
   }
   .first-row {
     width: 47.39583vw;
@@ -3622,6 +3559,7 @@ input::placeholder {
     font-size: 2.61905vw;
     letter-spacing: 0.05952vw;
     line-height: 3.80952vw;
+    width: 23.92857vw;
   }
   .first-row {
     width: 54.16667vw;
@@ -3681,6 +3619,7 @@ input::placeholder {
     font-size: 3.05556vw;
     letter-spacing: 0.06944vw;
     line-height: 4.44444vw;
+    width: 27.91667vw;
   }
   .first-row {
     width: 63.19444vw;
@@ -3740,6 +3679,7 @@ input::placeholder {
     font-size: 3.22108vw;
     letter-spacing: 0.07321vw;
     line-height: 4.68521vw;
+    width: 29.42899vw;
   }
   .first-row {
     width: 66.61786vw;
@@ -3799,6 +3739,7 @@ input::placeholder {
     font-size: 3.4375vw;
     letter-spacing: 0.07812vw;
     line-height: 5vw;
+    width: 31.40625vw;
   }
   .first-row {
     width: 71.09375vw;
@@ -3858,9 +3799,10 @@ input::placeholder {
     font-size: 4.29688vw;
     letter-spacing: 0.09766vw;
     line-height: 6.25vw;
+    width: 39.25781vw;
   }
   .first-row {
-    width: 88.86719vw;
+    width: 83.10547vw;
     margin-top: 8.30078vw;
   }
   input {
@@ -3891,10 +3833,10 @@ input::placeholder {
   }
   .email {
     margin: 0 0 0 1.75781vw;
-    width: 43.55469vw;
+    width: 37.79297vw;
   }
   .message {
-    width: 89.0625vw;
+    width: 83.10547vw;
     margin-top: 5.85938vw;
   }
   .submit {
@@ -3917,6 +3859,7 @@ input::placeholder {
     font-size: 4.4vw;
     letter-spacing: 0.1vw;
     line-height: 6.4vw;
+    width: 40.2vw;
   }
   .first-row {
     width: 91vw;
@@ -3976,6 +3919,7 @@ input::placeholder {
     font-size: 7.74648vw;
     letter-spacing: 0.17606vw;
     line-height: 11.26761vw;
+    width: 49.47183vw;
   }
   .first-row {
     -webkit-box-orient: vertical;
@@ -4028,6 +3972,176 @@ input::placeholder {
   }
 }
 
+@media screen and (max-width: 567px) {
+  .form {
+    height: 175.46667vw;
+  }
+  form {
+    padding: 32vw 0 0 18.93333vw;
+  }
+  form h1 {
+    font-size: 4.26667vw;
+    letter-spacing: initial;
+    line-height: 7.46667vw;
+    width: 37.6vw;
+  }
+  .first-row {
+    width: 76.8vw;
+    margin-top: 17.06667vw;
+  }
+  input {
+    padding-bottom: 3.46667vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 3.2vw;
+    letter-spacing: initial;
+    line-height: 5.33333vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 3.2vw;
+    letter-spacing: initial;
+    line-height: 5.33333vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 3.2vw;
+    letter-spacing: initial;
+    line-height: 5.33333vw;
+  }
+  input::placeholder {
+    font-size: 3.2vw;
+    letter-spacing: initial;
+    line-height: 5.33333vw;
+  }
+  .name {
+    width: 76.8vw;
+  }
+  .email {
+    margin: 8vw 0 0 0;
+    width: 76.8vw;
+  }
+  .message {
+    width: 76.8vw;
+    margin-top: 10.66667vw;
+  }
+  .submit {
+    font-size: 4.26667vw;
+    letter-spacing: 0.26667vw;
+    line-height: 6.4vw;
+    padding: 4.8vw 32.53333vw 4vw;
+    margin-top: 16vw;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .form {
+    height: 182.77778vw;
+  }
+  form {
+    padding: 33.33333vw 0 0 15.55556vw;
+  }
+  form h1 {
+    font-size: 4.44444vw;
+    line-height: 7.77778vw;
+    width: 39.16667vw;
+  }
+  .first-row {
+    width: 80vw;
+    margin-top: 17.77778vw;
+  }
+  input {
+    padding-bottom: 3.61111vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 3.33333vw;
+    line-height: 5.55556vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 3.33333vw;
+    line-height: 5.55556vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 3.33333vw;
+    line-height: 5.55556vw;
+  }
+  input::placeholder {
+    font-size: 3.33333vw;
+    line-height: 5.55556vw;
+  }
+  .name {
+    width: 80vw;
+  }
+  .email {
+    margin: 8.33333vw 0 0 0;
+    width: 80vw;
+  }
+  .message {
+    width: 80vw;
+    margin-top: 11.11111vw;
+  }
+  .submit {
+    font-size: 4.44444vw;
+    letter-spacing: 0.27778vw;
+    line-height: 6.66667vw;
+    padding: 5vw 33.88889vw 4.16667vw;
+    margin-top: 16.66667vw;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .form {
+    height: 205.625vw;
+  }
+  form {
+    padding: 37.5vw 0 0 5vw;
+  }
+  form h1 {
+    font-size: 5vw;
+    line-height: 8.75vw;
+    width: 44.0625vw;
+  }
+  .first-row {
+    width: 90vw;
+    margin-top: 20vw;
+  }
+  input {
+    padding-bottom: 4.0625vw;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+  }
+  input:-ms-input-placeholder {
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+  }
+  input::-ms-input-placeholder {
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+  }
+  input::placeholder {
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+  }
+  .name {
+    width: 90vw;
+  }
+  .email {
+    margin: 9.375vw 0 0 0;
+    width: 90vw;
+  }
+  .message {
+    width: 90vw;
+    margin-top: 12.5vw;
+  }
+  .submit {
+    font-size: 5vw;
+    letter-spacing: 0.3125vw;
+    line-height: 7.5vw;
+    padding: 5.625vw 38.125vw 4.6875vw;
+    margin-top: 18.75vw;
+  }
+}
+
 /* #endregion */
 /* #region Footer */
 footer {
@@ -4068,6 +4182,7 @@ footer p {
           align-items: center;
   width: 4.45312vw;
   margin-left: 36.21094vw;
+  height: 0.70312vw;
 }
 
 .second-third-elements {
@@ -4096,6 +4211,7 @@ footer p {
   .links {
     width: 5.9375vw;
     margin-left: 31.61458vw;
+    height: 0.9375vw;
   }
 }
 
@@ -4116,6 +4232,7 @@ footer p {
   .links {
     width: 6.78571vw;
     margin-left: 14.70238vw;
+    height: 1.07143vw;
   }
 }
 
@@ -4136,6 +4253,7 @@ footer p {
   .links {
     width: 7.91667vw;
     margin-left: 17.15278vw;
+    height: 1.25vw;
   }
 }
 
@@ -4156,6 +4274,7 @@ footer p {
   .links {
     width: 8.34553vw;
     margin-left: 18.08199vw;
+    height: 1.31772vw;
   }
 }
 
@@ -4176,6 +4295,7 @@ footer p {
   .links {
     width: 8.90625vw;
     margin-left: 19.29688vw;
+    height: 1.40625vw;
   }
 }
 
@@ -4196,6 +4316,7 @@ footer p {
   .links {
     width: 11.13281vw;
     margin-left: 14.55078vw;
+    height: 1.75781vw;
   }
 }
 
@@ -4223,6 +4344,7 @@ footer p {
   .links {
     width: 11.4vw;
     margin-left: 26vw;
+    height: 1.8vw;
   }
   .second-third-elements {
     margin-top: 4.5vw;
@@ -4245,12 +4367,89 @@ footer p {
   .links {
     display: none;
     width: 20.07042vw;
-    margin-left: 0vw;
+    height: 3.16901vw;
+    margin-left: 0;
   }
   .second-third-elements {
     margin-top: 4.5vw;
   }
 }
 
+@media screen and (max-width: 567px) {
+  footer {
+    margin: 0 18.93333vw 19.46667vw;
+  }
+  footer .logo {
+    width: 17.6vw;
+  }
+  footer p {
+    font-size: 3.2vw;
+    letter-spacing: initial;
+    line-height: 5.33333vw;
+    width: 61.6vw;
+  }
+  .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 16vw;
+    width: 32.26667vw;
+    height: 4.8vw;
+  }
+  .second-third-elements {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10.66667vw;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  footer {
+    margin: 0 15.55556vw 20.27778vw;
+  }
+  footer .logo {
+    width: 18.33333vw;
+  }
+  footer p {
+    font-size: 3.33333vw;
+    line-height: 5.55556vw;
+    width: 64.16667vw;
+  }
+  .links {
+    margin-top: 16.66667vw;
+    width: 33.61111vw;
+    height: 5vw;
+  }
+  .second-third-elements {
+    margin-top: 11.11111vw;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  footer {
+    margin: 0 5vw 12.5vw;
+  }
+  footer .logo {
+    width: 20.625vw;
+  }
+  footer p {
+    font-size: 3.75vw;
+    line-height: 6.25vw;
+    width: 72.1875vw;
+  }
+  .links {
+    margin-top: 18.75vw;
+    width: 37.8125vw;
+    height: 5.625vw;
+  }
+  .second-third-elements {
+    margin-top: 12.5vw;
+  }
+}
+
 /* #endregion */
-/*# sourceMappingURL=style.css.map */
