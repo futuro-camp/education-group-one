@@ -154,10 +154,6 @@
     }
     .video-box {
         margin-right: 80px;
-        /* width: 100%; */
-        /* align-self: center;
-        align-items: flex-start;
-        width: calc(100% - 120px); */
     }
     .video-box-line-first{
     margin-left: 90px;          /*По макету 140px!!! */
@@ -178,14 +174,6 @@
     }
     .advantages {
         margin-right: 184px;
-    }
-    .white-cascade-box{
-        /* width: 975px; */
-        /* width: calc(1020px - 124px); */
-    }
-    .gray-cascade-box{
-        /* width:calc(980px - 124px); */
-        /* width: 850px; */
     }
     .feedback-box {
         margin-right: 69px;
@@ -226,12 +214,6 @@
         margin-right: 40px;
         width: calc(100% - 80px);
     }
-    /* .video-box-line-first{
-        width
-    }
-        .video-box-line-second{
-        width
-    } */
     .white-cascade-box{
         width: calc(1020px - 40px);
         right: 0px;
@@ -245,10 +227,10 @@
 }
 @media only screen and (max-width: 1024px) {
     /* UPPER BLOCK */
-    .logo-keeper {
+    .logo-wrapper {
         margin-left: 40px;
     }
-    .nav-keeper {
+    .nav-container {
         float: right;
         margin-right: 50px;
     }
@@ -265,15 +247,10 @@
     .video-box-line-second{
         margin-left: 172px;
     }
-    .video-description {
-        display: none;
-    }
-    .video-description-mobile {
+    .video-description{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin-right: 50px;
+        flex-wrap: wrap;
     }
     /* MIDDLE BOX */
     .orange-box {
@@ -307,35 +284,29 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-    .white-box-text-tablet {
-        display: unset;
-    }
-    .white-box-text-pc {
-        display: none;
-    }
     .white-cascade-box-header {
         margin-top: 60px;
         margin-bottom: 56px;
         margin-left: 40px;
     }
-    .white-box-row-keeper {
+    .white-box-row-container {
         margin-left: 40px;
         margin-right: 40px;
         margin-bottom: 120px;
     }
-    .white-cascade-box a {
+    .white-cascade-box li a:first-child {
         text-decoration: none;
         writing-mode: unset;
         margin-top: 0px;
         margin-left: 0px;
     }
-    .upper-white-box-icon {
+    .pentagon-white-box-icon {
         margin-top: 0px;
     }
-    .middle-white-box-icon {
+    .star-white-box-icon {
         margin-top: 60px;
     }
-    .lower-white-box-icon {
+    .triangle-white-box-icon {
         margin-top: 60px;
     }
     .gray-cascade-box{
@@ -345,21 +316,15 @@
         left: 0px;
         top: -286px;
     }
-    .gray-box-text-tablet {
-        display: unset;
-    }
-    .gray-box-text-pc{
-        display: none;
-    }
-    .gray-cascade-box-upper {
+    .gray-cascade-box-square {
         margin-right: 40px;
         margin-left: 40px;
     }
-    .gray-cascade-box-middle {
+    .gray-cascade-box-circle {
         margin-right: 40px;
         margin-left: 40px;
     }
-    .gray-cascade-box-lower {
+    .gray-cascade-box-hexagon {
         margin-right: 40px;
         margin-left: 40px;
         margin-bottom: 60px;
@@ -401,7 +366,7 @@
         margin-bottom: 60px;
     }
     /* FOOTER */
-    .footer-logo-keeper a {
+    .footer-logo-wrapper a {
         margin-left: 40px;
     }
     .footer-social {
@@ -433,10 +398,6 @@
     }
     .video-box-line-second{
         margin-left: 40px;
-    }
-    .video-description-mobile {
-        margin-left: 40px;
-        margin-right: 0px;
     }
     /* MIDDLE BOX */
     .middle-content-box {
@@ -480,21 +441,12 @@
         flex-direction: column;
         justify-content: flex-start;
     }
-    .white-box-text-mobile {
-        display: unset;
-    }
-    .white-box-text-tablet {
-        display: none;
-    }
-    .white-box-text-pc {
-        display: none;
-    }
     .white-cascade-box-header {
         margin-top: 60px;
         margin-bottom: 56px;
         margin-left: 40px;
     }
-    .white-box-row-keeper {
+    .white-box-row-container {
         margin-left: 40px;
         margin-right: 40px;
         margin-bottom: 120px;
@@ -521,24 +473,18 @@
         left: 0px;
         top: -646px;
     }
-    .gray-box-text-mobile {
-        display: unset;
+    .gray-cascade-box-header {
+        margin-left: 40px;
     }
-    .gray-box-text-tablet {
-        display: none;
-    }
-    .gray-box-text-pc{
-        display: none;
-    }
-    .gray-cascade-box-upper {
+    .gray-cascade-box-square  {
         margin-right: 40px;
         margin-left: 40px;
     }
-    .gray-cascade-box-middle {
+    .gray-cascade-box-circle  {
         margin-right: 40px;
         margin-left: 40px;
     }
-    .gray-cascade-box-lower {
+    .gray-cascade-box-hexagon {
         margin-right: 40px;
         margin-left: 40px;
         margin-bottom: 60px;
@@ -592,21 +538,8 @@
     .right {
         margin-left: 40px;
     }
-    .footer-social {
-        display: none;
-    }
 }
 @media only screen and (max-width: 865px) {
-    .video-description-mobile {
-        display: none;
-    }
-    .video-description-mobile-mini{
-        display: unset;
-        margin-left: 30px;
-    }
-    .video-box-line-first-tablet {
-        display: unset;
-    }
 }
 @media only screen and (max-width: 759px) {
     /* UPPER BLOCK */
@@ -614,21 +547,9 @@
         margin-right: 16px;
         margin-left: 30px;
     }
-    .headline-header-pc{
-        display: none;
-    }
-    .headline-header-mobile{
-        display: unset;
-    }
     .headline-text{
         margin-top: 120px;
         margin-bottom: 143px;
-    }
-    .headline-text-pc {
-        display: none;
-    }
-    .headline-text-mobile {
-        display: unset;
     }
     .video-box {
         height: 341px;
@@ -648,12 +569,6 @@
         margin-left: 30px;
         width: 509px;
     }
-    .mobile-off {
-        display: none;
-    }
-    .mobile-on {
-        display: unset;
-    }
     .left-phone {
         left: 160px;
         top: 204px;
@@ -667,7 +582,7 @@
         margin-left: 30px;
     }
     /* LOWER BLOCK */
-    .white-box-row-keeper{
+    .white-box-row-container{
         margin-bottom: 60px;
     }
     .feedback-box {
@@ -721,10 +636,6 @@
     .video-box {
         width: 304px;
         margin-left: 71px;
-    }
-    .video-description-mobile-mini {
-        margin-left: 71px;
-        margin-right: 16px;
     }
     .orange-box-content {
         width: 288px;

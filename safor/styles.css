@@ -10,12 +10,11 @@ li {
     padding-left: 0px;
 }
 body {
-    /* background-color: darkolivegreen; */
-    background-color: #121212;
+    background-color: darkolivegreen;
+    /* background-color: #121212; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 2600px;
 }
 /* HEADER BLOCK */
 header {
@@ -123,27 +122,16 @@ header {
     flex-direction: column;
     /* margin-left: 900px; */
     margin-right: 760px;
+    height: 469px;
+    white-space:   unset;
 }
 .headline-header{
     display: flex;
     align-items: center;
     justify-content: start;
     width: 478px;
-    white-space: pre-line;
 }
-.headline-header h2{
-    color: #ffffff;
-    font-size: 44px;
-    font-family: 'Roboto-Bold';
-    line-height: 64px;
-    letter-spacing: 1px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-.headline-header-mobile {
-    display: none;
-}
-.headline-header-mobile h2{
+.headline-header {
     color: #ffffff;
     font-size: 44px;
     font-family: 'Roboto-Bold';
@@ -160,18 +148,7 @@ header {
     margin-top: 65px;
     margin-bottom: 165px;
 }
-.headline-text p{
-    color: #ffffff;
-    font-size:  16px;
-    font-family: 'ProductSansCrillyc';
-    line-height: 32px;
-    letter-spacing: 0.7px;
-    font-weight: 400;
-}
-.headline-text-mobile {
-    display: none;
-}
-.headline-text-mobile p{
+.headline-text {
     color: #ffffff;
     font-size:  16px;
     font-family: 'ProductSansCrillyc';
@@ -191,7 +168,7 @@ header {
     background-color: #000000
 }
 .video-box-line-first{
-    margin-left: 60px;    /* 2.51vw по линейке макета*/
+    margin-left: 60px;
     margin-top: 244px;
     display: flex;
     flex-direction: row;
@@ -199,9 +176,6 @@ header {
     justify-content: flex-end;
     align-items: center;
     min-width: 364px;
-}
-.video-box-line-first-tablet{
-    display: none;
 }
 .video-box h1{
     color: #ffffff;
@@ -212,7 +186,7 @@ header {
     flex-grow: 1;
 }
 .video-box-line-second {
-    margin-left: 60px;    /* 2.51vw по линейке макета*/
+    margin-left: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -241,40 +215,6 @@ header {
     letter-spacing: 0.7px;
     flex-grow: 1;
 }
-.video-description-mobile {
-    display: none;
-    margin-bottom: 248px;
-}
-.video-description-mobile-mini{
-    display: none;
-    margin-bottom: 248px;
-    margin-left: 40px;
-    margin-right: 0px;
-}
-.video-description-mobile p {
-    font-family: 'ProductSansCrillyc';
-    font-size:  16px;
-    line-height: 32px;
-    letter-spacing: 0.7px;
-    font-weight: 400;
-    color: #ffffff;
-}
-.video-description-mobile p:nth-child(2) {
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.video-description-mobile-mini p {
-    font-family: 'ProductSansCrillyc';
-    font-size:  16px;
-    line-height: 32px;
-    letter-spacing: 0.7px;
-    font-weight: 400;
-    color: #ffffff;
-}
-.video-description-mobile-mini p:nth-child(2) {
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
 .video-description {
     margin-bottom: 320px;
     /* margin-left: 904px; */
@@ -283,7 +223,7 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     /* justify-content: center; */
-    white-space: pre-line;
+    white-space:   unset;
 }
 .video-description-left{
     display: flex;
@@ -293,7 +233,7 @@ header {
     width: 580px;
     height: 192px;
 }
-.video-description-left p{
+.video-description-left {
     font-family: 'ProductSansCrillyc';
     font-size:  16px;
     line-height: 32px;
@@ -310,7 +250,7 @@ header {
     width: 320px;
     height: 96px;
 }
-.video-description-right p{
+.video-description-right {
     font-family: 'ProductSansCrillyc';
     font-size:  16px;
     line-height: 32px;
@@ -351,9 +291,6 @@ header {
     z-index: 12;
     position: relative;
 }
-.mobile-on {
-    display: none;
-}
 .text-install-registration {
     height: 380px;
     z-index: 13;
@@ -361,7 +298,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
 }
-.text-install-registration-label p{
+.text-install-registration-label {
     font-family: 'Roboto-Bold';
     font-size:  16px;
     letter-spacing: 1px;
@@ -373,7 +310,7 @@ header {
     margin-top: 57px;
     margin-bottom: 113px;;
 }
-.text-install p {
+.text-install  {
     font-family: 'Roboto-Bold';
     font-size: 34px;
     letter-spacing: 0.5px;
@@ -389,7 +326,7 @@ header {
     justify-content: flex-end;
     margin-bottom: 593px;
 }
-.text-registration p {
+.text-registration  {
     font-family: 'Roboto-Bold';
     font-size: 34px;
     letter-spacing: 0.5px;
@@ -409,7 +346,7 @@ header {
 .secure-header {
     margin-bottom: 191px;
 }
-.secure-header h1{
+.secure-header {
     font-family: 'Roboto-Bold';
     font-size: 34px;
     letter-spacing: 0.5px;
@@ -525,12 +462,6 @@ header {
     flex-wrap: nowrap;
     padding-left: 0px;
 }
-.white-box-text-tablet {
-    display: none;
-}
-.white-box-text-mobile{
-    display: none;
-}
 .white-cascade-box li a:first-child {
     font-family: 'Roboto-Medium';
     font-size: 24px;
@@ -556,21 +487,21 @@ header {
     justify-content: flex-start;
     align-items: flex-start;
 }
-.white-box-row-container p {
+.white-box-row-container li p {
     font-family: 'ProductSansCrillyc';
     font-size: 16px;
     color: #333333;
     line-height: 24px;
     font-weight: 400;
     letter-spacing: 0.4px;
-    white-space: pre-line;
+    white-space:   unset;
 }
 .white-cascade-box-pentagon {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.pentagon-white-box-icon{
+.pentagon-white-box-icon {
     background: url('./images/upper-icon-white-box.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -584,7 +515,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
 }
-.star-white-box-icon{
+.star-white-box-icon {
     background: url('./images/middle-icon-white-box.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -598,7 +529,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
 }
-.triangle-white-box-icon{
+.triangle-white-box-icon {
     background: url('./images/lower-icon-white-box.png');
     background-position: center;
     background-repeat: no-repeat;
@@ -621,17 +552,11 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    /* white-space: pre-line; */
+    /* white-space:   unset; */
 }
 .gray-cascade-box-header {
     margin-left: 60px;
     margin-top: 60px;
-}
-.gray-box-text-tablet {
-    display: none;
-}
-.gray-box-text-mobile {
-    display: none;
 }
 .gray-cascade-box-header li{
     font-family: 'Roboto-Medium';
@@ -648,7 +573,7 @@ header {
     align-items: flex-start;
     margin-left: 60px;
     margin-top: 56px;
-    white-space: pre-line;
+    white-space:   unset;
 }
 .square-icon {
     background: url('./images/upper-icon-gray-box.png');
@@ -673,7 +598,7 @@ header {
     align-items: flex-start;
     margin-left: 60px;
     margin-top: 60px;
-    white-space: pre-line;
+    white-space:   unset;
 }
 .circle-icon {
     background: url('./images/middle-icon-gray-box.png');
@@ -699,7 +624,7 @@ header {
     margin-left: 60px;
     margin-top: 60px;
     margin-bottom: 80px;
-    white-space: pre-line;
+    white-space:   unset;
 }
 .hexagon-icon {
     background: url('./images/lower-icon-gray-box.png');
@@ -737,7 +662,7 @@ header {
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
-    white-space: pre-line;
+    white-space:   unset;
 }
 .feedback-upper-line {
     width: 913px;
@@ -903,13 +828,13 @@ footer {
     /* height: 59px; */
     display: flex;
     justify-content: center;
-    white-space: pre-line;
+    white-space:   unset;
     /* top: 1274px; */
     /* right: 1121px; */
     /* position: absolute; */
     /* margin-right: 927px; */
 }
-.footer-text p {
+.footer-text  {
     font-family: 'ProductSansCrillyc';
     font-size:  16px;
     line-height: 32px;
