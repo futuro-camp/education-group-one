@@ -4,28 +4,28 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Safor</title>
-        <meta name="description" content="">
+        <meta name="description">
         <meta name="viewport" content="width=width-device, initial-scale=1">
-        <link rel="stylesheet" href="./styles.css" type="text/css">
-        <link rel="stylesheet" href="./fonts.css" type="text/css">
-        <link rel="stylesheet" href="./media.css" type="text/css">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="stylesheet" href="fonts.css" type="text/css">
+        <link rel="stylesheet" href="media.css" type="text/css">
     </head>
     <body>
         <header>
-            <div class="logo-keeper">
-                <a href="#"> <img src="./images/logo.png" /> </a>
+            <div class="logo-wrapper">
+                <a href="#"> <img src="images/logo.png" /> </a>
             </div>
-            <nav class="nav-keeper">
-                <div class="nav-item">
+            <ul class="nav-container">
+                <li class="nav-item">
                     <a href="#">How it works</a>
-                </div>
-                <div class="nav-item middle-item">
+                </li>
+                <li class="nav-item">
                     <a href="#">About</a>
-                </div>
-                <div class="nav-item">
+                </li>
+                <li class="nav-item">
                         <a href="#">Contacts</a>
-                </div>
-            </nav>
+                </li>
+            </ul>
         </header>
         <div class="main-box">
             <div class="lines-background">
@@ -128,120 +128,76 @@
                     </p>
                 </div>
             </div>
-            <div class="middle-content-box">
+            < class="middle-content-box">
                 <div class="orange-box">
-                    <!-- <div class="orange-box-content">
-                        <div class="text-install-registration">
-                            <div class="text-install-registration-label">
-                                <p>
-                                    HOW IT WORKS
-                                </p>
-                            </div>
-                            <div class="text-install">
-                                <p>
-                                    Install app IOS / ANDROID
-                                </p>
-                            </div>
-                            <div class="text-registration">
-                                <p>
-                                    Complete<br>
-                                    the registration
-                                </p>
-                            </div>
+                </div>
+                <div class="orange-box-content">
+                    <div class="text-install-registration">
+                        <div class="text-install-registration-label">
+                            <p>
+                                HOW IT WORKS
+                            </p>
                         </div>
-                        <div class="text-secure-box">
-                            <div class="secure-header">
-                                <h1>
-                                    SECURE<br>
-                                    YOUR LIFE IN ONE TAP
-                                </h1>
-                            </div>
-                            <div class="secure-text">
-                                <p>
-                                    Additional
-                                </p>
-                                <p>
-                                    Set up your home and office locations to
-                                    simplify your search in the city.<br>
-                                    Add your family contact to notify
-                                    them in dangerous situation
-                                </p>
-                            </div>
+                        <div class="text-install">
+                            <p>
+                                Install app<br class="mobile-on"> IOS / ANDROID
+                            </p>
                         </div>
-                        <div class="left-phone">
-                            <img src="./images/left-phone.png"/>
-                        </div>
-                        <div class="right-phone">
-                            <img src="./images/right-phone.png"/>
-                        </div>
-                    </div> -->
-                    </div>
-                    <div class="orange-box-content">
-                        <div class="text-install-registration">
-                            <div class="text-install-registration-label">
-                                <p>
-                                    HOW IT WORKS
-                                </p>
-                            </div>
-                            <div class="text-install">
-                                <p>
-                                    Install app<br class="mobile-on"> IOS / ANDROID
-                                </p>
-                            </div>
-                            <div class="text-registration">
-                                <p>
-                                    Complete<br>
-                                    the registration
-                                </p>
-                            </div>
-                        </div>
-                        <div class="text-secure-box">
-                            <div class="secure-header">
-                                <h1>
-                                    SECURE<br class="mobile-off">
-                                    YOUR<br class="mobile-on"> LIFE IN ONE TAP
-                                </h1>
-                            </div>
-                            <div class="secure-text">
-                                <p>
-                                    Additional
-                                </p>
-                                <p>
-                                    Set up your home and office locations to
-                                    simplify your search<br class="mobile-on">
-                                    in the city.<br class="mobile-off">
-                                    Add your family contact to notify
-                                    them in dangerous<br class="mobile-on"> situation
-                                </p>
-                            </div>
-                        </div>
-                        <div class="left-phone">
-                            <img src="./images/phone_1.png"/>
-                            <!-- <img src="./images/left-phone.png"/> -->
-                        </div>
-                        <div class="right-phone">
-                            <img src="./images/phone_2.png"/>
-                            <!-- <img src="./images/right-phone.png"/> -->
+                        <div class="text-registration">
+                            <p>
+                                Complete<br>
+                                the registration
+                            </p>
                         </div>
                     </div>
-                <div class="advantages">
-                    <div class="advantages-question">
+                    <div class="text-secure-box">
+                        <div class="secure-header">
+                            <h1>
+                                SECURE<br class="mobile-off">
+                                YOUR<br class="mobile-on"> LIFE IN ONE TAP
+                            </h1>
+                        </div>
+                        <div class="secure-text">
+                            <p>
+                                Additional
+                            </p>
+                            <p>
+                                Set up your home and office locations to
+                                simplify your search<br class="mobile-on">
+                                in the city.<br class="mobile-off">
+                                Add your family contact to notify
+                                them in dangerous<br class="mobile-on"> situation
+                            </p>
+                        </div>
+                    </div>
+                    <div class="left-phone">
+                        <img src="images/phone_1.png"/>
+                        <!-- <img src="images/left-phone.png"/> -->
+                    </div>
+                    <div class="right-phone">
+                        <img src="images/phone_2.png"/>
+                        <!-- <img src="images/right-phone.png"/> -->
+                    </div>
+                </div>
+                <ul class="advantages">
+                    <li class="advantages-question">
                         <p>WHY SAFOR?</p>
-                    </div>
-                    <div class="advantages-item">
+                    </li>
+                    <li class="advantages-item">
                         <h1>Reliability</h1>
                         <p>
                             You do not need to worry that you will be far from
-                            the city or<br class="mobile-on"> you will be hard to find in a urbanjungle
+                            the city or<br class="mobile-on"> you will be hard
+                            to find in a urbanjungle
                         </p>
-                    </div>
-                    <div class="advantages-item">
+                    </li>
+                    <li class="advantages-item">
                         <h1>Speed</h1>
                         <p>
                             Do not waste time explaining the situation
                             and describing what<br class="mobile-on"> is happening
                         </p>
-                    </div>
+                    </li>
                     <div class="advantages-item">
                         <h1>Anonymity</h1>
                         <p>
@@ -249,15 +205,15 @@
                             help only with your<br class="mobile-on"> consent
                         </p>
                     </div>
-                </div>
+                </ul>
             </div>
             <div class="lower-content-box">
-                <div class="white-cascade-box">
-                            <div class="white-cascade-box-header">
-                                <a href="#">FOR PEOPLE</a>
-                            </div>
-                            <div class="white-box-row-keeper">
-                                <div class="white-cascade-box-upper">
+                <ul class="white-cascade-box">
+                    <div class="white-cascade-box-header">
+                        <a href="#">FOR PEOPLE</a>
+                    </div>
+                    <div class="white-box-row-keeper">
+                        <div class="white-cascade-box-upper">
                                 <div class="upper-white-box-icon"></div>
                                     <p class="white-box-text-pc">
                                     Do not waste time to explain your location and nature of
@@ -274,8 +230,8 @@
                                     the threat,<br> guard patrols get your alarm in 1 second and
                                     advances to you no<br> matter whether you are in motion or not.
                                     </p>
-                                </div>
-                                <div class="white-cascade-box-middle">
+                        </div>
+                        <div class="white-cascade-box-middle">
                                     <div class="middle-white-box-icon"></div>
                                     <p class="white-box-text-pc">
                                     You will be foundregardless of whether you are in town or on a trip.<br>
@@ -296,8 +252,8 @@
                                     allows you<br> to specify<br>
                                     the exact location even when in a crowded place
                                     </p>
-                                </div>
-                                <div class="white-cascade-box-lower">
+                        </div>
+                        <div class="white-cascade-box-lower">
                                     <div class="lower-white-box-icon"></div>
                                     <p class="white-box-text-pc">
                                     And we will help in any situation. Only after coming to you the
@@ -316,9 +272,9 @@
                                     will be closed by the patrol arrived, whose goal is to
                                     protect and help<br> you.
                                     </p>
-                                </div>
-                            </div>
-                </div>
+                        </div>
+                    </div>
+                </ul>
                 <div class="gray-cascade-box">
                             <div class="gray-cascade-box-header">
                                 <a href="#">
@@ -416,8 +372,8 @@
         </div>
         <footer>
             <div class="footer-item left">
-                <div class="footer-logo-keeper">
-                    <a href="#"><img src="./images/logo.png" /></a>
+                <div class="footer-logo-wrapper">
+                    <a href="#"><img src="images/logo.png" /></a>
                 </div>
             </div>
             <div class="footer-item right">
@@ -431,13 +387,13 @@
                 </div>
                 <div class="footer-social">
                     <div class="social f">
-                        <a href="#"><img src="./images/f.png" /></a>
+                        <a href="#"><img src="images/f.png" /></a>
                     </div>
                     <div class="social i">
-                        <a href="#"><img src="./images/i.png" /></a>
+                        <a href="#"><img src="images/i.png" /></a>
                     </div>
                     <div class="social in">
-                        <a href="#"><img src="./images/in.png" /></a>
+                        <a href="#"><img src="images/in.png" /></a>
                     </div>
                 </div>
             </div>

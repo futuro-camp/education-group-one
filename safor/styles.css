@@ -17,21 +17,19 @@ header {
     flex-direction: row;
     align-items: center;
 }
-.logo-keeper {
-    /* background: url('./images/logo.png'); */
+.logo-wrapper {
     background-repeat: no-repeat;
     background-position: center;
-    width: 66px;  /* 2.58vw по линейке макета*/
     height: 20px;
     float: left;
     margin-left: 80px;
     margin-top: 67px;
     margin-bottom: 153px;
 }
-.logo-keeper:hover{
+.logo-wrapper:hover{
     background-color: #f76612;
 }
-.nav-keeper {
+.nav-container {
     float: right;
     margin-right: 79px;
     margin-top: 60px;
@@ -39,11 +37,11 @@ header {
     display: flex;
     flex-direction: row;
 }
-.middle-item {
+.nav-container li:nth-child(2) {
     margin-left: 47px;
     margin-right: 48px;
 }
-.nav-keeper a {
+.nav-container a {
     color: #ffffff;
     font-family: 'ProductSansCrillyc';
     font-size: 16px;
@@ -51,7 +49,7 @@ header {
     letter-spacing: 0.7px;
     text-decoration: none;
 }
-.nav-keeper a:hover {
+.nav-container a:hover {
     color: lightcoral;
     border: 1px dashed snow;
 }
@@ -591,7 +589,6 @@ header {
     margin-top: 80px;
     margin-bottom: 21px;
 }
-
 .gray-cascade-box{
     position: absolute;
     width: 980px;
@@ -818,22 +815,6 @@ button p {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-/* .footer-text {
-    width: 539px;
-    height: 59px;
-    top: 1274px;
-    right: 1121px;
-    position: absolute;
-}
-.footer-text p {
-    font-family: 'ProductSansCrillyc';
-    font-size:  16px;
-    line-height: 32px;
-    font-weight: 400;
-    letter-spacing: 0.7px;
-    color: #ffffff;
-} */
-
 /* FOOTER BLOCK */
 footer {
     /* height: 284px; */
@@ -844,19 +825,19 @@ footer {
     margin-bottom: 82px;
     z-index: 14;
 }
-.footer-logo-keeper{
-    /*width: 66px;*/                    /*!!!!!!!!!!!!!!!! 2.58vw по линейке макета*/
+.footer-logo-wrapper{
+    /*width: 66px;*/
     /* height: 20px; */
     /* margin-top: 182px; */
     /* margin-left: 80px; */
     /* margin-bottom: 82px; */
 }
-.footer-logo-keeper a {
+.footer-logo-wrapper a {
     margin-left: 80px;
     /* width: 2.58vw;
     height: 1.25vw; */
 }
-.footer-logo-keeper:hover{
+.footer-logo-wrapper:hover{
     background-color: #f76612;
 }
 .footer-social {
