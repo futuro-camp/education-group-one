@@ -1,16 +1,4 @@
 @font-face {
-    font-family: 'DrukWideBold';
-    src: url('./fonts/DrukWideBold.otf');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'DrukWideHeavy';
-    src: url('./fonts/DrukWideHeavy.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'Roboto-Medium';
     src: url('./fonts/ProductSansCrillyc.ttf');
     font-weight: normal;
