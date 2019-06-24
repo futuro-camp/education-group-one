@@ -250,7 +250,19 @@
     .video-description{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        width: calc(100% - 21.68%);
+        margin-right: 50px;
+    }
+    .video-description-item:nth-child(1) {
+        width: 100%;
+    }
+    .left-column p:nth-child(2) {
+        width: 100%;
+    }
+    .right-column {
+        margin-left: 0px;
+        width: 100%;
     }
     /* MIDDLE BOX */
     .orange-box {
@@ -398,6 +410,10 @@
     }
     .video-box-line-second{
         margin-left: 40px;
+    }
+    .video-description{
+        min-width: 508px;
+        margin-left: 30px;
     }
     /* MIDDLE BOX */
     .middle-content-box {
