@@ -8,7 +8,7 @@
 /* #region Header */
 
 header {
-    background: url("/background/Header/Header_bg.png"), 
+    background: url("background/Header/Header_bg.png"), 
                 linear-gradient(39deg, #cb0035 0%, #e06900 100%);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -358,7 +358,7 @@ header nav {
 /* #endregion */
 /* #region Info*/
 .info-sec {
-    background-image: url("/background/info-section/Drone.png");
+    background-image: url("background/info-section/Drone.png");
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 35vw;
@@ -566,11 +566,11 @@ header nav {
 }
 
 #first {
-    background-image: url("/background/portfolio-section/foto_top.png");
+    background-image: url("background/portfolio-section/foto_top.png");
 }
 
 #second {
-    background-image: url("/background/portfolio-section/foto_bottom.png");
+    background-image: url("background/portfolio-section/foto_bottom.png");
 }
 
 @media screen and (max-width: 1200px) {
@@ -658,7 +658,7 @@ header nav {
 /* #region Newsettlers*/
 .newsletter-sec {
     height: 489px;
-    background: url("/background/newsletter-section/bg_image.png"),
+    background: url("background/newsletter-section/bg_image.png"),
     linear-gradient(39deg, #cb0035 0%, #e06900 100%);
     background-blend-mode: soft-light;
     background-size: cover;
@@ -753,7 +753,7 @@ input:focus {
 /* #region Map*/
 .map {
     height: 607px;
-    background-image: url("/background/map-section/bg.png");
+    background-image: url("background/map-section/bg.png");
     background-size: cover;
     background-position: center;
 }
