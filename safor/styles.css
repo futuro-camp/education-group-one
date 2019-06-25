@@ -5,10 +5,10 @@
     /* border: 1px solid blue; */
 }
 ul {
-    padding-left: 0px;
+    padding-left:0;
 }
 li {
-    padding-left: 0px;
+    padding-left:0;
 }
 body {
     /* background-color: darkolivegreen; */
@@ -124,7 +124,7 @@ header {
 .headline-header{
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     width: 478px;
     color: #ffffff;
     font-size: 44px;
@@ -238,7 +238,6 @@ header {
     font-size:  16px;
     line-height: 32px;
     letter-spacing: 0.7px;
-    line-height: 32px;
     font-weight: 400;
     color: #ffffff;
 }
@@ -258,7 +257,7 @@ header {
     z-index: 10;
     position: absolute;
     bottom: 1153px;
-    left: 0px;
+    left:0;
     top: -160px;
     display: flex;
     flex-direction: row;
@@ -267,7 +266,7 @@ header {
 .orange-box-content {
     width: 592px;
     height: 1363px;
-    margin: 0px 1068px 250px 0px;
+    margin:0 1068px 250px 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -392,7 +391,7 @@ header {
     font-weight: 400;
     letter-spacing: 1px;
 }
-.advantages-item h1 {
+.advantages-item p:first-child {
     font-family: 'Roboto-Bold';
     font-size: 34px;
     color: #121212;
@@ -400,7 +399,7 @@ header {
     font-weight: 800;
     letter-spacing: 0.5px;
 }
-.advantages-item p {
+.advantages-item p:nth-child(2) {
     font-family: 'ProductSansCrillyc';
     font-size:  16px;
     color: #121212;
@@ -418,11 +417,11 @@ header {
     right: 764px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: flex-start;
     justify-content: flex-start;
     flex-wrap: nowrap;
-    padding-left: 0px;
+    padding-left:0;
 }
 .white-cascade-box li a:first-child {
     font-family: 'Roboto-Medium';
@@ -441,7 +440,7 @@ header {
     z-index: 20;
 }
 .white-cascade-box-header {
-    padding-left: 0px;
+    padding-left:0;
 }
 .white-box-row-container{
     display: flex;
