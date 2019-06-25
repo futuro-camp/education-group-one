@@ -4225,15 +4225,15 @@ body {
   }
   .two_text li:nth-child(1) {
     width: 76.8vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(2) {
     width: 76.8vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(3) {
     width: 76.8vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   /* #endregion */
   /* #endregion */
@@ -4671,15 +4671,15 @@ body {
   }
   .two_text li:nth-child(1) {
     width: 80vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(2) {
     width: 80vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(3) {
     width: 80vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   /* #endregion */
   /* #endregion */
@@ -5078,15 +5078,15 @@ body {
   }
   .two_text li:nth-child(1) {
     width: 90vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(2) {
     width: 90vw;
-    margin-left: 0vw;
+    margin-left: 0;
   }
   .two_text li:nth-child(3) {
     width: 90vw;
-    margin-left: 0vw;
+    margin-left: 0  ;
   }
   /* #endregion */
   /* #endregion */
