@@ -18,6 +18,10 @@
 
 /* #region General */
 
+#absolute {
+    position: absolute;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -28,7 +32,7 @@
     cursor: pointer;
 }
 
-.border_btn:hover {
+#border_btn:hover {
     border: transparent;
     background-color: #ffc74a;
     color: #b98000;
@@ -151,7 +155,7 @@ input:focus {
     font-weight: 400;
 }
 
-.top_text h1 {
+.top_text_headline {
     text-align: center;
     color: #ffffff;
     font-size: 4.37vw;
@@ -232,42 +236,36 @@ input:focus {
     background-size: 100%;
 }
 
-.categories .container div:nth-child(2n) h1,
-.categories .container div:nth-child(3) h1 {
+.categories_headline {
     margin-top: 16.59vw;
     color: #ffffff;
     font-size: 1.56vw;
     font-weight: 700;
 }
 
-.categories .container div:nth-child(2n) p,
-.categories .container div:nth-child(3) p {
+.categories_paragraph {
     margin-top: 0.36vw;
     color: #ffc74a;
     font-size: 0.72vw;
     font-weight: 400;
 }
 
-.categories .container div:nth-child(2n) h2,
-.categories .container div:nth-child(3) h2 {
+.categories_btn {
     display: none;
 }
 
-.categories .container div:nth-child(2n):hover h1,
-.categories .container div:nth-child(3):hover h1 {
+.categories .container div:hover .categories_headline {
     margin-top: 10.25vw;
     opacity: 0.9;
     font-size: 2.5vw;
 }
 
-.categories .container div:nth-child(2n):hover p
-.categories .container div:nth-child(3):hover p {
+.categories .container div:hover .categories_paragraph {
     margin-top: 0.41vw;
     color: #ffffff;
 }
 
-.categories .container div:nth-child(2n):hover h2,
-.categories .container div:nth-child(3):hover h2 {
+.categories .container div:hover .categories_btn {
     margin-top: 2.86vw;
     border: 0.05vw solid #ffc74a;
     color: #ffc74a;
@@ -280,8 +278,6 @@ input:focus {
     display: inline-block;
 }
 
-
-
 /* #endregion */
 
 /* #region Search */
@@ -292,7 +288,7 @@ input:focus {
     top: 14.3vw;
 }
 
-.search > h2 {
+.search_headline {
     text-align: center;
     color: #606f81;
     font-size: 1.56vw;
@@ -413,10 +409,10 @@ input:focus {
     display: block;
     width: 18.26vw;
     height: 8.79vw;
-    margin: 0.52vw 0.52vw 0vw 0.52vw;
+    margin: 0.52vw 0.52vw 0 0.52vw;
 }
 
-.search_boxes_text h2 {
+.search_boxes_text_headline {
     color: #606f81;
     font-size: 1.56vw;
     font-weight: 400;
@@ -498,7 +494,7 @@ input:focus {
     width: 42.5vw;
 }
 
-.exploreCity_content > h3 {
+.exploreCity_content_headline {
     text-align: center;
     color: #606f81;
     font-size: 1.56vw;
@@ -516,7 +512,7 @@ input:focus {
     width: 29.24vw;
 }
 
-.exploreCity_content > div div:first-child h2 {
+.exploreCity_content_div_headline {
     color: #f8c759;
     font-size: 1.87vw;
     font-weight: 700;
@@ -524,7 +520,7 @@ input:focus {
     margin: 0.73vw 0 2.8vw 0;
 }
 
-.exploreCity_content > div div:first-child p {
+.exploreCity_content_div_par {
     color: #606f81;
     font-size: 0.73vw;
     font-weight: 400;
@@ -532,7 +528,7 @@ input:focus {
     letter-spacing: 0.01vw;
 }
 
-.exploreCity_content > div div:first-child h3 {
+.exploreCity_content_div_btn {
     border: 0.05vw solid #ffc74a;
     color: #ffc74a;
     font-size: 0.73vw;
@@ -578,13 +574,13 @@ input:focus {
     justify-content: center;
 }
 
-.signUp h1 {
+.signUp_headline {
     color: #ffffff;
     font-size: 4.79vw;
     font-weight: 700;
 }
 
-.signUp h2 {
+.signUp_btn {
     border: 0.05vw solid #ffc74a;
     color: #ffc74a;
     font-size: 0.72vw;
@@ -597,7 +593,7 @@ input:focus {
     margin-top: 1.61vw;
 }
 
-.signUp h2:hover {
+.signUp_btn:hover {
     margin-top: 1.66vw;
     margin-bottom: 0.05vw;
 }
@@ -629,7 +625,7 @@ input:focus {
     align-items: center;
 }
 
-.footer h1 {
+.footer_background {
     position: absolute;
     width: 61.13vw;
     bottom: 0;
@@ -649,7 +645,7 @@ input:focus {
     height: 3.17vw;
 }
 
-.footer h2 {
+.footer_headline {
     color: #606f81;
     margin-top: 1.25vw;
     font-family: Montserrat;
@@ -718,7 +714,7 @@ input:focus {
         font-weight: 400;
     }
 
-    .top_text h1 {
+    .top_text_headline {
         font-size: 13.11vw;
         line-height: 12.63vw;
     }
@@ -747,31 +743,26 @@ input:focus {
         width: 38.6vw;
     }
 
-    .categories .container div:nth-child(2n) h1,
-    .categories .container div:nth-child(3) h1 {
+    .categories_headline {
         margin-top: 33.18vw;
         font-size: 3.12vw;
     }
     
-    .categories .container div:nth-child(2n) p,
-    .categories .container div:nth-child(3) p {
+    .categories_paragraph {
         margin-top: 0.72vw;
         font-size: 1.44vw;
     }
     
-    .categories .container div:nth-child(2n):hover h1,
-    .categories .container div:nth-child(3):hover h1 {
+    .categories .container div:hover .categories_headline {
         margin-top: 20.5vw;
         font-size: 5vw;
     }
     
-    .categories .container div:nth-child(2n):hover p
-    .categories .container div:nth-child(3):hover p {
+    .categories .container div:hover .categories_paragraph {
         margin-top: 0.82vw;
     }
     
-    .categories .container div:nth-child(2n):hover h2,
-    .categories .container div:nth-child(3):hover h2 {
+    .categories .container div:hover .categories_btn {
         margin-top: 5.72vw;
         border: 0.1vw solid #ffc74a;
         font-size: 1.44vw;
@@ -786,7 +777,7 @@ input:focus {
         top: 28.6vw;
     }
     
-    .search > h2 {
+    .search_headline {
         font-size: 4.68vw;
         line-height: 1.6vw;
         letter-spacing: 0.004vw;
@@ -844,7 +835,7 @@ input:focus {
     
     .search_boxes {
         top: 12vw;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     
     .search_boxes > div {
@@ -857,10 +848,10 @@ input:focus {
     .search_boxes > div img {
         width: 36.52vw;
         height: 16.58vw;
-        margin: 1.04vw 1.04vw 0vw 1.04vw;
+        margin: 1.04vw 1.04vw 0 1.04vw;
     }
     
-    .search_boxes_text h2 {
+    .search_boxes_text_headline {
         font-size: 3.12vw;
         letter-spacing: 0.02vw;
         padding-top: 2.9vw;
@@ -900,14 +891,14 @@ input:focus {
         width: 68.25vw;
     }
     
-    .exploreCity_content > h3 {
+    .exploreCity_content_headline {
         font-size: 4.68vw;
     }
     
     .exploreCity_content > div {
         flex-direction: column;
         align-items: center;
-        justify-content: left;
+        justify-content: flex-start;
         height: 100%;
     }
     
@@ -915,16 +906,16 @@ input:focus {
         width: 80vw;
     }
     
-    .exploreCity_content > div div:first-child h2 {
+    .exploreCity_content_div_headline {
         font-size: 4.11vw;
     }
     
-    .exploreCity_content > div div:first-child p {
+    .exploreCity_content_div_par {
         font-size: 2.19vw;
         line-height: 4.68vw;
     }
     
-    .exploreCity_content > div div:first-child h3 {
+    .exploreCity_content_div_btn {
         border: 0.1vw solid #ffc74a;
         font-size: 2.19vw;
         margin: 30% 5%;
@@ -944,11 +935,11 @@ input:focus {
         background-position: center;
     }
     
-    .signUp h1 {
+    .signUp_headline {
         font-size: 7.18vw;
     }
     
-    .signUp h2 {
+    .signUp_btn {
         border: 0.1vw solid #ffc74a;
         font-size: 2.16vw;
         letter-spacing: 0.1vw;
@@ -957,7 +948,7 @@ input:focus {
         margin-top: 4.83vw;
     }
     
-    .signUp h2:hover {
+    .signUp_btn:hover {
         margin-top: 4.93vw;
         margin-bottom: 0.1vw;
     }
@@ -972,7 +963,7 @@ input:focus {
         width: 100%;
     }
     
-    .footer h1 {
+    .footer_background {
         position: absolute;
         top: 20%;
         left: 5%;
@@ -986,7 +977,7 @@ input:focus {
         height: 6.34vw;
     }
     
-    .footer h2 {
+    .footer_headline {
         margin-top: 1.25vw;
         font-size: 2.5vw;
     }
@@ -1015,10 +1006,10 @@ input:focus {
     .search_boxes > div img {
         width: 73.04vw;
         height: 33.16vw;
-        margin: 2.08vw 2.08vw 0vw 2.08vw;
+        margin: 2.08vw 2.08vw 0 2.08vw;
     }
     
-    .search_boxes_text h2 {
+    .search_boxes_text_headline {
         font-size: 6.24vw;
         letter-spacing: 0.02vw;
         padding-top: 5.8vw;
