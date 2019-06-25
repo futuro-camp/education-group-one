@@ -18,6 +18,13 @@ p {
     margin: 0;
 }
 
+@media screen and (max-device-width: 567px) {
+    p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
 h1 {
     color: #ffffff;
     font-family: "Roboto-Bold";
@@ -27,6 +34,13 @@ h1 {
     line-height: 64px;
     text-transform: uppercase;
     margin: 0;
+}
+
+@media screen and (max-device-width: 567px) {
+    h1 {
+        font-size: 16px;
+        line-height: 28px;
+    }
 }
 
 h2 {
@@ -40,6 +54,13 @@ h2 {
     margin: 0;
 }
 
+@media screen and (max-device-width: 567px) {
+    h2 {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
 h3 {
     color: #121212;
     font-family: "Product Sans";
@@ -49,6 +70,13 @@ h3 {
     line-height: 24px;
     text-transform: uppercase;
     margin: 0;
+}
+
+@media screen and (max-device-width: 567px) {
+    h3 {
+        font-size: 12px;
+        line-height: 20px;
+    }
 }
 
 .header {
@@ -70,9 +98,22 @@ h3 {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .header {
+        margin: 16px 17px 0 16px;
+    }
+}
+
 .logo {
     height: 20px;
     width: 66px;
+}
+
+@media screen and (max-device-width: 567px) {
+    .logo {
+        height: 16px;
+        width: 53px;
+    }
 }
 
 ul.horizontal-list {
@@ -83,6 +124,12 @@ ul.horizontal-list {
     list-style: none;
     text-align: right;
     word-spacing: 47px;
+}
+
+@media screen and (max-device-width: 567px) {
+    ul.horizontal-list {
+        word-spacing: 20px;
+    }
 }
 
 ul.horizontal-list li {
@@ -173,9 +220,22 @@ ul.horizontal-list li a:hover {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .headline h1 {
+        width: 167px;
+        height: 52px;
+    }
+}
+
 @media screen and (max-device-width: 759px) {
     .headline h1 br {
         display: none;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    .headline h1 br {
+        display: block;
     }
 }
 
@@ -195,6 +255,13 @@ ul.horizontal-list li a:hover {
     .headline p {
         width: 493px;
         height: 96px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    .headline p {
+        width: 288px;
+        height: 80px;
     }
 }
 
@@ -419,6 +486,14 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .aboutsafor {
+        width: 288px;
+        height: 200px;
+        margin: 20px 17px 60px 71px;
+    }
+}
+
 .aboutsafor p {
     width: 540px;
     height: 192px;
@@ -437,6 +512,15 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .aboutsafor p {
+        width: 288px;
+        height: 150px;
+        line-height: 17px;
+        margin-right: 0;
+    }
+}
+
 #aboutp {
     width: 320px;
     height: 96px;
@@ -451,6 +535,15 @@ hr {
 @media screen and (max-device-width: 759px) {
     #aboutp {
         width: 508px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #aboutp {
+        width: 288px;
+        height: 50px;
+        line-height: 17px;
+        margin-right: 0;
     }
 }
 
@@ -509,6 +602,15 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .three {
+        height: 1424px;
+        background-image: url(Rectangle_3_567.png), url(back.png);
+        background-position-x: 0px, 100%;
+        background-position-y: 0px, 100%;
+    }
+}
+
 .threetext {
     position: absolute;
     margin: 124px 0 0 904px;
@@ -557,6 +659,13 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .threetext {
+        width: 288px;
+        margin: 60px 0 0 71px;
+    }
+}
+
 .threetext h3 {
     margin-bottom: 57px;
 }
@@ -587,6 +696,14 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .threetext img {
+        width: 180px;
+        height: 2px;
+        margin: 0 0 132px 0;
+    }
+}
+
 #threeh2border {
     margin-bottom: 0;
 }
@@ -595,6 +712,13 @@ hr {
     #threeh2border {
         width: 237px;
         height: 112px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #threeh2border {
+        width: 115px;
+        height: 52px;
     }
 }
 
@@ -654,6 +778,14 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    #threeimg1 {
+        width: 203px;
+        height: 200px;
+        margin: 236px 0 0 155px;
+    }
+}
+
 #threeimg2 {
     margin: 124px 295px 190px 1230px;
 }
@@ -700,6 +832,14 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    #threeimg2 {
+        width: 195px;
+        height: 200px;
+        margin: 60px 0 0 164px;
+    }
+}
+
 #threeshortp {
     width: 81px;
     height: 27px;
@@ -721,6 +861,13 @@ hr {
     #threelongp {
         width: 508px;
         height: 72px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #threelongp {
+        width: 288px;
+        height: 60px;
     }
 }
 
@@ -771,6 +918,14 @@ hr {
         width: 508px;
         height: 543px;
         margin: 0 0 0 30px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    .four {
+        width: 288px;
+        height: 392px;
+        margin: 0 0 0 71px;
     }
 }
 
@@ -1000,6 +1155,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .six {
+        width: 288px;
+    }
+}
+
 .six h1 {
     width: 402px;
     height: 123px;
@@ -1047,6 +1208,14 @@ hr {
         width: 281px;
         height: 187px;
         margin: 124px 0 0 30px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    .six h1 {
+        width: 141px;
+        height: 52px;
+        margin: 60px 0 0 71px;
     }
 }
 
@@ -1104,6 +1273,13 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    .six div {
+        margin: 64px 0 0 71px;
+        width: 288px;
+    }
+}
+
 input {
     border: 0;
     border-bottom: 1px solid #dbdbdb;
@@ -1139,6 +1315,12 @@ input {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    input {
+        width: 288px;
+    }
+}
+
 #biginput {
     width: 912px;
 }
@@ -1161,6 +1343,12 @@ input {
     }
 }
 
+@media screen and (max-device-width: 567px) {
+    #biginput {
+        width: 288px;
+    }
+}
+
 #inputbutton {
     width: 232px;
     height: 72px;
@@ -1174,6 +1362,13 @@ input {
     letter-spacing: 1px;
     line-height: 24px;
     text-transform: uppercase;
+}
+
+@media screen and (max-device-width: 567px) {
+    #inputbutton {
+        width: 288px;
+        height: 60px;
+    }
 }
 
 .modal {
@@ -1221,6 +1416,13 @@ input {
     .footer-tablet {
         width: 340px;
         margin: 200px 47px 69px 40px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    .footer-tablet {
+        width: 231px;
+        margin: 120px 74px 69px 71px;
     }
 }
 
