@@ -128,7 +128,7 @@ header {
     width: 478px;
     color: #ffffff;
     font-size: 44px;
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Medium';
     line-height: 64px;
     letter-spacing: 1px;
     font-weight: 800;
@@ -182,7 +182,7 @@ header {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
-    align-items: baseline;
+    align-items: center;
     min-width: 130px;
 }
 .video-box-line-second p {
@@ -293,7 +293,7 @@ header {
     margin-bottom: 113px;;
 }
 .text-install  {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Medium';
     font-size: 34px;
     letter-spacing: 0.5px;
     line-height: 60px;
@@ -309,7 +309,7 @@ header {
     margin-bottom: 593px;
 }
 .text-registration  {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Medium';
     font-size: 34px;
     letter-spacing: 0.5px;
     line-height: 60px;
@@ -326,7 +326,7 @@ header {
 }
 .secure-header {
     margin-bottom: 191px;
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Medium';
     font-size: 34px;
     letter-spacing: 0.5px;
     line-height: 60px;
@@ -348,6 +348,13 @@ header {
 }
 .secure-text p:first-child {
     margin-bottom: 9px;
+}
+.os-link:hover {
+    color: #ffffff;
+}
+.os-link {
+    color: #121212;
+    text-decoration: underline;
 }
 .left-phone{
     z-index: 14;
@@ -392,7 +399,7 @@ header {
     letter-spacing: 1px;
 }
 .advantages-item p:first-child {
-    font-family: 'Roboto-Bold';
+    font-family: 'Roboto-Medium';
     font-size: 34px;
     color: #121212;
     line-height: 60px;
@@ -637,7 +644,7 @@ header {
     flex-wrap: wrap;
     align-items: flex-start;
 }
-.input-list li:nth-child(1){
+.input-list li:nth-child(1) input {
     width: 446px;
     font-family: 'ProductSansCrillyc';
     font-size: 16px;
@@ -647,11 +654,10 @@ header {
     letter-spacing: 0.7px;
     text-transform: uppercase;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #dbdbdb;
     margin-bottom: 60px;
+    border-bottom: 1px solid;
 }
-.input-list li:nth-child(2){
+.input-list li:nth-child(2) input {
     width: 446px;
     font-family: 'ProductSansCrillyc';
     font-size: 16px;
@@ -662,11 +668,11 @@ header {
     text-transform: uppercase;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #dbdbdb;
     margin-left: 18px;
     margin-bottom: 60px;
+    border-bottom: 1px solid;
 }
-.input-list li:nth-child(3){
+.input-list li:nth-child(3) input {
     width: 912px;
     font-family: 'ProductSansCrillyc';
     font-size: 16px;
@@ -676,8 +682,7 @@ header {
     letter-spacing: 0.7px;
     text-transform: uppercase;
     background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid;
 }
 .input-list li input {
     color: #ffffff;
@@ -687,6 +692,12 @@ header {
     text-transform: uppercase;
     background-color: transparent;
     border: none;
+    width: 446px;
+}
+.input-message input:last-child {
+    width: 912px;
+    /* border-color: #f76612; */
+    /* border-bottom: 1px solid #dbdbdb; */
 }
 .input-list li:focus {
     outline: none;
@@ -771,11 +782,23 @@ footer {
 .f {
     margin-right: 37px;
 }
-.i{
+.i {
     margin-right: 38px;
 }
 .in {
     margin-right: 80px;
+}
+.f img {
+    width: 9px;
+    height: 16px;
+}
+.i img {
+    width: 18px;
+    height: 18px;
+}
+.in img {
+    width: 14px;
+    height: 14px;
 }
 
 /* .first-section {

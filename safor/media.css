@@ -63,7 +63,14 @@
         margin-right: 307px;
     }
     .footer-text {
-        margin-right: 487px;
+        /* margin-right: 487px; */
+        margin-right: 247px;
+    }
+    .in {
+        margin-right: 0;
+    }
+    .social {
+        margin-right: 320px;
     }
 }
 @media only screen and (max-width: 1440px) {
@@ -110,6 +117,10 @@
     }
     .footer-text {
         margin-right: 247px;
+        /* margin-right: 290px; */
+    }
+    .social {
+        margin-right: 67px;
     }
 }
 @media only screen and (max-width: 1366px) {
@@ -214,6 +225,9 @@
     }
     .footer-text {
     margin-right:0;
+    }
+    .social{
+        margin-right: 37px;
     }
 }
 @media only screen and (max-width: 1160px) {
@@ -370,7 +384,6 @@
         margin-bottom: 60px;
     }
     .feedback-box {
-        width: calc(100% - 88px);
         margin-left: 41px;
         margin-right: 47px;
         align-items: flex-start;
@@ -381,7 +394,6 @@
         /* margin-bottom: 85px; */
     }
     .input-list  {
-        width: calc(100% - 88px);
         justify-content: flex-start;
         flex-direction: row;
     }
@@ -389,15 +401,15 @@
         margin-top: 80px;
         width: 509px;
     }
-    .input-list li:nth-child(1){
-        width: calc(50% - 53px);
+    .input-list li:nth-child(1) input{
+        width: 417px;
     }
-    .input-list li:nth-child(2){
-        width: calc(50% - 53px);
+    .input-list li:nth-child(2) input{
+        width: 417px;
         margin-left: 18px;
     }
-    .input-list li:nth-child(3){
-        width: calc(100% - 88px);
+    .input-list li:nth-child(3) input {
+        width: 852px;
     }
     /* FOOTER */
     footer {
@@ -420,6 +432,9 @@
         flex-direction: column;
         align-items: flex-start;
         margin-bottom: 69px;
+    }
+    .social {
+        margin-right: 37px;
     }
 }
 @media only screen and (max-width: 1001px) {
@@ -541,17 +556,16 @@
         margin-bottom: 60px;
     }
     .feedback-box {
-        width: calc(760px - 60px);
         height: 579px;
         margin-top: 1002px;
-        margin-left: 31px;
+        margin-left: 41px;
         margin-right: 29px;
         align-items: flex-start;
         flex-direction: column;
     }
-    .feedback-header {
+    /* .feedback-header {
         width: calc(760px - 60px);
-        /* margin-bottom: 85px; */
+        margin-bottom: 85px;
     }
     .input-list  {
         width: 509px;
@@ -562,25 +576,21 @@
         margin-top: 80px;
         width: calc(759px - 60px);
     }
-    .input-list li:nth-child(1){
-        width: calc(759px - 60px);
+    .input-list li:nth-child(1) input {
+        width: calc(755px - 60px);
     }
-    .input-list li:nth-child(2){
-        width: calc(759px - 60px);
-        margin-left:0;
+    .input-list li:nth-child(2) input {
+        width: calc(755px - 60px);
+    }
+    .input-list li:nth-child(2) {
+        margin-left: 0;
     }
     .input-list li:nth-child(3){
         width: calc(760px - 60px);
     }
-    .upper-input-row input:first-child {
-        margin-bottom: 60px;
-    }
-    .upper-input-row input:last-child {
-        margin-bottom: 60px;
-    }
-    .lower-input-row input {
-        width: 671px;
-    }
+    .input-message:nth-child(3) input {
+        width: calc(755px - 60px);
+    } */
     /* FOOTER */
     footer {
         flex-direction: column;
@@ -662,14 +672,14 @@
         margin-top: 80px;
         width: 509px;
     }
-    .input-list li:nth-child(1){
+    .input-list li:nth-child(1) input {
         width: 508px;
     }
-    .input-list li:nth-child(2){
+    .input-list li:nth-child(2) input {
         width: 508px;
         margin-left:0;
     }
-    .input-list li:nth-child(3){
+    .input-list li:nth-child(3) input {
         width: 508px;
     }
     .upper-input-row input:first-child {
@@ -770,9 +780,11 @@
     }
     .video-box-line-second  {
         margin-left: 103px;
+        margin-top: -12px;
     }
     .video-box-line-second p {
-        font-size:  12px;
+        font-size: 12px;
+        padding-left: 18;
     }
     .video-description {
         width: 288px;
@@ -802,10 +814,6 @@
         width: 288px;
         height: 792px;
         margin: -100px 17px 170px 71px;
-        /* margin-left: 71px;
-        margin-right: 17px;
-        margin-top: -100px;
-        margin-bottom: 170px; */
     }
     .text-install-registration-label {
         font-size:  12px;
@@ -985,6 +993,10 @@
     }
 }
 @media only screen and (max-width: 376px) {
+    .video-box-line-second {
+        margin-left: 103px;
+        margin-top: -12px;
+    }
     .orange-box-content {
         margin-left: 16px;
     }
@@ -1031,7 +1043,10 @@
         margin-left: 16px;
     }
     .feedback-box{
-        margin-left: 16px;
+        margin-left: 0;
+    }
+    footer {
+        margin-top: 120px;
     }
     .footer-logo {
         margin-left: 16px;
