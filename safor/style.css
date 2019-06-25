@@ -2181,7 +2181,7 @@ header img {
   text-transform: uppercase;
 }
 
-.forth-section h1 {
+.forth-section-headline{
   color: #121212;
   font-family: "Roboto";
   font-size: 1.32812vw;
@@ -2219,7 +2219,7 @@ header img {
   .forth-section .text {
     padding: 82.08333vw 0 0 30.20833vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 1.77083vw;
     letter-spacing: 0.02604vw;
     line-height: 3.125vw;
@@ -2247,7 +2247,7 @@ header img {
   .forth-section .text {
     padding: 93.80952vw 0 0 27.38095vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 2.02381vw;
     letter-spacing: 0.02976vw;
     line-height: 3.57143vw;
@@ -2275,7 +2275,7 @@ header img {
   .forth-section .text {
     padding: 109.44444vw 0 0 31.94444vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 2.36111vw;
     letter-spacing: 0.03472vw;
     line-height: 4.16667vw;
@@ -2303,7 +2303,7 @@ header img {
   .forth-section .text {
     padding: 115.37335vw 0 0 28.25769vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 2.48902vw;
     letter-spacing: 0.0366vw;
     line-height: 4.39239vw;
@@ -2331,7 +2331,7 @@ header img {
   .forth-section .text {
     padding: 123.125vw 0 0 23.4375vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 2.65625vw;
     letter-spacing: 0.03906vw;
     line-height: 4.6875vw;
@@ -2359,7 +2359,7 @@ header img {
   .forth-section .text {
     padding: 153.90625vw 0 0 16.79688vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 3.32031vw;
     letter-spacing: 0.04883vw;
     line-height: 5.85938vw;
@@ -2387,7 +2387,7 @@ header img {
   .forth-section .text {
     padding: 136.2vw 0 0 3.90625vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 3.4vw;
     letter-spacing: 0.05vw;
     line-height: 6vw;
@@ -2416,7 +2416,7 @@ header img {
     padding: 205.45775vw 0 0 5.28169vw;
     width: 89.43662vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 5.98592vw;
     letter-spacing: 0.08803vw;
     line-height: 10.56338vw;
@@ -2445,7 +2445,7 @@ header img {
     padding: 16vw 0 0 18.93333vw;
     width: 76.8vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 4.26667vw;
     letter-spacing: initial;
     line-height: 7.46667vw;
@@ -2475,7 +2475,7 @@ header img {
     padding: 16.66667vw 0 0 15.55556vw;
     width: 80vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 4.44444vw;
     line-height: 7.77778vw;
   }
@@ -2503,7 +2503,7 @@ header img {
     padding: 18.75vw 0 0 5vw;
     width: 90vw;
   }
-  .forth-section h1 {
+  .forth-section-headline{
     font-size: 5vw;
     line-height: 8.75vw;
   }
