@@ -4,7 +4,6 @@
     text-decoration: none;
     list-style: none;
 }
-
 /* #region Header */
 
 header {
@@ -96,7 +95,7 @@ header nav {
     margin-top: 11.4vw;
 }
 
-.slogan h1 {
+.slogan-headline {
     font-size: 48px;
     font-weight: 700;
     line-height: 36px;
@@ -121,7 +120,7 @@ header nav {
 
 .btns li {
     border: 1px solid #fff;
-    margin: 0px 11px;
+    margin: 0 11px;
     color: #d32721;
     background-color: #fff;
     border-radius: 25px;
@@ -210,7 +209,7 @@ header nav {
         font-size: 6.11vw;
     }
 
-    .slogan h1 {
+    .slogan-headline {
         font-size: 6.58vw;
         margin-top: 1.8vw;
     }
@@ -239,7 +238,7 @@ header nav {
         font-size: 6.11vw;
     }
 
-    .slogan h1 {
+    .slogan-headline {
         font-size: 6.58vw;
         margin-top: 1.8vw;
     }
@@ -294,7 +293,7 @@ header nav {
 #cards li {
     width: 268px;
     height: 211px;
-    margin: 116px 2.34vw 0px;
+    margin: 116px 2.34vw 0;
     text-align: center;
 }
 
@@ -365,7 +364,7 @@ header nav {
     width: 100%
 }
 
-.info-sec h2 {
+.infosec-headline {
     background-image: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -382,7 +381,7 @@ header nav {
     font-family: "Open Sans";
     font-size: 18px;
     font-weight: 400;
-    margin: 32px 15.31vw 0px;
+    margin: 32px 15.31vw 0;
 }
 
 .info-sec ul {
@@ -402,7 +401,7 @@ header nav {
 }
 
 .info-sec li p {
-    margin: 0px 32px;
+    margin: 0 32px;
     width: 19.47vw;
     color: #a7acbc;
     font-family: "Open Sans";
@@ -410,7 +409,7 @@ header nav {
     font-weight: 400;
 }
 
-.info-sec li h3 {
+.list-headline {
     box-sizing: border-box;
     color: #3f4e76;
     font-family: "Open Sans";
@@ -441,7 +440,7 @@ header nav {
 }
 
 @media screen and (max-width: 768px) {
-    .info-sec h2 {
+    .infosec-headline {
         font-size: 36px;
         margin-left: 9.31vw;
         margin-top: 60px;
@@ -449,7 +448,7 @@ header nav {
     
     .info-sec p {
         font-size: 14px;
-        margin: 32px 9.31vw 0px;
+        margin: 32px 9.31vw 0;
     }
     
     .info-sec ul {
@@ -465,7 +464,7 @@ header nav {
 }
 
 @media screen and (max-width: 425px) {
-    .info-sec h2 {
+    .infosec-headline {
         margin-top: 40px;
     }
 
@@ -524,7 +523,7 @@ header nav {
     flex: 1;
 }
 
-.text h3 {
+.portfolio-text-headline {
     background-image: linear-gradient(15deg, #cb0035 0%, #e06900 100%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -533,7 +532,7 @@ header nav {
     font-size: 48px;
     font-weight: 700;
     line-height: 36px;
-    margin: 8.85vw 16.3vw 0px 6.3vw;
+    margin: 8.85vw 16.3vw 0 6.3vw;
 }
 
 .text p{
@@ -543,7 +542,7 @@ header nav {
     font-weight: 400;
     line-height: 36px;
     width: 28.64vw;
-    margin: 1.25vw 7.91vw 0px 6.3vw;
+    margin: 1.25vw 7.91vw 0 6.3vw;
 }
 
 .text a {
@@ -557,7 +556,7 @@ header nav {
     background-color: #264699;
     background-image: linear-gradient(-152deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%);
     border-radius: 25px;
-    margin: 3.125vw 25.93vw 0px 6.3vw;
+    margin: 3.125vw 25.93vw 0 6.3vw;
 }
 
 .text a:hover {
@@ -575,13 +574,13 @@ header nav {
 
 @media screen and (max-width: 1200px) {
     .text p {
-        margin-right: 0px;
+        margin-right: 0;
     }
     .text a {
-        margin-right: 0px;
+        margin-right: 0;
     }
-    .text h3 {
-        margin-right: 0px;
+    .portfolio-text-headline {
+        margin-right: 0;
     }
 }
 
@@ -589,7 +588,6 @@ header nav {
     .portfolio-sec li {
         flex-direction: column;
         width: 100%;
-        flex: 0;
         height: 641px;
     }
 
@@ -608,44 +606,44 @@ header nav {
         align-items: center;
     }
 
-    .text h3 {
+    .portfolio-text-headline {
         font-size: 28px;
         margin-top: 4.85vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
     
     .text p{
         font-size: 14px;
         width: 65vw;
         margin-top: 1.25vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
     
     .text a {
         font-size: 18px;
         margin-top: 3.125vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
 @media screen and (max-width: 425px) {
-    .text h3 {
+    .portfolio-text-headline {
         font-size: 20px;
         margin-top: 4.85vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
     
     .text p{
         font-size: 10px;
         width: 70vw;
         margin-top: 1.25vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
     
     .text a {
         font-size: 18px;
         margin-top: 3.125vw;
-        margin-left: 0px;
+        margin-left: 0;
     }
 }
 
@@ -667,7 +665,7 @@ header nav {
     flex-direction: column;
 }
 
-.newsletter-sec h3 {
+.newsletter-sec-h3 {
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 48px;
@@ -729,7 +727,7 @@ input:focus {
         height: 400px;
     }
 
-    .newsletter-sec h3 {
+    .newsletter-sec-h3 {
         width: 80%;
         font-size: 36px;
     }
