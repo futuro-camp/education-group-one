@@ -19,7 +19,7 @@
     font-size: 100px;
     line-height: 110px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     margin-top: 99px;
     margin-left: 244px;
 }
@@ -101,10 +101,6 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-around;
-}
-.brand-item {
-    /* width: 158px;
-    height: 112px; */
 }
 /* .brand-item:nth-child(1) {
     background: url('../images/brand-item-first.png');

@@ -9,7 +9,7 @@
 .news-column-left {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-grow: 1;
     margin-top: 350px;
@@ -44,7 +44,7 @@
 .play-icon {
     height: 28px;
     width: 22px;
-    background: url('../images/play-icon.png');
+    /* background: url('../images/play-icon.png'); */
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -60,7 +60,7 @@
     font-family: 'SFProDisplay-Semibold';
     font-size: 100px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #161618;
     line-height: 110px;
 }

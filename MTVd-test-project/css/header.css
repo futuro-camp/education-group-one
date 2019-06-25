@@ -126,7 +126,7 @@
     font-family: 'SFProDisplay-Bold';
     font-size: 224px;
     color: #ffffff;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     font-weight: 700;
     line-height: 200px;
     width: 100%;
@@ -148,7 +148,7 @@
     text-decoration: none;
     font-size: 18px;
     line-height: 119px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #ffffff;
     font-family: 'SFProDisplay-Semibold';
 }
@@ -162,8 +162,8 @@
     height: 1376px;
     width: 828px;
     z-index: 6;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     position: absolute;
     margin-left: 70px;
 }

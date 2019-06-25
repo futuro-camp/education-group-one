@@ -12,7 +12,7 @@
     font-family: 'SFProDisplay-Semibold';
     font-size: 100px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #161618;
     line-height: 110px;
     margin-left: 244px;
@@ -26,7 +26,7 @@
     font-family: 'SFProDisplay-Regular';
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #161618;
     line-height: 30px;
     margin-bottom: 376px;
@@ -53,7 +53,7 @@
     font-size: 72px;
     text-align: center;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 .about-black-box-text {
     font-family: 'SFProDisplay-Regular';
@@ -61,14 +61,14 @@
     font-size: 28px;
     text-align: center;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 .about-red-box {
     width: 524px;
     height: 980px;
     background-color: #ef0102;
     position: absolute;
-    right: 0px;
-    bottom: 0px;
+    right: 0;
+    bottom: 0;
     z-index: 1;
 }

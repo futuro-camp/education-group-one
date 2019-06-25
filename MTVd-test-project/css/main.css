@@ -6,7 +6,7 @@ body {
     background: url('../images/Main_Background.png');
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 0;
     z-index: 1;
 }
 header {
@@ -38,7 +38,7 @@ header {
 .footer {
     background: url('../images/footer-background.png');
     background-repeat: no-repeat;
-    background-position-x: 0px;
+    background-position-x: 0;
     background-position-y: 100px;
     background-color: #111113;
 }
