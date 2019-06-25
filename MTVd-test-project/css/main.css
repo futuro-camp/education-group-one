@@ -38,7 +38,5 @@ header {
 .footer {
     background: url('../images/footer-background.png');
     background-repeat: no-repeat;
-    background-position-x: 0;
-    background-position-y: 100px;
     background-color: #111113;
 }

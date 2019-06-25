@@ -67,7 +67,7 @@
     }
 
     /* NEWS BLOCK*/
-    .news-text h1{
+    .news-header{
         line-height: 100px;
     }
     .video-box {
@@ -150,7 +150,7 @@
     .news-text {
         width: 376px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 100px;
         font-size: 85px;
     }
@@ -244,7 +244,7 @@
     .news-text {
         width: 376px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 100px;
         font-size: 85px;
     }
@@ -356,7 +356,7 @@
     .news-text {
         width: 376px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 100px;
         font-size: 85px;
     }
@@ -485,7 +485,7 @@
     .news-text {
         width: 376px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 100px;
         font-size: 85px;
     }
@@ -653,7 +653,7 @@
     .news-text {
         width: 276px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 50px;
         font-size: 45px;
     }
@@ -846,7 +846,7 @@
     .news-text {
         width: 315px;
     }
-    .news-text h1{
+    .news-header{
         line-height: 50px;
         font-size: 45px;
     }

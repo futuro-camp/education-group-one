@@ -35,7 +35,7 @@
     background: url('../images/play-icon.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-position-x: 32px;
+    background-position: 32px;
 
 }
 .play-button:hover {
@@ -56,7 +56,7 @@
     margin-top: 235px;
     margin-bottom: 590px;
 }
-.news-text h1{
+.news-header {
     font-family: 'SFProDisplay-Semibold';
     font-size: 100px;
     font-weight: 400;
@@ -68,7 +68,7 @@
     font-family: 'SFProDisplay-Regular';
     font-size: 18px;
     font-weight: 400;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     color: #161618;
     line-height: 30px;
     margin-top: 57px;

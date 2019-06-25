@@ -93,8 +93,7 @@ align-items: center;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    border: dashed 1px yellow;
+    justify-content: space-around;
 }
 .social-buttons-block a {
     align-items: center;
