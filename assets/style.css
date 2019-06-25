@@ -64,7 +64,7 @@ h3 {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .header {
         margin: 30px 28px 0 30px;
     }
@@ -155,7 +155,7 @@ ul.horizontal-list li a:hover {
     margin: 0;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #headlineSAFOR {
         display: none;
     }
@@ -167,13 +167,13 @@ ul.horizontal-list li a:hover {
     margin-bottom: 65px;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .headline h1 {
         width: 508px;
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .headline h1 br {
         display: none;
     }
@@ -191,7 +191,7 @@ ul.horizontal-list li a:hover {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .headline p {
         width: 493px;
         height: 96px;
@@ -297,9 +297,9 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #about {
-        width: 568px;
+        width: 100%;
         height: 341px;
         margin: 143px 0 0 0;
     }
@@ -325,7 +325,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #about h1 {
         width: 221px;
         height: 123px;
@@ -411,7 +411,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .aboutsafor {
         width: 508px;
         height: 288px;
@@ -431,7 +431,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .aboutsafor p {
         width: 508px;
     }
@@ -448,7 +448,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #aboutp {
         width: 508px;
     }
@@ -502,7 +502,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .three {
         height: 2193px;
         background-position-y: 0px, 100%;
@@ -550,7 +550,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .threetext {
         width: 535px;
         margin: 124px 0 0 30px;
@@ -581,7 +581,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .threetext img {
         margin: 0 0 192px 0;
     }
@@ -591,7 +591,7 @@ hr {
     margin-bottom: 0;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #threeh2border {
         width: 237px;
         height: 112px;
@@ -648,7 +648,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #threeimg1 {
         margin: 391px 0 0 190px;
     }
@@ -694,7 +694,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #threeimg2 {
         margin: 80px 0 0 203px;
     }
@@ -717,7 +717,7 @@ hr {
     line-height: 24px;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #threelongp {
         width: 508px;
         height: 72px;
@@ -766,7 +766,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .four {
         width: 508px;
         height: 543px;
@@ -784,7 +784,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .four h3 {
         margin: 262px 0 57px 0;
     }
@@ -902,9 +902,9 @@ hr {
     display: flex;
 }
 
-@media screen and (min-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .fivefortablet {
-        width: 568px;
+        width: 100%;
         height: 1656px;
         display: flex;
         flex-wrap: wrap;
@@ -924,9 +924,9 @@ hr {
     background-image: url(forbusiness.png);
 }
 
-@media screen and (min-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .forbusinessfortablet {
-        width: 568px;
+        width: 100%;
     }
 }
 
@@ -937,9 +937,9 @@ hr {
     background-image: url(forpeople.png);
 }
 
-@media screen and (min-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .forpeoplefortablet {
-        width: 568px;
+        width: 100%;
     }
 }
 
@@ -994,7 +994,7 @@ hr {
     margin: 0 0 60px 0;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .six {
         width: 509px;
     }
@@ -1042,7 +1042,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .six h1 {
         width: 281px;
         height: 187px;
@@ -1097,7 +1097,7 @@ hr {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .six div {
         margin: 85px 0 0 30px;
         width: 508px;
@@ -1133,7 +1133,7 @@ input {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     input {
         width: 508px;
     }
@@ -1155,7 +1155,7 @@ input {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     #biginput {
         width: 508px;
     }
@@ -1217,7 +1217,7 @@ input {
     }
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .footer-tablet {
         width: 340px;
         margin: 200px 47px 69px 40px;
@@ -1231,7 +1231,7 @@ input {
     margin-top: 40px;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .footer-tablet div {
         display: flex;
         flex-wrap: wrap;
@@ -1244,7 +1244,7 @@ input {
     margin: 0 247px 60px 0;
 }
 
-@media screen and (max-device-width: 568px) {
+@media screen and (max-device-width: 759px) {
     .footer-tablet p {
         margin: 0 0 40px 0;
     }
