@@ -35,8 +35,6 @@
     background: url('../images/play-icon.png');
     background-position: center;
     background-repeat: no-repeat;
-    background-position: 32px;
-
 }
 .play-button:hover {
     border: 4px solid #f8323f;
