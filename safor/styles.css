@@ -2,7 +2,7 @@
     margin: 0 0;
     box-sizing: border-box;
     list-style-type: none;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 ul {
     padding-left: 0px;
@@ -11,8 +11,8 @@ li {
     padding-left: 0px;
 }
 body {
-    background-color: darkolivegreen;
-    /* background-color: #121212; */
+    /* background-color: darkolivegreen; */
+    background-color: #121212;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -779,7 +779,7 @@ footer {
     margin-right: 80px;
 }
 
-.first-section {
+/* .first-section {
     border: 1px solid red;
 }
 .second-section {
@@ -793,4 +793,4 @@ header {
 }
 footer {
     border: 1px solid red;
-}
+} */
