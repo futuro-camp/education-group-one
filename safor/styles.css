@@ -874,6 +874,7 @@ footer {
     font-weight: 400;
     letter-spacing: 0.7px;
     color: #ffffff;
+    opacity: 0.5;
     max-width: 540px;
     float: right;
 }

@@ -826,11 +826,11 @@
         margin-top: 60px;
     }
     .gray-cascade-box-hexagon {
-        margin-top: 60px;
+        /* margin-top: 60px;
         margin-right: 40px;
         margin-left: 40px;
-
-        margin-bottom: 60px;
+        margin-bottom: 60px; */
+        margin: 60px 40px;
     }
     .feedback-box {
         width: 92%;
@@ -1168,7 +1168,6 @@
         margin-left: 71px;
     }
     .social {
-        display: unset;
         margin-top: 61px;
         width: 136px;
         margin-left:0;
@@ -1181,23 +1180,23 @@
 }
 @media only screen and (max-width: 376px) {
     .headline {
-        margin-left: 16px;
+        margin-left: 56px;
     }
     .video-box {
-        margin-left: 16px;
+        margin-left: 56px;
     }
     .video-description {
-        margin-left: 16px;
+        margin-left: 56px;
     }
     .video-box-line-second {
         margin-left: 103px;
         margin-top: -12px;
     }
     .orange-box-content {
-        margin-left: 16px;
+        margin-left: 56px;
     }
     .advantages {
-        margin-left: 16px;
+        margin-left: 56px;
     }
     .right-phone {
         top: 436px;
@@ -1220,6 +1219,59 @@
         line-height: 28px;
     }
     .white-box-row-container{
+        margin-left: 56px;
+    }
+    .white-cascade-box-header {
+        margin-left: 56px;
+    }
+    .gray-cascade-box-header {
+        margin-left: 56px;
+        margin-top: 60px;
+    }
+    .gray-cascade-box-square {
+        margin-left: 56px;
+    }
+    .gray-cascade-box-circle {
+        margin-left: 56px;
+    }
+    .gray-cascade-box-hexagon {
+        margin-left: 56px;
+    }
+    .feedback-box{
+        /* width: 90%; */
+        margin-left: 56px;
+        margin-right: 56px;
+    }
+    .third-section {
+        margin-bottom: 0;
+    }
+    footer {
+        margin-top: 120px;
+    }
+    .footer-logo {
+        margin-left: 56px;
+    }
+    .right-footer {
+        margin-left: 56px;
+    }
+}
+@media only screen and (max-width: 359px) {
+    .headline {
+        margin-left: 16px;
+    }
+    .video-box {
+        margin-left: 16px;
+    }
+    .video-description {
+        margin-left: 16px;
+    }
+    .orange-box-content {
+        margin-left: 16px;
+    }
+    .advantages {
+        margin-left: 16px;
+    }
+    .white-box-row-container{
         margin-left: 16px;
     }
     .white-cascade-box-header {
@@ -1227,7 +1279,7 @@
     }
     .gray-cascade-box-header {
         margin-left: 16px;
-        margin-top: 60px;
+        /* margin-top: 60px; */
     }
     .gray-cascade-box-square {
         margin-left: 16px;
@@ -1242,12 +1294,6 @@
         width: 90%;
         margin-left: 16px;
         margin-right: 16px;
-    }
-    .third-section {
-        margin-bottom: 0;
-    }
-    footer {
-        margin-top: 120px;
     }
     .footer-logo {
         margin-left: 16px;
