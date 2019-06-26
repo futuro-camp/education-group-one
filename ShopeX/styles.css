@@ -1,0 +1,51 @@
+header {
+    margin-top: 52px;
+}
+.logo-line {
+    border: 1px solid red;
+}
+.header-logo{
+    border: 1px solid red;
+}
+.header-tools{
+    border: 1px solid red;
+    width: 100px;
+}
+.header-search form{
+    border: 1px solid red;
+    width: 100%;
+}
+.header-search {
+    padding-left: 0px !important;
+}
+.search-icon-button {
+    background-color: transparent;
+    border: none;
+}
+.search-icon {
+    width: 16px;
+    height: 16px;
+}
+.search {
+    text-transform: uppercase;
+    border: none;
+    width: 90%;
+}
+.header-background-line {
+    position: absolute;
+    top: 205px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #f4f4f4;
+    border: 1px solid #f1f1f1;
+}
+.navbar-header {
+    width: 100%;
+}
+.header-tools button:focus {
+    border: solid 1 px green;
+}
+.basket-badge {
+    display: none;
+}
