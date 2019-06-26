@@ -459,11 +459,7 @@
     .third-section {
     align-items: flex-start;
     }
-<<<<<<< HEAD
     .white-cascade-box{
-=======
-   .white-cascade-box{
->>>>>>> initial
         width: 50%;
         height: 828px;
         right:0;
@@ -533,6 +529,8 @@
     .button-line {
         margin-top: 0;
     }
+}
+@media only screen and (max-width: 760px) {
     /* UPPER BLOCK */
     .headline {
         margin-right: 30px;
