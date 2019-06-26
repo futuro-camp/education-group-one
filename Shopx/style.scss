@@ -1,0 +1,22 @@
+.no-outline:focus {
+    outline: none;
+}
+
+.header-form-input {
+    width: 80%;
+    border: none;
+}
+
+.header-form-submit {
+    background-image: url("img/head/search_icon.svg");
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+    border: none;
+    background-color: transparent;
+}
+
+.header-collapse-items {
+    position: absolute;
+    transform: translate(0, 70%);
+}
