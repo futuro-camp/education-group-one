@@ -632,7 +632,6 @@ body {
 .footer p {
   width: 21.05469vw;
   height: 2.30469vw;
-  opacity: 0.5;
   color: #ffffff;
   font-family: "Product Sans";
   font-size: 0.625vw;
@@ -649,19 +648,16 @@ body {
 .footer div a:first-child img {
   width: 0.3125vw;
   height: 0.70312vw;
-  opacity: 0.5;
   margin-right: 1.44531vw;
 }
 .footer div a:nth-child(2) img {
   width: 0.66406vw;
   height: 0.74219vw;
-  opacity: 0.5;
   margin-right: 1.48438vw;
 }
 .footer div a:last-child img {
   width: 0.54688vw;
   height: 0.625vw;
-  opacity: 0.5;
 }
 /* #endregion */
 @media screen and (max-width: 1920px) {
