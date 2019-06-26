@@ -11,8 +11,8 @@ li {
     padding-left:0;
 }
 body {
-    /* background-color: darkolivegreen; */
-    background-color: #121212;
+    background-color: darkolivegreen;
+    /* background-color: #121212; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -610,7 +610,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: flex-end;
     z-index: 14;
     position: relative;
     margin-bottom: 160px;
@@ -728,7 +728,8 @@ button  {
     width: 913px;
     height: 510px;
     margin-top: 604px;
-    margin-left: 900px;
+    /* margin-left: 900px; */
+    margin-right: 747px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -754,7 +755,7 @@ button  {
     align-items: flex-start;
     width: 100%;
 }
-.input-list:focus {
+.input-list input:focus {
     outline: none;
     border-color: #f76612;
 }
@@ -776,7 +777,8 @@ button  {
 }
 .input-list input:nth-child(2) {
     flex-basis: 49%;
-    margin-left: 18px;
+    /* margin-left: 18px; */
+    margin-left: 2%;
     margin-bottom: 60px;
 }
 .input-list input:nth-child(3) {
@@ -797,7 +799,8 @@ button:focus {
     background-color: #f76612;
     width: 232px;
     height: 72px;
-} 
+    border: none;
+}
 .button-line {
     width: 100%;
     display: flex;
