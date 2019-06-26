@@ -337,59 +337,6 @@
     .advantages {
         margin-right: 47px;
     }
-    /* .white-cascade-box{
-        width: 49.95vw;
-        height: 828px;
-        right:0;
-        top: -286px;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .white-cascade-box-header {
-        margin-top: 60px;
-        margin-bottom: 56px;
-        margin-left: 40px;
-    }
-    .white-box-row-container {
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-bottom: 120px;
-    }
-    .white-cascade-box li a:first-child {
-        text-decoration: none;
-        writing-mode: unset;
-        margin-top:0;
-        margin-left:0;
-    }
-    .pentagon-white-box-icon {
-        margin-top:0;
-    }
-    .star-white-box-icon {
-        margin-top: 60px;
-    }
-    .triangle-white-box-icon {
-        margin-top: 60px;
-    }
-    .gray-cascade-box{
-        width: 49.95vw;
-        height: 828px;
-        right:0;
-        left:0;
-        top: -286px;
-    }
-    .gray-cascade-box-square {
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-    .gray-cascade-box-circle {
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-    .gray-cascade-box-hexagon {
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 60px;
-    } */
     .feedback-box {
         width: 852px;
         /* margin-left: 172px; */
@@ -512,64 +459,6 @@
     .third-section {
     align-items: flex-start;
     }
-    /* .white-cascade-box{
-        width: 100%;
-        height: 696px;
-        right:0;
-        left:0;
-        top: 182px;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .white-cascade-box-header {
-        margin-top: 60px;
-        margin-bottom: 56px;
-        margin-left: 40px;
-    }
-    .white-box-row-container {
-        margin-left: 40px;
-        margin-right: 40px;
-        margin-bottom: 120px;
-    }
-    .white-cascade-box a {
-        text-decoration: none;
-        writing-mode: unset;
-        margin-top:0;
-        margin-left:0;
-    }
-    .upper-white-box-icon {
-        margin-top:0;
-    }
-    .middle-white-box-icon {
-        margin-top: 60px;
-    }
-    .lower-white-box-icon {
-        margin-top: 60px;
-    }
-    .gray-cascade-box{
-        width: 100%;
-        height: 828px;
-        right:0;
-        left:0;
-        top: -646px;
-    }
-    .gray-cascade-box-header {
-        margin-left: 40px;
-    }
-    .gray-cascade-box-square  {
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-    .gray-cascade-box-circle  {
-        margin-right: 40px;
-        margin-left: 40px;
-    }
-    .gray-cascade-box-hexagon {
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 60px;
-    } */
-
     .white-cascade-box{
         width: 50%;
         height: 828px;
@@ -625,12 +514,8 @@
         margin-top: 6vw;
     }
     .gray-cascade-box-hexagon {
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-top: 6vw;
-        margin-bottom: 6vw;
+        margin: 6vw 40px 6vw 40px;
     }
-
     .feedback-box {
         width: 91.3%;
         /* height: 579px; */
@@ -826,11 +711,7 @@
         margin-top: 60px;
     }
     .gray-cascade-box-hexagon {
-        /* margin-top: 60px;
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-bottom: 60px; */
-        margin: 60px 40px;
+        margin: 60px 40px 60px 40px;
     }
     .feedback-box {
         width: 92%;
