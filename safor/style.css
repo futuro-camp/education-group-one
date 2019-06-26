@@ -5,7 +5,7 @@
 }
 
 /* #endregion */
-/*#region body*/
+/* #region body*/
 * {
   margin: 0;
   padding: 0;
@@ -3466,6 +3466,7 @@ input:focus {
   background-color: #f76612;
   opacity: 1;
   height: 2.8125vw;
+  border: none;
 }
 
 .submit:hover {
