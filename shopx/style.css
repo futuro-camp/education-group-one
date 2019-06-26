@@ -1,0 +1,19 @@
+.search-form {
+    width: 100%;
+}
+
+.search-button {
+    background: none;
+    border: none;
+}
+
+.search-input {
+    border: none;
+    width: 80%;
+}
+
+.cart-items-counter {
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
