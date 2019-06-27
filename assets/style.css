@@ -1552,7 +1552,15 @@ footer {
     margin: 124px 47px 69px 40px;
 }
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (max-device-width: 1280px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 160px 80px 0 80px;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
     footer {
         display: flex;
         justify-content: space-between;
@@ -1560,8 +1568,17 @@ footer {
     }
 }
 
+@media screen and (max-device-width: 1000px) {
+    footer {
+        display: block;
+        width: 913px;
+        margin: 124px 47px 69px 40px;
+    }
+}
+
 @media screen and (max-device-width: 759px) {
     footer {
+        display: block;
         width: 340px;
         margin: 200px 47px 69px 40px;
     }
@@ -1569,6 +1586,7 @@ footer {
 
 @media screen and (max-device-width: 567px) {
     footer {
+        display: block;
         width: 231px;
         height: 198px;
         margin: 120px 74px 69px 71px;
@@ -1577,12 +1595,14 @@ footer {
 
 @media screen and (max-device-width: 374px) {
     footer {
+        display: block;
         margin: 120px 74px 69px 56px;
     }
 }
 
 @media screen and (max-device-width: 320px) {
     footer {
+        display: block;
         margin: 120px 74px 69px 16px;
     }
 }
@@ -1594,9 +1614,15 @@ footer div {
     margin-top: 40px;
 }
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (max-device-width: 1280px) {
     footer div {
         margin: 0 0 100px 0;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    footer div {
+        margin: 40px 0 100px 0;
     }
 }
 
@@ -1613,23 +1639,33 @@ footer p {
     margin: 0 247px 60px 0;
 }
 
-@media screen and (min-device-width: 1024px) {
+@media screen and (max-device-width: 1280px) {
+    footer p {
+        margin: 0 247px 0 154px;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
     footer p {
         width: 539px;
         height: 59px;
-        margin: 0 149px 0 0;
+        margin: 0 149px 55px 0;
     }
 }
 
 @media screen and (max-device-width: 759px) {
     footer p {
-        margin: 0 0 40px 0;
+        width: 340px;
+        height: 96px;
+        margin: 45px 0 45px 0;
     }
 }
 
 @media screen and (max-device-width: 567px) {
     footer p {
-        margin: 0 0 60px 0;
+        width: 231px;
+        height: 59px;
+        margin: 45px 0 60px 0;
     }
 }
 
