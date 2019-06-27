@@ -101,7 +101,7 @@ h3 {
 @media screen and (max-device-width: 567px) {
     .header {
         height: 23px;
-        margin: 16px 17px 0 16px;
+        margin: 16px 16px 0 16px;
     }
 }
 
@@ -212,6 +212,12 @@ ul.horizontal-list li a:hover {
 @media screen and (max-device-width: 374px) {
     .headline {
         margin: -38px 16px 65px 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .headline {
+        margin: -38px 16px 65px 16px;
     }
 }
 
@@ -450,6 +456,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 320px) {
+    #about {
+        margin: 88px 0 0 16px;
+    }
+}
+
 #about h1 {
     width: 364px;
     height: 71px;
@@ -589,6 +601,12 @@ hr {
 @media screen and (max-device-width: 374px) {
     .aboutsafor {
         margin: 20px 17px 60px 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .aboutsafor {
+        margin: 20px 17px 60px 16px;
     }
 }
 
@@ -770,6 +788,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 320px) {
+    .threetext {
+        margin: 60px 0 0 16px;
+    }
+}
+
 .threetext h3 {
     margin-bottom: 57px;
 }
@@ -914,6 +938,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 320px) {
+    #threeimg1 {
+        margin: 236px 0 0 100px;
+    }
+}
+
 #threeimg2 {
     margin: 124px 295px 190px 1230px;
 }
@@ -971,6 +1001,12 @@ hr {
 @media screen and (max-device-width: 374px) {
     #threeimg2 {
         margin: 60px 0 0 149px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    #threeimg2 {
+        margin: 60px 0 0 109px;
     }
 }
 
@@ -1074,6 +1110,12 @@ hr {
 @media screen and (max-device-width: 374px) {
     .four {
         margin: 0 0 0 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .four {
+        margin: 0 0 0 16px;
     }
 }
 
@@ -1278,6 +1320,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 320px) {
+    .forbusinesstext {
+        margin: 46px 17px 37px 16px;
+    }
+}
+
 .forbusinesstext div {
     width: 171px;
     height: 40px;
@@ -1400,6 +1448,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 320px) {
+    .six h1 {
+        margin: 60px 0 0 16px;
+    }
+}
+
 .six div {
     display: flex;
     flex: column;
@@ -1464,6 +1518,12 @@ hr {
 @media screen and (max-device-width: 374px) {
     .six div {
         margin: 50px 0 0 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .six div {
+        margin: 50px 0 0 16px;
     }
 }
 
@@ -1623,6 +1683,12 @@ input {
 @media screen and (max-device-width: 374px) {
     .footer-tablet {
         margin: 120px 74px 69px 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    .footer-tablet {
+        margin: 120px 74px 69px 16px;
     }
 }
 
