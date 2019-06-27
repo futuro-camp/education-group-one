@@ -1,0 +1,44 @@
+header {
+    margin-top: 52px;
+}
+.logo-line {
+    border: 1px solid red;
+}
+.header-tools{
+    width: 100px;
+}
+.header-search form{
+    width: 100%;
+}
+.header-search {
+    padding-left: 0px !important;
+}
+.search-icon-button {
+    background-color: transparent;
+    border: none;
+}
+.search-icon {
+    width: 16px;
+    height: 16px;
+}
+.search {
+    text-transform: uppercase;
+    border: none;
+    width: 90%;
+}
+.header-background-line {
+    position: absolute;
+    top: 205px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+}
+.navbar-header {
+    width: 100%;
+}
+.header-tools button:focus {
+    border: solid 1 px green;
+}
+.basket-badge {
+    display: none;
+}
