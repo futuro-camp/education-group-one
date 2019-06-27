@@ -345,6 +345,24 @@ header .nav a:hover {
   color: #f3d3e2;
 }
 
+@media only screen and (max-width: 1120px) {
+  .carousel .product {
+    margin-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .carousel .product {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 642px) {
+  .carousel .product {
+    margin-right: 0;
+  }
+}
+
 .carousel .number-pointer {
   width: 119px;
   height: 88px;
@@ -402,5 +420,20 @@ header .nav a:hover {
 
 .carousel .number-pointer .white-pointer a {
   color: #ffffff;
+}
+
+.catalog {
+  margin-top: 60px;
+}
+
+.catalog .catalog-menu {
+  height: 60px;
+  background-color: #b4e0cf;
+  margin-bottom: 73px;
+}
+
+.catalog .catalog-items {
+  height: 60px;
+  background-color: #b4e0cf;
 }
 /*# sourceMappingURL=main.css.map */

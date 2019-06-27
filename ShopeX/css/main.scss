@@ -121,8 +121,6 @@ header {
 
 }
 }
-
-
 // SECTION 1 - CAROUSEL
 .carousel {
     background-color: $primaryColor;
@@ -218,6 +216,21 @@ header {
             color: $secondaryLightColor;
         }
     }
+    @media only screen and (max-width: 1120px){
+        .product {
+            margin-right: 10%;
+        }
+    }
+    @media only screen and (max-width: 769px){
+        .product {
+            margin-right: 0;
+        }
+    }
+    @media only screen and (max-width: 642px){
+        .product {
+            margin-right: 0;
+        }
+    }
 
     .number-pointer {
         width: 119px;
@@ -262,4 +275,19 @@ header {
             color:#ffffff;
             }
         }
+}
+// SECTION 2 - CATALOG
+.catalog {
+    margin-top: 60px;
+
+    .catalog-menu {
+        height: 60px;
+        background-color: $textColorNavHover;
+
+        margin-bottom: 73px;
+    }
+    .catalog-items {
+        height: 60px;
+        background-color: $textColorNavHover;
+    }
 }
