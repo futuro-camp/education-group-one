@@ -1552,7 +1552,31 @@ footer {
     margin: 124px 47px 69px 40px;
 }
 
-@media screen and (max-device-width: 1280px) {
+@media screen and (max-device-width: 2560px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 160px 80px 0 80px;
+    }
+}
+
+@media screen and (max-device-width: 1920px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 160px 80px 0 80px;
+    }
+}
+
+@media screen and (max-device-width: 1680px) {
+    footer {
+        display: flex;
+        justify-content: space-between;
+        margin: 160px 320px 0 80px;
+    }
+}
+
+@media screen and (max-device-width: 1440px) {
     footer {
         display: flex;
         justify-content: space-between;
@@ -1614,7 +1638,25 @@ footer div {
     margin-top: 40px;
 }
 
-@media screen and (max-device-width: 1280px) {
+@media screen and (max-device-width: 2560px) {
+    footer div {
+        margin: 0 0 100px 0;
+    }
+}
+
+@media screen and (max-device-width: 1920px) {
+    footer div {
+        margin: 0 0 100px 0;
+    }
+}
+
+@media screen and (max-device-width: 1680px) {
+    footer div {
+        margin: 0 0 100px 0;
+    }
+}
+
+@media screen and (max-device-width: 1440px) {
     footer div {
         margin: 0 0 100px 0;
     }
@@ -1639,7 +1681,25 @@ footer p {
     margin: 0 247px 60px 0;
 }
 
-@media screen and (max-device-width: 1280px) {
+@media screen and (max-device-width: 2560px) {
+    footer p {
+        margin: 0 927px 0 154px;
+    }
+}
+
+@media screen and (max-device-width: 1920px) {
+    footer p {
+        margin: 0 607px 0 154px;
+    }
+}
+
+@media screen and (max-device-width: 1680px) {
+    footer p {
+        margin: 0 247px 0 154px;
+    }
+}
+
+@media screen and (max-device-width: 1440px) {
     footer p {
         margin: 0 247px 0 154px;
     }
@@ -1668,45 +1728,3 @@ footer p {
         margin: 45px 0 60px 0;
     }
 }
-
-/* footer {
-    display: flex;
-    justify-content: space-between;
-    margin: 160px 80px 65px 80px;
-}
-
-@media screen and (max-device-width: 1000px) {
-    footer {
-        display: none;
-    }
-}
-
-footer p {
-    width: 539px;
-    height: 59px;
-    opacity: 0.5;
-    margin-right: 180px;
-}
-
-@media screen and (max-device-width: 1440px) {
-    footer p {
-        margin-right: -65px;
-    }
-}
-
-@media screen and (max-device-width: 1366px) {
-    footer p {
-        margin-right: 0;
-    }
-}
-
-@media screen and (max-device-width: 1280px) {
-    footer p {
-        margin-right: 75px;
-    }
-}
-
-#brands {
-    width: 114px;
-    height: 19px;
-} */
