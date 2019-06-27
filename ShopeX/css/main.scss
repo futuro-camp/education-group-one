@@ -1,5 +1,5 @@
 @import "colors&fonts";
-
+// BORDER UNDER LOGO-LINE IN HEADER
 .header-background-line {
     position: absolute;
     top: 162px;
@@ -36,8 +36,6 @@ header {
 
                 .search-icon-button {
                     margin-right: 14px;
-                    width: 16px;
-                    height: 16px;
                     background-color: transparent;
                     border: none;
                     display: flex;
@@ -80,7 +78,7 @@ header {
         flex-direction: row;
         justify-content: center;
         list-style: none;
-            li {
+            a {
                 color: $textColorNav;
                 text-transform: uppercase;
                 font-size: 11px;
@@ -106,5 +104,144 @@ header {
     .nav li:hover {
         color: $textColorNavHover;
         text-decoration: underline;
+    }
+}
+.carousel {
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 576px;
+
+    .product {
+        margin: 192px 35% 192px 0;
+        width: 530px;
+        height: 192px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .product-first-row p{ margin-bottom: 0;}
+        .product-first-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            flex-basis: 100%;
+            width: 52%;
+        }
+            .product-first-row p:nth-child(1) {
+                font-family: 'Alex Brush';
+                font-size: 73px;
+                line-height: 24px;
+                font-weight: 400;
+                flex-basis: 50%;
+                color: $textColorDefault;
+            }
+            .product-first-row p:nth-child(2) {
+                font-family: 'Roboto Thin';
+                font-size: 23px;
+                line-height: 24px;
+                font-weight: 400;
+                flex-basis: 50%;
+                color: $textColorDefault;
+            }
+
+        .product-second-row p{margin-bottom: 0;}
+        .product-second-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-basis: 100%;
+            width: 100%;
+            margin-bottom: 23px;
+            margin-top: 23px;
+        }
+            .product-second-row p:nth-child(1) {
+                font-family: 'Titillium Web';
+                font-size: 72px;
+                line-height: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $textColorDefault;
+            }
+            .product-second-row p:nth-child(2) {
+                font-family: 'Roboto Thin';
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: 400;
+                align-self: center;
+                color: $textColorDefault;
+            }
+
+        .product-third-row p{ margin-bottom: 0;}
+        .product-third-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-basis: 100%;
+        }
+        .product-third-row a {
+            font-family: 'Roboto Linght';
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            text-decoration: underline;
+            height: 20px;
+            color: $textColorDefault;
+            text-decoration-color:#617e6e;
+            -moz-text-decoration-color:#617e6e;
+        }
+        .product-third-row a:hover {
+            color: $secondaryLightColor;
+        }
+    }
+
+    .number-pointer {
+        width: 119px;
+        height: 88px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .number-pointer-separator {
+            background-color: #9fcfb4;
+            height: 1px;
+        }
+            .first {
+            width: 119px;
+            }
+            .second {
+            width: 79px;
+            }
+
+        .number {
+            font-size: 16px;
+        }
+        .number a{
+            text-decoration: none;
+        }
+        .number p{
+            margin-bottom: 0;
+            font-family: 'Titillium Web Light';
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0;
+            // line-height: 38px;
+        }
+        .number a {
+            color:#232e28;
+        }
+        .number a:hover {
+            color: $secondaryColor;
+        }
+        .white-pointer a{
+            color:#ffffff;
+        }
     }
 }

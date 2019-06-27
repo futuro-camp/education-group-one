@@ -65,8 +65,6 @@ header .header-search form {
 
 header .header-search form .search-icon-button {
   margin-right: 14px;
-  width: 16px;
-  height: 16px;
   background-color: transparent;
   border: none;
   display: -webkit-box;
@@ -134,7 +132,7 @@ header .nav {
   list-style: none;
 }
 
-header .nav li {
+header .nav a {
   color: #45505e;
   text-transform: uppercase;
   font-size: 11px;
@@ -167,5 +165,228 @@ header .nav li:first-child {
 header .nav li:hover {
   color: #b4e0cf;
   text-decoration: underline;
+}
+
+.carousel {
+  background-color: #ade1c5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 576px;
+}
+
+.carousel .product {
+  margin: 192px 35% 192px 0;
+  width: 530px;
+  height: 192px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.carousel .product .product-first-row p {
+  margin-bottom: 0;
+}
+
+.carousel .product .product-first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 52%;
+}
+
+.carousel .product .product-first-row p:nth-child(1) {
+  font-family: 'Alex Brush';
+  font-size: 73px;
+  line-height: 24px;
+  font-weight: 400;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  color: #000000;
+}
+
+.carousel .product .product-first-row p:nth-child(2) {
+  font-family: 'Roboto Thin';
+  font-size: 23px;
+  line-height: 24px;
+  font-weight: 400;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  color: #000000;
+}
+
+.carousel .product .product-second-row p {
+  margin-bottom: 0;
+}
+
+.carousel .product .product-second-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  width: 100%;
+  margin-bottom: 23px;
+  margin-top: 23px;
+}
+
+.carousel .product .product-second-row p:nth-child(1) {
+  font-family: 'Titillium Web';
+  font-size: 72px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.carousel .product .product-second-row p:nth-child(2) {
+  font-family: 'Roboto Thin';
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #000000;
+}
+
+.carousel .product .product-third-row p {
+  margin-bottom: 0;
+}
+
+.carousel .product .product-third-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.carousel .product .product-third-row a {
+  font-family: 'Roboto Linght';
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-decoration: underline;
+  height: 20px;
+  color: #000000;
+  -webkit-text-decoration-color: #617e6e;
+          text-decoration-color: #617e6e;
+  -moz-text-decoration-color: #617e6e;
+}
+
+.carousel .product .product-third-row a:hover {
+  color: #f3d3e2;
+}
+
+.carousel .number-pointer {
+  width: 119px;
+  height: 88px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.carousel .number-pointer .number-pointer-separator {
+  background-color: #9fcfb4;
+  height: 1px;
+}
+
+.carousel .number-pointer .first {
+  width: 119px;
+}
+
+.carousel .number-pointer .second {
+  width: 79px;
+}
+
+.carousel .number-pointer .number {
+  font-size: 16px;
+}
+
+.carousel .number-pointer .number a {
+  text-decoration: none;
+}
+
+.carousel .number-pointer .number p {
+  margin-bottom: 0;
+  font-family: 'Titillium Web Light';
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0;
+}
+
+.carousel .number-pointer .number a {
+  color: #232e28;
+}
+
+.carousel .number-pointer .number a:hover {
+  color: #e7a8c6;
+}
+
+.carousel .number-pointer .white-pointer a {
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
