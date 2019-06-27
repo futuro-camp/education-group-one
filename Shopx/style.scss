@@ -1,22 +1,329 @@
+/* #region Fonts */
+
+@font-face {
+    font-family: AlexBrush;
+    src: url('fonts/AlexBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Geo;
+    src: url('fonts/Geo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: bold;
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 100;
+    src: url('fonts/Roboto-Thin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Roboto;
+    font-weight: 300;
+    src: url('fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    src: url('fonts/TitilliumWeb-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    font-weight: bold;
+    src: url('fonts/TitilliumWeb-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: TitilliumWeb;
+    font-weight: 300;
+    src: url('fonts/TitilliumWeb-Light.ttf') format('truetype');
+}
+
+/* #endregion */
+
+$color-map: (
+    dark-text: #000,
+    light-back-text: #fff,
+    sale-right-back: #8ed1b7,
+    sale-left-back: #e7a8c6,
+    adventage-back-one: #1d1e24,
+    adventage-back-two: #202127,
+    card-line: #eee,
+    footer-text: #7b7c85,
+    adventage-text: #767676,
+    nav-text: #45505e,
+    search-text: #414141,
+    slider-lines: #9fcfb4,
+    header-border: #f1f1f1,
+    slider-text: #232e28,
+    card-select-border: #b7e3e4,
+    header-back: #f4f4f4,
+    footer-line: #e8e8e8,
+    slider-back: #ade1c5,
+    nav-border: #e9e9e9
+);
+
+$font-map: (
+    rob: Roboto,
+    alex: AlexBrush,
+    geo: Geo,
+    titi: TitilliumWeb
+);
+
+$media-breakpoints: (
+    xs: 575px,
+    sm: 767px,
+    md: 991px,
+    lg: 1199px
+);
+
+/* #region General */
+
 .no-outline:focus {
     outline: none;
 }
 
-.header-form-input {
-    width: 80%;
-    border: none;
+/* #endregion */
+
+header {
+
+    border: 1px solid map-get($color-map, header-border);
+    height: 154px;
+    align-content: center;
+    display: flex;
+
+    @media screen and (max-width: map-get($media-breakpoints, xs)) {
+        height: 254px;;
+    }
+
+    .header-row {
+        width: 1170px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        > div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        @media screen and (max-width: 1170px)
+        {
+            width: 100%;
+        }
+
+        .logo {
+            max-width: 154px;
+            width: 100%;
+
+            @media screen and (max-width: map-get($media-breakpoints, xs)) {
+                margin: 0;
+            }
+            
+        }
+
+        .search-submit {
+            width: 16px;
+            height: 16px;
+            background: url('img/head/search_icon.svg');
+            background-size: cover;
+            border: none;
+        }
+
+        .search-input {
+            width: 100%;
+            border: none;
+            color: map-get($color-map, search-text);
+            font-family: map-get($font-map, rob);
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            width: 100%;
+        }
+
+    }
+
 }
 
-.header-form-submit {
-    background-image: url("img/head/search_icon.svg");
-    background-size: cover;
-    width: 16px;
-    height: 16px;
-    border: none;
-    background-color: transparent;
+
+.nav-row {
+    width: 433px;
+    margin: 0 auto;
+
+
+    @media screen and (max-width: 433px)
+    {
+        width: 100%;
+    }
+
+    nav {     
+        button,
+         a{
+            color: map-get($color-map, nav-text);
+            font-family: map-get($font-map, rob);
+            line-height: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+        }
+
+        a {
+            font-size: 11px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        button {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: map-get($color-map, sale-right-back);
+            text-decoration: underline;
+        }
+
+    }
+
 }
 
-.header-collapse-items {
-    position: absolute;
-    transform: translate(0, 70%);
+.carousel 
+{
+
+    .carousel-indicators {
+        margin: 0;
+        width: 119px;
+        left: auto;
+        bottom: 50%;
+        transform: translate(0, 50%);
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0;
+        height: 88px;
+
+        li:first-child {
+            width: 84px;
+            border-bottom: 1px solid #9fcfb4;
+        }
+
+        li:last-child {
+            width: 44px;
+            border-top: 1px solid #9fcfb4;
+        }
+
+        li {
+            opacity: 1;
+            padding-right: 35px;
+            text-align: right;
+            text-indent: 0;
+            margin: 0;
+            border: none;
+            color: map-get($color-map, slider-text);
+            font-family: map-get($font-map, titi);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 38px;
+            text-transform: uppercase;
+            height: auto;
+            background-color: transparent;
+        }
+
+        .active {
+            color: map-get($color-map, light-back-text);
+        }
+    }
+
+    .carousel-inner {
+
+        
+        > div {
+            width: 100vw;
+            height: 576px;
+
+            @media screen and (max-width: map-get($media-breakpoints, sm))
+            {
+                height: 300px;
+            }
+        }
+
+        .item1 {
+            background-color: map-get($color-map, slider-back);
+        }
+
+        .item2 {
+            background-color: map-get($color-map, slider-back);
+        }
+
+        .item3 {
+            background-color: map-get($color-map, slider-back);
+        }
+    }
+
+
+    .text {
+        position: relative;
+        top: 192px;
+        left: 601px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        width: 527px;
+
+        .italics {
+            font-family: map-get($font-map, alex);
+            font-size: 73px;
+            font-weight: 400;
+            height: 53px;
+        }
+
+        .not-italics {
+            font-family: map-get($font-map, rob);
+            font-weight: 100;
+            letter-spacing: 4.6px;
+            text-transform: uppercase;
+        }
+
+        .headline {
+            font-family: map-get($font-map, titi);
+            font-size: 72px;
+            font-weight: bold;
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+
+        .price {
+            font-family: map-get($font-map, rob);
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 24px;
+        }
+
+        .btn {
+            font-family: map-get($font-map, rob);
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 24px;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+    }
 }
