@@ -55,20 +55,14 @@
                         <img src="./images/logo.png" class="logo"/>
                     </div>
             </div>
-            <!-- <ul class="nav">
-                <a href="#"><li>home</li></a>
-                <a href="#"><li>shop</li></a>
-                <a href="#"><li>element</li></a>
-                <a href="#"><li>pages</li></a>
-                <a href="#"><li>portfolio</li></a>
-                <a href="#"><li>blogs</li></a>
-            </ul> -->
             <nav class="nav navbar navbar-expand-md">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                                                 data-target="#navbarNav" aria-controls="navbarNav"
                                                 aria-expanded="false"
                                                 aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon">
+                        <img src="./images/icons-expand-arrow.png" class="dropdown dropdown-icon"/>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
@@ -125,10 +119,220 @@
             </div>
         </section>
         <section class="catalog">
-            <div class="container catalog-menu"></div>
-            <div class="container catalog-items"></div>
+            <div class="container catalog-menu">
+                <nav class="nav navbar navbar-expand-md">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                                    data-target="#navbarNav-catalog" aria-controls="navbarNav"
+                                                    aria-expanded="false"
+                                                    aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon">
+                            <img src="./images/dropdown-icon.png" class="dropdown"/>
+                        </span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav-catalog">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Learning</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Office</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Outdoor</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <form class="search-container">
+                    <button class="search-icon-button">
+                        <img src="./images/Search-Icon.png" class="search-icon">
+                    </button>
+                    <input type="text" class="search" placeholder="search"/>
+                </form>
+            </div>
+            <div class="container menu-underline">
+            </div>
+            <div class="container catalog-items">
+                <div class="row content-row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                <span>$65.00</span> $35.00
+                                            </p>
+                                        </div>
+                                        <div class="line-card">
+                                        </div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                $65.00
+                                                <span class="sale-price"> $35.00</span>
+                                            </p>
+                                        </div>
+                                        <div class="line-card"></div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                $65.00
+                                                <span class="sale-price"> $35.00</span>
+                                            </p>
+                                        </div>
+                                        <div class="line-card"></div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                $65.00
+                                                <span class="sale-price"> $35.00</span>
+                                            </p>
+                                        </div>
+                                        <div class="line-card"></div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                $65.00
+                                                <span class="sale-price"> $35.00</span>
+                                            </p>
+                                        </div>
+                                        <div class="line-card"></div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="item">
+                                    <div class="image-card">
+                                        <div class="buttons">
+                                            <a href=""><img src="./images/dropdown-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/like-card-icon.png" alt="" class="button-card"></a>
+                                            <a href=""><img src="./images/addToList-card@2x.png" alt="" class="button-card"></a>
+                                        </div>
+                                        <div class="photo">
+                                            <!-- <img src="./images/card-image.png" alt="" class="photo-card"> -->
+                                        </div>
+                                    </div>
+                                    <div class="description-card">
+                                        <div class="text-card">
+                                            <p class="name">Lava Vtase</p>
+                                            <p class="price">
+                                                $65.00
+                                                <span class="sale-price"> $35.00</span>
+                                            </p>
+                                        </div>
+                                        <div class="line-card"></div>
+                                        <button class="button-card">
+                                            <img src="./images/basket-icon.png"/>
+                                            <a href="" >add to card</a>
+                                        </button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="sale">
+
         </section>
         <section class="advantage">
         </section>
