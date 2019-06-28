@@ -691,6 +691,14 @@ header .nav a:hover {
 .catalog .catalog-items .item .image-card .photo {
   background-color: #617e6e;
   width: 74%;
+  position: relative;
+}
+
+.catalog .catalog-items .item .image-card .photo .badge {
+  display: unset;
+  position: absolute;
+  left: -25px;
+  bottom: 18px;
 }
 
 .catalog .catalog-items .item .description-card {
@@ -791,6 +799,10 @@ header .nav a:hover {
   text-transform: uppercase;
 }
 
+.catalog .catalog-items .item .description-card .button-card a:hover {
+  color: #b4e0cf;
+}
+
 @media only screen and (max-width: 767px) {
   .catalog header .logo-row .header-search {
     padding-left: 0;
@@ -815,5 +827,247 @@ header .nav a:hover {
 
 .sale {
   margin-top: 176px;
+}
+
+.advantages .row {
+  margin-bottom: 63px;
+}
+
+.advantages .row .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.advantages .row .col-12 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1d1e24;
+}
+
+.advantages .row .col-12 div p {
+  color: #767676;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.advantages .row .col-12 .fast-delivery {
+  padding-top: 54px;
+}
+
+.advantages .row .col-12 .fast-delivery img {
+  margin-bottom: 48px;
+}
+
+.advantages .row .col-12 .special-discount {
+  background-color: #202127;
+  padding-top: 48px;
+}
+
+.advantages .row .col-12 .special-discount img {
+  margin-bottom: 41px;
+}
+
+.advantages .row .col-12 .secure-checkout {
+  padding-top: 40px;
+}
+
+.advantages .row .col-12 .secure-checkout img {
+  margin-bottom: 40px;
+}
+
+.advantages .row .col-12 .money-returns {
+  background-color: #202127;
+  padding-top: 43px;
+}
+
+.advantages .row .col-12 .money-returns img {
+  margin-bottom: 42px;
+}
+
+.advantages .row .col-3 div p:nth-child(1) {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+
+footer .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 143px;
+}
+
+footer .row .col-lg-4 {
+  border: 1px solid red;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer .row .col-lg-4 .about-website {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer .row .col-lg-4 .about-website img {
+  margin-bottom: 22px;
+}
+
+footer .row .col-lg-4 .about-website p {
+  margin-bottom: 0;
+  color: #7b7c85;
+  font-size: 13px;
+  font-weight: 300;
+  font-family: "Roboto Light";
+  font-weight: 300;
+  letter-spacing: 0.52px;
+  line-height: 22px;
+  white-space: pre-line;
+}
+
+footer .row .col-lg-4 {
+  border: 1px solid red;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+footer .row .col-lg-4 .useful-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .row .col-lg-4 .useful-links .list-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+footer .row .col-lg-4 .useful-links .list-box ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+footer .row .col-lg-4 .useful-links .list-box p {
+  color: #1d1e24;
+  font-family: "Titillium Web";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+
+footer .row .col-lg-4 .useful-links .list-box li {
+  color: #7b7c85;
+  font-family: 'Roboto Light';
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 36px;
+}
+
+footer .row .col-lg-4 .insta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 2px;
+}
+
+footer .row .col-lg-4 .insta img {
+  margin-right: 10px;
+}
+
+footer .row .col-lg-4 .insta div {
+  color: #1d1e24;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+footer .row .col-lg-4 .instagram-gallary {
+  margin-left: 0;
+}
+
+footer .row .col-lg-4 .instagram-gallary .instagram-item {
+  border: 1px solid #617e6e;
+  width: 86px;
+  height: 86px;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media only screen and (max-device-width: 767px) {
+  .useful-links {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+footer .row .col-4 .about-website p:nth-child(3) {
+  margin-top: 35px;
+  font-family: "Roboto Light";
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.48px;
+}
+
+.list-box ul:nth-child(2) {
+  margin-left: 37px;
 }
 /*# sourceMappingURL=main.css.map */

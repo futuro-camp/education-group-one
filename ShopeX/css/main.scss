@@ -492,6 +492,14 @@ header {
                     .photo {
                         background-color: #617e6e;
                         width: 74%;
+                        position: relative;
+
+                            .badge {
+                                display: unset;
+                                position: absolute;
+                                left: -25px;
+                                bottom: 18px;
+                            }
                     }
                 }
 
@@ -562,6 +570,9 @@ header {
                                     line-height: 24px;
                                     text-transform: uppercase;
                                 }
+                                a:hover{
+                                    color: $textColorNavHover;
+                                }
                         }
                 }
         }
@@ -601,4 +612,183 @@ header {
 // SECTION 3 - SALE
 .sale {
     margin-top: 176px;
+}
+
+// SECTION 4 - ADVANTAGES
+.advantages {
+    .row {
+        margin-bottom: 63px;
+        .col-12{
+            padding-left: 0;
+            padding-right: 0;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: #1d1e24;
+                    p{
+                        color: #767676;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 24px;
+                    }
+            }
+            .fast-delivery{
+                padding-top: 54px;
+                img{
+                    margin-bottom: 48px;
+                }
+            }
+            .special-discount{
+                background-color: #202127;
+                padding-top: 48px;
+                    img{
+                        margin-bottom: 41px;
+                    }
+            }
+            .secure-checkout{
+                padding-top: 40px;
+                img{
+                    margin-bottom: 40px;
+                }
+            }
+            .money-returns{
+                background-color: #202127;
+                padding-top: 43px;
+                    img{
+                        margin-bottom: 42px;
+                    }
+            }
+        }
+    }
+}
+.advantages .row .col-3 div p:nth-child(1) {
+    color: #ffffff;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}
+
+//FOOTER
+footer {
+    .row{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-bottom: 143px;
+
+        .col-lg-4{
+            border: 1px solid red;
+            padding-left: 0;
+            padding-right: 0;
+                .about-website {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                    img {
+                        margin-bottom: 22px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        color: #7b7c85;
+                        font-size: 13px;
+                        font-weight: 300;
+                        font-family: "Roboto Light";
+                        font-weight: 300;
+                        letter-spacing: 0.52px;
+                        line-height: 22px;
+                        white-space: pre-line;
+                    }
+                }
+        }
+        .col-lg-4{
+            border: 1px solid red;
+            padding-left: 0;
+            padding-right: 0;
+                .useful-links{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .list-box{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+
+                            ul{
+                                padding-left: 0;
+                                list-style: none;
+                            }
+                            p{
+                                color: #1d1e24;
+                                font-family: "Titillium Web";
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 36px;
+                                margin-bottom: 40px;
+                            }
+                            li{
+                                color: #7b7c85;
+                                font-family: 'Roboto Light';
+                                font-size: 12px;
+                                font-weight: 300;
+                                line-height: 36px;
+                            }
+                    }
+                }
+        }
+        .col-lg-4{
+            .insta{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 2px;
+                    img{
+                        margin-right: 10px;
+                    }
+                    div{
+                        color: #1d1e24;
+                        font-family: "Roboto";
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+            }
+            .instagram-gallary {
+                margin-left: 0;
+
+                    .instagram-item{
+                        border: 1px solid #617e6e;
+                        width: 86px;
+                        height: 86px;
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+            }
+        }
+    }
+}
+@media only screen and (max-device-width: 767px){
+    .useful-links{
+        align-items: center;
+    }
+    .instagram-gallary{
+
+    }
+}
+footer .row .col-4 .about-website p:nth-child(3) {
+    margin-top: 35px;
+    font-family: "Roboto Light";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.48px;
+}
+.list-box ul:nth-child(2) {
+    margin-left: 37px;
 }
