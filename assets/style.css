@@ -1153,14 +1153,12 @@ hr {
 }
 
 .five {
-    width: 1000px;
     height: 828px;
     display: flex;
 }
 
 @media screen and (max-device-width: 2560px) {
     .five {
-        width: 1110px;
         height: 730px;
         margin: -263px 680px 0 770px;
     }
@@ -1204,7 +1202,7 @@ hr {
 
 @media screen and (max-device-width: 1000px) {
     .five {
-        width: 1000px;
+        width: 100%;
         height: 828px;
         display: flex;
         margin: 0;
@@ -1234,22 +1232,19 @@ hr {
     background-image: url(forbusiness.png);
 }
 
-@media screen and (max-device-width: 759px) {
-    .forbusiness {
-        width: 100%;
-    }
-}
-
-@media screen and (max-device-width: 567px) {
-    .forbusiness {
-        height: 582px;
-    }
-}
-
 @media screen and (max-device-width: 2560px) {
     #forbusiness {
         position: absolute;
         width: 980px;
+        height: 640px;
+        margin: 0 0 0 130px;
+    }
+}
+
+@media screen and (max-device-width: 1024px) {
+    #forbusiness {
+        position: absolute;
+        width: 851px;
         height: 640px;
         margin: 0 0 0 130px;
     }
@@ -1263,6 +1258,19 @@ hr {
         background-image: url(forbusiness.png);
         margin: 0;
         position: static;
+    }
+}
+
+@media screen and (max-device-width: 759px) {
+    #forbusiness {
+        width: 100%;
+        height: 828px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #forbusiness {
+        height: 582px;
     }
 }
 
@@ -1289,26 +1297,21 @@ hr {
     }
 }
 
-.forbusinesstext {
-    margin: 60px 40px 0 40px;
+@media screen and (max-device-width: 759px) {
+    #forpeople {
+        width: 100%;
+        height: 828px;
+    }
 }
 
 @media screen and (max-device-width: 567px) {
-    .forbusinesstext {
-        margin: 46px 17px 37px 71px;
+    #forpeople {
+        height: 582px;
     }
 }
 
-@media screen and (max-device-width: 374px) {
-    .forbusinesstext {
-        margin: 46px 17px 37px 56px;
-    }
-}
-
-@media screen and (max-device-width: 320px) {
-    .forbusinesstext {
-        margin: 46px 17px 37px 16px;
-    }
+.forbusinesstext {
+    margin: 60px 40px 0 40px;
 }
 
 @media screen and (max-device-width: 2560px) {
@@ -1317,9 +1320,39 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 1024px) {
+    #forbusinesstext {
+        margin: 44px 32px 80px 60px;
+    }
+}
+
 @media screen and (max-device-width: 1000px) {
     #forbusinesstext {
-        margin: 60px 40px 0 40px;
+        margin: 60px 40px 120px 40px;
+    }
+}
+
+@media screen and (max-device-width: 759px) {
+    #forbusinesstext {
+        margin: 60px 30px 0 30px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #forbusinesstext {
+        margin: 46px 17px 37px 71px;
+    }
+}
+
+@media screen and (max-device-width: 374px) {
+    #forbusinesstext {
+        margin: 46px 17px 37px 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    #forbusinesstext {
+        margin: 46px 17px 37px 16px;
     }
 }
 
@@ -1361,6 +1394,39 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 1000px) {
+    #forbusinesstext p {
+        margin: 0 0 80px 0;
+        width: 100%;
+        height: 120px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-device-width: 759px) {
+    #forbusinesstext p {
+        margin: 0 0 60px 0;
+        height: 128px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #forbusinesstext p {
+        margin: 0 0 40px 0;
+        height: 80px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-device-width: 375px) {
+    #forbusinesstext p {
+        margin: 0 0 40px 0;
+        height: 80px;
+        line-height: 20px;
+    }
+}
+
 #forpeopletext div {
     color: #333333;
 }
@@ -1381,6 +1447,12 @@ hr {
     }
 }
 
+@media screen and (max-device-width: 375px) {
+    #forpeopletext div {
+        margin: 0 0 35px 0;
+    }
+}
+
 @media screen and (max-device-width: 2560px) {
     #forpeopletext {
         width: 640px;
@@ -1391,9 +1463,33 @@ hr {
 
 @media screen and (max-device-width: 1000px) {
     #forpeopletext {
-        width: 420px;
+        width: 100%;
         height: 648px;
         margin: 60px 40px 120px 40px;
+    }
+}
+
+@media screen and (max-device-width: 759px) {
+    #forpeopletext {
+        margin: 60px 30px 0 30px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #forpeopletext {
+        margin: 46px 17px 37px 71px;
+    }
+}
+
+@media screen and (max-device-width: 374px) {
+    #forpeopletext {
+        margin: 46px 17px 37px 56px;
+    }
+}
+
+@media screen and (max-device-width: 320px) {
+    #forpeopletext {
+        margin: 46px 17px 37px 16px;
     }
 }
 
@@ -1413,15 +1509,45 @@ hr {
 @media screen and (max-device-width: 1000px) {
     #forpeopletext p {
         margin: 0 0 80px 0;
-        width: 420px;
+        width: 100%;
         height: 120px;
         line-height: 22px;
+    }
+}
+
+@media screen and (max-device-width: 759px) {
+    #forpeopletext p {
+        margin: 0 0 60px 0;
+        height: 128px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-device-width: 567px) {
+    #forpeopletext p {
+        margin: 0 0 40px 0;
+        height: 80px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-device-width: 375px) {
+    #forpeopletext p {
+        margin: 0 0 40px 0;
+        height: 80px;
+        line-height: 20px;
     }
 }
 
 @media screen and (max-device-width: 2560px) {
     #forpeopletext img {
         margin: 0 0 21px 0;
+    }
+}
+
+@media screen and (max-device-width: 375px) {
+    #forpeopletext img {
+        margin: 0 0 16px 0;
     }
 }
 
