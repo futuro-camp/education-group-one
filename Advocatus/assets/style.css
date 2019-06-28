@@ -1,0 +1,802 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 168px;
+    height: 18px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 48px 345px 44px 374px;
+}
+
+.point {
+    color: #e8bf5d;
+    letter-spacing: 1px;
+}
+
+#wordspacing {
+    word-spacing: 0.56px;
+}
+
+ul.horizontal-list {
+    display: inline-block;
+    width: 656px;
+    height: 12px;
+    margin: 49px 377px 49px 0;
+    padding: 0;
+    word-spacing: 20px;
+}
+
+ul.horizontal-list li {
+    display: inline-block;
+}
+
+ul.horizontal-list li a {
+    text-decoration: none;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+ul.horizontal-list li a:after {
+    height: 5px;
+    background-color: #e8bf5d;
+    display: block;
+    content: "";
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+
+ul.horizontal-list li a:hover:after, a:focus:after {
+    width: 100%;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 43.75vw;
+    background-size: 100% 100%;
+    background-image: url(stock-photo-177211577.png);
+    background-repeat: no-repeat;
+}
+
+.shadow {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-image: url(innershadow.png);
+    background-repeat: no-repeat;
+}
+
+.adamsuaerezlawyer {
+    margin: 605px 327px 141px 493px;
+    width: 442px;
+    height: 94px;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 65px;
+    font-weight: 400;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 15px;
+}
+
+.adamsuaerez {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.lawyer {
+    font-family: "Open Sans";
+    font-size: 31px;
+    letter-spacing: 1.24px;
+}
+
+button {
+    width: 181px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    background-color: #e8bf5d;
+}
+
+.textbutton {
+    width: 88px;
+    height: 12px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 31px;
+}
+
+.shadow button {
+    margin: 627px 477px 163px 0;
+}
+
+.numberdiv {
+    position: relative;
+}
+
+.numbersodd {
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 195px;
+    font-weight: 400;
+    opacity: 0.1;
+    margin: 0 1359px 0 383px;
+    line-height: 300px;
+}
+
+.numbertext {
+    position: absolute;
+    top: 0;
+    margin: 99px 763px 0 372px;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 15px;
+}
+
+.aboutus {
+    width: 131px;
+    height: 25px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 29px;
+}
+
+.numbersoddtext {
+    width: 762px;
+    height: 51px;
+    color: #666666;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24.89px;
+    letter-spacing: 0.84px;
+    margin-top: 15px;
+}
+
+.historyexperise {
+    display: flex;
+    flex-direction: row;
+    width: 75px;
+    height: 20px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31px;
+    margin: 49px 458px 0 373px;
+}
+
+.history {
+    display: flex;
+    flex-direction: row;
+    margin: 35px 45px 0 0;
+}
+
+.historyyears {
+    width: 64px;
+    height: 15px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 31px;
+}
+
+.historytext {
+    width: 430px;
+    height: 38px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    margin: 0 0 42px 48px;
+}
+
+.experise {
+    width: 95px;
+}
+
+.experisetext {
+    width: 486px;
+    height: 169px;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-top: 36px;
+}
+
+.two {
+    width: 100%;
+    height: 748px;
+    background-color: #111111;
+}
+
+.numberparagraph {
+    width: 762px;
+    height: 51px;
+    color: #b9b9b9;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24.89px;
+    letter-spacing: 0.84px;
+}
+
+.numberseven {
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 195px;
+    font-weight: 400;
+    opacity: 0.1;
+    margin: 0 1359px 0 383px;
+    line-height: 300px;
+}
+
+#numbertwo {
+    margin-top: 410px;
+}
+
+.numbertext {
+    position: absolute;
+    top: 0;
+    margin: 99px 763px 0 372px;
+    border-left: 2px solid #e8bf5d;
+    padding-left: 15px;
+}
+
+.numberheader {
+    height: 25px;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    margin-bottom: 29px;
+}
+
+.icondiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.handshake {
+    display: flex;
+    margin: 0 120px 0 486px;
+}
+
+.wrench {
+    display: flex;
+    margin: 0 438px 68px 0;
+}
+
+.computer {
+    display: flex;
+    margin: 0 120px 0 496px;
+}
+
+.home {
+    display: flex;
+    margin: 0;
+}
+
+.iconhandshake {
+    width: 58px;
+    height: 38px;
+    color: #e8bf5d;
+    font-family: "Font Awesome";
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-top: 2px;
+}
+
+.iconwrench {
+    width: 42px;
+    height: 42px;
+    margin-top: 2px;
+}
+
+.iconcomputer {
+    width: 49px;
+    height: 43px;
+    margin-top: 2px;
+}
+
+.iconhome {
+    width: 42px;
+    height: 33px;
+    color: #e8bf5d;
+    font-family: "Font Awesome";
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-top: 2px;
+}
+
+.fortextclient {
+    margin-left: 30px;
+}
+
+.iconheder {
+    width: 219px;
+    height: 17px;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-bottom: 32px;
+}
+
+.icontext {
+    width: 357px;
+    height: 89px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#lawyers {
+    width: 276px;
+    height: 29px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 18.84px;
+    margin-top: 15px;
+}
+
+.lawyersphoto {
+    display: flex;
+    margin-left: 374px;
+}
+
+.lawyersphoto img {
+    margin-right: 30px;
+    width: 270px;
+    height: 300px;
+}
+
+.lawyersphoto div {
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#lawyersname {
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    line-height: 31px;
+}
+
+#lawyer {
+    font-family: "Open Sans";
+    letter-spacing: 0.56px;
+    line-height: 24px;
+    margin-bottom: 101px;
+}
+
+.four {
+    width: 100%;
+    height: 748px;
+    background-image: url(stock-photo-152247655.png), url(BASE.png);
+}
+
+.alonsmithdiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alonsmithphoto {
+    width: 765px;
+    height: 325px;
+    background-repeat: no-repeat, no-repeat;
+    background-image: url(photo.png), url(orangesquere.png);
+    background-position-x: 375px, 395px;
+    background-position-y: 0, 20px;
+}
+
+.alonsmithtext {
+    display: flex;
+    align-items: flex-start;
+    margin: 22px 437px 0 35px;
+}
+
+.quote {
+    height: 25px;
+    opacity: 0.25;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 96px;
+    font-weight: 400;
+    line-height: 54.18px;
+    margin-right: 13px;
+    letter-spacing: 0.56px;
+}
+
+.alonsmithlongtext {
+    width: 600px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+}
+
+.alonsmithshorttext {
+    width: 128px;
+    height: 44px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 39px;
+}
+
+.alonsmith {
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    line-height: 31px;
+}
+
+.CEO {
+    font-family: "Open Sans";
+    line-height: 24px;
+}
+
+.container {
+    width: 100% !important;
+}
+
+.glyphicon {
+    color: #111;
+}
+
+ol.carousel-indicators {
+    margin-bottom: 70px;
+    margin-left: -88px;
+    text-align: left;
+}
+
+.five {
+    width: 100%;
+    height: 1023px;
+}
+
+#publications {
+    width: 295px;
+    height: 25px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 28.84px;
+}
+
+#publicationstext {
+    margin-top: 105px;
+}
+
+.publicationsdiv {
+    display: flex;
+    flex: column;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 0 0 374px;
+}
+
+.publicationsdiv img {
+    width: 370px;
+    height: 299px;
+}
+
+.publicationsdiv div {
+    width: 367px;
+    height: 50px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#imgcomments {
+    width: 137px;
+    height: 16px;
+    margin-right: 155px;
+}
+
+#imgshare {
+    width: 70px;
+    height: 15px;
+}
+
+#border {
+    border-bottom: 3px solid #e8bf5d;
+}
+
+#publicationtite {
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    line-height: 60px;
+    font-weight: bold;
+}
+
+#adamsuarez {
+    font-family: "Open Sans";
+    letter-spacing: 0.64px;
+    line-height: 24px;
+}
+
+#adamsuarezmargin {
+    margin: 0 127px 0 5px;
+}
+
+#by {
+    color: #666666;
+    font-family: "Open Sans";
+    font-style: italic;
+    letter-spacing: 0.64px;
+    line-height: 24px;
+}
+
+#adamsuareztext {
+    width: 357px;
+    height: 135px;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-bottom: 40px;
+}
+
+.six {
+    width: 100%;
+    height: 748px;
+    background-color: #111111;
+}
+
+.faqdiv {
+    display: flex;
+}
+
+.questionsdiv {
+    width: 566px;
+    height: 281px;
+    display: flex;
+    flex: column;
+    align-content: space-between;
+    margin-left: 377px;
+}
+
+.questions {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    width: 566px;
+    height: 14px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 0px;
+    padding: 22.75px 0 22.25px 0;
+    border-bottom: 1px solid #e8bf5d;
+    letter-spacing: 0.56px;
+}
+
+.questions img {
+    width: 12px;
+    height: 12px;
+}
+
+#minus {
+    width: 12px;
+    height: 4px;
+}
+
+.questionstext {
+    width: 406px;
+    height: 169px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+    width: 500px;
+    height: 281px;
+    box-shadow: 0 12px 40px rgba(216, 178, 87, 0.32);
+    border-radius: 3px;
+    background-color: #e8bf5d;
+    padding: 42px 48px 70px 46px;
+    margin-left: 35px;
+}
+
+#selectedquestion {
+    color: #e8bf5d;
+}
+
+.seven {
+    width: 100%;
+    height: 865px;
+}
+
+#contact {
+    width: 295px;
+    height: 25px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 28.84px;
+}
+
+#contacttext {
+    margin-top: 105px;
+}
+
+.contactdiv {
+    display: flex;
+    width: 870px;
+    height: 490px;
+    box-shadow: 0 12px 40px rgba(104, 86, 42, 0.1);
+    border-radius: 3px;
+    background-color: #ffffff;
+    margin-left: 525px;
+    margin-bottom: 75px;
+}
+
+#contactform {
+    display: flex;
+    flex: column;
+    align-content: space-between;
+    width: 350px;
+    height: 490px;
+    margin: 55px 0 0 50px;
+}
+
+.map {
+    width: 870px;
+    height: 490px;
+    background-repeat: no-repeat, no-repeat;
+    background-image: url(map.png), url(baseformap.png);
+    background-position-x: 71px, 47px;
+    background-position-y: 52px, 75px;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid #333333;
+    padding: 35px 0 10px 0;
+    height: 60px;
+    width: 350px;
+    font-style: italic !important;
+    opacity: 0.5;
+    color: #b9b9b9;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+}
+
+#biginput {
+    padding: 120px 0 15px 0;
+}
+
+#inputbutton {
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 16px;
+    font-weight: 1000;
+    line-height: 31px;
+    letter-spacing: 0.64px;
+    margin-top: 30px;
+}
+
+footer {
+    width: 100%;
+    height: 81px;
+    background-color: #111111;
+}
+
+footer img {
+    width: 113px;
+    height: 16px;
+    margin: 15px 0 0 1362px;
+}
+
+.copyright {
+    margin-left: 375px;
+    height: 17px;
+    color: #b5b5b5;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 75px;
+}
+
+#symuco {
+    color: #ffffff;
+    font-family: "Open Sans";
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
