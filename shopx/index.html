@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Lato:300|Roboto:100,300,400,700|Titillium+Web:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -130,9 +130,146 @@
                 <button type="button" class="btn">Outdoor</button>
             </div>
             <div class="form-group col-12 col-md-3">
-                    <label for="header-search"><img src="icons/search.svg" alt="search"></label>
-                    <input type="text" class="form-cotrol" id="header-search" placeholder="search">
+                    <label for="catalogue-search"><img src="icons/search.svg" alt="search"></label>
+                    <input type="text" class="form-cotrol" id="catalogue-search" placeholder="search">
                 </div>
+        </div>
+        <div class="row catalogue-content">
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Lava Vtase</h1>
+                        <p id="current-price"><span id="past-price">$65.00</span>$35.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Ceramic Pot</h1>
+                        <p id="current-price"><span id="past-price">$78.00</span>$45.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Dinnerware Service</h1>
+                        <p id="current-price"><span id="past-price">$89.00</span>$56.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Norm Jars</h1>
+                        <p id="current-price"><span id="past-price">$65.00</span>$35.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Floating Boat</h1>
+                        <p id="current-price"><span id="past-price">$78.00</span>$45.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-10 col-sm-6 col-md-4">
+                <div class="card">
+                    <div class="card-head">
+                        <div class="buttons">
+                            <button class="btn"><img src="icons/3-layers.svg" alt="menu"></button>
+                            <button class="btn"><img src="icons/heart.svg" alt="like"></button>
+                            <button class="btn"><img src="icons/5-layers.svg" alt="addtolist"></button>
+                        </div>
+                        <img id="card-image" src="" alt="">
+                    </div>
+                    <div class="card-middle">
+                        <h1>Ceramic Pot</h1>
+                        <p id="current-price"><span id="past-price">$89.00</span>$56.00</p>
+                    </div>
+                    <div class="card-bottom">
+                        <a href="#"><img src="icons/cart.svg" alt="cart">Add To cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sale container-fluid">
+        <div class="row sale-row">
+            <div class="col-12 col-lg-6 sale-col">
+                <div class="text">
+                    <div>
+                        <p>Wood Stand</p>
+                    </div>
+                </div>
+                <div class="price">
+                    <p>$65.00</p>
+                    <h1>$35.00</h1>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 description">
+                <h3>Lava Vase</h3>
+                <h1>Ceramic Planter with Wood Stand</h1>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                <a href="#">Shop Now</a>
+            </div>
         </div>
     </section>
 </body>
