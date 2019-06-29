@@ -13,7 +13,6 @@
     border-bottom: $headerBorder;
 }
 header {
-/* FIRST LINE HEADER */
     .logo-row {
         display: flex;
         justify-content: space-between;
@@ -81,7 +80,6 @@ header {
         }
     }
 
-/* NAVIGATION LINE HEADER */
     .nav {
         margin-top: 69px;
         margin-bottom: 27px;
@@ -125,12 +123,12 @@ header {
             // }
         }
         .nav-item {
-            margin-left: 0px;
+            margin-left: 0;
         }
         .nav {
             justify-content: flex-start;
             margin-top: 20px;
-            margin-bottom: 0px;
+            margin-bottom: 0;
             padding-left: 0;
         }
 
@@ -227,8 +225,7 @@ header {
             text-transform: uppercase;
             height: 20px;
             color: $textColorDefault;
-            text-decoration-color:#617e6e;
-            -moz-text-decoration-color:#617e6e;
+            color:#617e6e;
         }
         .product-third-row a:hover {
             color: $secondaryLightColor;
@@ -355,7 +352,6 @@ header {
                 a {
                     text-transform: uppercase;
                     color: #45505e;
-                    text-transform: uppercase;
                     font-size: 11px;
                     line-height: 24px;
                     letter-spacing: 2.2px;
@@ -377,7 +373,7 @@ header {
                     .nav {
                         justify-content: flex-start;
                         margin-top: 20px;
-                        margin-bottom: 0px;
+                        margin-bottom: 0;
                         padding-left: 0;
                     }
                 }
@@ -385,7 +381,7 @@ header {
                 align-items: flex-start;
             }
             .nav-item {
-                margin-left: 0px;
+                margin-left: 0;
             }
 
 
@@ -705,7 +701,7 @@ header {
                 letter-spacing: 32.2px;
                 position: absolute;
                 right: 100px;
-                top: 0px;
+                top: 0;
                     p{
                         margin-top: 39px;
                     }
