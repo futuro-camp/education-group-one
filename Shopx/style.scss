@@ -509,17 +509,24 @@ header {
         
         justify-content: center;
         font-size: 16px;
-        padding-top: 40px;
-        padding-bottom: 175px;
+        padding-top: 2.5em;
+        padding-bottom: 10.9375em;
+
+        @media screen and (max-width: map-get($media-breakpoints, xs))
+        {
+            font-size: 14px;
+        }
 
         > div {
-            margin-top: 37px;
+            margin-top: 2.3125em;
             padding: 0;
 
             .card {
-                width: 93%;
+                border: none;
+                width: 22.5em;
+                height: 32.0625em;
                 margin: 0 auto;
-                box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+                box-shadow: 0 0 4.75em rgba(231, 231, 231, 0.66);
 
                 .card-content {
                     display: flex;
@@ -528,7 +535,7 @@ header {
 
                     .card-vertical-btns {
                         margin-top: 1.8em;
-                        width: 26.6%;
+                        width: 5.625em;
                         height: 6.3125em;
                         display: flex;
                         flex-direction: column;
@@ -543,7 +550,7 @@ header {
                     }
 
                     .card-image {
-                        width: 73.4%;
+                        width: 16.5625em;
                         height: 16em;
                         display: flex;
 
@@ -647,6 +654,10 @@ header {
     > div {
         padding: 0;
         height: 771px;
+
+        @media screen and (max-width: map-get($media-breakpoints, xs)) {
+            height: 300px;
+        }
     }
 
     .left {
@@ -660,7 +671,7 @@ header {
             width: 16.625em;
             height: 16.625em;
             border-radius: 50%;
-            background-color: #e7a8c6;
+            background-color: map-get($color-map, sale-left-back);
             border: 0.875em solid rgba(255, 255, 255, 0.49);
 
             @media screen and (max-width: map-get($media-breakpoints, xs)) {
@@ -668,6 +679,9 @@ header {
             }
 
             .text {
+
+
+
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
@@ -681,8 +695,8 @@ header {
                 }
 
                 .old-price {
-                    color: #000000;
-                    font-family: Roboto;
+                    color: map-get($color-map, dark-text);
+                    font-family: map-get($font-map, rob);
                     font-size: 1em;
                     font-weight: bold;
                     line-height: 1;
@@ -690,8 +704,8 @@ header {
                 }
 
                 .new-price {
-                    color: #ffffff;
-                    font-family: Roboto;
+                    color: map-get($color-map, light-back-text);
+                    font-family: map-get($font-map, rob);
                     font-size: 2.8125em;
                     font-weight: bold;
                     line-height: 1;
@@ -708,6 +722,10 @@ header {
             background-image: url('img/sale/back.png');
             margin: auto 0;
 
+            @media screen and (max-width: map-get($media-breakpoints, xs)) {
+                display: none;
+            }
+
             div {
                 transform: rotate(-90deg);
                 position: relative;
@@ -715,7 +733,7 @@ header {
                 right: 5px;
 
                 p {
-                    color: #000000;
+                    color: map-get($color-map, dark-text);
                     font-family: map-get($font-map, titi);
                     font-size: 23px;
                     font-weight: bold;
@@ -735,6 +753,10 @@ header {
             display: none;
         }
 
+        @media screen and (min-width: 1920px) {
+            background-size: cover;
+        }
+
         background: url('img/sale/right-back.png');
 
         p {
@@ -745,8 +767,8 @@ header {
 
         .name {
             margin-top: 328px;
-            color: #ffffff;
-            font-family: Roboto;
+            color: map-get($color-map, light-back-text);
+            font-family: map-get($font-map, rob);
             font-size: 12px;
             font-weight: bold;
             line-height: 24px;
@@ -755,7 +777,7 @@ header {
 
         .short-description {
             margin-top: 10px;
-            color: #000000;
+            color: map-get($color-map, dark-text);
             font-family: map-get($font-map, titi);
             font-size: 23px;
             font-weight: bold;
@@ -764,10 +786,10 @@ header {
 
         .description {
             margin-top: 47px;
-            background-color: #8ed1b7;
+            background-color: map-get($color-map, sale-right-back);
             width: 436px;
-            color: #ffffff;
-            font-family: Roboto;
+            color: map-get($color-map, light-back-text);
+            font-family: map-get($font-map, rob);
             font-size: 14px;
             font-weight: 300;
             line-height: 24px;
@@ -775,13 +797,224 @@ header {
 
         .right-btn {
             margin-top: 52px;
-            color: #ffffff;
-            font-family: Roboto;
+            color: map-get($color-map, light-back-text);
+            font-family: map-get($font-map, rob);
             font-size: 12px;
             font-weight: bold;
             line-height: 24px;
             text-decoration: underline;
             text-transform: uppercase;
+        }
+    }
+}
+
+.advantages {
+    width: 100%;
+    margin: 0;
+
+    >div {
+        height: 256px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;    
+
+        p {
+            width: 100%;
+        }
+    
+        .icon {
+            margin: auto 0;
+        }
+    
+        .name {
+            margin: 0;
+            color: map-get($color-map, light-back-text);
+            font-family: map-get($font-map, titi);
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 24px;
+            text-transform: uppercase;
+            letter-spacing: 3.6px;
+        }
+    
+        .description {
+            margin-top: 19px;
+            margin-bottom: 50px;
+            color: map-get($color-map, adventage-text);
+            font-family: map-get($font-map, rob);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+    }
+
+    > div:nth-child(2n+1),
+    > div:first-child {
+        background-color: map-get($color-map, adventage-back-one);
+    }
+
+    > div:nth-child(2n) {
+        background-color: map-get($color-map, adventage-back-two);
+    }
+
+
+}
+
+.container-fluid {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(232, 232, 232, 0.49);
+
+    .row {
+        width: 1145px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 1145px) {
+            width: 100%;
+        }
+
+    }
+
+    .upper {
+
+        .about {
+
+            img {
+                margin-top: 100px;
+
+                @media screen and (max-width: map-get($media-breakpoints, md))
+                {
+                    margin-top: 50px;
+                    position: relative;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+
+            .text {
+                margin-top: 22px;
+                width: 80%;
+                color: map-get($color-map, footer-text);
+                font-family: map-get($font-map, rob);
+                font-size: 13px;
+                font-weight: 300;
+                letter-spacing: 0.52px;
+                line-height: 22px;
+            }
+
+            .more {
+                color: map-get($color-map, footer-text);
+                font-family: map-get($font-map, rob);
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 22px;
+                letter-spacing: 0.52px;
+            }
+
+        }
+
+        .links {
+
+            @media screen and (max-width: map-get($media-breakpoints, md))
+            {
+               text-align: center;
+            }
+
+            p {
+                margin-top: 51px;
+                color: map-get($color-map, adventage-back-one);
+                font-family: map-get($font-map, titi);
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                margin-top: 33px;
+                list-style-type: none;
+                padding: 0;
+                height: 154px;
+
+                li {
+                    color: map-get($color-map, footer-text);
+                    font-family: map-get($font-map, rob);
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 28px;
+                }
+            }
+
+        }
+
+        .insta {
+            
+            @media screen and (max-width: map-get($media-breakpoints, lg))
+            {
+                text-align: center;
+            }
+
+            img {
+                margin-top: -4px;
+            }
+
+            p {
+                display: inline-block;
+                color: map-get($color-map, adventage-back-one);
+                font-family: map-get($font-map, rob);
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 53px;
+                margin-bottom: 34px;
+            }
+
+            .insta-photos {
+                display: flex;
+                flex-wrap: wrap;
+                width: 365px;
+
+                @media screen and (max-width: map-get($media-breakpoints, xs))
+                {
+                    justify-content: center;
+                    width: 100%
+                }
+
+                img {
+                    margin-top: 6px;
+                    margin-right: 2.5px;
+                    margin-left: 2.5px;
+                    width: 86px;
+                    height: 86px;
+                    background-color: map-get($color-map, sale-left-back);
+                }
+
+                @media screen and (max-width: map-get($media-breakpoints, lg))
+                {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+
+    .lower {
+        margin-top: 156px;
+        justify-content: space-between;
+
+        @media screen and (max-width: map-get($media-breakpoints, sm))
+        {
+            margin-top: 106px;
+            justify-content: center;
+        }
+
+        p {
+            margin-top: 23px;
+            color: map-get($color-map, footer-text);
+            font-family: map-get($font-map, rob);
+            font-size: 13px;
+            font-weight: 300;
         }
     }
 }
