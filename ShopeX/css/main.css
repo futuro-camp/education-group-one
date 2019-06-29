@@ -365,11 +365,50 @@ header .nav a:hover {
   .carousel .product {
     margin-right: 0;
   }
-}
-
-@media only screen and (max-width: 642px) {
-  .carousel .product {
-    margin-right: 0;
+  .carousel .product .product-first-row {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .carousel .product .product-first-row p:nth-child(1) {
+    font-family: 'Alex Brush';
+    font-size: 36px;
+    line-height: 12px;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .carousel .product .product-first-row p:nth-child(2) {
+    font-family: 'Roboto Thin';
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 2.3px;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+  .carousel .product .product-second-row {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .carousel .product .product-second-row p:nth-child(1) {
+    font-family: 'Titillium Web';
+    font-size: 36px;
+    line-height: 12px;
+  }
+  .carousel .product .product-second-row p:nth-child(2) {
+    font-family: 'Roboto Thin';
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .carousel .product .product-third-row {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .carousel .product .product-third-row a {
+    font-family: 'Roboto Light';
+    font-size: 10px;
+    line-height: 12px;
   }
 }
 
@@ -430,6 +469,24 @@ header .nav a:hover {
 
 .carousel .number-pointer .white-pointer a {
   color: #ffffff;
+}
+
+@media only screen and (max-width: 398px) {
+  .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .carousel .product {
+    width: 100%;
+  }
 }
 
 .catalog {
@@ -831,6 +888,8 @@ header .nav a:hover {
 
 .advantages .row {
   margin-bottom: 63px;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .advantages .row .col-12 {
@@ -920,7 +979,6 @@ footer .row {
 }
 
 footer .row .col-lg-4 {
-  border: 1px solid red;
   padding-left: 0;
   padding-right: 0;
 }
@@ -958,7 +1016,6 @@ footer .row .col-lg-4 .about-website p {
 }
 
 footer .row .col-lg-4 {
-  border: 1px solid red;
   padding-left: 0;
   padding-right: 0;
 }
@@ -1044,22 +1101,48 @@ footer .row .col-lg-4 .instagram-gallary {
 }
 
 footer .row .col-lg-4 .instagram-gallary .instagram-item {
-  border: 1px solid #617e6e;
   width: 86px;
   height: 86px;
   padding-left: 0;
   padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid brown;
+}
+
+footer .row .col-lg-4 .instagram-gallary .instagram-item img {
+  width: 97%;
+  height: 97%;
+}
+
+footer .footer-resourses {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @media only screen and (max-device-width: 767px) {
-  .useful-links {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  footer .row .col-lg-4 .insta {
+    margin-top: 51px;
   }
 }
 
-footer .row .col-4 .about-website p:nth-child(3) {
+@media only screen and (max-device-width: 575px) {
+  .useful-links {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 51px;
+  }
+}
+
+.about-website p:nth-child(3) {
   margin-top: 35px;
   font-family: "Roboto Light";
   font-size: 12px;
