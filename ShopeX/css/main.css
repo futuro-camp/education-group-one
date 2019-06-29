@@ -153,7 +153,6 @@ header .nav .navbar-collapse {
 header .nav a {
   text-transform: uppercase;
   color: #45505e;
-  text-transform: uppercase;
   font-size: 11px;
   line-height: 24px;
   letter-spacing: 2.2px;
@@ -512,7 +511,6 @@ header .nav a:hover {
   letter-spacing: 2.2px;
   font-family: 'Roboto-Bold';
   font-weight: 700;
-  font-style: bold;
 }
 
 .catalog .nav a:hover {
@@ -608,8 +606,9 @@ header .nav a:hover {
     padding-left: 0;
   }
   .catalog header .nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .catalog header .nav button {
     padding-left: 0;
@@ -839,8 +838,9 @@ header .nav a:hover {
     padding-left: 0;
   }
   .catalog header .nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .catalog header .nav button {
     padding-left: 0;

@@ -101,7 +101,6 @@ header {
             a {
                 text-transform: uppercase;
                 color: $textColorNav;
-                text-transform: uppercase;
                 font-size: 11px;
                 line-height: 24px;
                 letter-spacing: 2.2px;
@@ -331,7 +330,6 @@ header {
     margin-top: 60px;
 //MENU CATALOG
     .catalog-menu {
-        // background-color: $textColorNavHover;
         margin-bottom: 26px;
         display: flex;
         justify-content: space-between;
@@ -345,7 +343,6 @@ header {
             justify-content: center;
             list-style: none;
             padding-left: 0;
-
             .navbar-collapse {
                 justify-content: center;
             }
@@ -357,7 +354,6 @@ header {
                     letter-spacing: 2.2px;
                     font-family: 'Roboto-Bold';
                     font-weight: 700;
-                    font-style: bold;
                 }
                 a:hover {
                     color: $textColorNavHover;
@@ -368,8 +364,6 @@ header {
             .catalog-menu {
                 flex-direction: column-reverse;
                 align-items: flex-start;
-
-
                     .nav {
                         justify-content: flex-start;
                         margin-top: 20px;
@@ -436,7 +430,7 @@ header {
                         }
                     }
                     .nav {
-                        justify-content: space-around;
+                        justify-content: space-between;
                             button {
                                 padding-left: 0;
                                 margin-left: 55px;
@@ -617,7 +611,7 @@ header {
             }
         }
         .nav {
-            justify-content: space-around;
+            justify-content: space-between;
                 button {
                     padding-left: 0;
                     margin-left: 55px;
