@@ -1,7 +1,3 @@
-@function calculatePers($pixels, $parrentWidth) {
-    @return ($pixels/$parrentWidth) * 100%;
-}
-
 *{
     list-style: none;
     text-decoration: none;
@@ -85,7 +81,7 @@ header{
 
             ul {
                 display: flex;
-                width: calculatePers(126, 262);
+                width: 48%;
                 justify-content: space-between;
             }
         }
@@ -221,21 +217,21 @@ header{
             .text{
                 position: relative;
                 top: 192px;
-                left: calculatePers(600, 1920);
+                left: 31.25%;
                 display: flex;
                 width: 580px;
                 flex-wrap: wrap;
 
                 @media screen and (max-width: 1024px) {
-                    left: calculatePers(200, 1024);
+                    left: 19.53%;
                 }
 
                 @media screen and (max-width: 768px) {
-                    left: calculatePers(50, 768);
+                    left: 6.51%;
                     width: 360px;
                 }
 
-                h1 {
+                .carousel-item-heading {
                     margin-top: 35px;
                     color: #000000;
                     font-family: "Roboto - Thin";
@@ -263,7 +259,7 @@ header{
                     }
                 }
 
-                h2 {
+                .carousel-item-name {
                     margin: 23px 6px 0 0;
                     color: #000000;
                     font-family: "Titillium Web";
@@ -421,7 +417,7 @@ header{
                 .buttons {
                     display: flex;
                     flex-direction: column;
-                    margin: 29px calculatePers(40, 350) 0 calculatePers(37, 350);
+                    margin: 29px 11.42% 0 10.57%;
                     height: 100px;
                     justify-content: space-between;
 
@@ -448,7 +444,7 @@ header{
                     margin: 40px 0 35px;
                 }
 
-                h1 {
+                .card-name {
                     color: #000000;
                     font-family: "Titillium Web";
                     font-size: 23px;
@@ -561,7 +557,7 @@ header{
                     }
                 }
 
-                h1 {
+                .price-heading {
                     color: #ffffff;
                     font-family: "Roboto";
                     font-size: 45px;
@@ -627,10 +623,10 @@ header{
                 line-height: 24px;
                 text-transform: uppercase;
                 margin-top: 328px;
-                margin-left: calculatePers(83, 960);
+                margin-left: 8.64%;
             }
 
-            h1 {
+            .description-header {
                 color: #000000;
                 font-family: "Titillium Web";
                 font-size: 23px;
@@ -639,7 +635,7 @@ header{
                 background-color: #8ed1b7;
                 margin-top: 10px;
                 width: 339px;
-                margin-left: calculatePers(83, 960);
+                margin-left: 8.64%;
             }
 
             p {
@@ -651,7 +647,7 @@ header{
                 background-color: #8ed1b7;
                 width: 436px;
                 margin-top: 47px;
-                margin-left: calculatePers(83, 960);
+                margin-left: 8.64%;
             }
             
             a {
@@ -664,7 +660,7 @@ header{
                 font-family: "Roboto";
                 background-color: #8ed1b7;
                 margin-top: 52px;
-                margin-left: calculatePers(83, 960);
+                margin-left: 8.64%;
             }
             
             a:hover {
@@ -703,7 +699,7 @@ header{
                 flex-direction: column;
                 align-items: center;
 
-                h1 {
+                .content-heading {
                     color: #ffffff;
                     font-family: "Titillium Web";
                     font-size: 18px;
@@ -760,7 +756,7 @@ header{
             letter-spacing: 0.48px;
         }
 
-        h1 {
+        .links-row-heading {
             margin-top: 63px;
             color: #1d1e24;
             font-family: "Titillium Web";

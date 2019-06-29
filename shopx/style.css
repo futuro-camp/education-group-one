@@ -112,7 +112,7 @@ header .row-first .buttons-col ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 48.0916%;
+  width: 48%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -288,18 +288,18 @@ header .row-second .navigation .navigation-list li a:hover {
 
 @media screen and (max-width: 1024px) {
   .slider .carousel-inner .carousel-item .text {
-    left: 19.53125%;
+    left: 19.53%;
   }
 }
 
 @media screen and (max-width: 768px) {
   .slider .carousel-inner .carousel-item .text {
-    left: 6.51042%;
+    left: 6.51%;
     width: 360px;
   }
 }
 
-.slider .carousel-inner .carousel-item .text h1 {
+.slider .carousel-inner .carousel-item .text .carousel-item-heading {
   margin-top: 35px;
   color: #000000;
   font-family: "Roboto - Thin";
@@ -310,13 +310,13 @@ header .row-second .navigation .navigation-list li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .slider .carousel-inner .carousel-item .text h1 {
+  .slider .carousel-inner .carousel-item .text .carousel-item-heading {
     font-size: 18px;
     line-height: 24px;
   }
 }
 
-.slider .carousel-inner .carousel-item .text h1 span {
+.slider .carousel-inner .carousel-item .text .carousel-item-heading span {
   font-family: "Alex Brush";
   font-size: 73px;
   font-weight: 400;
@@ -325,13 +325,13 @@ header .row-second .navigation .navigation-list li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .slider .carousel-inner .carousel-item .text h1 span {
+  .slider .carousel-inner .carousel-item .text .carousel-item-heading span {
     font-size: 50px;
     margin-right: 4px;
   }
 }
 
-.slider .carousel-inner .carousel-item .text h2 {
+.slider .carousel-inner .carousel-item .text .carousel-item-name {
   margin: 23px 6px 0 0;
   color: #000000;
   font-family: "Titillium Web";
@@ -342,7 +342,7 @@ header .row-second .navigation .navigation-list li a:hover {
 }
 
 @media screen and (max-width: 768px) {
-  .slider .carousel-inner .carousel-item .text h2 {
+  .slider .carousel-inner .carousel-item .text .carousel-item-name {
     font-size: 40px;
   }
 }
@@ -529,7 +529,7 @@ header .row-second .navigation .navigation-list li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 29px 11.42857% 0 10.57143%;
+  margin: 29px 11.42% 0 10.57%;
   height: 100px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -570,7 +570,7 @@ header .row-second .navigation .navigation-list li a:hover {
   }
 }
 
-.catalogue .catalogue-content .card .card-middle h1 {
+.catalogue .catalogue-content .card .card-middle .card-name {
   color: #000000;
   font-family: "Titillium Web";
   font-size: 23px;
@@ -700,7 +700,7 @@ header .row-second .navigation .navigation-list li a:hover {
   }
 }
 
-.sale .sale-row .sale-col .price h1 {
+.sale .sale-row .sale-col .price .price-heading {
   color: #ffffff;
   font-family: "Roboto";
   font-size: 45px;
@@ -709,7 +709,7 @@ header .row-second .navigation .navigation-list li a:hover {
 }
 
 @media screen and (max-width: 576px) {
-  .sale .sale-row .sale-col .price h1 {
+  .sale .sale-row .sale-col .price .price-heading {
     font-size: 22px;
     line-height: 12px;
   }
@@ -780,10 +780,10 @@ header .row-second .navigation .navigation-list li a:hover {
   line-height: 24px;
   text-transform: uppercase;
   margin-top: 328px;
-  margin-left: 8.64583%;
+  margin-left: 8.64%;
 }
 
-.sale .sale-row .description h1 {
+.sale .sale-row .description .description-header {
   color: #000000;
   font-family: "Titillium Web";
   font-size: 23px;
@@ -792,7 +792,7 @@ header .row-second .navigation .navigation-list li a:hover {
   background-color: #8ed1b7;
   margin-top: 10px;
   width: 339px;
-  margin-left: 8.64583%;
+  margin-left: 8.64%;
 }
 
 .sale .sale-row .description p {
@@ -804,7 +804,7 @@ header .row-second .navigation .navigation-list li a:hover {
   background-color: #8ed1b7;
   width: 436px;
   margin-top: 47px;
-  margin-left: 8.64583%;
+  margin-left: 8.64%;
 }
 
 .sale .sale-row .description a {
@@ -817,7 +817,7 @@ header .row-second .navigation .navigation-list li a:hover {
   font-family: "Roboto";
   background-color: #8ed1b7;
   margin-top: 52px;
-  margin-left: 8.64583%;
+  margin-left: 8.64%;
 }
 
 .sale .sale-row .description a:hover {
@@ -873,7 +873,7 @@ header .row-second .navigation .navigation-list li a:hover {
           align-items: center;
 }
 
-.advantages .row .advantage .content h1 {
+.advantages .row .advantage .content .content-heading {
   color: #ffffff;
   font-family: "Titillium Web";
   font-size: 18px;
@@ -927,7 +927,7 @@ header .row-second .navigation .navigation-list li a:hover {
   letter-spacing: 0.48px;
 }
 
-.links .links-row h1 {
+.links .links-row .links-row-heading {
   margin-top: 63px;
   color: #1d1e24;
   font-family: "Titillium Web";
