@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <title>Shopx</title>
 </head>
 <body>
@@ -62,15 +62,15 @@
             </div>
         </nav>
     </section>
-    <section id="carouselIndicator" class="carousel slide" data-ride="carousel">
+    <section id="carousel-indicator" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
-            <li data-target="#carouselIndicator" data-slide-to="0">
+            <li data-target="#carousel-indicator" data-slide-to="0">
                 01
             </li>
-            <li data-target="#carouselIndicator" data-slide-to="1" class="active">
+            <li data-target="#carousel-indicator" data-slide-to="1" class="active">
                 02
             </li>
-            <li data-target="#carouselIndicator" data-slide-to="2">
+            <li data-target="#carousel-indicator" data-slide-to="2">
                 03
             </li>
         </ul>
@@ -352,26 +352,28 @@
         </div>
     </section>
     <section class="advantages row">
-        <div class="col-12 col-sm-6 col-xl-3">
-            <img class="icon" src="img/advantages/bus.svg">
-            <p class="name">FAST DELIVERY</p>
-            <p class="description">Same day delivery as soon as possible</p>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <img class="icon" src="img/advantages/tag.svg">
-            <p class="name">SPECIAL DISCOUNT</p>
-            <p class="description">Get attractive offers day by day</p>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <img class="icon" src="img/advantages/lock.svg">
-            <p class="name">SECURE CHECKOUT</p>
-            <p class="description">Fully secured SSL checkout technology</p>
-        </div>
-        <div class="col-12 col-sm-6 col-xl-3">
-            <img class="icon" src="img/advantages/bag.svg">
-            <p class="name">MONEY RETURNS</p>
-            <p class="description">100% Money back guarntee</p>
-        </div>
+        <ul class="row">
+            <li class="col-12 col-sm-6 col-xl-3">
+                <img class="icon" src="img/advantages/bus.svg">
+                <p class="name">FAST DELIVERY</p>
+                <p class="description">Same day delivery as soon as possible</p>
+            </li>
+            <li class="col-12 col-sm-6 col-xl-3">
+                <img class="icon" src="img/advantages/tag.svg">
+                <p class="name">SPECIAL DISCOUNT</p>
+                <p class="description">Get attractive offers day by day</p>
+            </li>
+            <li class="col-12 col-sm-6 col-xl-3">
+                <img class="icon" src="img/advantages/lock.svg">
+                <p class="name">SECURE CHECKOUT</p>
+                <p class="description">Fully secured SSL checkout technology</p>
+            </li>
+            <li class="col-12 col-sm-6 col-xl-3">
+                <img class="icon" src="img/advantages/bag.svg">
+                <p class="name">MONEY RETURNS</p>
+                <p class="description">100% Money back guarntee</p>
+            </li>            
+        </ul>
     </section>
     <footer class="container-fluid">
             <div class="upper row">

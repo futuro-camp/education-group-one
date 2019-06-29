@@ -362,7 +362,6 @@ header {
             line-height: 1;
             text-decoration: underline;
             text-transform: uppercase;
-            padding: 0;
             color: map-get($color-map, dark-text);
 
         }
@@ -440,7 +439,6 @@ header {
                                 font-weight: 400;
                                 line-height: 1;
                                 text-transform: uppercase;
-                                font-weight: 400;
                                 letter-spacing: 2.2px;
                             }
 
@@ -484,7 +482,7 @@ header {
                 height: 16px;
                 line-height: 1;
                 border: none;
-                background: url('img/head/search_icon.svg');
+                background: url('img/content/search_icon.svg');
             }
 
             .input {
@@ -497,7 +495,6 @@ header {
                 font-family: map-get($font-map, rob);
                 font-size: 11px;
                 font-weight: 400;
-                line-height: 24px;
                 text-transform: uppercase;
                 letter-spacing: 2.2px;
             }
@@ -812,53 +809,58 @@ header {
     width: 100%;
     margin: 0;
 
-    >div {
-        height: 256px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        text-align: center;    
+    .row {
+        width: 100%;
+        margin: 0;
+        padding: 0;
 
-        p {
-            width: 100%;
+        >li {
+            height: 256px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: center;    
+    
+            p {
+                width: 100%;
+            }
+        
+            .icon {
+                margin: auto 0;
+            }
+        
+            .name {
+                margin: 0;
+                color: map-get($color-map, light-back-text);
+                font-family: map-get($font-map, titi);
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 24px;
+                text-transform: uppercase;
+                letter-spacing: 3.6px;
+            }
+        
+            .description {
+                margin-top: 19px;
+                margin-bottom: 50px;
+                color: map-get($color-map, adventage-text);
+                font-family: map-get($font-map, rob);
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 24px;
+            }
         }
     
-        .icon {
-            margin: auto 0;
+        > li:nth-child(2n+1),
+        > li:first-child {
+            background-color: map-get($color-map, adventage-back-one);
         }
     
-        .name {
-            margin: 0;
-            color: map-get($color-map, light-back-text);
-            font-family: map-get($font-map, titi);
-            font-size: 24px;
-            font-weight: bold;
-            line-height: 24px;
-            text-transform: uppercase;
-            letter-spacing: 3.6px;
+        > li:nth-child(2n) {
+            background-color: map-get($color-map, adventage-back-two);
         }
-    
-        .description {
-            margin-top: 19px;
-            margin-bottom: 50px;
-            color: map-get($color-map, adventage-text);
-            font-family: map-get($font-map, rob);
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 24px;
-        }
+
     }
-
-    > div:nth-child(2n+1),
-    > div:first-child {
-        background-color: map-get($color-map, adventage-back-one);
-    }
-
-    > div:nth-child(2n) {
-        background-color: map-get($color-map, adventage-back-two);
-    }
-
-
 }
 
 .container-fluid {

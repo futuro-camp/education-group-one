@@ -134,8 +134,7 @@ header .header-row .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+    justify-content: space-around;
   list-style-type: none;
   width: 100%;
 }
@@ -355,7 +354,6 @@ header .header-row .nav {
   line-height: 1;
   text-decoration: underline;
   text-transform: uppercase;
-  padding: 0;
   color: #000;
 }
 
@@ -455,7 +453,6 @@ header .header-row .nav {
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
-  font-weight: 400;
   letter-spacing: 2.2px;
 }
 
@@ -498,7 +495,7 @@ header .header-row .nav {
   height: 16px;
   line-height: 1;
   border: none;
-  background: url("img/head/search_icon.svg");
+  background: url("img/content/search_icon.svg");
 }
 
 .content .nav-and-search .searchbar .input {
@@ -511,7 +508,6 @@ header .header-row .nav {
   font-family: Roboto;
   font-size: 11px;
   font-weight: 400;
-  line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 2.2px;
 }
@@ -854,7 +850,13 @@ header .header-row .nav {
   margin: 0;
 }
 
-.advantages > div {
+.advantages .row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages .row > li {
   height: 256px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -869,15 +871,15 @@ header .header-row .nav {
   text-align: center;
 }
 
-.advantages > div p {
+.advantages .row > li p {
   width: 100%;
 }
 
-.advantages > div .icon {
+.advantages .row > li .icon {
   margin: auto 0;
 }
 
-.advantages > div .name {
+.advantages .row > li .name {
   margin: 0;
   color: #fff;
   font-family: TitilliumWeb;
@@ -888,7 +890,7 @@ header .header-row .nav {
   letter-spacing: 3.6px;
 }
 
-.advantages > div .description {
+.advantages .row > li .description {
   margin-top: 19px;
   margin-bottom: 50px;
   color: #767676;
@@ -898,12 +900,12 @@ header .header-row .nav {
   line-height: 24px;
 }
 
-.advantages > div:nth-child(2n+1),
-.advantages > div:first-child {
+.advantages .row > li:nth-child(2n+1),
+.advantages .row > li:first-child {
   background-color: #1d1e24;
 }
 
-.advantages > div:nth-child(2n) {
+.advantages .row > li:nth-child(2n) {
   background-color: #202127;
 }
 
