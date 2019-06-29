@@ -964,7 +964,6 @@ header .nav a:hover {
   top: 345px;
   height: 81px;
   width: 611px;
-  border: 1px solid rebeccapurple;
   background: url("../images/back.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -1153,7 +1152,6 @@ footer .row .col-lg-4 .about-website p {
   font-size: 13px;
   font-weight: 300;
   font-family: "Roboto Light";
-  font-weight: 300;
   letter-spacing: 0.52px;
   line-height: 22px;
   white-space: pre-line;
@@ -1325,6 +1323,24 @@ footer .footer-credits img {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  footer .row .col-lg-4 .useful-links .list-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .list-box ul:nth-child(2) {
+    margin-left: 0;
+  }
+  .catalog .menu-underline {
+    margin-bottom: 23px;
+  }
+  .carousel .number-pointer {
+    display: none;
+  }
+  .catalog .catalog-menu {
+    padding-left: 15px;
+  }
 }
 
 @media only screen and (max-device-width: 575px) {
@@ -1336,6 +1352,19 @@ footer .footer-credits img {
   }
   .sale .sale-wrapper .sale-price .price-cirle {
     right: 100px;
+  }
+  .sale .sale-wrapper .sale-price {
+    height: 440px;
+  }
+  .sale .sale-wrapper .background-box {
+    display: none;
+  }
+  .sale .sale-wrapper .sale-price .price-cirle {
+    right: 0;
+    bottom: 0;
+  }
+  footer .footer-resourses {
+    padding-bottom: 53px;
   }
 }
 
