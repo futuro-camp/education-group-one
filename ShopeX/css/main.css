@@ -887,7 +887,7 @@ header .nav a:hover {
 }
 
 .advantages .row {
-  margin-bottom: 63px;
+  margin-bottom: 12px;
   margin-left: 0;
   margin-right: 0;
 }
@@ -956,6 +956,11 @@ header .nav a:hover {
   margin-bottom: 42px;
 }
 
+.advantages .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .advantages .row .col-3 div p:nth-child(1) {
   color: #ffffff;
   font-family: "Titillium Web";
@@ -964,6 +969,10 @@ header .nav a:hover {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 3.6px;
+}
+
+footer {
+  border: 1px solid rgba(232, 232, 232, 0.49);
 }
 
 footer .row {
@@ -975,7 +984,6 @@ footer .row {
           justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 143px;
 }
 
 footer .row .col-lg-4 {
@@ -997,6 +1005,7 @@ footer .row .col-lg-4 .about-website {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-top: 100px;
 }
 
 footer .row .col-lg-4 .about-website img {
@@ -1031,6 +1040,7 @@ footer .row .col-lg-4 .useful-links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 51px;
 }
 
 footer .row .col-lg-4 .useful-links .list-box {
@@ -1082,7 +1092,7 @@ footer .row .col-lg-4 .insta {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-top: 2px;
+  margin-top: 52px;
 }
 
 footer .row .col-lg-4 .insta img {
@@ -1114,7 +1124,6 @@ footer .row .col-lg-4 .instagram-gallary .instagram-item {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid brown;
 }
 
 footer .row .col-lg-4 .instagram-gallary .instagram-item img {
@@ -1125,11 +1134,43 @@ footer .row .col-lg-4 .instagram-gallary .instagram-item img {
 footer .footer-resourses {
   margin-left: 0;
   margin-right: 0;
+  padding-bottom: 153px;
+}
+
+footer .footer-credits {
+  margin-left: 0;
+  margin-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .footer-credits p {
+  margin-bottom: 4px;
+  color: #7b7c85;
+  font-family: Lato;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+footer .footer-credits img {
+  margin-bottom: -31px;
 }
 
 @media only screen and (max-device-width: 767px) {
   footer .row .col-lg-4 .insta {
     margin-top: 51px;
+  }
+  footer .footer-credits {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 

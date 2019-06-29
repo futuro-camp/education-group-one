@@ -664,7 +664,7 @@ header {
 // SECTION 4 - ADVANTAGES
 .advantages {
     .row {
-        margin-bottom: 63px;
+        margin-bottom: 12px;
         margin-left: 0;
         margin-right: 0;
 
@@ -713,6 +713,10 @@ header {
             }
         }
     }
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 .advantages .row .col-3 div p:nth-child(1) {
     color: #ffffff;
@@ -726,11 +730,12 @@ header {
 
 //FOOTER
 footer {
+    border: 1px solid rgba(232, 232, 232, 0.49);
+    // border: 2px solid red;
     .row{
         display: flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        margin-bottom: 143px;
 
         .col-lg-4{
             padding-left: 0;
@@ -740,6 +745,7 @@ footer {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: flex-start;
+                margin-top: 100px;
                     img {
                         margin-bottom: 22px;
                     }
@@ -763,7 +769,7 @@ footer {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-
+                    margin-top: 51px;
                     .list-box{
                         display: flex;
                         flex-direction: row;
@@ -797,7 +803,7 @@ footer {
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: flex-start;
-                margin-top: 2px;
+                margin-top: 52px;
                     img{
                         margin-right: 10px;
                     }
@@ -810,7 +816,6 @@ footer {
             }
             .instagram-gallary {
                 margin-left: 0;
-
                     .instagram-item{
                         width: 86px;
                         height: 86px;
@@ -819,8 +824,6 @@ footer {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border: 1px solid brown;
-
                             img{
                                 width: 97%;
                                 height: 97%;
@@ -832,13 +835,34 @@ footer {
     .footer-resourses {
         margin-left: 0;
         margin-right: 0;
+        padding-bottom: 153px;
+    }
+    .footer-credits {
+        margin-left: 0;
+        margin-right: 0;
+        // margin-bottom: 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+            p{
+                margin-bottom: 4px;
+                color: #7b7c85;
+                font-family: Lato;
+                font-size: 13px;
+                font-weight: 300;
+            }
+            img {
+                margin-bottom: -31px;
+            }
     }
 }
 @media only screen and (max-device-width: 767px){
     footer .row .col-lg-4 .insta {
         margin-top: 51px;
     }
-
+    footer .footer-credits {
+        justify-content: center;
+    }
 }
 @media only screen and (max-device-width: 575px){
     .useful-links{
