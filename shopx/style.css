@@ -257,6 +257,18 @@ header .row-second .navigation .navigation-list li a:hover {
   }
 }
 
+.slider .carousel-inner #carousel-first {
+  background-color: #ade1c5;
+}
+
+.slider .carousel-inner #carousel-second {
+  background-color: red;
+}
+
+.slider .carousel-inner #carousel-third {
+  background-color: green;
+}
+
 .slider .carousel-inner .carousel-item {
   width: 100%;
   height: 576px;
@@ -971,6 +983,12 @@ header .row-second .navigation .navigation-list li a:hover {
   background-color: #e7a8c6;
   height: 86px;
   width: 86px;
+}
+
+.links .links-row .instagram ul li img {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 1000px) {
