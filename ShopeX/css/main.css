@@ -471,24 +471,6 @@ header .nav a:hover {
   color: #ffffff;
 }
 
-@media only screen and (max-width: 398px) {
-  .carousel {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .carousel .product {
-    width: 100%;
-  }
-}
-
 .catalog {
   margin-top: 60px;
 }
@@ -965,12 +947,28 @@ header .nav a:hover {
   line-height: 24px;
   letter-spacing: 32.2px;
   position: absolute;
-  right: -163px;
-  top: 256px;
+  right: 100px;
+  top: 0px;
+}
+
+.sale .sale-wrapper .right-text p {
+  margin-top: 39px;
+}
+
+.sale .sale-wrapper .background-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: -265px;
+  top: 345px;
+  height: 81px;
+  width: 611px;
+  border: 1px solid rebeccapurple;
   background: url("../images/back.png");
   background-position: center;
-  transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
+  background-repeat: no-repeat;
+  background-size: cover;
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -978,16 +976,11 @@ header .nav a:hover {
   -o-transform: rotate(-90deg);
 }
 
-.sale .sale-wrapper .right-text p {
-  margin-top: 39px;
-}
-
 .sale .sale-wrapper .sale-featured {
   background: url("../images/featured-back.png");
 }
 
 .sale .sale-wrapper .sale-featured .featured-product {
-  width: 444px;
   height: 235px;
   margin-top: 328px;
   margin-left: 82px;
@@ -1305,6 +1298,24 @@ footer .footer-credits img {
   margin-bottom: -31px;
 }
 
+.about-website p:nth-child(3) {
+  margin-top: 35px;
+  font-family: "Roboto Light";
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.48px;
+}
+
+.list-box ul:nth-child(2) {
+  margin-left: 37px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .sale {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (max-device-width: 767px) {
   footer .row .col-lg-4 .insta {
     margin-top: 51px;
@@ -1323,17 +1334,26 @@ footer .footer-credits img {
             align-items: flex-start;
     margin-top: 51px;
   }
+  .sale .sale-wrapper .sale-price .price-cirle {
+    right: 100px;
+  }
 }
 
-.about-website p:nth-child(3) {
-  margin-top: 35px;
-  font-family: "Roboto Light";
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 0.48px;
-}
-
-.list-box ul:nth-child(2) {
-  margin-left: 37px;
+@media only screen and (max-width: 398px) {
+  .carousel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .carousel .product {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
