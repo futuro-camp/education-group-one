@@ -1,9 +1,5 @@
 /* COLORS */
 /* FONTS */
-.row {
-  width: 100%;
-}
-
 .header-background-line {
   position: absolute;
   top: 162px;
@@ -1377,5 +1373,9 @@ footer .footer-credits img {
   .carousel .product {
     width: 100%;
   }
+}
+
+.row {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

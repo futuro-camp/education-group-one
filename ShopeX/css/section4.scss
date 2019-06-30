@@ -1,0 +1,66 @@
+// SECTION 4 - ADVANTAGES
+.advantages {
+    .row {
+        margin-bottom: 12px;
+        margin-left: 0;
+        margin-right: 0;
+
+        .col-12{
+            padding-left: 0;
+            padding-right: 0;
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: #1d1e24;
+                    p{
+                        color: #767676;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 24px;
+                    }
+            }
+            .fast-delivery{
+                padding-top: 54px;
+                img{
+                    margin-bottom: 48px;
+                }
+            }
+            .special-discount{
+                background-color: #202127;
+                padding-top: 48px;
+                    img{
+                        margin-bottom: 41px;
+                    }
+            }
+            .secure-checkout{
+                padding-top: 40px;
+                img{
+                    margin-bottom: 40px;
+                }
+            }
+            .money-returns{
+                background-color: #202127;
+                padding-top: 43px;
+                    img{
+                        margin-bottom: 42px;
+                    }
+            }
+        }
+    }
+    .container-fluid{
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.advantages .row .col-3 div p:nth-child(1) {
+    color: #ffffff;
+    font-family: "Titillium Web";
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+}

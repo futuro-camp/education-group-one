@@ -1,0 +1,131 @@
+// BORDER UNDER LOGO-LINE IN HEADER
+.header-background-line {
+    position: absolute;
+    top: 162px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $headerBackground;
+    border-bottom: $headerBorder;
+}
+header {
+    .logo-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 52px;
+
+        .header-background-line  {
+            background-color: $headerBackground;
+            border: 1px solid $headerBorder;
+        }
+        .header-search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+                .search-container {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-wrap: nowrap;
+                }
+                form {
+                    width: 100%;
+                    .search-icon-button {
+                        margin-right: 14px;
+                        background-color: transparent;
+                        border: none;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .search-icon-button:focus {
+                        outline-color: $primaryColor;
+                    }
+                    input:focus {
+                        outline-color: $primaryColor;
+                    }
+                    input {
+                        background-color: transparent;
+                        height: 16px;
+                        font-size: 11px;
+                        line-height: 24px;
+                        letter-spacing: 2.2px;
+                        font-family: 'Roboto-Regular';
+                        font-weight: 400;
+                        color: $textColorSearch;
+                        text-transform: uppercase;
+                        border: none;
+                        width: 69%;
+                    }
+                }
+        }
+        .header-logo {
+            display: flex;
+            justify-content: center;
+        }
+        .header-tools {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100px;
+        }
+        .header-tools a:nth-child(2) {
+            margin-left: 27px;
+            margin-right: 35px;
+        }
+    }
+
+    .nav {
+        margin-top: 69px;
+        margin-bottom: 27px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        list-style: none;
+            button {
+                span {
+                    .dropdown-icon {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+            }
+        .navbar-collapse {
+            justify-content: center;
+        }
+            a {
+                text-transform: uppercase;
+                color: $textColorNav;
+                font-size: 11px;
+                line-height: 24px;
+                letter-spacing: 2.2px;
+                font-family: 'Roboto-Regular';
+                font-weight: 400;
+            }
+            a:hover {
+                color: $textColorNavHover;
+                text-decoration: underline;
+            }
+    }
+    @media only screen and (max-device-width: 767px) {
+        .navbar-nav {
+            // flex-direction: column;
+            align-items: flex-start;
+
+            // button {
+            //     // padding-left: 0;
+            // }
+        }
+        .nav-item {
+            margin-left: 0;
+        }
+        .nav {
+            justify-content: flex-start;
+            margin-top: 20px;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+
+}
+}

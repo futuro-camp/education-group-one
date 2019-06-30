@@ -1,0 +1,190 @@
+// SECTION 1 - CAROUSEL
+.carousel {
+    background-color: $primaryColor;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 576px;
+
+        .product {
+        margin: 192px 35% 192px 0;
+        width: 530px;
+        height: 192px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        .product-first-row p{ margin-bottom: 0;}
+        .product-first-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-end;
+            flex-basis: 100%;
+            width: 52%;
+        }
+            .product-first-row p:nth-child(1) {
+                font-family: 'Alex Brush';
+                font-size: 73px;
+                line-height: 24px;
+                font-weight: 400;
+                flex-basis: 50%;
+                color: $textColorDefault;
+            }
+            .product-first-row p:nth-child(2) {
+                font-family: 'Roboto Thin';
+                font-size: 23px;
+                line-height: 12px;
+                letter-spacing: 4.6px;
+                text-transform: uppercase;
+                font-weight: 400;
+                flex-basis: 50%;
+                color: $textColorDefault;
+            }
+
+        .product-second-row p{margin-bottom: 0;}
+        .product-second-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-basis: 100%;
+            width: 100%;
+            // margin-bottom: 23px;
+            // margin-top: 23px;
+        }
+            .product-second-row p:nth-child(1) {
+                font-family: 'Titillium Web';
+                font-size: 72px;
+                line-height: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $textColorDefault;
+            }
+            .product-second-row p:nth-child(2) {
+                font-family: 'Roboto Thin';
+                font-size: 24px;
+                line-height: 24px;
+                font-weight: 400;
+                align-self: center;
+                color: $textColorDefault;
+            }
+
+        .product-third-row p{ margin-bottom: 0;}
+        .product-third-row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            flex-basis: 100%;
+        }
+        .product-third-row a {
+            font-family: 'Roboto Light';
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            text-decoration: underline;
+            text-transform: uppercase;
+            height: 20px;
+            color: $textColorDefault;
+            color:#617e6e;
+        }
+        .product-third-row a:hover {
+            color: $secondaryLightColor;
+        }
+        }
+        @media only screen and (max-width: 1120px) {
+        .product {
+            margin-right: 10%;
+        }
+        }
+        @media only screen and (max-width: 769px) {
+        .product {
+            margin-right: 0;
+
+                .product-first-row {
+                    justify-content: flex-start;
+                    flex-basis: 50%;
+                }
+                .product-first-row p:nth-child(1) {
+                    font-family: 'Alex Brush';
+                    font-size: 36px;
+                    line-height: 12px;
+                    flex-basis: 25%;
+                }
+                .product-first-row p:nth-child(2) {
+                    font-family: 'Roboto Thin';
+                    font-size: 12px;
+                    line-height: 12px;
+                    letter-spacing: 2.3px;
+                    flex-basis: 25%;
+                }
+                .product-second-row {
+                    flex-basis: 50%;
+                }
+                .product-second-row p:nth-child(1) {
+                    font-family: 'Titillium Web';
+                    font-size: 36px;
+                    line-height: 12px;
+                }
+                .product-second-row p:nth-child(2) {
+                    font-family: 'Roboto Thin';
+                    font-size: 12px;
+                    line-height: 12px;
+                }
+                .product-third-row {
+                    flex-basis: 50%;
+                }
+                .product-third-row a {
+                    font-family: 'Roboto Light';
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+        }
+        }
+        .number-pointer {
+        width: 119px;
+        height: 88px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .number-pointer-separator {
+            background-color: #9fcfb4;
+            height: 1px;
+        }
+            .first {
+            width: 119px;
+            }
+            .second {
+            width: 79px;
+            }
+
+        .number {
+            font-size: 16px;
+        }
+        .number a{
+            text-decoration: none;
+        }
+        .number p{
+            margin-bottom: 0;
+            font-family: 'Titillium Web Light';
+            font-size: 16px;
+            font-weight: 300;
+            letter-spacing: 0;
+            // line-height: 38px;
+        }
+        .number a {
+            color:#232e28;
+        }
+        .number a:hover {
+            color: $secondaryColor;
+        }
+        .white-pointer a{
+            color:#ffffff;
+            }
+        }
+}

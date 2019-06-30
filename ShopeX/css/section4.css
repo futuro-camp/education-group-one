@@ -1,0 +1,85 @@
+.advantages .row {
+  margin-bottom: 12px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.advantages .row .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.advantages .row .col-12 div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1d1e24;
+}
+
+.advantages .row .col-12 div p {
+  color: #767676;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.advantages .row .col-12 .fast-delivery {
+  padding-top: 54px;
+}
+
+.advantages .row .col-12 .fast-delivery img {
+  margin-bottom: 48px;
+}
+
+.advantages .row .col-12 .special-discount {
+  background-color: #202127;
+  padding-top: 48px;
+}
+
+.advantages .row .col-12 .special-discount img {
+  margin-bottom: 41px;
+}
+
+.advantages .row .col-12 .secure-checkout {
+  padding-top: 40px;
+}
+
+.advantages .row .col-12 .secure-checkout img {
+  margin-bottom: 40px;
+}
+
+.advantages .row .col-12 .money-returns {
+  background-color: #202127;
+  padding-top: 43px;
+}
+
+.advantages .row .col-12 .money-returns img {
+  margin-bottom: 42px;
+}
+
+.advantages .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.advantages .row .col-3 div p:nth-child(1) {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+}
+/*# sourceMappingURL=section4.css.map */

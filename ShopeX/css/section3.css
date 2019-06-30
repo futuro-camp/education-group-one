@@ -1,0 +1,157 @@
+.sale {
+  margin-top: 176px;
+}
+
+.sale .sale-wrapper {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sale .sale-wrapper .sale-price {
+  position: relative;
+  height: 771px;
+}
+
+.sale .sale-wrapper .sale-price .price-cirle {
+  height: 240px;
+  width: 240px;
+  background-color: #e7a8c6;
+  position: absolute;
+  bottom: 119px;
+  right: 244px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 14px solid #f3d3e2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sale .sale-wrapper .sale-price .price-cirle p {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.sale .sale-wrapper .sale-price .price-cirle p span {
+  margin-bottom: 4px;
+  margin-left: 86px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: line-through;
+}
+
+.sale .sale-wrapper .right-text {
+  height: 81px;
+  margin-bottom: 0;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 32.2px;
+  position: absolute;
+  right: 100px;
+  top: 0;
+}
+
+.sale .sale-wrapper .right-text p {
+  margin-top: 39px;
+}
+
+.sale .sale-wrapper .background-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: -265px;
+  top: 345px;
+  height: 81px;
+  width: 611px;
+  background: url("../images/back.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.sale .sale-wrapper .sale-featured {
+  background: url("../images/featured-back.png");
+}
+
+.sale .sale-wrapper .sale-featured .featured-product {
+  height: 235px;
+  margin-top: 328px;
+  margin-left: 82px;
+}
+
+.sale .sale-wrapper .sale-featured .featured-product .name p {
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.sale .sale-wrapper .sale-featured .featured-product .name p span {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.sale .sale-wrapper .sale-featured .featured-product .description p {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  max-width: 436px;
+}
+
+.sale .sale-wrapper .sale-featured .featured-product .shop-now a {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=section3.css.map */

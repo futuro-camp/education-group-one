@@ -1,0 +1,137 @@
+//FOOTER
+footer {
+    border: 1px solid rgba(232, 232, 232, 0.49);
+    // border: 2px solid red;
+    .row{
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        .col-lg-4{
+            padding-left: 0;
+            padding-right: 0;
+                .about-website {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 100px;
+                    img {
+                        margin-bottom: 22px;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        color: #7b7c85;
+                        font-size: 13px;
+                        font-weight: 300;
+                        font-family: "Roboto Light";
+                        letter-spacing: 0.52px;
+                        line-height: 22px;
+                        white-space: pre-line;
+                    }
+                }
+        }
+        .col-lg-4{
+            padding-left: 0;
+            padding-right: 0;
+                .useful-links{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-top: 51px;
+                    .list-box{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+
+                            ul{
+                                padding-left: 0;
+                                list-style: none;
+                            }
+                            p{
+                                color: #1d1e24;
+                                font-family: "Titillium Web";
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 36px;
+                                margin-bottom: 40px;
+                            }
+                            li{
+                                color: #7b7c85;
+                                font-family: 'Roboto Light';
+                                font-size: 12px;
+                                font-weight: 300;
+                                line-height: 36px;
+                            }
+                    }
+                }
+        }
+        .col-lg-4{
+            .insta{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin-top: 52px;
+                    img{
+                        margin-right: 10px;
+                    }
+                    div{
+                        color: #1d1e24;
+                        font-family: "Roboto";
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+            }
+            .instagram-gallary {
+                margin-left: 0;
+                    .instagram-item{
+                        width: 86px;
+                        height: 86px;
+                        padding-left: 0;
+                        padding-right: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                            img{
+                                width: 97%;
+                                height: 97%;
+                            }
+                    }
+            }
+        }
+    }
+    .footer-resourses {
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 153px;
+    }
+    .footer-credits {
+        margin-left: 0;
+        margin-right: 0;
+        // margin-bottom: 13px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+            p{
+                margin-bottom: 4px;
+                color: #7b7c85;
+                font-family: Lato;
+                font-size: 13px;
+                font-weight: 300;
+            }
+            img {
+                margin-bottom: -31px;
+            }
+    }
+}
+.about-website p:nth-child(3) {
+    margin-top: 35px;
+    font-family: "Roboto Light";
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.48px;
+}
+.list-box ul:nth-child(2) {
+    margin-left: 37px;
+}
