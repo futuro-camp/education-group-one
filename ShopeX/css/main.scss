@@ -1,15 +1,15 @@
-@import "colors&fonts";
-// BORDER UNDER LOGO-LINE IN HEADER
+@import "colorsAndFonts";
 .row {
     width: 100%;
 }
+// BORDER UNDER LOGO-LINE IN HEADER
 .header-background-line {
     position: absolute;
     top: 162px;
     left: 0;
     height: 1px;
     width: 100%;
-    background-color: $headerBG;
+    background-color: $headerBackground;
     border-bottom: $headerBorder;
 }
 header {
@@ -20,7 +20,7 @@ header {
         margin-top: 52px;
 
         .header-background-line  {
-            background-color: $headerBG;
+            background-color: $headerBackground;
             border: 1px solid $headerBorder;
         }
         .header-search {
@@ -142,7 +142,7 @@ header {
     align-items: center;
     height: 576px;
 
-    .product {
+        .product {
         margin: 192px 35% 192px 0;
         width: 530px;
         height: 192px;
@@ -229,13 +229,13 @@ header {
         .product-third-row a:hover {
             color: $secondaryLightColor;
         }
-    }
-    @media only screen and (max-width: 1120px) {
+        }
+        @media only screen and (max-width: 1120px) {
         .product {
             margin-right: 10%;
         }
-    }
-    @media only screen and (max-width: 769px) {
+        }
+        @media only screen and (max-width: 769px) {
         .product {
             margin-right: 0;
 
@@ -278,10 +278,8 @@ header {
                     line-height: 12px;
                 }
         }
-    }
-
-
-    .number-pointer {
+        }
+        .number-pointer {
         width: 119px;
         height: 88px;
         display: flex;
@@ -747,6 +745,7 @@ header {
                                     font-size: 14px;
                                     font-weight: 300;
                                     line-height: 24px;
+                                    max-width: 436px;
                                 }
                             }
                             .shop-now{
@@ -957,9 +956,6 @@ footer {
             }
     }
 }
-// footer .row .col-lg-4 .about-website p {
-//     width: 313px;
-// }
 .about-website p:nth-child(3) {
     margin-top: 35px;
     font-family: "Roboto Light";
@@ -1032,6 +1028,3 @@ footer {
             }
     }
 }
-// * {
-//     border: 1px solid green;
-// }

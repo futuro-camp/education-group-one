@@ -1000,6 +1000,7 @@ header .nav a:hover {
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+  max-width: 436px;
 }
 
 .sale .sale-wrapper .sale-featured .featured-product .shop-now a {
