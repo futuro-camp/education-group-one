@@ -1,3 +1,34 @@
+body .sale .sale-wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+body .sale {
+  background-color: #8ed1b7;
+}
+
+.sale .sale-wrapper .sale-price {
+  background-color: #ffffff;
+}
+
+body .advantages .row {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.advantages .container-fluid {
+  background-color: #1d1e24;
+}
+
+.carousel {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.slider {
+  background-color: #ade1c5;
+}
+
 /* COLORS */
 /* FONTS */
 .header-background-line {
