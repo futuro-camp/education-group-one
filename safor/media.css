@@ -469,10 +469,7 @@
         margin-top: 3vw;
     }
     .gray-cascade-box-hexagon {
-        margin-right: 40px;
-        margin-left: 40px;
-        margin-top: 3vw;
-        margin-bottom: 6vw;
+        margin: 3vw 40px 6vw 40px;
     }
     .feedback-box {
         width: 91.3%;
