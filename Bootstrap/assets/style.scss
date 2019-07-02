@@ -1,0 +1,98 @@
+$base-color1: #ade1c5;
+$base-color2: #8ed1b7;
+
+.container {
+  .row {
+    height: 154px;
+    .col-sm-4 {
+      margin: auto 0;
+    }
+    .search {
+      margin-top: 85px;
+      input {
+        border: 0;
+        color: #414141;
+        font-family: "Roboto-Medium";
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+      }
+    }
+    .logo {
+      margin-top: 52px;
+    }
+    .tools {
+      margin-top: 63px;
+      a {
+        margin: 0 15px 0 15px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.line {
+  height: 1px;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+.navbar {
+  height: 70px;
+  .navbar-nav {
+    .nav-item {
+      a {
+        text-decoration: none;
+        color: #45505e;
+        font-family: "Roboto-Medium";
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        letter-spacing: 2.2px;
+        &:hover {
+          color: $base-color2;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.container-fluid {
+  height: 576px;
+  background-color: $base-color1;
+  .row {
+    .col {
+      margin: 192px 0 0 0;
+      .newarrivals {
+        height: 53px;
+        color: #000000;
+        font-family: "Roboto - Thin";
+        font-size: 23px;
+        font-weight: bold;
+        line-height: 24px;
+      }
+      .skyplanter {
+        height: 53px;
+        color: #000000;
+        font-family: "Titillium Web";
+        font-size: 72px;
+        font-weight: bold;
+        line-height: 24px;
+        text-transform: uppercase;
+      }
+      a {
+        color: #000000;
+        font-family: "Roboto-Medium";
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 24px;
+        text-decoration: underline;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.container .row {
+  height: 154px;
+}
+
+.container .row .col-sm-4 {
+  margin: auto 0;
+}
+
+.container .row .search {
+  margin-top: 85px;
+}
+
+.container .row .search input {
+  border: 0;
+  color: #414141;
+  font-family: "Roboto-Medium";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+}
+
+.container .row .logo {
+  margin-top: 52px;
+}
+
+.container .row .tools {
+  margin-top: 63px;
+}
+
+.container .row .tools a {
+  margin: 0 15px 0 15px;
+  text-decoration: none;
+}
+
+.line {
+  height: 1px;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+.navbar {
+  height: 70px;
+}
+
+.navbar .navbar-nav .nav-item a {
+  text-decoration: none;
+  color: #45505e;
+  font-family: "Roboto-Medium";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+}
+
+.navbar .navbar-nav .nav-item a:hover {
+  color: #8ed1b7;
+  text-decoration: underline;
+}
+
+.container-fluid {
+  height: 576px;
+  background-color: #ade1c5;
+}
+
+.container-fluid .row .col {
+  margin: 192px 0 0 0;
+}
+
+.container-fluid .row .col .newarrivals {
+  height: 53px;
+  color: #000000;
+  font-family: "Roboto - Thin";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.container-fluid .row .col .skyplanter {
+  height: 53px;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 72px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.container-fluid .row .col a {
+  color: #000000;
+  font-family: "Roboto-Medium";
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
