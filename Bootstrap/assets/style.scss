@@ -66,23 +66,41 @@ $base-color2: #8ed1b7;
   background-color: $base-color1;
   .row {
     .col {
-      margin: 192px 0 0 0;
+      margin: 192px 789px 0 601px;
+      width: 530px;
+      height: 192px;
       .newarrivals {
         height: 53px;
         color: #000000;
-        font-family: "Roboto - Thin";
+        font-family: "Roboto-Medium";
         font-size: 23px;
         font-weight: bold;
         line-height: 24px;
+        #new {
+          font-family: "Alex Brush";
+          font-size: 73px;
+          font-weight: 400;
+        }
+        #arrivals {
+          font-family: "Roboto-Medium";
+          font-weight: 100;
+          letter-spacing: 4.6px;
+        }
       }
       .skyplanter {
-        height: 53px;
+        width: 527px;
         color: #000000;
         font-family: "Titillium Web";
         font-size: 72px;
         font-weight: bold;
         line-height: 24px;
         text-transform: uppercase;
+        #price {
+          font-family: "Roboto-Medium";
+          font-size: 24px;
+          font-weight: bold;
+          line-height: 24px;
+        }
       }
       a {
         color: #000000;
