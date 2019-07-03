@@ -4,8 +4,8 @@ class Account {
         this.id = id;
         this.money = money;
         this.owner = {
-            name: name,
-            surname: surname
+            name,
+            surname
         };
     }
 }

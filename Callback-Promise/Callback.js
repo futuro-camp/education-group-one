@@ -22,15 +22,29 @@ function StartCallback() {
             }
             else if(ar[1].toLowerCase() == 'list')
             {
-                manager.GetList(function(answer){
-                    console.log(answer);
+                manager.GetList(function(error, data){
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else 
+                    {
+                        console.log(data);
+                    }
                     ContinueCallback();
                 })
             }
             else 
             {
-                manager.Get(ar[1], function(answer) {
-                    console.log(answer);
+                manager.Get(ar[1], function(error, data) {
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else 
+                    {
+                        console.log(data);
+                    }
                     ContinueCallback();
                 });
             }
@@ -45,8 +59,15 @@ function StartCallback() {
             }
             else
             {
-                manager.Transfer(ar[1], ar[2], Number(ar[3]), function(answer) {
-                    console.log(answer);
+                manager.Transfer(ar[1], ar[2], Number(ar[3]), function(error, data) {
+                    if(error)
+                    {
+                        console.log(error);
+                    }
+                    else 
+                    {
+                        console.log(data);
+                    }
                     ContinueCallback();
                 });  
             }
