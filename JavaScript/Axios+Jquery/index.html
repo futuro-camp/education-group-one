@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <section class="content">
+        <ul id="content"></ul>
+    </section>
+    <form action="#" class="form">
+        <input id="post-form-input" type="text" placeholder="New object value">
+        <input id="post-form-submit" type="submit" value="Add new object">
+    </form>
+    <form action="#" class="form">
+        <input id="delete-form-input" type="text" placeholder="Id of object for delete">
+        <input id="delete-form-submit" type="submit" value="Delete object">
+    </form>
+    <form action="#" class="form">
+        <input id="contact-form-email-input" type="email" placeholder="Email" required>
+        <input id="contact-form-message-input" type="text" placeholder="Message" required>
+        <input id="contact-form-submit" type="submit" value="Send contacts">
+    </form>
+    <div class="modal">
+        <p id="modal-text"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

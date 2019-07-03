@@ -27,7 +27,7 @@ class BankManager {
                     resolve(result);
                 }
                 else {
-                    reject();
+                    reject("There is no account with this id");
                 }
             }, 1000);
         });
@@ -43,7 +43,7 @@ class BankManager {
                     toAccount.money += moneyAmount;
                 }
                 else {
-                    reject();
+                    reject("Not enough money for tranfer");
                 }
                 resolve({from: from, to: to, moneyAmount: moneyAmount});
             }, 3000);

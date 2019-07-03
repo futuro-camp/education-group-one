@@ -21,22 +21,22 @@ function GetCommand() {
         }
         else if(answear.toLowerCase()=="get") {
             rl.question("Input account id: ", (answear) => {
-                if(!isNaN(answear)){
+                if(Number(answear)){
                     bank.Get(answear, getCallback);
                 }
             })
         }
         else if(answear.toLowerCase()=="t") {
             let from, to, money;
-            rl.question("Input first id: ", (a) => {
-                if(!isNaN(a)) {
-                    from = a; 
-                    rl.question("Input sevond id: ", (b) => {
-                        if(!isNaN(b)) {
-                            to = b; 
-                            rl.question("Input transacton amount: ", (c) => {
-                                if(!isNaN(b)) {
-                                    money = Number(c); 
+            rl.question("Input first id: ", (firstId) => {
+                if(Number(firstId)) {
+                    from = firstId; 
+                    rl.question("Input second id: ", (secondId) => {
+                        if(Number(secondId)) {
+                            to = secondId; 
+                            rl.question("Input transacton money amount: ", (moneyAmount) => {
+                                if(Number(moneyAmount)) {
+                                    money = Number(moneyAmount); 
                                     bank.Transfer(from, to, money, transferCallback);
                                 }
                                 else {
@@ -61,26 +61,41 @@ function GetCommand() {
     });
 }
 
-function getListCallback(info) {
-    console.log(info);
+function getListCallback(error, info) {
+    if(error == undefined) {
+        console.log(info);
+    }
+    else {
+        console.log(error);
+    }
     GetCommand();
 }
 
-function getCallback(info) {
-    let result = "";
-    result+="---------------------------------\n";
-    result+= "id:"+info.id+" money:"+info.money+" owner:"+info.owner.ownerName+" "+info.owner.ownerSurname+"\n";
-    result+="---------------------------------\n";
-    console.log(result);
+function getCallback(error, info) {
+    if(error == undefined) {
+        let result = "";
+        result+="---------------------------------\n";
+        result+= "id:"+info.id+" money:"+info.money+" owner:"+info.owner.ownerName+" "+info.owner.ownerSurname+"\n";
+        result+="---------------------------------\n";
+        console.log(result);
+    }
+    else {
+        console.log(error);
+    }
     GetCommand();
 }
 
-function transferCallback(info) {
-    let result = "";
-    result+="---------------------------------\n";
-    result+= "account with id:"+info.from+" transfers to account with id:"+info.to+" "+info.moneyAmount+" ghriven\n";
-    result+="---------------------------------\n";
-    console.log(result);
+function transferCallback(error, info) {
+    if(error == undefined) {
+        let result = "";
+        result+="---------------------------------\n";
+        result+= "account with id:"+info.from+" transfers to account with id:"+info.to+" "+info.moneyAmount+" ghriven\n";
+        result+="---------------------------------\n";
+        console.log(result);
+    }
+    else {
+        console.log(error);
+    }
     GetCommand();
 }
 

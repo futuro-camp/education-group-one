@@ -17,27 +17,27 @@ function Start() {
 function GetCommand() {
     rl.question("Command list:\nGL - get list,\nGET - get account by id,\nT- transfer from one to another account\nInsert command: ", (answear) => {
         if(answear.toLowerCase()=="gl") {
-            bank.GetList().then(getListCallback);
+            bank.GetList().then(getListCallback).catch((error) => {console.log(error)});
         }
         else if(answear.toLowerCase()=="get") {
             rl.question("Input account id: ", (answear) => {
-                if(!isNaN(answear)){
-                    bank.Get(answear).then(getCallback).catch(console.log("There is no account with this id"));
+                if(Number(answear)){
+                    bank.Get(answear).then(getCallback).catch((error) => {console.log(error)});
                 }
             })
         }
         else if(answear.toLowerCase()=="t") {
             let from, to, money;
-            rl.question("Input first id: ", (a) => {
-                if(!isNaN(a)) {
-                    from = a; 
-                    rl.question("Input sevond id: ", (b) => {
-                        if(!isNaN(b)) {
-                            to = b; 
-                            rl.question("Input transacton amount: ", (c) => {
-                                if(!isNaN(b)) {
-                                    money = Number(c); 
-                                    bank.Transfer(from, to, money).then(transferCallback).catch(console.log("Not enought money"));
+            rl.question("Input first id: ", (firstId) => {
+                if(Number(firstId)) {
+                    from = firstId; 
+                    rl.question("Input second id: ", (secondId) => {
+                        if(Number(secondId)) {
+                            to = secondId; 
+                            rl.question("Input transacton amount: ", (moneyAmount) => {
+                                if(Number(moneyAmount)) {
+                                    money = Number(moneyAmount); 
+                                    bank.Transfer(from, to, money).then(transferCallback).catch((error) => {console.log(error)});
                                 }
                                 else {
                                     GetCommand();
