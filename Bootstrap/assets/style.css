@@ -13,7 +13,7 @@
 .container .row .search input {
   border: 0;
   color: #414141;
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-size: 11px;
   font-weight: 400;
   line-height: 24px;
@@ -47,7 +47,7 @@
 .navbar .navbar-nav .nav-item a {
   text-decoration: none;
   color: #45505e;
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-size: 11px;
   font-weight: 400;
   line-height: 24px;
@@ -65,53 +65,57 @@
   background-color: #ade1c5;
 }
 
-.container-fluid .row .col {
-  margin: 192px 789px 0 601px;
+.container-fluid .row .col-sm-4 {
+  margin: 192px 0 0 0;
   width: 530px;
-  height: 192px;
+  height: 200px;
 }
 
-.container-fluid .row .col .newarrivals {
-  height: 53px;
+.container-fluid .row .col-sm-4 .newarrivals {
+  height: 57px;
   color: #000000;
-  font-family: "Roboto-Medium";
+  font-family: "Roboto-Thin";
   font-size: 23px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 63px;
+  margin: 0 0 23px 0;
 }
 
-.container-fluid .row .col .newarrivals #new {
+.container-fluid .row .col-sm-4 .newarrivals #new {
   font-family: "Alex Brush";
   font-size: 73px;
   font-weight: 400;
 }
 
-.container-fluid .row .col .newarrivals #arrivals {
-  font-family: "Roboto-Medium";
+.container-fluid .row .col-sm-4 .newarrivals #arrivals {
+  font-family: "Roboto-Thin";
   font-weight: 100;
   letter-spacing: 4.6px;
 }
 
-.container-fluid .row .col .skyplanter {
-  width: 527px;
+.container-fluid .row .col-sm-4 .skyplanter {
+  height: 51px;
   color: #000000;
   font-family: "Titillium Web";
   font-size: 72px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 48px;
   text-transform: uppercase;
+  margin: 0 0 47px 0;
 }
 
-.container-fluid .row .col .skyplanter #price {
-  font-family: "Roboto-Medium";
+.container-fluid .row .col-sm-4 .skyplanter #price {
+  height: 51px;
+  font-family: "Roboto-Thin";
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
+  margin-top: -20px;
 }
 
-.container-fluid .row .col a {
+.container-fluid .row .col-sm-4 a {
   color: #000000;
-  font-family: "Roboto-Medium";
+  font-family: "Roboto";
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;

@@ -1,20 +1,27 @@
 @font-face {
-    font-family: "Roboto-Medium";
-    src: url("./fonts/Roboto-Medium.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Roboto";
+  src: url("./fonts/Roboto/Roboto-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "Roboto-Bold";
-    src: url("./fonts/Roboto-Bold.ttf");
+  font-family: "Roboto-Thin";
+  src: url("./fonts/Roboto/Roboto-Thin.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alex Brush";
+  src: url("./fonts/Alex_Brush/AlexBrush-Regular.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Titillium Web";
+    src: url("./fonts/Titillium_Web/TitilliumWeb-SemiBold.ttf");
     font-weight: bold;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "Product Sans";
-    src: url("./fonts/Product Sans Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
+  }
