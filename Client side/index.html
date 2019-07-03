@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="axios.min.js"></script>
+    <script src="jquery.min.js"></script>
+    <title>Client</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-btn">&times;</span>
+            <p class="modal-text"></p>
+        </div> 
+    </div>
+    <ul id="list">
+    </ul>
+    <div>
+        <input type="text" placeholder="id number" id="delete_input">
+        <button id="delete_btn">Delete element</button>
+    </div>
+    <div>
+        <input type="text" placeholder="new element" id="add_input">
+        <button id="add_btn">Add element</button>
+    </div>
+    <input type="text" placeholder="email" id="email_input">
+    <input type="text" placeholder="value" id="email_value">
+    <button id="email_btn">Submit</button>
+    <script src="./script.js"></script> 
+</body>
+</html>
