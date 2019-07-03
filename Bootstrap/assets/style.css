@@ -1,16 +1,16 @@
-.container .row {
+header .row {
   height: 154px;
 }
 
-.container .row .col-sm-4 {
+header .row .col-sm-4 {
   margin: auto 0;
 }
 
-.container .row .search {
+header .row .search {
   margin-top: 85px;
 }
 
-.container .row .search input {
+header .row .search input {
   border: 0;
   color: #414141;
   font-family: "Roboto";
@@ -21,15 +21,15 @@
   letter-spacing: 2.2px;
 }
 
-.container .row .logo {
+header .row .logo {
   margin-top: 52px;
 }
 
-.container .row .tools {
+header .row .tools {
   margin-top: 63px;
 }
 
-.container .row .tools a {
+header .row .tools a {
   margin: 0 15px 0 15px;
   text-decoration: none;
 }
@@ -60,40 +60,39 @@
   text-decoration: underline;
 }
 
-.container-fluid {
+.slider {
   height: 576px;
   background-color: #ade1c5;
 }
 
-.container-fluid .row .col-sm-4 {
+.slider .row .col-sm-4 {
   margin: 192px 0 0 0;
   width: 530px;
   height: 200px;
 }
 
-.container-fluid .row .col-sm-4 .newarrivals {
-  height: 57px;
+.slider .row .col-sm-4 .newarrivals {
   color: #000000;
   font-family: "Roboto-Thin";
   font-size: 23px;
   font-weight: bold;
-  line-height: 63px;
+  line-height: 30px;
   margin: 0 0 23px 0;
 }
 
-.container-fluid .row .col-sm-4 .newarrivals #new {
+.slider .row .col-sm-4 .newarrivals #new {
   font-family: "Alex Brush";
   font-size: 73px;
   font-weight: 400;
 }
 
-.container-fluid .row .col-sm-4 .newarrivals #arrivals {
+.slider .row .col-sm-4 .newarrivals #arrivals {
   font-family: "Roboto-Thin";
   font-weight: 100;
   letter-spacing: 4.6px;
 }
 
-.container-fluid .row .col-sm-4 .skyplanter {
+.slider .row .col-sm-4 .skyplanter {
   height: 51px;
   color: #000000;
   font-family: "Titillium Web";
@@ -104,7 +103,7 @@
   margin: 0 0 47px 0;
 }
 
-.container-fluid .row .col-sm-4 .skyplanter #price {
+.slider .row .col-sm-4 .skyplanter #price {
   height: 51px;
   font-family: "Roboto-Thin";
   font-size: 24px;
@@ -113,7 +112,7 @@
   margin-top: -20px;
 }
 
-.container-fluid .row .col-sm-4 a {
+.slider .row .col-sm-4 a {
   color: #000000;
   font-family: "Roboto";
   font-size: 16px;
@@ -121,5 +120,68 @@
   line-height: 24px;
   text-decoration: underline;
   text-transform: uppercase;
+}
+
+.product .row {
+  margin: 60px 0 14px 0;
+}
+
+.product .row .col-6 a {
+  text-decoration: none;
+  color: #45505e;
+  font-family: "Roboto";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-left: 30px;
+}
+
+.product .row .col-6 a:hover {
+  color: #8ed1b7;
+  text-decoration: underline;
+}
+
+.product .row .line {
+  width: 100%;
+  height: 1px;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+.product .row .col-6 {
+  padding-right: 0;
+}
+
+.product .row .col-6 input {
+  width: 55px;
+  border: 0;
+  color: #414141;
+  font-family: "Roboto";
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2.2px;
+  margin-top: 5px;
+}
+
+.product .row .col-4 {
+  width: 360px;
+  height: 513px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+          box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+  padding: 0;
+}
+
+.product .row .col-4 div {
+  width: 265px;
+  height: 256px;
+  background-color: #e7a8c6;
+  -webkit-box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+          box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+  margin: 0 30px 294px 70px;
 }
 /*# sourceMappingURL=style.css.map */
