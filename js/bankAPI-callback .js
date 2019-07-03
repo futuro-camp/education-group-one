@@ -61,7 +61,6 @@ class Bank {
                 cb(`Account with id ${from} does not have enough money for this transaction`);
                 return;
             }
-
             this.bankList = this.bankList.map(account=> {
                 if(account.id === accountF.id ){
                     return {
@@ -90,7 +89,6 @@ Privat.createAccount(new Acc('Ignatik',3200,3));
 Privat.createAccount(new Acc('Kartoshka',4200,4));
 function start(){
 rl.question ('Hello, we are happy to see you in our BankManager! This is available command list: getList / getId / transfer \n', answer=>{
-    // console.log(answer);
     if (answer == 'getList'){
         Privat.getList(function(error,list){
                 if (error){
@@ -153,8 +151,7 @@ rl.question ('Hello, we are happy to see you in our BankManager! This is availab
     } else {
         console.log('Please enter available command');
         start();
-    }
- });
+    }});
 }
 function request() {
     rl.question('Wanna do something else ? Press y/n  \n', answer=>{
