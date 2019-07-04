@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="axios.min.js"></script>
     <script src="jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
     <title>Client</title>
 </head>
 <body>
@@ -16,11 +17,7 @@
         </div> 
     </div>
     <ul id="list">
-    </ul>
-    <div>
-        <input type="text" placeholder="id number" id="delete_input">
-        <button id="delete_btn">Delete element</button>
-    </div>
+    </ul>   
     <div>
         <input type="text" placeholder="new element" id="add_input">
         <button id="add_btn">Add element</button>
@@ -28,6 +25,8 @@
     <input type="text" placeholder="email" id="email_input">
     <input type="text" placeholder="value" id="email_value">
     <button id="email_btn">Submit</button>
+    <button id="svg" style="display: block;">Graph</button>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="./script.js"></script> 
 </body>
 </html>
