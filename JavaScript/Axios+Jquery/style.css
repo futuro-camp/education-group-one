@@ -28,4 +28,14 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+button {
+  margin-left: 10px;
+}
+
+.graph {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+}
 /*# sourceMappingURL=style.css.map */

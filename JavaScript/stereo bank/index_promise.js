@@ -1,6 +1,6 @@
 const readLine = require("readline");
-const bankManager = require("./promise_logic");
-const account = require("./account_logic");
+const BankManager = require("./promise_logic");
+const Account = require("./account_logic");
 
 const rl = readLine.createInterface({
     input:process.stdin,
@@ -10,23 +10,23 @@ const rl = readLine.createInterface({
 var bank;
 
 function Start() {
-    bank = new bankManager([ new account(1, 250, "Alexey", "Petrenko"), new account(2, 80000, "Anatoliy", "Vaserman"), new account(3, 2500, "Grigoriy", "Skovoroda"), new account(4, 80, "Sjul", "Vern")]);
-    GetCommand();
+    bank = new BankManager([ new Account(1, 250, "Alexey", "Petrenko"), new Account(2, 80000, "Anatoliy", "Vaserman"), new Account(3, 2500, "Grigoriy", "Skovoroda"), new Account(4, 80, "Sjul", "Vern")]);
+    getCommand();
 }
 
-function GetCommand() {
+function getCommand() {
     rl.question("Command list:\nGL - get list,\nGET - get account by id,\nT- transfer from one to another account\nInsert command: ", (answear) => {
-        if(answear.toLowerCase()=="gl") {
-            bank.GetList().then(getListCallback).catch((error) => {console.log(error)});
+        if(answear.toLowerCase()==="gl") {
+            bank.getList().then(getListCallback).catch((error) => console.log(error));
         }
-        else if(answear.toLowerCase()=="get") {
+        else if(answear.toLowerCase()==="get") {
             rl.question("Input account id: ", (answear) => {
                 if(Number(answear)){
-                    bank.Get(answear).then(getCallback).catch((error) => {console.log(error)});
+                    bank.get(answear).then(getCallback).catch((error) => console.log(error));
                 }
             })
         }
-        else if(answear.toLowerCase()=="t") {
+        else if(answear.toLowerCase()==="t") {
             let from, to, money;
             rl.question("Input first id: ", (firstId) => {
                 if(Number(firstId)) {
@@ -37,33 +37,33 @@ function GetCommand() {
                             rl.question("Input transacton amount: ", (moneyAmount) => {
                                 if(Number(moneyAmount)) {
                                     money = Number(moneyAmount); 
-                                    bank.Transfer(from, to, money).then(transferCallback).catch((error) => {console.log(error)});
+                                    bank.transfer(from, to, money).then(transferCallback).catch((error) => console.log(error));
                                 }
                                 else {
-                                    GetCommand();
+                                    getCommand();
                                 }
                             })
                         }
                         else {
-                            GetCommand();
+                            getCommand();
                         }
                     })
                 }
                 else {
-                    GetCommand();
+                    getCommand();
                 }
-            })
+            });
         }
         else {
             console.log("Invalid command");
-            GetCommand();
+            getCommand();
         }
     });
 }
 
 function getListCallback(info) {
     console.log(info);
-    GetCommand();
+    getCommand();
 }
 
 function getCallback(info) {
@@ -72,7 +72,7 @@ function getCallback(info) {
     result+= "id:"+info.id+" money:"+info.money+" owner:"+info.owner.ownerName+" "+info.owner.ownerSurname+"\n";
     result+="---------------------------------\n";
     console.log(result);
-    GetCommand();
+    getCommand();
 }
 
 function transferCallback(info) {
@@ -81,7 +81,7 @@ function transferCallback(info) {
     result+= "account with id:"+info.from+" transfers to account with id:"+info.to+" "+info.moneyAmount+" ghriven\n";
     result+="---------------------------------\n";
     console.log(result);
-    GetCommand();
+    getCommand();
 }
 
 Start();

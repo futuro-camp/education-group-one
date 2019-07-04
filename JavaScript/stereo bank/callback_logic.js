@@ -1,12 +1,12 @@
 class BankManager {
 
     constructor(accounts) {
-        this.accounts = accounts
+        this.accounts = accounts;
     }
 
-    GetList(callback) { 
-        let result = "";
-        this.accounts.forEach(element => {
+    getList(callback) { 
+        var result = "";
+        this.accounts.forEach((element) => {
             result+="|||||||||||||||||||||||||||||||||||\n";
             result+="id:"+element.id+" money:"+ element.money+" owner:"+element.owner.name+" "+ element.owner.ownerSurname+"\n";
             result+="|||||||||||||||||||||||||||||||||||\n";
@@ -16,12 +16,12 @@ class BankManager {
         }, 2000);
     }
 
-    Get(id, callback) {
+    get(id, callback) {
         let error;
         let result;
-        result = this.accounts.filter(acc => acc.id==id).shift();
+        result = this.accounts.filter((acc) => acc.id===id).shift();
         setTimeout(function() {
-            if(result != undefined){
+            if(result){
                 callback(error, result);
             }
             else {
@@ -31,19 +31,19 @@ class BankManager {
         }, 1000);
     }
 
-    Transfer(from, to, moneyAmount, callback) {
+    transfer(from, to, moneyAmount, callback) {
         let error;
-        let fromAccount = this.accounts.filter(acc => acc.id==from).shift();
-        let toAccount = this.accounts.filter(acc => acc.id==to).shift();
+        let fromAccount = this.accounts.filter((acc) => acc.id===from).shift();
+        let toAccount = this.accounts.filter((acc) => acc.id===to).shift();
         setTimeout(function() {
         if(fromAccount.money - moneyAmount >= 0) {
             fromAccount.money -= moneyAmount;
             toAccount.money += moneyAmount;
-            callback(error, {from: from, to: to, moneyAmount: moneyAmount});
+            callback(error, {from, to, moneyAmount});
         }
         else {
             error = "Not enough money for transaction";
-            callback(error, {from: from, to: to, moneyAmount: moneyAmount});
+            callback(error, {from, to, moneyAmount});
         }    
         }, 3000);
     }

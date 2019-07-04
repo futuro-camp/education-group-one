@@ -20,16 +20,16 @@
         <input id="post-form-submit" type="submit" value="Add new object">
     </form>
     <form action="#" class="form">
-        <input id="delete-form-input" type="text" placeholder="Id of object for delete">
-        <input id="delete-form-submit" type="submit" value="Delete object">
-    </form>
-    <form action="#" class="form">
         <input id="contact-form-email-input" type="email" placeholder="Email" required>
         <input id="contact-form-message-input" type="text" placeholder="Message" required>
         <input id="contact-form-submit" type="submit" value="Send contacts">
     </form>
     <div class="modal">
         <p id="modal-text"></p>
+    </div>
+    <div class="graph">
+        <canvas id="graph" height="250"></canvas>
+        <button id="getGraph">Get graph</button>
     </div>
     <script src="script.js"></script>
 </body>

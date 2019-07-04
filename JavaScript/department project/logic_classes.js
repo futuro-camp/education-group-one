@@ -28,8 +28,8 @@ class Department {
     }
 
     remove(employeeEmail) {
-        let index = this.employees.indexOf(this.employees.filter(emp => emp.email == employeeEmail).pop());
-        if(index != -1) {
+        let index = this.employees.indexOf(this.employees.filter((emp) => emp.email === employeeEmail).pop());
+        if(index !== -1) {
             this.employees.splice(index, 1);
         }
         else {
@@ -38,18 +38,18 @@ class Department {
     }
 
     averageSalary() {
-        return (this.employees.map(emp => emp.salary).reduce((x,y) => x + y)) / this.employees.length;
+        return (this.employees.map((emp) => emp.salary).reduce((x,y) => x + y)) / this.employees.length;
     }
 
     summarySalary() {
-        return this.employees.map(emp => {return emp.salary}).reduce((x, y) => {return x + y});
+        return this.employees.map((emp) => emp.salary).reduce((x, y) => {return x + y});
     }
 
     filter() {
-        return this.employees.filter(employee => employee.salary < this.averageSalary());
+        return this.employees.filter((employee) => employee.salary < this.averageSalary());
     }
 }
 
-module.exports.human = Human;
-module.exports.employee = Employee;
-module.exports.department = Department; 
+module.exports.Human = Human;
+module.exports.Employee = Employee;
+module.exports.Department = Department; 
