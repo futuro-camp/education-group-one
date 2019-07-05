@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>JQuery</title>
+</head>
+<body>
+    <p style="text-align: center; font-weight: 24px; line-height: 2;">LaLaLa</p>
+    <h1 style="text-align: center; font-weight: 40px; line-height: 2;">LaLaLa</h1>
+    <script>
+        jQuery.prototype.colorChange = function(color) 
+        {
+            color = color.replace(/[^0-9,]/gi, "").split(',').map(x => parseInt(x));
+            let dColor = [Change(color[0], -1),Change(color[1], -1),Change(color[2], -1)];
+            let lColor = [Change(color[0], 1),Change(color[1], 1),Change(color[2], 1)];
+            color = `rgb(${Check(color[0])},${Check(color[1])},${Check(color[2])})`;
+            dColor = `rgb(${Check(dColor[0])},${Check(dColor[1])},${Check(dColor[2])})`;
+            lColor = `rgb(${Check(lColor[0])},${Check(lColor[1])},${Check(lColor[2])})`;
+            this.css({
+                "border-color": dColor,
+                "border-weight": "1px",
+                "border-style": "solid",
+                "color": color,
+                "background-color": lColor
+            });
+        };
+        function Check(value) 
+        {
+            return Math.round(value) > 255 ? 255 : Math.round(value);
+        };
+        function Change(value, factor) 
+        {
+            let percent = 30;
+            return (value*(1+(percent*0.01*factor)))+0.5;
+        };
+        $("p").css("color", "red");
+        $("p").colorChange("rgb(49,255,94)");
+        $("h1").colorChange("rgb(97,109,52)");
+    </script>
+</body>
+</html>

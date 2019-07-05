@@ -5,17 +5,90 @@
 
 }
 
-.modal {
-    display: none;
+html {
+    margin: 0;
+}
+
+body {
+    height: 300%;
+    margin: 0;
+}
+
+.first, .second, .third {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.first {
+    background-color: lightblue;
+}
+
+.second {
+    background-color: lightsalmon;
+}
+
+.third {
+    background-color: lightslategray;
+}
+
+.modal,
+.login {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     margin: 0;
+}
+
+.login {
+    background: white linear-gradient(rgba(109, 136, 177, 0.6), rgba(143, 107, 107, 0.6));
+}
+
+.login input {
+    border: none;
+    border-bottom: 1px solid rgba(109, 136, 177, 0.6);
+    outline: none;
+    margin-bottom: 20px;
+    color: rgb(116, 97, 97);
+    font-size: 16px;
+    line-height: 2;
+}
+
+.login button {
+    padding: 10px 50px;
+    background-color: transparent;
+    border-radius: 70px;
+    color: rgba(116, 97, 97, 0.8);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid rgba(109, 136, 177, 0.6);
+    outline: none;
+}
+
+.login button:hover {
+    color: rgba(109, 136, 177, 0.8);
+}
+
+.login input::placeholder {
+    color: rgb(116, 97, 97);
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+.modal {
+    display: none;
     background-color: rgba(66, 65, 65, 0.8);
 }
 
-.modal-content {
+.login-content {
+    display: flex;
+    flex-direction: column; 
+    padding: 40px 0;
+}
+
+.modal-content,
+.login-content {
     position: relative;
     border-radius: 5px;
     top: 20%;
@@ -39,4 +112,15 @@
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
+}
+
+#logout {
+    border-radius: 50%;
+    padding: 10px 10px;
+    background-color: rgb(199, 28, 28);
+    border: none;
+    text-transform: uppercase;
+    color: rgb(228, 210, 210);
+    outline: none;
+    cursor: pointer;
 }

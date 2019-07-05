@@ -4,47 +4,34 @@ let data,
     startPoint,
     divValue;
 let pressed = true;
+let instance;
+let scrolling = false;
 
-$("#svg").on("click", function() {
-    if(pressed)
-    {
-        pressed = false;
-        $(this).html("Remove");
-        GetData();
-    }
-    else
-    {
-        pressed = true;
-        $(this).html("Graph");
-        $("svg").remove();
-    }
-});
-
-function GetData() {
-    axios.get("http://192.168.1.100:3000/api/chart")
+function getData() {
+    instance.get("http://192.168.1.100:3000/api/chart")
     .then(function(response) {
         data = response.data;
     })
     .catch(function(error) {
-        ShowModal(error);
-    }).then(Draw).then(function() {
+        showModal(error);
+    }).then(draw).then(function() {
         $("circle").on("click", function() {
-            let x = Math.round((parseInt($(this).css("cx")) - startPoint[0]) * divValue[0]);
-            let y = Math.round(-(parseInt($(this).css("cy")) - startPoint[1]) * divValue[1]);
-            ShowModal(`x: ${x}; y: ${y}.`);
+            let x = Math.round((parseFloat($(this).css("cx")) - startPoint[0]) * divValue[0]);
+            let y = Math.round(-(parseFloat($(this).css("cy")) - startPoint[1]) * divValue[1]);
+            showModal(`x: ${x}; y: ${y}.`);
         });
     });
 }
 
-function FindX(value) {
+function findX(value) {
     return startPoint[0] + value / divValue[0];
 }
 
-function FindY(value) {
+function findY(value) {
     return startPoint[1] - value / divValue[1];
 }
 
-function Draw() {
+function draw() {
     let padding = 80;
     let width = 1000, height = 800;
     let maxX = Math.max(...data.map(x => x[0]));
@@ -96,8 +83,8 @@ function Draw() {
         let [x1, y1] = data[i];
         svg.append("svg:circle")
             .attr("class", "nodes")
-            .attr("cx", FindX(x1))
-            .attr("cy", FindY(y1))
+            .attr("cx", findX(x1))
+            .attr("cy", findY(y1))
             .attr("r", "5px")
             .attr("fill", "black");
         if(i + 1 != data.length)
@@ -105,73 +92,73 @@ function Draw() {
             let [x2, y2] = data[i+1];
 
             svg.append("line")
-            .attr("x1", FindX(x1))
-            .attr("y1", FindY(y1))
-            .attr("x2", FindX(x2))
-            .attr("y2", FindY(y2))
+            .attr("x1", findX(x1))
+            .attr("y1", findY(y1))
+            .attr("x2", findX(x2))
+            .attr("y2", findY(y2))
             .style("stroke", "black");
         }
         i++;
     }
 }
 
-function ShowModal(msg) {
+function showModal(msg) {
     $('.modal-text').html(msg);
     modal.css('display', 'block');
 }
 
-function Get() {
-    axios.get(link + "/api/items")
+function get() {
+    instance.get(`/api/items`)
     .then(function(response) {
         $("#list").empty();
         for(element of response.data)
         {
             $("#list").append(`<li id='${element.id}'>${element.value} <button id="delete">Delete</button></li>`);
         }
-        $("#list").on("click", "button", Remove);
     })
     .catch(function(error) {
-        ShowModal(error);
+        showModal(error);
     });
 }
 
-function Add() {
+function add() {
     var value = $("#add_input").val().trim();
     if(value)
     {
-        axios.post(link+"/api/items", {
+        instance.post("/api/items", {
             value
         }).then(function(response) {
             $("#add_input").val("");
             $("#list").append(`<li id='${response.data.id}'>${response.data.value} <button>Delete</button></li>`);
         }).catch(function(error) {
-            ShowModal(error);
+            showModal(error);
         });
     }
     else
     {
-        ShowModal("wrong input");
+        showModal("wrong input");
     }
 }
 
-function Validate(value) {
+function validate(value) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(value);
 }
 
-function Remove(event) {
-    axios.delete(`${link}/api/items/${event.currentTarget.parentElement.id}}`).then(function(response) {
+function remove(event) {
+    instance.delete(`/api/items/${event.currentTarget.parentElement.id}`)
+    .then(function(response) {
         $(`#${response.data.id}`).remove();
     }).catch(function(error) {
-        ShowModal(error);
+        showModal(error);
     });
 }
 
-function Contact() {
+function contact() {
     let value = $("#email_value").val().trim();
-    if(Validate($("#email_input").val()) && value)
+    if(validate($("#email_input").val()) && value)
     {
-        axios.post(`${link}/api/contact`, 
+        instance.post(`${link}/api/contact`, 
         {
             email: $("#email_input").val(), 
             value
@@ -179,31 +166,168 @@ function Contact() {
         .then(function(response) {
             $("#email_value").val("");
             $("#email_input").val("");
-            ShowModal(response.data);
+            showModal(response.data);
         }).catch(function(error) {
-            ShowModal(error);
+            showModal(error);
         });
     }
     else
     {
-        ShowModal("Wrong input");
+        showModal("Wrong input");
     }
 }
 
+function login() {
+    let login = $(".login_login").val().trim();
+    let password = $(".login_password").val().trim();
+
+    if(login && password)
+    {
+        axios.post(`${link}/login`, {
+            login, password
+        }).then(response => {
+            $(".login_login").val("");
+            $(".login_password").val("");
+            closeLog();
+            localStorage.setItem("auth", response.data.key);
+            document.cookie = `auth=${response.data.key}`;
+            instance = axios.create({
+                baseURL: link,
+                headers: {"auth": response.data.key}
+            })
+            get();
+        }).catch(error => {
+            console.log(error);
+        })
+    }
+    else
+    {
+        showModal("Wrong input");
+    }
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+function start() {
+    let auth = localStorage.getItem("auth");
+    if(auth)
+    {
+        closeLog();
+        instance = axios.create({
+            baseURL: link,
+            headers: {"auth": auth}
+        });
+        get();
+    }
+    else
+    {
+        auth = getCookie("auth");
+        if(auth) {
+            closeLog();
+            instance = axios.create({
+                baseURL: link,
+                headers: {"auth": auth}
+            });
+            get();
+        }
+    }
+}
+
+function deleteStorage() {
+    localStorage.removeItem("auth");
+}
+
+function deleteCookie() {
+    document.cookie = "auth=;";
+}
+
+function closeLog() {
+    $(".login").css("display", "none");
+}
+
+function openLog() {
+    $(".login").css("display", "block");
+}
+
+function logOut() {
+    localStorage.removeItem("auth");
+    document.cookie = "auth=;";
+    openLog();
+}
+
+$("#list").on("click", "button", remove);
+$("#logout").on("click", logOut);
+$(".login_btn").on("click", login);
 $("#email_input").on("input", function() {
-    if(Validate($(this).val()))
+    if(validate($(this).val()))
         $(this).css("outline-color", "green");
     else
         $(this).css("outline-color", "red");
 
 })
-$("#add_btn").click(Add);
-$("#email_btn").click(Contact);
+$("#add_btn").click(add);
+$("#email_btn").click(contact);
 $(".modal-content").click(function(event) {
     event.stopPropagation();
 })
 $(".modal-btn, .modal").click(function() {
     modal.css('display', 'none');
 });
+$("#svg").on("click", function() {
+    if(pressed)
+    {
+        pressed = false;
+        $(this).html("remove");
+        getData();
+    }
+    else
+    {
+        pressed = true;
+        $(this).html("Graph");
+        $("svg").remove();
+    }
+});
+$(".first, .second, .third").on('mousewheel', function(e){
+    e.preventDefault();
+    let a = [$(".first"), $(".second"), $(".third")]
+    let p = a.findIndex(elem => {
+        return $(this).is(elem);
+    });
+    if(e.originalEvent.wheelDelta < 0 && !scrolling) {
+        scrolling = true;
+        $('html, body').animate({
+            scrollTop: (p == a.length - 1 ? a[p] : a[p + 1]).offset().top}, 
+            1000,
+            function() {
+                scrolling = false;
+            });
+    }
+    else if(!scrolling)
+    {
+        scrolling = true;
+        $('html, body').animate({
+            scrollTop: (p == 0 ? a[p] : a[p - 1]).offset().top}, 
+            1000,
+            function() {
+                scrolling = false;
+            });
+    }
+});
+$(".first, .second, .third").on("click", function() {
+    document.location.href = "index.html";
+})
 
-Get();
+start();
