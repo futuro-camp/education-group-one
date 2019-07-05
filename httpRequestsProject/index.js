@@ -2,6 +2,7 @@
 function getFromServer() {
     axios.get('http://192.168.1.100:3000/api/items')
     .then((content)=>{
+        console.log(content);
         showSomething(content.data);
     }).catch((error)=>{
         console.log(error);
