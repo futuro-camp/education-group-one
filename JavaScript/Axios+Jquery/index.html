@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri|Montserrat&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -24,12 +25,19 @@
         <input id="contact-form-message-input" type="text" placeholder="Message" required>
         <input id="contact-form-submit" type="submit" value="Send contacts">
     </form>
-    <div class="modal">
+    <div class="contact-modal">
         <p id="modal-text"></p>
+    </div>
+    <div class="login-modal">
+        <form action="#">
+            <input id="login-modal-login" type="text" placeholder="login">
+            <input id="login-modal-password" type="password" placeholder="password">
+            <input id="login-modal-submit" type="submit" value="Log in">
+        </form>
     </div>
     <div class="graph">
         <canvas id="graph" height="250"></canvas>
-        <button id="getGraph">Get graph</button>
+        <button id="getGraph">Get chart</button>
     </div>
     <script src="script.js"></script>
 </body>

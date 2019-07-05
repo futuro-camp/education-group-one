@@ -5,22 +5,51 @@
   list-style: none;
 }
 
-.content {
+#content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
 }
 
-.content li {
-  margin: 10px 0;
+#content li {
+  margin: 15px 0;
   display: none;
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+#content li button {
+  color: #1a0000;
+  background-color: gray;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  font-size: 18px;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#content li button:hover {
+  background-color: #ff0000;
+}
+
+#content li button:focus {
+  outline: none;
 }
 
 .form {
-  margin-top: 25px;
+  margin-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,13 +58,129 @@
           justify-content: center;
 }
 
-button {
-  margin-left: 10px;
+.form #post-form-input, .form #contact-form-email-input, .form #contact-form-message-input {
+  height: 25px;
+  width: 450px;
+  border: none;
+  border-bottom: 3px solid black;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  line-height: 24px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+
+.form #post-form-input:focus, .form #contact-form-email-input:focus, .form #contact-form-message-input:focus {
+  outline: none;
+}
+
+.form #post-form-submit, .form #contact-form-submit {
+  height: 25px;
+  width: 150px;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  color: black;
+  line-height: 24px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+.form #post-form-submit:focus, .form #contact-form-submit:focus {
+  outline: none;
+}
+
+.form #post-form-submit:hover, .form #contact-form-submit:hover {
+  color: orangered;
+}
+
+.form #contact-form-email-input, .form #contact-form-message-input {
+  width: 225px;
 }
 
 .graph {
   width: 300px;
   height: 300px;
   margin: 20px auto;
+}
+
+.login-modal form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-modal form input {
+  margin: 10px 20px;
+  border: none;
+  border-bottom: 2px solid black;
+  width: 300px;
+  height: 40px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  line-height: 24px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.login-modal form input:focus {
+  border-bottom: 2px solid orangered;
+  outline: none;
+}
+
+.login-modal form input::-webkit-input-placeholder {
+  text-align: center;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.login-modal form input:-ms-input-placeholder {
+  text-align: center;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.login-modal form input::-ms-input-placeholder {
+  text-align: center;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.login-modal form input::placeholder {
+  text-align: center;
+  color: grey;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.login-modal form #login-modal-submit {
+  border: none;
+  border-radius: 15px;
+}
+
+.login-modal form #login-modal-submit:hover {
+  border: none;
+  background-color: orangered;
 }
 /*# sourceMappingURL=style.css.map */

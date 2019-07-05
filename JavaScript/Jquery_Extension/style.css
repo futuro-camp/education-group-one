@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+.rainbow {
+  height: 300px;
+  width: 300px;
+  border: solid 5px;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=style.css.map */
