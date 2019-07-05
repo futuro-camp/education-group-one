@@ -6,6 +6,8 @@
 .container p {
     width: 100%;
     border: 1px solid #000;
+    color: #000;
+    background-color: lightcyan;
     text-align: justify;
     padding: 5px;
 }
