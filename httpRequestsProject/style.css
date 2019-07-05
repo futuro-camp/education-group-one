@@ -1,9 +1,54 @@
-
+.sign-in-cover {
+    width: 100%;
+    height: 46.58vw;
+    margin: 0 auto;
+}
+.sign-in {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sign-in input {
+    width: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.sign-in button {
+    width: 503px;
+    height: 50px;
+    background-color: azure;
+    border: solid 1px green;
+}
 .message {
     display: none;
     padding: 50px;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: sandybrown;
+    justify-content: center;
+    align-items: flex-start;
+}
+.message p {
+    margin-top: 25%;
+    width: 70%;
+    font-size: 45px;
+    color: white;
 }
 .list-box  {
     list-style: none;

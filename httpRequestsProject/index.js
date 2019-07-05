@@ -1,6 +1,6 @@
 // Getting from the server all content and find ONLY data
 function getFromServer() {
-    axios.get('http://192.168.1.100:3000/api/items')
+    instance.get('/items')
     .then((content)=>{
         console.log(content);
         showSomething(content.data);
@@ -22,7 +22,7 @@ $("#send").click(function() {
 });
 //Sending to server value of input's textarea
 function postNewValueToServer(){
-    axios.post('http://192.168.1.100:3000/api/items', {
+    instance.post('/items', {
         value: $("#new").val()
     }).then((answer)=>{
         $("#new").val('');
@@ -39,7 +39,7 @@ $("#del").click(function() {
 });
 //Deleting an object from the server
 function deleteFromServer(data){
-    axios.delete(`http://192.168.1.100:3000/api/items/${data}`)
+    instance.delete(`/items/${data}`)
     .then((answer)=>{
         $(`#${answer.data.id}`).remove();
     })
@@ -48,11 +48,8 @@ function deleteFromServer(data){
     })
 }
 //Creating onclik-event for the button ve (value+email)
-$("#ve").click(function() {
-    postNewValueEmailToServer();
-});
+$("#ve").click(function() { postNewValueEmailToServer(); });
 //Validation for inputs
-
 //my regular expression for email
     let x = /.+@.+\..+/i;
 // disable buttons by default
@@ -95,7 +92,7 @@ $("#ve").click(function() {
     })
 //Sending to server value and email of input's textareas
 function postNewValueEmailToServer(){
-    axios.post(`http://192.168.1.100:3000/api/contact`, {
+    instance.post(`/contact`, {
         value: $("#value").val(),
         email: $("#email").val()
     })
@@ -103,13 +100,16 @@ function postNewValueEmailToServer(){
         $("#value, #email").val('');
         $(".message").append(`<p> ${answer.data}</p>`);
         $(".message").css("display","flex");
+        setTimeout(() => {
+            $(".message").css("display","none");
+        }, 3000);
     }).catch((error)=>{
         alert(error);
     })
 }
 //Get array of points from the server
 function getChart(){
-    axios.get('http://192.168.1.100:3000/api/chart')
+    instance.get('/chart')
     .then((content)=>{
         return content.data;
     })
@@ -136,7 +136,6 @@ function getChart(){
         ctx.moveTo(-charts.width/2,0)
         ctx.lineTo(charts.width/2,0)
         ctx.stroke();
-
         ctx.lineWidth = "1";
         ctx.strokeStyle="#003300";
         ctx.moveTo(0,-charts.height/2)
@@ -144,7 +143,6 @@ function getChart(){
         ctx.moveTo(0,-charts.height/2)
         ctx.lineTo(4,-charts.height/2+10)
         ctx.stroke();
-
         ctx.lineWidth = "1";
         ctx.strokeStyle="#003300";
         ctx.moveTo(charts.width/2,0)
@@ -163,8 +161,68 @@ $("#draw").click(function() {
     getChart();
     $("#draw").prop('disabled', true);
 });
-
+//Creating authorization request
+    //login password const
+    let loginTrue = 'test';
+    let passwordTrue = 'admin';
+    //disable button SIGN IN by default
+    $("#signIn").prop('disabled', true);
+    //LOG/PASS-input's validation
+    // validation on empty string + outline LOGIN-Input
+    $("#log").on("input focus", function() {
+        if($(this).val().trim()) {
+            $("#log").css("outline-color","green");
+        } else {
+            $("#log").css("outline-color","brown",);
+        }
+    })
+    // validation on empty string + outline PASSWORD-Input
+    $("#pas").on("input focus", function() {
+        if($(this).val().trim()) {
+            $("#pas").css("outline-color","green");
+        } else {
+            $("#pas").css("outline-color","brown",);
+        }
+    })
+    // Validation LOGIN & PASSWORD inputs for valid
+    $("#log, #pas").on("input focus", function() {
+        if($("#log").val().trim()&&$("#pas").val().trim()) {
+            $("#signIn").prop('disabled', false);
+        } else {
+            $("#signIn").prop('disabled', true);
+        }
+    })
+    //sending values by pressing button SIGN IN
+    $("#signIn").click(function() { postAuthorization(); });
+    // global variable "AXIOS CREATE"
+    let instance ;
+     //authorization's method
+function postAuthorization() {
+    // console.log($("#log").val(), $("#pas").val());
+    axios.post('http://192.168.1.100:3000/login',{
+        login: $("#log").val(),
+        password: $("#pas").val()
+    })
+    .then(content => {
+        $(".sign-in").css("display","none");
+        return content.data.key;
+    })
+    .then((key) => {
+        console.log(key);
+        instance = axios.create({
+            baseURL: 'http://192.168.1.100:3000/api',
+            headers: {'auth':key}
+        })
+    })
+    .then(() => {
+        getFromServer();
+    })
+    .catch(error => {
+        alert(error);
+    })
+}
 // Starting main method
-getFromServer();
+// getFromServer();
 // getChart();
 // draw();
+// postAuthorization();
