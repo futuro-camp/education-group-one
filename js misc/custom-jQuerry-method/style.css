@@ -1,8 +1,37 @@
 .container{
-    width: 70%;
+    width: 40%;
     margin: 0 auto;
+    margin-top: 50px;
 }
 .container p {
     width: 100%;
     border: 1px solid #000;
+    text-align: justify;
+    padding: 5px;
+}
+.value-form{
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.value-form input {
+    margin-bottom: 10px;
+    width: 48%;
+    text-align: center;
+    outline-color: brown;
+}
+.value-form button {
+    width: 49%;
+    background-color: azure;
+    border: solid 1px green;
+    color: green;
+    font-size: 20px;
+}
+.value-form button:focus {
+    outline-color: black;
 }
