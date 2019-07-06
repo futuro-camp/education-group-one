@@ -300,16 +300,16 @@ $("#svg").on("click", function() {
         $("svg").remove();
     }
 });
-$(".first, .second, .third").on('mousewheel', function(e){
+$(".section").on('mousewheel', function(e){
     e.preventDefault();
-    let a = [$(".first"), $(".second"), $(".third")]
+    let a = Array.from($(".section"));
     let p = a.findIndex(elem => {
         return $(this).is(elem);
     });
     if(e.originalEvent.wheelDelta < 0 && !scrolling) {
         scrolling = true;
         $('html, body').animate({
-            scrollTop: (p == a.length - 1 ? a[p] : a[p + 1]).offset().top}, 
+            scrollTop: $(p == a.length - 1 ? a[p] : a[p + 1]).offset().top}, 
             1000,
             function() {
                 scrolling = false;
@@ -319,14 +319,14 @@ $(".first, .second, .third").on('mousewheel', function(e){
     {
         scrolling = true;
         $('html, body').animate({
-            scrollTop: (p == 0 ? a[p] : a[p - 1]).offset().top}, 
+            scrollTop: $(p == 0 ? a[p] : a[p - 1]).offset().top}, 
             1000,
             function() {
                 scrolling = false;
             });
     }
 });
-$(".first, .second, .third").on("click", function() {
+$(".section").on("click", function() {
     document.location.href = "index.html";
 })
 
