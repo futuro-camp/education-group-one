@@ -308,6 +308,34 @@ header .row .tools a {
   border-right: 1px solid #767676;
 }
 
+.section .row .col-3 div {
+  margin: 0 0 50px 0;
+  text-align: center;
+}
+
+.section .row .col-3 div img {
+  color: #343640;
+}
+
+.section .row .col-3 div h1 {
+  color: #ffffff;
+  font-family: "Titillium Web";
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
+  margin: 38px 0 8px 0;
+}
+
+.section .row .col-3 div p {
+  color: #767676;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+}
+
 .foot {
   height: 297px;
 }

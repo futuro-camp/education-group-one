@@ -236,7 +236,7 @@ header {
         .hot {
           background-color: $base-color-warm-1;
         }
-        .invisible{
+        .invisible {
           opacity: 0;
         }
       }
@@ -248,7 +248,7 @@ header {
         background-color: #ffffff;
         border: 0;
         border-top: 1px solid #eeeeee;
-        img{
+        img {
           margin: 37px 0 0 90px;
         }
         h2 {
@@ -285,6 +285,30 @@ header {
       height: 258px;
       background-color: #1d1e24;
       border-right: 1px solid #767676;
+      div {
+        margin: 0 0 50px 0;
+        text-align: center;
+        img {
+          color: #343640;
+        }
+        h1 {
+          color: #ffffff;
+          font-family: "Titillium Web";
+          font-size: 18px;
+          line-height: 24px;
+          text-transform: uppercase;
+          letter-spacing: 3.6px;
+          margin: 38px 0 8px 0;
+        }
+        p {
+          color: #767676;
+          font-family: "Roboto";
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 24px;
+          margin: 0;
+        }
+      }
     }
   }
 }
