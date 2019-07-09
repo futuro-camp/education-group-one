@@ -270,6 +270,30 @@ header {
 .featured {
   .row {
     .col-6 {
+      div {
+        width: 266px;
+        height: 266px;
+        border-radius: 150px;
+        border: 14px solid rgba(255, 255, 255, 0.49);
+        background-color: #e7a8c6;
+        margin: 386px 0 0 450px;
+        p {
+          width: 141px;
+          height: 61px;
+          color: #ffffff;
+          font-family: "Roboto";
+          font-size: 45px;
+          line-height: 24px;
+          margin: 73px 69px 0 45px;
+          text-align: right;
+          span {
+            color: #000000;
+            font-size: 16px;
+            text-decoration: line-through;
+            margin: 4px 0 0 0;
+          }
+        }
+      }
     }
     .banner {
       width: 960px;
