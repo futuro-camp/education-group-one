@@ -1,4 +1,4 @@
-# Edication Repository
+# Education Repository
 
 This is a shared repository between students of first group of *Futuro Camp*
 
