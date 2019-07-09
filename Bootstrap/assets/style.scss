@@ -1,5 +1,6 @@
-$base-color1: #ade1c5;
-$base-color2: #8ed1b7;
+$base-color-cold-1: #ade1c5;
+$base-color-cold-2: #8ed1b7;
+$base-color-warm-1: #e7a8c6;
 
 header {
   .row {
@@ -39,7 +40,7 @@ header {
   margin: 0;
 }
 
-.navbar {
+.head {
   height: 70px;
   .navbar-nav {
     .nav-item {
@@ -53,7 +54,7 @@ header {
         text-transform: uppercase;
         letter-spacing: 2.2px;
         &:hover {
-          color: $base-color2;
+          color: $base-color-cold-2;
           text-decoration: underline;
         }
       }
@@ -63,9 +64,9 @@ header {
 
 .slider {
   height: 576px;
-  background-color: $base-color1;
+  background-color: $base-color-cold-1;
   .row {
-    .col-sm-4 {
+    .col-4 {
       margin: 192px 0 0 0;
       width: 530px;
       height: 200px;
@@ -119,8 +120,11 @@ header {
 }
 
 .product {
-  .row {
-    margin: 60px 0 14px 0;
+  margin: 0 0 175px 0;
+  padding: 0;
+  .filter {
+    margin: 60px 0 73px 0;
+    width: 1140px;
     .col-6 {
       a {
         text-decoration: none;
@@ -133,7 +137,7 @@ header {
         letter-spacing: 2.2px;
         margin-left: 30px;
         &:hover {
-          color: $base-color2;
+          color: $base-color-cold-2;
           text-decoration: underline;
         }
       }
@@ -145,7 +149,7 @@ header {
       margin: 0;
     }
     .col-6 {
-      padding-right: 0;
+      padding: 0;
       input {
         width: 55px;
         border: 0;
@@ -161,19 +165,132 @@ header {
     }
   }
   .row {
+    width: 1140px;
+    margin-left: 0;
     .col-4 {
+      padding: 37px 31px 0 0;
       width: 360px;
       height: 513px;
       background-color: #ffffff;
       box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
       padding: 0;
+      .toolsproduct {
+        width: 19px;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 #ffffff;
+        margin: 29px 0 0 37px;
+        a {
+          img {
+            margin: 0 0 40px 0;
+          }
+          .like {
+            margin: 0 0 27px 0;
+          }
+          .heart {
+            margin: 0 0 28px 0;
+          }
+        }
+      }
       div {
         width: 265px;
         height: 256px;
-        background-color: #e7a8c6;
+        background-color: $base-color-warm-1;
         box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
-        margin: 0 30px 294px 70px;
+        margin: 0 0 294px 70px;
+        h1 {
+          color: #000000;
+          font-family: "Titillium Web";
+          font-size: 23px;
+          font-weight: bold;
+          line-height: 24px;
+          margin: 62px 0 0 30px;
+        }
+        p {
+          font-family: "Roboto";
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 24px;
+          color: #8ed1b7;
+          margin: 15px 0 0 30px;
+          span {
+            color: #000000;
+            text-decoration: line-through;
+            margin: 0 15px 0 0;
+          }
+        }
+        div {
+          width: 50px;
+          height: 50px;
+          border-radius: 30px;
+          background-color: $base-color-cold-2;
+          margin: 189px 0 0 -25px;
+          padding: 13px 0 0 0;
+          color: #ffffff;
+          font-family: "Roboto";
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 24px;
+          text-transform: uppercase;
+          text-align: center;
+        }
+        .hot {
+          background-color: $base-color-warm-1;
+        }
+        .invisible{
+          opacity: 0;
+        }
+      }
+      button {
+        display: flex;
+        width: 303px;
+        height: 58px;
+        margin: 40px 0 0 -87px;
+        background-color: #ffffff;
+        border: 0;
+        border-top: 1px solid #eeeeee;
+        img{
+          margin: 37px 0 0 90px;
+        }
+        h2 {
+          color: #000000;
+          font-family: "Roboto";
+          font-size: 12px;
+          font-weight: bold;
+          line-height: 24px;
+          text-transform: uppercase;
+          margin: 40px 0 0 9px;
+        }
+      }
+      .color {
+        background-color: $base-color-cold-2;
       }
     }
   }
+}
+.featured {
+  .row {
+    .col-6 {
+    }
+    .banner {
+      width: 960px;
+      height: 771px;
+      background-color: $base-color-cold-2;
+    }
+  }
+}
+.section {
+  .row {
+    .col-3 {
+      width: 480px;
+      height: 258px;
+      background-color: #1d1e24;
+      border-right: 1px solid #767676;
+    }
+  }
+}
+.foot {
+  height: 297px;
+}
+footer {
+  height: 233px;
 }

@@ -40,11 +40,11 @@ header .row .tools a {
   margin: 0;
 }
 
-.navbar {
+.head {
   height: 70px;
 }
 
-.navbar .navbar-nav .nav-item a {
+.head .navbar-nav .nav-item a {
   text-decoration: none;
   color: #45505e;
   font-family: "Roboto";
@@ -55,7 +55,7 @@ header .row .tools a {
   letter-spacing: 2.2px;
 }
 
-.navbar .navbar-nav .nav-item a:hover {
+.head .navbar-nav .nav-item a:hover {
   color: #8ed1b7;
   text-decoration: underline;
 }
@@ -65,13 +65,13 @@ header .row .tools a {
   background-color: #ade1c5;
 }
 
-.slider .row .col-sm-4 {
+.slider .row .col-4 {
   margin: 192px 0 0 0;
   width: 530px;
   height: 200px;
 }
 
-.slider .row .col-sm-4 .newarrivals {
+.slider .row .col-4 .newarrivals {
   color: #000000;
   font-family: "Roboto-Thin";
   font-size: 23px;
@@ -80,19 +80,19 @@ header .row .tools a {
   margin: 0 0 23px 0;
 }
 
-.slider .row .col-sm-4 .newarrivals #new {
+.slider .row .col-4 .newarrivals #new {
   font-family: "Alex Brush";
   font-size: 73px;
   font-weight: 400;
 }
 
-.slider .row .col-sm-4 .newarrivals #arrivals {
+.slider .row .col-4 .newarrivals #arrivals {
   font-family: "Roboto-Thin";
   font-weight: 100;
   letter-spacing: 4.6px;
 }
 
-.slider .row .col-sm-4 .skyplanter {
+.slider .row .col-4 .skyplanter {
   height: 51px;
   color: #000000;
   font-family: "Titillium Web";
@@ -103,7 +103,7 @@ header .row .tools a {
   margin: 0 0 47px 0;
 }
 
-.slider .row .col-sm-4 .skyplanter #price {
+.slider .row .col-4 .skyplanter #price {
   height: 51px;
   font-family: "Roboto-Thin";
   font-size: 24px;
@@ -112,7 +112,7 @@ header .row .tools a {
   margin-top: -20px;
 }
 
-.slider .row .col-sm-4 a {
+.slider .row .col-4 a {
   color: #000000;
   font-family: "Roboto";
   font-size: 16px;
@@ -122,11 +122,17 @@ header .row .tools a {
   text-transform: uppercase;
 }
 
-.product .row {
-  margin: 60px 0 14px 0;
+.product {
+  margin: 0 0 175px 0;
+  padding: 0;
 }
 
-.product .row .col-6 a {
+.product .filter {
+  margin: 60px 0 73px 0;
+  width: 1140px;
+}
+
+.product .filter .col-6 a {
   text-decoration: none;
   color: #45505e;
   font-family: "Roboto";
@@ -138,23 +144,23 @@ header .row .tools a {
   margin-left: 30px;
 }
 
-.product .row .col-6 a:hover {
+.product .filter .col-6 a:hover {
   color: #8ed1b7;
   text-decoration: underline;
 }
 
-.product .row .line {
+.product .filter .line {
   width: 100%;
   height: 1px;
   color: #f1f1f1;
   margin: 0;
 }
 
-.product .row .col-6 {
-  padding-right: 0;
+.product .filter .col-6 {
+  padding: 0;
 }
 
-.product .row .col-6 input {
+.product .filter .col-6 input {
   width: 55px;
   border: 0;
   color: #414141;
@@ -167,7 +173,13 @@ header .row .tools a {
   margin-top: 5px;
 }
 
+.product .row {
+  width: 1140px;
+  margin-left: 0;
+}
+
 .product .row .col-4 {
+  padding: 37px 31px 0 0;
   width: 360px;
   height: 513px;
   background-color: #ffffff;
@@ -176,12 +188,131 @@ header .row .tools a {
   padding: 0;
 }
 
+.product .row .col-4 .toolsproduct {
+  width: 19px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 0 #ffffff;
+          box-shadow: 0 0 0 #ffffff;
+  margin: 29px 0 0 37px;
+}
+
+.product .row .col-4 .toolsproduct a img {
+  margin: 0 0 40px 0;
+}
+
+.product .row .col-4 .toolsproduct a .like {
+  margin: 0 0 27px 0;
+}
+
+.product .row .col-4 .toolsproduct a .heart {
+  margin: 0 0 28px 0;
+}
+
 .product .row .col-4 div {
   width: 265px;
   height: 256px;
   background-color: #e7a8c6;
   -webkit-box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
           box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
-  margin: 0 30px 294px 70px;
+  margin: 0 0 294px 70px;
+}
+
+.product .row .col-4 div h1 {
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 62px 0 0 30px;
+}
+
+.product .row .col-4 div p {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #8ed1b7;
+  margin: 15px 0 0 30px;
+}
+
+.product .row .col-4 div p span {
+  color: #000000;
+  text-decoration: line-through;
+  margin: 0 15px 0 0;
+}
+
+.product .row .col-4 div div {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #8ed1b7;
+  margin: 189px 0 0 -25px;
+  padding: 13px 0 0 0;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.product .row .col-4 div .hot {
+  background-color: #e7a8c6;
+}
+
+.product .row .col-4 div .invisible {
+  opacity: 0;
+}
+
+.product .row .col-4 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 303px;
+  height: 58px;
+  margin: 40px 0 0 -87px;
+  background-color: #ffffff;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+}
+
+.product .row .col-4 button img {
+  margin: 37px 0 0 90px;
+}
+
+.product .row .col-4 button h2 {
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin: 40px 0 0 9px;
+}
+
+.product .row .col-4 .color {
+  background-color: #8ed1b7;
+}
+
+.featured .row .banner {
+  width: 960px;
+  height: 771px;
+  background-color: #8ed1b7;
+}
+
+.section .row .col-3 {
+  width: 480px;
+  height: 258px;
+  background-color: #1d1e24;
+  border-right: 1px solid #767676;
+}
+
+.foot {
+  height: 297px;
+}
+
+footer {
+  height: 233px;
 }
 /*# sourceMappingURL=style.css.map */
