@@ -31,4 +31,11 @@ function blackListValidate(email) {
     }
 }
 
-module.exports = { blackListCheck, blackListValidate };
+function blackListRemove(email) {
+    let result = blacklist.filter(element => element.email === email)
+    if(result.length) {
+        blacklist.splice(blacklist.indexOf(result[0]),1)
+    }
+}
+
+module.exports = { blackListCheck, blackListValidate, blackListRemove };

@@ -27,6 +27,7 @@ function login() {
         if(blackList.blackListValidate()) {
             let accountData = accountManager.getUser(answer, JSON.parse(encoder.decode(dataManager.readAccoutsData())).accounts);
             if(accountData.isLoginSuccesfull) {
+                blackList.blackListRemove(answer.email);
                 consoleUi.displayAccount(accountData.data).then((answer) => {
                     if(answer.choosedOption === 0) {
                         listDisplay(util.transactionsToArray(accountData.data.transaction), 0);
