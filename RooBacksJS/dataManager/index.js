@@ -15,13 +15,13 @@ function readLocations(){
 }
 // console.log(readLocations());
 
-
-module.exports = { readLocations, readAccounts};
-
-
 // Fucntion which will overwrite database.file with user accounts after user operations with money ballance
+function writeAccounts(data){
+    fs.writeFileSync ('./resourses/accounts.txt', data);
+}
 
-// function writeAccounts(){
-//     fs.writeFileSync ('../resourses/accounts.txt');
-// }
-// writeAccounts();
+module.exports = { readLocations, readAccounts, writeAccounts};
+
+
+
+

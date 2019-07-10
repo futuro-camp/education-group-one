@@ -1,10 +1,10 @@
 // Import moduls
 
-// const accountManager = require('./accountManager/index');
+const accountManager = require('./accountManager/index');
 
 const dataManager = require('./dataManager/index');
 
-// const encoder = require('./encoder/index');
+const encoder = require('./encoder/index');
 
 const utilities = require('./utilities/index');
 
@@ -12,26 +12,34 @@ const validator = require('./validator/index');
 
 const consoleUI = require('./consoleUI');
 
+
+
 function login(){
     consoleUI.signIn(validator.checkEmail, validator.checkPassword)
     .then(answer => {
-        let accountsList = dataManager.readAccounts();
-        let user;
-        accountsList = JSON.parse(accountsList);
-        accountsList.accounts.forEach(element => {
-            if (element.email === answer.email && element.password === answer.password){
-                user = element;
-            }
-        });
+        //Проверка на присутствие в бан-листе 3 и более раз
+        if(validator.banCheck(answer.email)){
+            consoleUI.errorLogin(answer.email)
+            .then(answer => {
+                if(answer.answer === "Try to Login again?"){
+                    login();
+                }
+                else {
+                    exit();
+                }
+            })
+            return;
+        }
+        let accountsList = encoder.deCode(dataManager.readAccounts());
+        let user = accountManager.checkAccount(accountsList, answer);
         if (user){
+            validator.blackListFiltered(user.email);
             consoleUI.accountInfo(user)
             .then(answer => {
                 if(answer.info === "View Transactions History"){
-                    let transactionList = utilities.creatingPagesLocations(user.transaction);
+                    let transactionList = utilities.creatingTransactionsPages(user.transaction);
                     console.clear();
-                    const schedule = consoleUI.viewTransactionList(transactionList);
-                    // console.log(schedule);
-                    // consoleUI.viewTransactionsList(schedule, 0);
+                    const schedule = consoleUI.transactionsToString(transactionList);
                     showTransactions(schedule, 0);
                 }
                 else {
@@ -40,6 +48,8 @@ function login(){
             })
         }
         else {
+            // минус попытка входа (неверный пароль)
+            validator.addToBan(answer.email);
             consoleUI.errorLogin(answer.email)
             .then(answer => {
                 if(answer.answer === "Try to Login again?"){
@@ -55,7 +65,6 @@ function login(){
 
 function showTransactions(list, x) {
     console.clear();
-    // console.log('');
     consoleUI.viewTransactionsList(list, x)
     .then(answer => {
         if(answer.Transactions === 0){
@@ -71,7 +80,6 @@ function showTransactions(list, x) {
 }
 function showLocation(pages, x) {
     console.clear();
-    // console.log('');
     consoleUI.viewLocationList(pages, x)
     .then(answer => {
         if(answer.Locations === 0){
@@ -87,6 +95,9 @@ function showLocation(pages, x) {
 }
 
 function launch(){
+    // to crypt database
+    // dataManager.writeAccounts(encoder.enCode(dataManager.readAccounts()));
+    console.clear();
     consoleUI.entry()
     .then(answer => {
         if (answer.choose === 0){
@@ -103,7 +114,7 @@ function launch(){
 
 function exit(){
     console.clear();
-    console.log('\nSee you later!\n');
+    console.log('\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n');
     process.exit();
 }
 

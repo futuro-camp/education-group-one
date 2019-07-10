@@ -30,28 +30,15 @@ let accs = [
 let email = 'first@ads.ss';
 
 //function which will check account existence
-function checkAccount(identificator){
-    let view;
-    view = accs.find(Element => Element.email==identificator);
-    console.log('');
-    console.log(`Account name : ${view.email}`);
-    console.log('');
-    console.log(`Your balance is : ${view.money}$`);
-    let history = view.transaction;
-    return history;
-}
-// checkAccount(email);
-
-//functiom which view transaction history
-function checkHistory(history){
-    console.log('');
-    history.map(function(item){
-        if (item.value>0) {
-            console.log(`Credited money ${item.value}$ by the adress ${item.place} on ${item.date};`);
-        } else {
-            console.log(`Spent money ${item.value}$ by the adress ${item.place} on ${item.date};`);
+function checkAccount(accountsList, answer){
+    accountsList = JSON.parse(accountsList);
+    let result;
+    accountsList.accounts.forEach(element => {
+        if (element.email === answer.email && element.password === answer.password){
+            result = element;
         }
-        })
-    console.log('');
+    });
+    return result;
 }
-checkHistory(checkAccount(email));
+
+module.exports = {checkAccount};

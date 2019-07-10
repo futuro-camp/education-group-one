@@ -56,13 +56,8 @@
                 ])
     }
 
-//function which will console.log every place per one page
-function creatingPagesView(element){
-    for (let i = 0; i < element.length; i++) {
-        console.log(element[i]);
-    }
-}
-//
+
+// function which offers user to RElogin of quit
 function errorLogin(email){
     console.clear();
     return inquirer
@@ -74,12 +69,17 @@ function errorLogin(email){
         choices: ["Try to Login again?", "Exit"]
     }])
 }
-
+//function which will console.log every place per four on page
+function creatingPagesView(element){
+    for (let i = 0; i < element.length; i++) {
+        console.log(element[i]);
+    }
+}
 // VIEW Locations scenario
     function viewLocationList(list, x){
         let choices = [];
         if(x===0){
-            if(list.length<=4){
+            if(list.length<2){
                 choices = [{type: 'separator', message: '\n'},{name: 'exit', value: 2},{type: 'separator'}];
             }
             else {
@@ -105,11 +105,18 @@ function errorLogin(email){
             }
         ])
     }
+
+//function which will console.log every transaction per four on page
+    function creatingTransactionsPagesView(element){
+        for (let i = 0; i < element.length; i++) {
+            console.log(element[i]);
+        }
+    }
 // VIEW Transactions scenario
     function viewTransactionsList(list, x){
         let choices = [];
         if(x===0){
-            if(list.length<=3){
+            if(list.length<2){
                 choices = [{name: 'exit', value: 2}];
             }
             else {
@@ -122,9 +129,7 @@ function errorLogin(email){
         else {
             choices = [{type: 'separator'},{name:'prev', value: 0},{type: 'separator'},{name:'next', value: 1},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
         }
-        list.forEach(element => {
-            console.log(element);
-        });
+        creatingTransactionsPagesView(list[x]);
         return inquirer
         .prompt ([
             {
@@ -138,12 +143,23 @@ function errorLogin(email){
         ])
     }
 
-    function viewTransactionList(array){
-        let transactionList = array[0].map(element => {
-            return `Transaction value: ${element.value}$, place: ${element.place}, date: ${element.date}`;
-        })
+    function transactionsToString(array){
+            let transactionList = array.map((page) => {
+                return page.map((obj) => {
+                    let dateString = new Date(Date.parse(obj.date)).toLocaleString(
+                        {
+                            weekday: 'long',
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                            hour: 'numeric',
+                            minute: 'numeric'
+                        });
+                    let valueString = obj.value>0 ? `Arrival: ${obj.value}`:`Spent: ${-obj.value}`;
+                    return `${valueString}, ${obj.place}, ${dateString}`;
+                })
+            })
         return transactionList;
-        // console.log(transactionList);
     }
 
     function accountInfo(user){
@@ -158,4 +174,4 @@ function errorLogin(email){
         }])
     }
 
-    module.exports = {entry, signIn, accountInfo, viewLocationList, viewTransactionList, viewTransactionsList, errorLogin};
+    module.exports = {entry, signIn, accountInfo, viewLocationList, transactionsToString, viewTransactionsList, errorLogin};

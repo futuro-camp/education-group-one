@@ -15,7 +15,7 @@ function enCode(input){
     }
     return crypted.join('');
 }
-console.log(enCode(input));
+// console.log(enCode(input));
 
 // function which decrypted user-date from dataManager's returned date
 function deCode(decrypted){
@@ -28,5 +28,7 @@ function deCode(decrypted){
     }
     return decrypted.join('');
 }
-let a = deCode(enCode(input));
-console.log(a);
+// let a = deCode(enCode(input));
+// console.log(a);
+
+module.exports = { deCode, enCode};

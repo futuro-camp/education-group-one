@@ -11,8 +11,17 @@ function creatingPagesLocations(arr){
     // console.log(pages);
     return pages;
 }
-// creatingPagesLocations();
+// creating Transactions PagesLocations();
+function creatingTransactionsPages(arr){
+    let pages = [];
+    var i,j,temparray,step = 4;
+    for (i=0,j=arr.length; i<j; i+=step) {
+        temparray = arr.slice(i,i+step);
+        pages.push(temparray);
+    }
+    // console.log(pages);
+    return pages;
+}
 
 
-
-module.exports = {creatingPagesLocations};
+module.exports = {creatingPagesLocations, creatingTransactionsPages};
