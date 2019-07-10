@@ -307,6 +307,20 @@ header .row .tools a {
   margin: 80px 0;
 }
 
+.featured .row .col-6 h3 {
+  height: 19px;
+  width: 442px;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 24px;
+  letter-spacing: 32.2px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin: -179px 0 0 229px;
+}
+
 .featured .row .col-6 div {
   width: 266px;
   height: 266px;
@@ -338,6 +352,71 @@ header .row .tools a {
   width: 960px;
   height: 771px;
   background-color: #8ed1b7;
+}
+
+.featured .row .banner span h1 {
+  width: 865px;
+  height: 70px;
+  opacity: 0.06;
+  color: #000000;
+  font-family: "Roboto";
+  font-size: 168px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 33.6px;
+  margin: 115px 0 0 105px;
+}
+
+.featured .row .banner span img {
+  width: 636px;
+  height: 505px;
+  margin: -24px 0 0 325px;
+  position: absolute;
+}
+
+.featured .row .banner .textfeatured {
+  position: absolute;
+  margin: 139px 0 0 82px;
+}
+
+.featured .row .banner .textfeatured h4 {
+  width: 65px;
+  height: 12px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: #8ed1b7;
+}
+
+.featured .row .banner .textfeatured h2 {
+  width: 339px;
+  height: 18px;
+  color: #000000;
+  font-family: "Titillium Web";
+  font-size: 23px;
+  font-weight: bold;
+  line-height: 16px;
+  margin: 10px 0 0 0;
+  background-color: #8ed1b7;
+}
+
+.featured .row .banner .textfeatured p {
+  width: 436px;
+  height: 86px;
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 38px 0 44px 0;
+  background-color: #8ed1b7;
+}
+
+.featured .row .banner .textfeatured a h4 {
+  text-decoration: underline;
 }
 
 .section .row .col-3 {
