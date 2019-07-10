@@ -38,8 +38,8 @@ function login() {
                 });
             }
             else {
+                blackList.blackListCheck(answer.email);
                 consoleUi.displayInvalidLogin(accountData.data).then((answer) => {
-                    blackList.blackListCheck(answer.email);
                     if(answer.choosedOption === 0) {
                         login();
                     }

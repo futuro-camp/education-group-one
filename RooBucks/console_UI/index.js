@@ -1,4 +1,4 @@
-const inquirer = require('../node_modules/inquirer');
+const inquirer = require('inquirer');
 
 function displayEntry() {
     return inquirer.prompt({
