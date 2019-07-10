@@ -454,11 +454,32 @@ header .row .tools a {
   margin: 0;
 }
 
-.foot {
-  height: 297px;
+footer {
+  height: 530px;
 }
 
-footer {
-  height: 233px;
+footer .row .col-4 h4 {
+  height: 98px;
+  color: #7b7c85;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.52px;
+  line-height: 22px;
+}
+
+footer .row .col-4 h4 span {
+  font-size: 16px;
+}
+
+footer .row .col-4 a h4 {
+  height: 14px;
+}
+
+footer .row .col-4 h1 {
+  color: #1d1e24;
+  font-family: "Titillium Web";
+  font-size: 18px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
