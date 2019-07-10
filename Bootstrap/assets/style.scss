@@ -175,6 +175,7 @@ header {
       box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
       padding: 0;
       .toolsproduct {
+        height: 130px;
         width: 19px;
         background-color: #ffffff;
         box-shadow: 0 0 0 #ffffff;
@@ -196,28 +197,7 @@ header {
         height: 256px;
         background-color: $base-color-warm-1;
         box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
-        margin: 0 0 294px 70px;
-        h1 {
-          color: #000000;
-          font-family: "Titillium Web";
-          font-size: 23px;
-          font-weight: bold;
-          line-height: 24px;
-          margin: 62px 0 0 30px;
-        }
-        p {
-          font-family: "Roboto";
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 24px;
-          color: #8ed1b7;
-          margin: 15px 0 0 30px;
-          span {
-            color: #000000;
-            text-decoration: line-through;
-            margin: 0 15px 0 0;
-          }
-        }
+        margin: 0 0 0 59px;
         div {
           width: 50px;
           height: 50px;
@@ -240,25 +220,50 @@ header {
           opacity: 0;
         }
       }
-      button {
-        display: flex;
-        width: 303px;
-        height: 58px;
-        margin: 40px 0 0 -87px;
-        background-color: #ffffff;
-        border: 0;
-        border-top: 1px solid #eeeeee;
-        img {
-          margin: 37px 0 0 90px;
-        }
-        h2 {
+      span {
+        text-align: center;
+        margin: 0 auto;
+        h1 {
           color: #000000;
-          font-family: "Roboto";
-          font-size: 12px;
+          font-family: "Titillium Web";
+          font-size: 23px;
           font-weight: bold;
           line-height: 24px;
-          text-transform: uppercase;
-          margin: 40px 0 0 9px;
+          margin: 0 0 18px 0;
+        }
+        p {
+          font-family: "Roboto";
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 24px;
+          color: #8ed1b7;
+          margin: 0 0 40px 0;
+          span {
+            color: #000000;
+            text-decoration: line-through;
+            margin: 0 15px 0 0;
+          }
+        }
+        button {
+          display: flex;
+          width: 303px;
+          height: 58px;
+          margin: 0;
+          background-color: #ffffff;
+          border: 0;
+          border-top: 1px solid #eeeeee;
+          img {
+            margin: 35px 0 0 90px;
+          }
+          h2 {
+            color: #000000;
+            font-family: "Roboto";
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 24px;
+            text-transform: uppercase;
+            margin: 38px 0 0 9px;
+          }
         }
       }
       .color {
@@ -270,6 +275,11 @@ header {
 .featured {
   .row {
     .col-6 {
+      img {
+        width: 395px;
+        height: 611px;
+        margin: 80px 0;
+      }
       div {
         width: 266px;
         height: 266px;
@@ -292,11 +302,6 @@ header {
             text-decoration: line-through;
             margin: 4px 0 0 0;
           }
-        }
-        img {
-          width: 395px;
-          height: 611px;
-          margin: 80px 0;
         }
       }
     }
