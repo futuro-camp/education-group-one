@@ -1,0 +1,58 @@
+.inputs {
+  margin: 15px 0;
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valueInput {
+  border: none;
+  border-bottom: 2px solid #eeeeee;
+  text-align: center;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.valueInput:focus {
+  outline: none;
+  border-bottom: 2px solid #8ed1b7;
+}
+
+.submitInput {
+  border: none;
+  background: none;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.submitInput:hover {
+  cursor: pointer;
+  color: #8ed1b7;
+}
+
+.submitInput:focus {
+  outline: none;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px 40px;
+  justify-content: space-around;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
