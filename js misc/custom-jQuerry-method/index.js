@@ -5,25 +5,25 @@ jQuery.prototype.colorMagic = function(r,g,b,x) {
     // setting background-color from entered rgb-color
     this.css("background-color", `rgb(${r},${g},${b})`);
     if(x>0) {
-        r<x ? r=0 : r=r-x;
-        g<x ? g=0 : g=g-x;
-        b<x ? b=0 : b=b-x;
+        r = r<x ? 0 : r-x;
+        g = g<x ? 0 : g-x;
+        b = b<x ? 0 : b-x;
     } else {
-        r-x<256 ? r=r-x : r=255;
-        g-x<256 ? g=g-x : g=255;
-        b-x<256 ? b=b-x : b=255;
+        r= r-x<256 ? r-x : 255;
+        g= g-x<256 ? g-x : 255;
+        b= b-x<256 ? b-x : 255;
     }
     // setting text-color from entered (rgb-color minus x-value)
     this.css("color", `rgb(${r},${g},${b})`);
     x=-x;
     if(x>0) {
-        r<x ? r=0 : r=r-x;
-        g<x ? g=0 : g=g-x;
-        b<x ? b=0 : b=b-x;
+        r= r<x ? 0 : r-x;
+        g= g<x ? 0 : g-x;
+        b= b<x ? 0 : b-x;
     } else {
-        r-x<256 ? r=r-x : r=255;
-        g-x<256 ? g=g-x : g=255;
-        b-x<256 ? b=b-x : b=255;
+        r= r-x<256 ? r-x : 255;
+        g= g-x<256 ? g-x : 255;
+        b= b-x<256 ? b-x : 255;
     }
     // setting border-color from entered (rgb-color->brg plus x-value)
     this.css("border-color", `rgb(${b},${r},${g})`);

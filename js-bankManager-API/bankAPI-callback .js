@@ -36,9 +36,9 @@ class Bank {
         }, 3000);
     }
     getId(number,cb){
-        setTimeout(()=>{
+        setTimeout(() => {
             let identifier = this.bankList.find((Acc) => Acc.id===number);
-            if(identifier===undefined){
+            if(identifier){
                 cb("Account with this id does not exist", null);
                 return;
             }
@@ -49,11 +49,11 @@ class Bank {
         setTimeout(() => {
             let accountF = this.bankList.find((account) => account.id===from);
             let accountT = this.bankList.find((account) => account.id===to);
-            if (accountF===undefined){
+            if (accountF){
                 cb(`Account with id ${from} does not exist`);
                 return;
             }
-            if (accountT===undefined){
+            if (accountT){
                 cb(`Account with id ${to} does not exist`);
                 return;
             }
@@ -82,11 +82,23 @@ class Bank {
         }, 0);
     }
 }
+function request() {
+    rl.question("Wanna do something else ? Press y/n  \n", (answer) => {
+        if(answer==="y"){
+            start();
+        } else {
+            console.log("Have a nice day!");
+            process.exit();
+        }
+    });
+}
+
 let Privat = new Bank ("Privat Bank", []);
 Privat.createAccount(new Acc("Antony",1200, 1));
 Privat.createAccount(new Acc("Volodya",2200,2));
 Privat.createAccount(new Acc("Ignatik",3200,3));
 Privat.createAccount(new Acc("Kartoshka",4200,4));
+
 function start(){
 rl.question ("Hello, we are happy to see you in our BankManager! This is available command list: getList / getId / transfer \n", (answer) => {
     if (answer === "getList"){
@@ -153,14 +165,5 @@ rl.question ("Hello, we are happy to see you in our BankManager! This is availab
         start();
     }});
 }
-function request() {
-    rl.question("Wanna do something else ? Press y/n  \n", (answer) => {
-        if(answer==="y"){
-            start();
-        } else {
-            console.log("Have a nice day!");
-            process.exit();
-        }
-    });
-}
+
 start();

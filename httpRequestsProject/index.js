@@ -1,6 +1,14 @@
+// global variable "AXIOS CREATE"
+let instance ;
+// Function for showing "something" (including) in the html-object
+function showSomething(data) {
+    data.forEach((element) => {
+        $(".list-box").append(`<li id=${element.id}><button onclick="deleteFromServer(${element.id})">del</button>
+                                                    ID: ${element.id}
+                                                    Value: ${element.value}</li>`);
+    });
+}
 // Getting from the server all content and find ONLY data
-        // global variable "AXIOS CREATE"
-        let instance ;
 function getFromServer() {
     instance.get("/items")
     .then((content) => {
@@ -10,18 +18,6 @@ function getFromServer() {
         console.log(error);
     })
 }
-// Function for showing "something" (including) in the html-object
-function showSomething(data) {
-    data.forEach((element) => {
-        $(".list-box").append(`<li id=${element.id}><button onclick="deleteFromServer(${element.id})">del</button>
-                                                    ID: ${element.id}
-                                                    Value: ${element.value}</li>`);
-    });
-}
-//Creating onclik-event for the button SEND
-$("#send").click(function() {
-    postNewValueToServer();
-});
 //Sending to server value of input"s textarea
 function postNewValueToServer(){
     instance.post("/items", {
@@ -35,10 +31,27 @@ function postNewValueToServer(){
         alert(error);
     })
 }
-//Creating onclik-event for the button DELETE
-$("#del").click(function() {
-    deleteFromServer();
+//Creating onclik-event for the button SEND
+$("#send").click(function() {
+    postNewValueToServer();
 });
+//Sending to server value and email of input"s textareas
+function postNewValueEmailToServer(){
+    instance.post("/contact", {
+        value: $("#value").val(),
+        email: $("#email").val()
+    })
+    .then((answer) => {
+        $("#value, #email").val("");
+        $(".message").append(`<p> ${answer.data}</p>`);
+        $(".message").css("display","flex");
+        setTimeout(() => {
+            $(".message").css("display","none");
+        }, 3000);
+    }).catch((error) => {
+        alert(error);
+    })
+}
 //Deleting an object from the server
 function deleteFromServer(data){
     instance.delete(`/items/${data}`)
@@ -49,6 +62,10 @@ function deleteFromServer(data){
         console.log(error);
     })
 }
+//Creating onclik-event for the button DELETE
+$("#del").click(function() {
+    deleteFromServer();
+});
 //Creating onclik-event for the button ve (value+email)
 $("#ve").click(function() { postNewValueEmailToServer(); });
 //Validation for inputs
@@ -92,23 +109,7 @@ $("#ve").click(function() { postNewValueEmailToServer(); });
             $("#ve").prop("disabled", true);
         }
     })
-//Sending to server value and email of input"s textareas
-function postNewValueEmailToServer(){
-    instance.post(`/contact`, {
-        value: $("#value").val(),
-        email: $("#email").val()
-    })
-    .then((answer) => {
-        $("#value, #email").val("");
-        $(".message").append(`<p> ${answer.data}</p>`);
-        $(".message").css("display","flex");
-        setTimeout(() => {
-            $(".message").css("display","none");
-        }, 3000);
-    }).catch((error) => {
-        alert(error);
-    })
-}
+
 //Get array of points from the server
 function getChart(){
     instance.get("/chart")
@@ -193,7 +194,7 @@ $("#draw").click(function() {
         } else {
             $("#signIn").prop("disabled", true);
         }
-    })
+    });
     //sending values by pressing button SIGN IN
     $("#signIn").click(function() { postAuthorization(); });
 
@@ -204,7 +205,7 @@ function postAuthorization() {
         login: $("#log").val(),
         password: $("#pas").val()
     })
-    .then(content => {
+    .then((content) => {
         $(".sign-in").css("display","none");
         return content.data.key;
     })
@@ -218,7 +219,7 @@ function postAuthorization() {
     .then(() =>  {
         getFromServer();
     })
-    .catch(error => {
+    .catch((error) => {
         alert(error);
     });
 }

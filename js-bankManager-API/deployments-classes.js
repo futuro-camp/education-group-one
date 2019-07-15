@@ -45,7 +45,7 @@ class Emp extends human{
         this.list.splice(g,1);
         console.log(this.list);
     }
-};
+}
 
 let medicine = new Department("medicine",[]);
 medicine.add(new Emp("anton","muha2399", 1200));

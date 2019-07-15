@@ -30,7 +30,7 @@ class Bank {
     }
     getList(){
             return new Promise((resolve,reject)=>{
-                setTimeout(()=>{
+                setTimeout(() => {
                 if (this.bankList.length < 1){
                     reject("This BankList is empty");
                 } else {
@@ -43,7 +43,7 @@ class Bank {
         return new Promise ((resolve,reject)=>{
             setTimeout(() => {
                 let identifier = this.bankList.find((Acc) => Acc.id===number);
-                if(identifier===undefined){
+                if(identifier){
                         reject("Account with this id does not exist");
                 } else { resolve(identifier);}
             }, 1000);
@@ -54,10 +54,10 @@ class Bank {
             setTimeout(() => {
                 let accountF = this.bankList.find((account) => account.id===from);
                 let accountT = this.bankList.find((account) => account.id===to);
-                if (accountF===undefined){
+                if (accountF){
                     reject(`Account with id ${from} does not exist`);
                 }
-                if (accountT===undefined){
+                if (accountT){
                     reject(`Account with id ${to} does not exist`);
                 }
                 if (accountF.money<amount){
@@ -85,6 +85,18 @@ class Bank {
         });
     }
 }
+
+function request() {
+    rl.question("Wanna do something else ? Press y/n  \n", (answer) => {
+        if(answer==="y"){
+            start();
+        } else {
+            console.log("Have a nice day!\n");
+            process.exit();
+        }
+    });
+}
+
 let Privat = new Bank ("Privat Bank", []);
 Privat.createAccount(new Acc("Antony",1200, 1));
 Privat.createAccount(new Acc("Volodya",2200,2));
@@ -153,14 +165,5 @@ function start(){
             request();
         }});
     }
-    function request() {
-        rl.question("Wanna do something else ? Press y/n  \n", (answer) => {
-            if(answer==="y"){
-                start();
-            } else {
-                console.log("Have a nice day!\n");
-                process.exit();
-            }
-        });
-    }
+
     start();

@@ -28,7 +28,7 @@ Department.prototype.lessThenAvg = function(){
     let d = this.avgSalary();
     let e = this.list.filter((x) => x.salary < d);
     return e;
-}
+}ж
 Department.prototype.remove = function(del){
     let f = this.list.map((Emp) => Emp.email);
     let g = f.indexOf(del);

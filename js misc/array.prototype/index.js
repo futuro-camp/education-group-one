@@ -24,7 +24,7 @@ Array.prototype.bubbleSortH = function() {
         }
     } while (swap);
     return this;
-}
+};
     //custromSort elements from lower to higer value
 Array.prototype.bubbleSortL = function() {
     let swap;
