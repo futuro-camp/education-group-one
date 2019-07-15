@@ -12,61 +12,10 @@ const validator = require("./validator/index");
 
 const consoleUI = require("./consoleUI");
 
-
-
-function login(){
-    consoleUI.signIn(validator.checkEmail, validator.checkPassword)
-    .then(answer => {
-        //Проверка на присутствие в бан-листе 3 и более раз
-        if(validator.banCheck(answer.email)){
-            consoleUI.errorLogin(answer.email)
-            .then(answer => {
-                if(answer.answer === "Try to Login again?"){
-                    login();
-                }
-                else {
-                    exit();
-                }
-            })
-            return;
-        }
-        let accountsList = encoder.deCode(dataManager.readAccounts());
-        let user = accountManager.checkAccount(accountsList, answer);
-        if (user){
-            validator.blackListFiltered(user.email);
-            consoleUI.accountInfo(user)
-            .then(answer => {
-                if(answer.info === "View Transactions History"){
-                    let transactionList = utilities.creatingTransactionsPages(user.transaction);
-                    console.clear();
-                    const schedule = consoleUI.transactionsToString(transactionList);
-                    showTransactions(schedule, 0);
-                }
-                else {
-                    exit();
-                }
-            })
-        }
-        else {
-            // минус попытка входа (неверный пароль)
-            validator.addToBan(answer.email);
-            consoleUI.errorLogin(answer.email)
-            .then(answer => {
-                if(answer.answer === "Try to Login again?"){
-                    login();
-                }
-                else {
-                    exit();
-                }
-            })
-        }
-    });
-}
-
 function showTransactions(list, x) {
     console.clear();
     consoleUI.viewTransactionsList(list, x)
-    .then(answer => {
+    .then((answer) => {
         if(answer.Transactions === 0){
             showTransactions(list, x-1);
         }
@@ -78,10 +27,11 @@ function showTransactions(list, x) {
         }
     });
 }
+
 function showLocation(pages, x) {
     console.clear();
     consoleUI.viewLocationList(pages, x)
-    .then(answer => {
+    .then((answer) => {
         if(answer.Locations === 0){
             showLocation(pages, x-1);
         }
@@ -99,7 +49,7 @@ function launch(){
     // dataManager.writeAccounts(encoder.enCode(dataManager.readAccounts()));
     console.clear();
     consoleUI.entry()
-    .then(answer => {
+    .then((answer) => {
         if (answer.choose === 0){
             login();
         } else {
@@ -115,6 +65,55 @@ function exit(){
     console.clear();
     console.log("\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\n\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n\n\n");
     process.exit();
+}
+
+function login(){
+    consoleUI.signIn(validator.checkEmail, validator.checkPassword)
+    .then((answer) => {
+        //Проверка на присутствие в бан-листе 3 и более раз
+        if(validator.banCheck(answer.email)){
+            consoleUI.errorLogin(answer.email)
+            .then((answer) => {
+                if(answer.answer === "Try to Login again?"){
+                    login();
+                }
+                else {
+                    exit();
+                }
+            })
+            return;
+        }
+        let accountsList = encoder.deCode(dataManager.readAccounts());
+        let user = accountManager.checkAccount(accountsList, answer);
+        if (user){
+            validator.blackListFiltered(user.email);
+            consoleUI.accountInfo(user)
+            .then((answer) => {
+                if(answer.info === "View Transactions History"){
+                    let transactionList = utilities.creatingTransactionsPages(user.transaction);
+                    console.clear();
+                    const schedule = consoleUI.transactionsToString(transactionList);
+                    showTransactions(schedule, 0);
+                }
+                else {
+                    exit();
+                }
+            })
+        }
+        else {
+            // минус попытка входа (неверный пароль)
+            validator.addToBan(answer.email);
+            consoleUI.errorLogin(answer.email)
+            .then((answer) => {
+                if(answer.answer === "Try to Login again?"){
+                    login();
+                }
+                else {
+                    exit();
+                }
+            })
+        }
+    });
 }
 
 launch();

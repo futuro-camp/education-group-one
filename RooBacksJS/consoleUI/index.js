@@ -67,7 +67,7 @@ function errorLogin(email){
         message: `Invalid Email Address and / or Password for ${email}. Or you may have exceeded the number of consecutive attempts allowed.`,
         prefix: "",
         choices: ["Try to Login again?", "Exit"]
-    }])
+    }]);
 }
 //function which will console.log every place per four on page
 function creatingPagesView(element){
@@ -140,7 +140,7 @@ function creatingPagesView(element){
                 suffix: "",
                 choices: choices
             }
-        ])
+        ]);
     }
 
     function transactionsToString(array){
@@ -158,7 +158,7 @@ function creatingPagesView(element){
                     let valueString = obj.value>0 ? `Arrival: ${obj.value}`:`Spent: ${-obj.value}`;
                     return `${valueString}, ${obj.place}, ${dateString}`;
                 })
-            })
+            });
         return transactionList;
     }
 
