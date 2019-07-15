@@ -1,33 +1,33 @@
 // calling console UI library
-    var inquirer = require('inquirer');
+    var inquirer = require("inquirer");
 
-// Creatimg choices between LOGin and VIEW Location's places
+// Creatimg choices between LOGin and VIEW Location"s places
     function entry(){
         console.clear();
         return inquirer
         .prompt({
-            message: '\nHello! You are welcomed by the system RooBacks. What option you want to choose: ',
-            name: 'choose',
-            type: 'list',
-            prefix: '',
+            message: "\nHello! You are welcomed by the system RooBacks. What option you want to choose: ",
+            name: "choose",
+            type: "list",
+            prefix: "",
             choices: [
             {
-                type: 'separator',
-                message: '\n '
+                type: "separator",
+                message: "\n "
             },
             {
-                name: 'View Account',
+                name: "View Account",
                 value: 0
             },
             {
-                type: 'separator'
+                type: "separator"
             },
             {
-                name: 'View Locations',
+                name: "View Locations",
                 value: 1
             },
             {
-                type: 'separator'
+                type: "separator"
             },
         ]
         })
@@ -39,18 +39,18 @@
         return inquirer
         .prompt([
                     {
-                        message:'Please enter your Email',
-                        prefix: '',
-                        name: 'email',
-                        type: 'input',
+                        message:"Please enter your Email",
+                        prefix: "",
+                        name: "email",
+                        type: "input",
                         validate: check
                     },
                     {
-                        message:'Please enter your Password',
-                        prefix: '',
-                        name: 'password',
-                        type: 'password',
-                        mask: '#',
+                        message:"Please enter your Password",
+                        prefix: "",
+                        name: "password",
+                        type: "password",
+                        mask: "#",
                         validate: checkP
                     }
                 ])
@@ -62,10 +62,10 @@ function errorLogin(email){
     console.clear();
     return inquirer
     .prompt([{
-        type:'list',
-        name: 'answer',
+        type:"list",
+        name: "answer",
         message: `Invalid Email Address and / or Password for ${email}. Or you may have exceeded the number of consecutive attempts allowed.`,
-        prefix: '',
+        prefix: "",
         choices: ["Try to Login again?", "Exit"]
     }])
 }
@@ -80,27 +80,27 @@ function creatingPagesView(element){
         let choices = [];
         if(x===0){
             if(list.length<2){
-                choices = [{type: 'separator', message: '\n'},{name: 'exit', value: 2},{type: 'separator'}];
+                choices = [{type: "separator", message: "\n"},{name: "exit", value: 2},{type: "separator"}];
             }
             else {
-                choices = [{type: 'separator', message: '\n'},{name:'next', value: 1},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+                choices = [{type: "separator", message: "\n"},{name:"next", value: 1},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
             }
         }
         else if(x===list.length-1){
-            choices = [{type: 'separator', message: '\n'},{name:'prev', value: 0},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+            choices = [{type: "separator", message: "\n"},{name:"prev", value: 0},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
         }
         else {
-            choices = [{type: 'separator', message: '\n'},{name:'prev', value: 0},{type: 'separator'},{name:'next', value: 1},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+            choices = [{type: "separator", message: "\n"},{name:"prev", value: 0},{type: "separator"},{name:"next", value: 1},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
         }
         creatingPagesView(list[x]);
         return inquirer
         .prompt ([
             {
-                type: 'list',
-                prefix: '',
-                name: 'Locations',
-                message: ' ',
-                suffix: '',
+                type: "list",
+                prefix: "",
+                name: "Locations",
+                message: " ",
+                suffix: "",
                 choices: choices
             }
         ])
@@ -117,27 +117,27 @@ function creatingPagesView(element){
         let choices = [];
         if(x===0){
             if(list.length<2){
-                choices = [{name: 'exit', value: 2}];
+                choices = [{name: "exit", value: 2}];
             }
             else {
-                choices = [{type: 'separator'},{name:'next', value: 1},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+                choices = [{type: "separator"},{name:"next", value: 1},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
             }
         }
         else if(x===list.length-1){
-            choices = [{type: 'separator'},{name:'prev', value: 0},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+            choices = [{type: "separator"},{name:"prev", value: 0},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
         }
         else {
-            choices = [{type: 'separator'},{name:'prev', value: 0},{type: 'separator'},{name:'next', value: 1},{type: 'separator'},{name: 'exit', value: 2},{type: 'separator'}];
+            choices = [{type: "separator"},{name:"prev", value: 0},{type: "separator"},{name:"next", value: 1},{type: "separator"},{name: "exit", value: 2},{type: "separator"}];
         }
         creatingTransactionsPagesView(list[x]);
         return inquirer
         .prompt ([
             {
-                type: 'list',
-                prefix: '',
-                name: 'Transactions',
-                message: ' ',
-                suffix: '',
+                type: "list",
+                prefix: "",
+                name: "Transactions",
+                message: " ",
+                suffix: "",
                 choices: choices
             }
         ])
@@ -148,12 +148,12 @@ function creatingPagesView(element){
                 return page.map((obj) => {
                     let dateString = new Date(Date.parse(obj.date)).toLocaleString(
                         {
-                            weekday: 'long',
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                            hour: 'numeric',
-                            minute: 'numeric'
+                            weekday: "long",
+                            year: "numeric",
+                            month: "long",
+                            day: "numeric",
+                            hour: "numeric",
+                            minute: "numeric"
                         });
                     let valueString = obj.value>0 ? `Arrival: ${obj.value}`:`Spent: ${-obj.value}`;
                     return `${valueString}, ${obj.place}, ${dateString}`;
@@ -166,12 +166,12 @@ function creatingPagesView(element){
         console.clear();
         return inquirer
         .prompt([{
-            name: 'info',
-            type: 'list',
+            name: "info",
+            type: "list",
             message: `\nYour login: ${user.email}\nYour money balance is: ${user.money}$\n`,
             choices: ["View Transactions History","LoggOff"],
-            prefix: ''
-        }])
+            prefix: ""
+        }]);
     }
 
     module.exports = {entry, signIn, accountInfo, viewLocationList, transactionsToString, viewTransactionsList, errorLogin};

@@ -1,7 +1,7 @@
 let accs = [
     {
-        email: 'first@ads.ss',
-        password: 'asdasdasdasd',
+        email: "first@ads.ss",
+        password: "asdasdasdasd",
         id: 1,
         money: 100,
         transaction: [
@@ -9,8 +9,8 @@ let accs = [
         ]
     },
     {
-        email: 'second@ads.ss',
-        password: 'asdasdasdasd',
+        email: "second@ads.ss",
+        password: "asdasdasdasd",
         id: 2,
         money: 125,
         transaction: [
@@ -18,8 +18,8 @@ let accs = [
         ]
     },
     {
-        email: 'third@ads.ss',
-        password: 'asdasdasdasd',
+        email: "third@ads.ss",
+        password: "asdasdasdasd",
         id: 3,
         money: 150,
         transaction: [
@@ -27,13 +27,13 @@ let accs = [
         ]
     }
 ];
-let email = 'first@ads.ss';
+let email = "first@ads.ss";
 
 //function which will check account existence
 function checkAccount(accountsList, answer){
     accountsList = JSON.parse(accountsList);
     let result;
-    accountsList.accounts.forEach(element => {
+    accountsList.accounts.forEach((element) => {
         if (element.email === answer.email && element.password === answer.password){
             result = element;
         }

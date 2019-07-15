@@ -1,16 +1,16 @@
 // Import moduls
 
-const accountManager = require('./accountManager/index');
+const accountManager = require("./accountManager/index");
 
-const dataManager = require('./dataManager/index');
+const dataManager = require("./dataManager/index");
 
-const encoder = require('./encoder/index');
+const encoder = require("./encoder/index");
 
-const utilities = require('./utilities/index');
+const utilities = require("./utilities/index");
 
-const validator = require('./validator/index');
+const validator = require("./validator/index");
 
-const consoleUI = require('./consoleUI');
+const consoleUI = require("./consoleUI");
 
 
 
@@ -60,7 +60,7 @@ function login(){
                 }
             })
         }
-    })
+    });
 }
 
 function showTransactions(list, x) {
@@ -109,12 +109,11 @@ function launch(){
             showLocation(pages, 0);
         }
     })
-    .then()
 }
 
 function exit(){
     console.clear();
-    console.log('\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n');
+    console.log("\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\n\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n\n\n");
     process.exit();
 }
 

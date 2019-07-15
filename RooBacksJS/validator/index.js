@@ -29,7 +29,7 @@
         blackList.push(email);
         setTimeout(() => {
             banReducer(email);
-        },60000)
+        },60000);
         if(banCheck(email)){
             setTimeout(() => {
                 blackListFiltered(email);
@@ -43,7 +43,7 @@
 // auto-removing from ban list before ban
 function  banReducer(email){
     let x = blackList.indexOf(email);
-    if (x!=-1){
+    if (x!==-1){
         if(!banCheck(email)){
                 blackList.splice(x,1);
                 setTimeout(() => {
