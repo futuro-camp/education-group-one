@@ -12,6 +12,12 @@ const validator = require("./validator/index");
 
 const consoleUI = require("./consoleUI");
 
+function exit(){
+    console.clear();
+    console.log("\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\n\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n\n\n");
+    process.exit();
+}
+
 function showTransactions(list, x) {
     console.clear();
     consoleUI.viewTransactionsList(list, x)
@@ -44,29 +50,6 @@ function showLocation(pages, x) {
     });
 }
 
-function launch(){
-    // to crypt database
-    // dataManager.writeAccounts(encoder.enCode(dataManager.readAccounts()));
-    console.clear();
-    consoleUI.entry()
-    .then((answer) => {
-        if (answer.choose === 0){
-            login();
-        } else {
-            let locationsList = dataManager.readLocations();
-            locationsList = JSON.parse(locationsList);
-            let pages = utilities.creatingPagesLocations(locationsList.places);
-            showLocation(pages, 0);
-        }
-    })
-}
-
-function exit(){
-    console.clear();
-    console.log("\nThanks you for using system RooBucks, based on vanilla JavaScript.:)\n\nHave a nice day!(c) Kharkiv National University of Radio Electronics\n\n\n");
-    process.exit();
-}
-
 function login(){
     consoleUI.signIn(validator.checkEmail, validator.checkPassword)
     .then((answer) => {
@@ -80,7 +63,7 @@ function login(){
                 else {
                     exit();
                 }
-            })
+            });
             return;
         }
         let accountsList = encoder.deCode(dataManager.readAccounts());
@@ -111,7 +94,24 @@ function login(){
                 else {
                     exit();
                 }
-            })
+            });
+        }
+    });
+}
+
+function launch(){
+    // to crypt database
+    // dataManager.writeAccounts(encoder.enCode(dataManager.readAccounts()));
+    console.clear();
+    consoleUI.entry()
+    .then((answer) => {
+        if (answer.choose === 0){
+            login();
+        } else {
+            let locationsList = dataManager.readLocations();
+            locationsList = JSON.parse(locationsList);
+            let pages = utilities.creatingPagesLocations(locationsList.places);
+            showLocation(pages, 0);
         }
     });
 }

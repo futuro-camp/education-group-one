@@ -103,7 +103,7 @@ function creatingPagesView(element){
                 suffix: "",
                 choices: choices
             }
-        ])
+        ]);
     }
 
 //function which will console.log every transaction per four on page
@@ -157,7 +157,7 @@ function creatingPagesView(element){
                         });
                     let valueString = obj.value>0 ? `Arrival: ${obj.value}`:`Spent: ${-obj.value}`;
                     return `${valueString}, ${obj.place}, ${dateString}`;
-                })
+                });
             });
         return transactionList;
     }

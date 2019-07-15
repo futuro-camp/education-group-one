@@ -1,8 +1,5 @@
 // regExp for email validation
     let successEmail = /([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-// // regExp for email validation
-//     let successEmail = /([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-    // let email = 'asd@asd.asd';
 // function which cheks is email valid ?
     function checkEmail(input){
         return successEmail.test(input);
@@ -18,7 +15,7 @@
 // function which controls quantity of wrong logging
     function banCheck(email){
         if (blackList.indexOf(email) !== -1){
-            if(blackList.filter(element => element === email).length === 3){
+            if(blackList.filter((element) => element === email).length === 3){
                 return true;
             }
         }
@@ -38,7 +35,7 @@
     }
 // removing -entry from ban-list
     function blackListFiltered(email){
-        blackList = blackList.filter(x => x !== email);
+        blackList = blackList.filter((x) => x !== email);
     }
 // auto-removing from ban list before ban
 function  banReducer(email){
