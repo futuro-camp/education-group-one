@@ -1,0 +1,124 @@
+
+.card {
+  width: 360px;
+  box-shadow: 0 0 76px rgba(231, 231, 231, 0.66);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+}
+
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  height: 256px;
+}
+
+.card_header .menu {
+  width: 15px;
+  height: 9px;
+  background-image: url("../img/3-layers.svg");
+}
+
+.card_header .like {
+  margin-top: 40px;
+  width: 17px;
+  height: 15px;
+  background-image: url("../img/like.svg");
+}
+
+.card_header .add_to {
+  margin-top: 28px;
+  width: 19px;
+  height: 9px;
+  background-image: url("../img/add_to.svg")
+}
+
+.card_header button {
+  background-color: transparent;
+  border: none;
+}
+
+.card_header ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 25px auto 0 auto;
+}
+
+.card_header img {
+  width: 265px;
+  height: 256px;
+  background-color: #e7a8c6;
+}
+
+.card_body {
+  text-align: center;
+}
+
+.card_body .text {
+  margin-top: 62px;
+  margin-bottom: 24px;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.card_body .oldPrice {
+  margin: 0;
+  display: inline-block;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  text-decoration: line-through;
+  margin-right: 5px;
+}
+
+.card_body .curPrice {
+  margin: 0;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+  color: #8ed1b7;
+}
+
+.card_btn_add {
+  width: 90%;
+  margin: 41px auto 0 auto;
+  border: none;
+  border-top: 1px solid #eee;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_btn_add p {
+  margin-left: 10px;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.card_btn_remove {
+  width: 90%;
+  margin: auto auto 0 auto;
+  height: 50px;
+  border: none;
+  border-top: 1px solid #e6bcbc;
+  color: #000000;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: transparent;
+}

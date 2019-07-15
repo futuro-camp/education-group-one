@@ -27,10 +27,8 @@ export default class CardWrapper extends Component {
     }
 
     removeCard(id) {
-        return () => {
             let array = this.state.cards.filter((x) => x.key !== id);
             this.setState({cards: array});
-        };
     }
 
     render() {
@@ -43,7 +41,7 @@ export default class CardWrapper extends Component {
                     <button className="add-card-btn" onClick={this.addCard}>Add</button>
                 </div>
                 <div className="card-wrapper_content">
-                    {this.state.cards.map((x) => <Card key={x.key} id={x.key} text={x.name} oldPrice={x.oldPrice} curPrice={x.curPrice} remove={this.removeCard} />)}
+                    {this.state.cards.map(({key, name, oldPrice, curPrice}) => <Card key={key} id={key} text={name} oldPrice={oldPrice} curPrice={curPrice} remove={this.removeCard} />)}
                 </div>
             </div>
         );

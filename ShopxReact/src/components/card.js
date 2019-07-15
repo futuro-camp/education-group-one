@@ -21,7 +21,7 @@ const Card = ({id, text, oldPrice, curPrice, remove}) => {
                 <img src={cartIcon} alt="" />
                 <p>Add to cart</p>
             </button>
-            <button className="card_btn_remove" onClick={remove(id)}>
+            <button className="card_btn_remove" onClick={() => { remove(id); }}>
                 Remove
             </button>
         </div>
