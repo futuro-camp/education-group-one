@@ -421,7 +421,9 @@ header {
   }
 }
 footer {
-  height: 530px;
+  height: 478px;
+  border: 1px solid rgba(232, 232, 232, 0.49);
+  margin: 12px 0 40px 133px;
   .row {
     .col-4 {
       h4 {
@@ -449,6 +451,8 @@ footer {
         font-size: 18px;
         font-weight: 400;
       }
+    }
+    .three {
     }
   }
 }
