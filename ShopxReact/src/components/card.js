@@ -1,5 +1,5 @@
 import React from "react";
-import cart_icon from "../img/cart.svg";
+import cartIcon from "../img/cart.svg";
 
 const Card = ({id, text, oldPrice, curPrice, remove}) => {
     return (
@@ -18,7 +18,7 @@ const Card = ({id, text, oldPrice, curPrice, remove}) => {
                 <p className="curPrice">{curPrice}</p>
             </div>
             <button className="card_btn_add">
-                <img src={cart_icon} alt="" />
+                <img src={cartIcon} alt="" />
                 <p>Add to cart</p>
             </button>
             <button className="card_btn_remove" onClick={remove(id)}>
@@ -26,6 +26,6 @@ const Card = ({id, text, oldPrice, curPrice, remove}) => {
             </button>
         </div>
     );
-}
+};
 
 export default Card;
