@@ -1,9 +1,9 @@
-import React, {Component} from 'react'
-import addToCompareListIcon from '../icons/addToCompareList.svg'
-import likeIcon from '../icons/likeIcon.svg'
-import filterIcon from '../icons/filterIcon.svg'
-import cartIcon from '../icons/cartIcon.svg'
-import './CardStyle.css'
+import React, {Component} from "react";
+import addToCompareListIcon from "../icons/addToCompareList.svg";
+import likeIcon from "../icons/likeIcon.svg";
+import filterIcon from "../icons/filterIcon.svg";
+import cartIcon from "../icons/cartIcon.svg";
+import "./CardStyle.css";
 
 
 function CardMenuButton(props) {
@@ -16,8 +16,8 @@ function CardMenuButton(props) {
 
 class CardMenuLikeButton extends Component {
     constructor(props) {
-        super(props)
-        this.state = { liked: false }
+        super(props);
+        this.state = { liked: false };
     }
 
     render() {
@@ -40,7 +40,7 @@ function CardMenu(props) {
 }
 
 function CardImage(props) {
-    return <img className="cardImage" src={props.cardImage} alt="CardImage"/>
+    return <img className="cardImage" src={ props.cardImage } alt="CardImage"/>;
 }
 
 function CardHeader(props) {
@@ -71,7 +71,7 @@ function CardFooter(props) {
 }
 
 function CardDeleteButton(props) {
-    return <button onClick = {props.deleteMethod} className="removeButton">Remove</button>
+    return <button onClick = {props.deleteMethod} className="removeButton">Remove</button>;
 }
 
 export default class Card extends Component {
@@ -83,6 +83,6 @@ export default class Card extends Component {
                 <CardFooter/>
                 <CardDeleteButton deleteMethod={this.props.deleteMethod}/>
             </div>
-        )
+        );
     }
 }
