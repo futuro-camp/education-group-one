@@ -1,5 +1,4 @@
 class BankManager {
-
     constructor(accounts) {
         this.accounts = accounts;
     }
@@ -7,9 +6,9 @@ class BankManager {
     getList(callback) { 
         var result = "";
         this.accounts.forEach((element) => {
-            result+="|||||||||||||||||||||||||||||||||||\n";
-            result+="id:"+element.id+" money:"+ element.money+" owner:"+element.owner.name+" "+ element.owner.ownerSurname+"\n";
-            result+="|||||||||||||||||||||||||||||||||||\n";
+            result += "|||||||||||||||||||||||||||||||||||\n";
+            result += "id:" + element.id + " money:" + element.money + " owner:"+element.owner.ownerName + " " + element.owner.ownerSurname + "\n";
+            result += "|||||||||||||||||||||||||||||||||||\n";
         });
         setTimeout(function() { 
             callback(result);
@@ -18,10 +17,14 @@ class BankManager {
 
     get(id, callback) {
         let error;
-        let result;
-        result = this.accounts.filter((acc) => acc.id===id).shift();
-        setTimeout(function() {
-            if(result){
+        let info;
+        let result = "";
+        info = this.accounts.filter((acc) => acc.id === id).shift();
+        setTimeout(() => {
+            if(info){
+                result += "---------------------------------\n";
+                result += "id:" + info.id + " money:" + info.money + " owner:" + info.owner.ownerName + " " + info.owner.ownerSurname + "\n";
+                result += "---------------------------------\n";
                 callback(error, result);
             }
             else {
@@ -33,9 +36,11 @@ class BankManager {
 
     transfer(from, to, moneyAmount, callback) {
         let error;
-        let fromAccount = this.accounts.filter((acc) => acc.id===from).shift();
-        let toAccount = this.accounts.filter((acc) => acc.id===to).shift();
-        setTimeout(function() {
+        let fromAccount; 
+        fromAccount = this.accounts.filter((acc) => acc.id === from).shift();
+        let toAccount;
+        toAccount = this.accounts.filter((acc) => acc.id === to).shift();
+        setTimeout(() => {
         if(fromAccount.money - moneyAmount >= 0) {
             fromAccount.money -= moneyAmount;
             toAccount.money += moneyAmount;

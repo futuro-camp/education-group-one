@@ -42,7 +42,7 @@ class Department {
     }
 
     summarySalary() {
-        return this.employees.map((emp) => emp.salary).reduce((x, y) => {return x + y});
+        return this.employees.map((emp) => emp.salary).reduce((x, y) => x + y);
     }
 
     filter() {

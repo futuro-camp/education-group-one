@@ -9,7 +9,7 @@ function hexToRgb(hex) {
 
 function componentToHex(c) {
     var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+    return hex.length === 1 ? "0" + hex : hex;
 }
   
 function rgbToHex(color) {
@@ -21,16 +21,16 @@ function changeColor(factor, color) {
     let {r,g,b} = color;
     if(factor>0) {
         return {
-            r: r+factor>255 ? 255 : r+factor,
-            g: g+factor>255 ? 255 : g+factor,
-            b: b+factor>255 ? 255 : b+factor
+            r: r + factor > 255 ? 255 : r + factor,
+            g: g + factor > 255 ? 255 : g + factor,
+            b: b + factor > 255 ? 255 : b + factor
         };
     }
     else {
         return {
-            r: r+factor<0 ? 0 : r+factor,
-            g: g+factor<0 ? 0 : g+factor,
-            b: b+factor<0 ? 0 : b+factor
+            r: r + factor < 0 ? 0 : r + factor,
+            g: g + factor < 0 ? 0 : g + factor,
+            b: b + factor < 0 ? 0 : b + factor
         };
     }
 
@@ -47,6 +47,6 @@ function rainbow(color) {
     }
 }
 
-jQuery.fn.extend({ rainbow: rainbow });
+jQuery.fn.extend({ rainbow });
 
 $(".rainbow").rainbow("#00ffff");

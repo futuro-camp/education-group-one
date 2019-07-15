@@ -10,7 +10,7 @@ class BankManager {
                 let result = "";
                 this.accounts.forEach((element) => {
                     result+="|||||||||||||||||||||||||||||||||||\n";
-                    result+="id:"+element.id+" money:"+ element.money+" owner:"+element.owner.name+" "+ element.owner.ownerSurname+"\n";
+                    result+="id:"+element.id+" money:"+ element.money+" owner:"+element.owner.ownerName+" "+ element.owner.ownerSurname+"\n";
                     result+="|||||||||||||||||||||||||||||||||||\n";
                 });
                 resolve(result);

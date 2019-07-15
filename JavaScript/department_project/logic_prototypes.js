@@ -26,7 +26,7 @@ Department.prototype.add = function(employee) {
 };
 
 Department.prototype.remove = function(employeeEmail) {
-    let index = this.employees.indexOf(this.employees.filter(emp => emp.email === employeeEmail).pop());
+    let index = this.employees.indexOf(this.employees.filter((emp) => emp.email === employeeEmail).pop());
     if(index !== -1) {
         this.employees.splice(index, 1);
     }
@@ -40,7 +40,7 @@ Department.prototype.averageSalary = function() {
 };
 
 Department.prototype.summarySalary = function() {
-    return this.employees.map((emp) => emp.salary).reduce((x, y) => {return x + y});
+    return this.employees.map((emp) => emp.salary).reduce((x, y) => x + y);
 };
 
 Department.prototype.filter = function() {

@@ -10,7 +10,7 @@ function drawGraph(resp) {
         canvConx.moveTo(-canvas.width/2, 0);
         canvConx.lineTo(canvas.width/2, 0);
         canvConx.stroke();
-        for(i=-((canvas.width/2)/10); i<=canvas.width*scale; i++) {
+        for(let i=-((canvas.width/2)/10); i<=canvas.width*scale; i++) {
             canvConx.beginPath();
             canvConx.moveTo(i*scale, -5);
             canvConx.lineTo(i*scale, 5);
@@ -41,17 +41,17 @@ function drawGraph(resp) {
 
         canvConx.beginPath();
         canvConx.strokeStyle = "#ff0000";
-        [x,y] = resp.data[0];
+        let [x,y] = resp.data[0];
         canvConx.moveTo(x*scale, -y*scale);
         resp.data.forEach((element) => {
-            [x,y] = element;
+            let [x,y] = element;
             canvConx.lineTo(x*scale, -y*scale);
         });
         canvConx.stroke();
     }
 }
 
-axiosInstance = axios.create({ baseURL: "http://192.168.1.100:3000" });
+let axiosInstance = axios.create({ baseURL: "http://192.168.1.100:3000" });
 
 $(".login-modal").modal({
     fadeDuration: 1000, 
@@ -81,7 +81,7 @@ $("#login-modal-submit").click((event) => {
                             });
                         });
                         $(`#item-${id}`).slideDown(1000);
-                    })
+                    });
                      }).catch((error) => {
                         alert(error);
                 });
@@ -134,7 +134,7 @@ $("#contact-form-submit").click((event) => {
         });
     }
     else {
-        alert("Please, fill all fields")
+        alert("Please, fill all fields");
     }
 });
 
@@ -160,7 +160,7 @@ $("#getGraph").one("click", () => {
     axiosInstance.get("/api/chart").then((resp) => {
         $("#getGraph").text("Update chart");
         drawGraph(resp);
-        $("#getGraph").one("click", () =>{
+        $("#getGraph").one("click", () => {
             axiosInstance.get("/api/chart").then((resp) => {
                 drawGraph(resp);
             }).catch((error) => {

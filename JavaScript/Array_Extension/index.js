@@ -1,9 +1,9 @@
 function removeOdd() {
-    return this.filter(element => element%2 !== 0);
+    return this.filter((element) => element%2 !== 0);
 }
 
 function removeEven() {
-    return this.filter(element => element%2 === 0);
+    return this.filter((element) => element%2 === 0);
 }
 
 function customSort() {
@@ -23,7 +23,7 @@ Array.prototype.removeOdd = removeOdd;
 Array.prototype.removeEven = removeEven;
 Array.prototype.customSort = customSort;
 
-arr = [3,6,2,7,8,4,5,1];
+let arr = [3,6,2,7,8,4,5,1];
 
 console.log(arr);
 console.log(arr.removeOdd());
