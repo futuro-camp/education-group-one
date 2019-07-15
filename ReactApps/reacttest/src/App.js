@@ -1,13 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import Wrapper from './wrapper';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import Wrapper from "./wrapper";
+import "./App.css";
 
 function App() {
   return (
         <div className="body">
           <Wrapper />
-        </div>)
+        </div>);
 }
 
 export default App;

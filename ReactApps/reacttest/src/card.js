@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from "react";
 
 class ItemCard extends Component {
     constructor(props){
@@ -7,12 +7,12 @@ class ItemCard extends Component {
             title: "Название",
             oldPrice: "цена",
             newPrice: "цена"
-        }
+        };
     }
 
     componentWillMount(){
-        const {title, id} = this.props
-        console.log('im card im rendered '+ `${title}: ${id}`)
+        const {title, id} = this.props;
+        console.log("im card im rendered "+ `${title}: ${id}`)
     }
 
     render(){
@@ -45,14 +45,14 @@ class ItemCard extends Component {
                             <p>Add to cart</p>
                         </div>
                     </button>
-                    <button className="removeFromCart" onClick={()=>this.props.delete(this.props.id)}>
+                    <button className="removeFromCart" onClick={() => this.props.delete(this.props.id)}>
                         <div className="buttonTitle">
                             <p>Remove</p>
                         </div>
                     </button>
                 </div>
             </div>
-        )
+        );
     }
 }
 

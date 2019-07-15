@@ -31,9 +31,6 @@
     transform: rotate(360deg);
   }
 }
-.body {
-
-}
 #main {
   margin: 0 auto;
   padding: 0;
@@ -161,7 +158,7 @@
 .text{
   margin-left: 119px;
   margin-top: 62px;
-  width: 70%px;
+  width: 70%;
   height: 55px;
   display: flex;
   flex-direction: column;
@@ -218,8 +215,6 @@
   width: 135px;
   height: 23px;
   background: transparent;
-  border: none;
-  margin-top: 0px;
   text-transform: uppercase;
   border: 1px solid #e9e9e9;
   margin-top: 5px;

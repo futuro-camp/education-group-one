@@ -1,6 +1,6 @@
 
-import React, {Component} from 'react';
-import ItemCard from './card';
+import React, {Component} from "react";
+import ItemCard from "./card";
 
 class Wrapper extends Component {
 
@@ -13,7 +13,7 @@ class Wrapper extends Component {
             // <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35" id={this.id+1}/>,
             // <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/>
             ]
-        }
+        };
         //Бинд ивэнта клик к этому компоненту
         this.handleClick = this.handleClick.bind(this);
         this.handleClickRemove = this.handleClickRemove.bind(this);
@@ -27,7 +27,7 @@ class Wrapper extends Component {
 
     handleClickRemove(id){
         const {data} = this.state;
-        const updatedArray = data.filter(element => id != element.props.id);
+        const updatedArray = data.filter((element) => id !== element.props.id);
         this.setState({data:updatedArray});
     }
 
@@ -36,11 +36,11 @@ class Wrapper extends Component {
             <div id="main">
                 <div className="input-box">
                     <label htmlFor="title">Name of Product</label>
-                    <input type="text" onChange={this.handleChange} ref={title => this.name = title} id="title" placeholder="title"/>
+                    <input type="text" onChange={this.handleChange} ref={(title) => this.name = title} id="title" placeholder="title"/>
                     <label htmlFor="oldPrice">Old Price</label>
                     <label htmlFor="newPrice">Current price with a discount</label>
-                    <input type="text" onChange={this.handleChange} ref={oldPrice => this.price = oldPrice} id="oldPrice" placeholder="oldPrice"/>
-                    <input type="text" onChange={this.handleChange} ref={newPrice => this.discount = newPrice} id="newPrice" placeholder="newPrice"/>
+                    <input type="text" onChange={this.handleChange} ref={(oldPrice) => this.price = oldPrice} id="oldPrice" placeholder="oldPrice"/>
+                    <input type="text" onChange={this.handleChange} ref={(newPrice) => this.discount = newPrice} id="newPrice" placeholder="newPrice"/>
                     <button id="add" onClick={this.handleClick}>Append</button>
                 </div>
                 <div className="catalog">
@@ -52,7 +52,7 @@ class Wrapper extends Component {
                     <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/> */}
                 </div>
             </div>
-        )
+        );
     }
 }
 
