@@ -2,7 +2,7 @@ class human {
     constructor(name){
         this.name = name;
     }
-};
+}
 class Emp extends human{
     constructor(name, email, salary){
         super(name);

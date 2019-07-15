@@ -186,7 +186,7 @@ $("#draw").click(function() {
         } else {
             $("#pas").css("outline-color","brown",);
         }
-    })
+    });
     // Validation LOGIN & PASSWORD inputs for valid
     $("#log, #pas").on("input focus", function() {
         if($("#log").val().trim()&&$("#pas").val().trim()) {
@@ -195,10 +195,7 @@ $("#draw").click(function() {
             $("#signIn").prop("disabled", true);
         }
     });
-    //sending values by pressing button SIGN IN
-    $("#signIn").click(function() { postAuthorization(); });
-
-     //authorization"s method
+    //authorization"s method
 function postAuthorization() {
     // console.log($("#log").val(), $("#pas").val());
     axios.post("http://192.168.1.100:3000/login",{
@@ -223,6 +220,8 @@ function postAuthorization() {
         alert(error);
     });
 }
+//sending values by pressing button SIGN IN
+$("#signIn").click(function() { postAuthorization(); });
 // Starting main method
 // getFromServer();
 // getChart();

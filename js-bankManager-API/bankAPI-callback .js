@@ -28,7 +28,7 @@ class Bank {
         }
     }
     getList(cb){
-        setTimeout(()=>{
+        setTimeout(() => {
             if (this.bankList.length < 1){
                 cb("This BankList is empty",null);
             }

@@ -8,7 +8,7 @@ Array.prototype.removeOdd = function() {
     //removeEven elements from array
 Array.prototype.removeEven = function() {
     return this.filter((element) => element%2!==0);
-}
+};
     //custromSort elements from higer to lower value
 Array.prototype.bubbleSortH = function() {
     let swap;
