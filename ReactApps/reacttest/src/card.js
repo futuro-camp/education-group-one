@@ -3,19 +3,15 @@ import React, {Component} from "react";
 class ItemCard extends Component {
     constructor(props){
         super(props);
-        this.state = {
-            title: "Название",
-            oldPrice: "цена",
-            newPrice: "цена"
-        };
-    }
-
-    componentWillMount(){
-        const {title, id} = this.props;
-        console.log("im card im rendered "+ `${title}: ${id}`)
+        // this.props = {
+        //     title: "name",
+        //     oldPrice: "price",
+        //     newPrice: "newPrice"
+        // };
     }
 
     render(){
+        let {title, oldPrice, newPrice, remove, id } = this.props;
         return(
             <div className="card">
                 <div className="header">
@@ -29,12 +25,10 @@ class ItemCard extends Component {
                 </div>
                 <div className="sectionBody">
                     <div className="text">
-                        <div>
-                            <p className="itemTitle">{this.props.title}</p>
-                        </div>
+                        <p className="itemTitle">{title}</p>
                         <div className="priceRow">
-                            <p className="itemOldPrice">{this.props.oldPrice}$</p>
-                            <p className="itemNewPrice">    {this.props.newPrice}$</p>
+                            <p className="itemOldPrice">{oldPrice}$</p>
+                            <p className="itemNewPrice">    {newPrice}$</p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +39,7 @@ class ItemCard extends Component {
                             <p>Add to cart</p>
                         </div>
                     </button>
-                    <button className="removeFromCart" onClick={() => this.props.delete(this.props.id)}>
+                    <button className="removeFromCart" onClick={() => remove(id)}>
                         <div className="buttonTitle">
                             <p>Remove</p>
                         </div>

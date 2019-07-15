@@ -1,0 +1,51 @@
+.input-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 1%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.input-box label:first-child {
+width: 90%
+}
+.input-box label {
+width: 45%;
+margin-bottom: 10px;
+}
+#title {
+text-align: left;
+width: 100%;
+margin-bottom: 20px;
+background: transparent;
+border: 1px solid lightslategray;
+outline: #e9e9e9;
+}
+#oldPrice {
+text-align: left;
+width: 44%;
+margin-bottom: 10px;
+background: transparent;
+border: 1px solid lightslategray;
+outline: #e9e9e9;
+}
+#newPrice {
+text-align: left;
+width: 44%;
+margin-bottom: 10px;
+background: transparent;
+border: 1px solid lightslategray;
+outline: #e9e9e9;
+}
+#add {
+width: 100%;
+height: 30px;
+margin-top: 20px;
+margin-bottom: 20px;
+display: flex;
+justify-content: center;
+background: transparent;
+border: 1px solid gray;
+}

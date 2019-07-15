@@ -7,30 +7,25 @@ class Wrapper extends Component {
     constructor(props) {
         super(props);
         this.id = 0;
-        this.state = {
-            data: [
-            // <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35" id={this.id}/>,
-            // <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35" id={this.id+1}/>,
-            // <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/>
-            ]
-        };
-        //Бинд ивэнта клик к этому компоненту
+        this.state = {data: []};
+        //Bind clickEvent to this component
         this.handleClick = this.handleClick.bind(this);
         this.handleClickRemove = this.handleClickRemove.bind(this);
     }
-
-    // Передача объекта (инпуты) со всеми собственными пропертями и валью
-    handleClick(){
-        this.id++;
-        this.setState({ data: [...this.state.data, <ItemCard title={this.name.value} oldPrice={this.price.value}$ newPrice={this.discount.value}$ id={this.id} key={this.id} delete={this.handleClickRemove}/>] });
-    }
-
     handleClickRemove(id){
         const {data} = this.state;
-        const updatedArray = data.filter((element) => id !== element.props.id);
+        const updatedArray = data.filter((element) => id !== element.id);
         this.setState({data:updatedArray});
     }
-
+    //Transfer object (input) with all own props and values
+    handleClick(){
+        this.id++;
+        this.setState({data: [...this.state.data, {title: this.name.value,
+                                                    oldPrice: this.price.value,
+                                                    newPrice: this.discount.value,
+                                                    id: this.id,
+                                                    key: this.id}]});
+    }
     render() {
         return (
             <div id="main">
@@ -44,12 +39,12 @@ class Wrapper extends Component {
                     <button id="add" onClick={this.handleClick}>Append</button>
                 </div>
                 <div className="catalog">
-                    {this.state.data}
-
-                    {/* <ItemCard title="" oldPrice="" newPrice="" />,
-                    <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/>,
-                    <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/>,
-                    <ItemCard title="LavaVtase" oldPrice="68" newPrice ="35"/> */}
+                    {this.state.data.map((element) => <ItemCard title={element.title}
+                                                                oldPrice={element.oldPrice}$
+                                                                newPrice={element.newPrice}$
+                                                                id={element.id}
+                                                                key={element.id}
+                                                                remove={this.handleClickRemove}/>)}
                 </div>
             </div>
         );
