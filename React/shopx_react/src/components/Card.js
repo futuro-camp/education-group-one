@@ -29,7 +29,7 @@ class CardMenuLikeButton extends Component {
     }
 }
 
-function CardMenu(props) {
+function CardMenu() {
     return(
         <div className="cardMenu">
             <CardMenuButton icon = {filterIcon}/>
@@ -53,15 +53,18 @@ function CardHeader(props) {
 }
 
 function CardContent(props) {
+    let {cardName, price} = props;
+    let {old, current} = price;
     return (
+        
         <div className="cardContent">
-            <h1 className="heading">{props.cardName}</h1>
-            <p className="currentPrice"><span className="oldPrice">{props.price.old}</span>{props.price.current}</p>
+            <h1 className="heading">{cardName}</h1>
+            <p className="currentPrice"><span className="oldPrice">{old}</span>{current}</p>
         </div>
     )
 }
 
-function CardFooter(props) {
+function CardFooter() {
     return (
         <button className="cardFooter">
             <img src={cartIcon} alt="Cart"/>
@@ -74,15 +77,14 @@ function CardDeleteButton(props) {
     return <button onClick = {props.deleteMethod} className="removeButton">Remove</button>;
 }
 
-export default class Card extends Component {
-    render() {
+export default function Card(props) {
+        let {cardImage, cardName, price, deleteMethod} = props;
         return (
             <div className="card">
-                <CardHeader cardImage={this.props.cardImage}/>
-                <CardContent cardName={this.props.cardName} price={this.props.price}/>
+                <CardHeader cardImage={cardImage}/>
+                <CardContent cardName={cardName} price={price}/>
                 <CardFooter/>
-                <CardDeleteButton deleteMethod={this.props.deleteMethod}/>
+                <CardDeleteButton deleteMethod={deleteMethod}/>
             </div>
         );
-    }
 }
