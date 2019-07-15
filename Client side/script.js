@@ -202,7 +202,7 @@ function login() {
             instance = axios.create({
                 baseURL: link,
                 headers: {"auth": response.data.key}
-            })
+            });
             get();
         }).catch((error) => {
             console.log(error);

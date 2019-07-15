@@ -36,14 +36,14 @@ class Flow {
                         console.log(a);
                     }).catch((error) => {
                         console.log(error);
-                    }).then(() => { this.continuePromise() });
+                    }).then(() => { this.continuePromise(); });
                 }
                 else{
                     this.manager.get(ar[1]).then((a) => {
                         console.log(a);
                     }).catch((error) => {
                         console.log(error);
-                    }).then(() => { this.continuePromise() });  
+                    }).then(() => { this.continuePromise(); });  
                 }
             }
             else if(answer.includes("Transfer")){
@@ -57,7 +57,7 @@ class Flow {
                         console.log(a);
                     }).catch((error) => {
                         console.log(error);
-                    }).then(() => { this.continuePromise() });            
+                    }).then(() => { this.continuePromise(); });            
                 }
             }
             else{
