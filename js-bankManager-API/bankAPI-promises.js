@@ -50,8 +50,8 @@ class Bank {
         });
     }
     transfer(from,to,amount){
-        return new Promise ((resolve,reject)=>{
-            setTimeout(()=>{
+        return new Promise ((resolve,reject) => {
+            setTimeout(() => {
                 let accountF = this.bankList.find((account) => account.id===from);
                 let accountT = this.bankList.find((account) => account.id===to);
                 if (accountF===undefined){
@@ -69,7 +69,7 @@ class Bank {
                             name: account.name,
                             money: account.money - amount,
                             id: account.id
-                        }
+                        };
                     }
                     if(account.id === accountT.id){
                         return {
@@ -92,20 +92,20 @@ Privat.createAccount(new Acc("Ignatik",3200,3));
 Privat.createAccount(new Acc("Kartoshka",4200,4));
 
 function start(){
-    rl.question ("Hello, we are happy to see you in our BankManager!\n This is available command list: getList / getId / transfer \n", (answer) =>{
-        if (answer == "getList"){
+    rl.question ("Hello, we are happy to see you in our BankManager!\n This is available command list: getList / getId / transfer \n", (answer) => {
+        if (answer === "getList"){
             Privat.getList().then(function(arg){
                 if(arg){
                     console.log(arg);
                 }
-            }).catch(function(err){
+            }).catch(function(error){
                 if (error){
                     console.log(error);
                 }
             }).then(request);
         }
         else if (answer === "getId"){
-            rl.question("Please enter account ID \n", (id) =>{
+            rl.question("Please enter account ID \n", (id) => {
                 if(Number(id)){
                     Privat.getId(id).then((message) => {
                         console.log(message);
@@ -119,11 +119,11 @@ function start(){
             });
         }
         else if (answer === "transfer"){
-            rl.question("Please enter account ID which transfer the money \n", (idF) =>{
+            rl.question("Please enter account ID which transfer the money \n", (idF) => {
                 if (Number(idF)){
-                    rl.question("Please enter account ID who get the money \n", (idT) =>{
+                    rl.question("Please enter account ID who get the money \n", (idT) => {
                         if (Number(idT)){
-                            rl.question("Please enter amount of money \n", (a) =>{
+                            rl.question("Please enter amount of money \n", (a) => {
                                 if (Number(a)){
                                     Privat.transfer(Number(idF),Number(idT),Number(a)).then((list,amount) => {
                                         console.log("");
@@ -154,13 +154,13 @@ function start(){
         }});
     }
     function request() {
-        rl.question("Wanna do something else ? Press y/n  \n", (answer) =>{
-            if(answer=="y"){
+        rl.question("Wanna do something else ? Press y/n  \n", (answer) => {
+            if(answer==="y"){
                 start();
             } else {
                 console.log("Have a nice day!\n");
                 process.exit();
             }
-        })
+        });
     }
     start();

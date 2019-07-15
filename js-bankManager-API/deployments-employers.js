@@ -1,4 +1,4 @@
-function department (title, arr) {
+function Department (title, arr) {
     this.name = title;
     this.list = arr;
 }
@@ -10,32 +10,32 @@ function Emp(name,email,salary) {
     this.email = email;
     this.salary = salary;
 }
-department.prototype.add = function(Employee) {
+Department.prototype.add = function(Employee) {
     if (Employee instanceof Emp) {
         this.list.push(Employee);
     }
 }
-department.prototype.sumSalary = function(){
+Department.prototype.sumSalary = function(){
     let a = this.list.map((Emp) => Emp.salary);
     let b = a.reduce((x,y) => x+y);
     return b;
 }
-department.prototype.avgSalary = function(){
+Department.prototype.avgSalary = function(){
     let c = this.sumSalary()/this.list.length;
     return c;
 }
-department.prototype.lessThenAvg = function(){
+Department.prototype.lessThenAvg = function(){
     let d = this.avgSalary();
     let e = this.list.filter((x) => x.salary < d);
     return e;
 }
-department.prototype.remove = function(del){
+Department.prototype.remove = function(del){
     let f = this.list.map((Emp) => Emp.email);
     let g = f.indexOf(del);
     this.list.splice(g,1);
     console.log(this.list);
-}
-let medicine = new department("medicine",[]);
+};
+let medicine = new Department("medicine",[]);
 medicine.add(new Emp("anton","muha2399", 1200));
 medicine.add(new Emp("ignat","vetalsokolov", 12000));
 medicine.add(new Emp("esenin","d-feduk", 120));

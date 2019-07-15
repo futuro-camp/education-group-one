@@ -1,4 +1,6 @@
 // Getting from the server all content and find ONLY data
+        // global variable "AXIOS CREATE"
+        let instance ;
 function getFromServer() {
     instance.get("/items")
     .then((content) => {
@@ -29,7 +31,7 @@ function postNewValueToServer(){
         $(".list-box").append(`<li id=${answer.data.id}><button onclick="deleteFromServer(${answer.data.id})">del</button>
                                                         ID: ${answer.data.id}
                                                         Value: ${answer.data.value}</li>`);
-    }).catch((error) =>{
+    }).catch((error) => {
         alert(error);
     })
 }
@@ -194,8 +196,7 @@ $("#draw").click(function() {
     })
     //sending values by pressing button SIGN IN
     $("#signIn").click(function() { postAuthorization(); });
-    // global variable "AXIOS CREATE"
-    let instance ;
+
      //authorization"s method
 function postAuthorization() {
     // console.log($("#log").val(), $("#pas").val());
@@ -212,7 +213,7 @@ function postAuthorization() {
         instance = axios.create({
             baseURL: "http://192.168.1.100:3000/api",
             headers: {"auth":key}
-        })
+        });
     })
     .then(() =>  {
         getFromServer();

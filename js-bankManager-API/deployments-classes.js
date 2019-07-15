@@ -1,5 +1,15 @@
-
-class department{
+class human {
+    constructor(name){
+        this.name = name;
+    }
+};
+class Emp extends human{
+    constructor(name, email, salary){
+        super(name);
+        this.email = email;
+        this.salary = salary;
+    }
+}class Department{
 
     constructor(title, arr){
         this.name = title;
@@ -37,20 +47,7 @@ class department{
     }
 };
 
-class human {
-    constructor(name){
-        this.name = name;
-    }
-};
-class Emp extends human{
-    constructor(name, email, salary){
-        super(name);
-        this.email = email;
-        this.salary = salary;
-    }
-}
-
-let medicine = new department("medicine",[]);
+let medicine = new Department("medicine",[]);
 medicine.add(new Emp("anton","muha2399", 1200));
 medicine.add(new Emp("ignat","vetalsokolov", 12000));
 medicine.add(new Emp("esenin","d-feduk", 120));
