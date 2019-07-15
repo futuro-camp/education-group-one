@@ -26,7 +26,7 @@ function drawGraph(resp) {
         canvConx.moveTo(0, 0);
         canvConx.lineTo(0, -canvas.height);
         canvConx.stroke();
-        for(i=0; i>=-canvas.height; i--) {
+        for(let i=0; i>=-canvas.height; i--) {
             canvConx.beginPath();
             canvConx.moveTo(-5, i*scale);
             canvConx.lineTo(5, i*scale);

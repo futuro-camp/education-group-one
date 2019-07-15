@@ -15,14 +15,14 @@ class Instance {
     getCommand() {
         rl.question("Command list:\nGL - get list,\nGET - get account by id,\nT- transfer from one to another account\nInsert command: ", (answear) => {
             if(answear.toLowerCase() === "gl") {
-                this.bank.getList().then((info) => { this.getListCallback(info) }).catch((error) => console.log(error));
+                this.bank.getList().then((info) => { this.getListCallback(info); }).catch((error) => console.log(error));
             }
             else if(answear.toLowerCase() === "get") {
                 rl.question("Input account id: ", (answear) => {
                     if(Number(answear)){
-                        this.bank.get(Number(answear)).then((info) => { this.getCallback(info) }).catch((error) => console.log(error));
+                        this.bank.get(Number(answear)).then((info) => { this.getCallback(info); }).catch((error) => console.log(error));
                     }
-                })
+                });
             }
             else if(answear.toLowerCase() === "t") {
                 let from, to, money;
@@ -35,7 +35,7 @@ class Instance {
                                 rl.question("Input transacton amount: ", (moneyAmount) => {
                                     if(Number(moneyAmount)) {
                                         money = Number(moneyAmount); 
-                                        this.bank.transfer(from, to, money).then((info) => { this.transferCallback(info) }).catch((error) => console.log(error));
+                                        this.bank.transfer(from, to, money).then((info) => { this.transferCallback(info); }).catch((error) => console.log(error));
                                     }
                                     else {
                                         this.getCommand();

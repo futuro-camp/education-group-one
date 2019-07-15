@@ -9,20 +9,20 @@ const rl = readLine.createInterface({
 
 class Instance {
     constructor() {
-        this.bank = new BankManager([ new Account(1, 250, "Alexey", "Petrenko"), new Account(2, 80000, "Anatoliy", "Vaserman"), new Account(3, 2500, "Grigoriy", "Skovoroda"), new Account(4, 80, "Sjul", "Vern")]);;
+        this.bank = new BankManager([ new Account(1, 250, "Alexey", "Petrenko"), new Account(2, 80000, "Anatoliy", "Vaserman"), new Account(3, 2500, "Grigoriy", "Skovoroda"), new Account(4, 80, "Sjul", "Vern")]);
     }
 
     getCommand() {
         rl.question("Command list:\nGL - get list,\nGET - get account by id,\nT- transfer from one to another account\nInsert command: ", (answear) => {
             if(answear.toLowerCase() === "gl") {
-                this.bank.getList((resp) => { this.getListCallback(resp) });
+                this.bank.getList((resp) => { this.getListCallback(resp); });
             }
             else if(answear.toLowerCase() === "get") {
                 rl.question("Input account id: ", (answear) => {
                     if(Number(answear)){
-                        this.bank.get(Number(answear), (error, resp) => { this.getCallback(error, resp) });
+                        this.bank.get(Number(answear), (error, resp) => { this.getCallback(error, resp); });
                     }
-                })
+                });
             }
             else if(answear.toLowerCase() === "t") {
                 let from, to, money;
@@ -35,7 +35,7 @@ class Instance {
                                 rl.question("Input transacton money amount: ", (moneyAmount) => {
                                     if(Number(moneyAmount)) {
                                         money = Number(moneyAmount); 
-                                        this.bank.transfer(from, to, money, (error, resp) => { this.transferCallback(error, resp) });
+                                        this.bank.transfer(from, to, money, (error, resp) => { this.transferCallback(error, resp); });
                                     }
                                     else {
                                         this.getCommand();
