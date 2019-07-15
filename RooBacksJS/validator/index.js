@@ -50,4 +50,7 @@ function  banReducer(email){
     }
 }
 
+// banReducer();
+// blackListFiltered();
+
     module.exports = {checkEmail, checkPassword, banCheck, banReducer, addToBan, blackListFiltered};

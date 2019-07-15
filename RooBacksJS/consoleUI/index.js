@@ -30,7 +30,7 @@
                 type: "separator"
             },
         ]
-        })
+        });
     }
 
 // LOG-in scenario
@@ -53,7 +53,7 @@
                         mask: "#",
                         validate: checkP
                     }
-                ])
+                ]);
     }
 
 
@@ -101,7 +101,7 @@ function creatingPagesView(element){
                 name: "Locations",
                 message: " ",
                 suffix: "",
-                choices: choices
+                choices
             }
         ]);
     }
@@ -138,7 +138,7 @@ function creatingPagesView(element){
                 name: "Transactions",
                 message: " ",
                 suffix: "",
-                choices: choices
+                choices
             }
         ]);
     }
