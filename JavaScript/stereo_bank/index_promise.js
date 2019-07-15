@@ -5,7 +5,7 @@ const Account = require("./account_logic");
 const rl = readLine.createInterface({
     input:process.stdin,
     output:process.stdout
-})
+});
 
 class Instance {
     constructor() {
