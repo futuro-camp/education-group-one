@@ -17,7 +17,7 @@ function blackListValidate(email) {
 }
 
 function blackListRemove(email) {
-    let result = blacklist.filter(element => element.email === email)
+    let result = blacklist.filter((element) => element.email === email);
     if(result.length) {
         blacklist.splice(blacklist.indexOf(result[0]), 1);
     }
@@ -25,7 +25,7 @@ function blackListRemove(email) {
 
 function blackListCheck(email) {
     console.log(email);
-    let result = blacklist.filter((element) => element.email === email)
+    let result = blacklist.filter((element) => element.email === email);
     if(result.length) {
         if(result[0].loginTry < attemptsCount) {
             result[0].loginTry += 1;
