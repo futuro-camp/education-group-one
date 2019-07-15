@@ -206,7 +206,7 @@ function login() {
             get();
         }).catch((error) => {
             console.log(error);
-        })
+        });
     }
     else{
         showModal("Wrong input");

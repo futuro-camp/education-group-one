@@ -8,61 +8,64 @@ managerPromise.addAccount("petya", "ayrep", 1654);
 managerPromise.addAccount("kolya", "aylok", 4894);
 managerPromise.addAccount("miha", "ahim", 9413);
 
-function promise() {
-    startPromise();
-}
+class Flow {
+    constructor(manager)
+    {
+        this.manager = manager;
+    }
 
-function continuePromise(){
-    readline.question("Press any key to continue: ", 
-    function(){
-        promise();
-    });
-}
-
-function startPromise(){
-    console.clear();
-    readline.question("List of commands:\n'Get List' - return all available accounts;\n'Get #' - get account, where # - account id;\n'Transfer # @ $' - transfer, where # - id from, @ - id where, $ - amount of money;\n", 
-    function(answer){
-        if(answer.includes("Get")){
-            let ar = answer.split(" ");
-            if(ar.length !== 2){
-                console.log("No such command!");
-                continuePromise();
+    continuePromise(){
+        readline.question("Press any key to continue: ", 
+        () => {
+            this.startPromise();
+        });
+    }
+    
+    startPromise(){
+        console.clear();
+        readline.question("List of commands:\n'Get List' - return all available accounts;\n'Get #' - get account, where # - account id;\n'Transfer # @ $' - transfer, where # - id from, @ - id where, $ - amount of money;\n", 
+        (answer) => { 
+            if(answer.includes("Get")){
+                let ar = answer.split(" ");
+                if(ar.length !== 2){
+                    console.log("No such command!");
+                    this.continuePromise();
+                }
+                else if(ar[1].toLowerCase() === "list"){
+                    this.manager.getList().then((a) => {
+                        console.log(a);
+                    }).catch((error) => {
+                        console.log(error);
+                    }).then(() => { this.continuePromise() });
+                }
+                else{
+                    this.manager.get(ar[1]).then((a) => {
+                        console.log(a);
+                    }).catch((error) => {
+                        console.log(error);
+                    }).then(() => { this.continuePromise() });  
+                }
             }
-            else if(ar[1].toLowerCase() === "list"){
-                managerPromise.getList().then(function(a){
-                    console.log(a);
-                }).catch(function(error){
-                    console.log(error);
-                }).then(continuePromise);
+            else if(answer.includes("Transfer")){
+                let ar = answer.split(" ");
+                if(ar.length !== 4){
+                    console.log("No such command!");
+                    this.continuePromise();
+                }
+                else{
+                    this.manager.transfer(ar[1], ar[2], Number(ar[3])).then((a) => {
+                        console.log(a);
+                    }).catch((error) => {
+                        console.log(error);
+                    }).then(() => { this.continuePromise() });            
+                }
             }
             else{
-                managerPromise.get(ar[1]).then(function(a){
-                    console.log(a);
-                }).catch(function(error) {
-                    console.log(error);
-                }).then(continuePromise);  
-            }
-        }
-        else if(answer.includes("Transfer")){
-            let ar = answer.split(" ");
-            if(ar.length !== 4){
                 console.log("No such command!");
-                continuePromise();
+                this.continuePromise();
             }
-            else{
-                managerPromise.transfer(ar[1], ar[2], Number(ar[3])).then(function(a){
-                    console.log(a);
-                }).catch(function(error){
-                    console.log(error);
-                }).then(continuePromise);            
-            }
-        }
-        else{
-            console.log("No such command!");
-            continuePromise();
-        }
-    });
+        });
+    }
 }
 
-module.exports = startPromise;
+module.exports = new Flow(managerPromise);
