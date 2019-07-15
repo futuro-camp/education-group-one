@@ -8,10 +8,12 @@ function emailValidate(email) {
 }
 
 function passwordValidate(password) {
-    if(password.length > 0) 
+    if(password.length > 0) {
         return true;
-    else
+    }
+    else {
         return "Please insert password";
+    }
 }
 
 module.exports = { emailValidate, passwordValidate };

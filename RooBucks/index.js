@@ -6,20 +6,23 @@ const validator = require("./validator");
 const accountManager = require("./account_manager");
 const blackList = require("./blacklist");
 
-function start() {
-    console.clear();
-    consoleUi.displayEntry().then((answer) => {
-        if(answer.choosedOption === 0) {
-            login();
-        } else {
-            listDisplay(util.arraySplit(JSON.parse(dataManager.readLocationData()).places), 0);
-        }
-    });
-}
-
 function exit() {
     console.clear();
     process.exit();
+}
+
+function listDisplay(data, currentPage) {
+    consoleUi.displayList(data, currentPage).then((answer) => {
+        if(answer.choosedOption === 0) {
+            listDisplay(data, currentPage - 1);
+        }
+        else if(answer.choosedOption === 1) {
+            listDisplay(data, currentPage + 1);
+        }
+        else {
+            exit();
+        }
+    });
 }
 
 function login() {
@@ -62,14 +65,15 @@ function login() {
     });
 }
 
-function listDisplay(data, currentPage) {
-    consoleUi.displayList(data, currentPage).then((answer) => {
-        if(answer.choosedOption === 0) 
-            listDisplay(data, currentPage - 1);
-        else if(answer.choosedOption === 1)
-            listDisplay(data, currentPage + 1);
-        else
-            exit();
+function start() {
+    console.clear();
+    consoleUi.displayEntry().then((answer) => {
+        if(answer.choosedOption === 0) {
+            login();
+        } 
+        else {
+            listDisplay(util.arraySplit(JSON.parse(dataManager.readLocationData()).places), 0);
+        }
     });
 }
 

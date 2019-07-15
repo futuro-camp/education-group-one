@@ -9,7 +9,7 @@ function arraySplit(array) {
 
 function transactionsToArray(transactionsArray) {
     let stringArray = transactionsArray.map((element) => {
-        let datestring = new Date(Date.parse(element.date)).toLocaleDateString('en-US', {
+        let datestring = new Date(Date.parse(element.date)).toLocaleDateString("en-US", {
             weekday: "long",
             year: "numeric",
             month: "long", 

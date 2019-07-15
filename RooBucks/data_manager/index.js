@@ -1,4 +1,4 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function readAccoutsData() {
     return fs.readFileSync("./Storage/accounts.txt").toString();
