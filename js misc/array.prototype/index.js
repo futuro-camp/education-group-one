@@ -40,7 +40,7 @@ Array.prototype.bubbleSortL = function() {
         }
     } while (swap);
     return this;
-}
+};
 //test array for methods remove odd/even
 let test = [1,2,3,4,5];
 //test array for methods bubbleSort H->L/L->H

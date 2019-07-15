@@ -32,8 +32,6 @@
 .message {
     display: none;
     padding: 50px;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     z-index: 3;
     width: 100%;

@@ -1,10 +1,10 @@
 // Getting from the server all content and find ONLY data
 function getFromServer() {
-    instance.get('/items')
-    .then((content)=>{
+    instance.get("/items")
+    .then((content) => {
         console.log(content);
         showSomething(content.data);
-    }).catch((error)=>{
+    }).catch((error) => {
         console.log(error);
     })
 }
@@ -20,16 +20,16 @@ function showSomething(data) {
 $("#send").click(function() {
     postNewValueToServer();
 });
-//Sending to server value of input's textarea
+//Sending to server value of input"s textarea
 function postNewValueToServer(){
-    instance.post('/items', {
+    instance.post("/items", {
         value: $("#new").val()
-    }).then((answer)=>{
-        $("#new").val('');
+    }).then((answer) => {
+        $("#new").val("");
         $(".list-box").append(`<li id=${answer.data.id}><button onclick="deleteFromServer(${answer.data.id})">del</button>
                                                         ID: ${answer.data.id}
                                                         Value: ${answer.data.value}</li>`);
-    }).catch((error)=>{
+    }).catch((error) =>{
         alert(error);
     })
 }
@@ -40,10 +40,10 @@ $("#del").click(function() {
 //Deleting an object from the server
 function deleteFromServer(data){
     instance.delete(`/items/${data}`)
-    .then((answer)=>{
+    .then((answer) => {
         $(`#${answer.data.id}`).remove();
     })
-    .catch((error)=>{
+    .catch((error) => {
         console.log(error);
     })
 }
@@ -53,16 +53,16 @@ $("#ve").click(function() { postNewValueEmailToServer(); });
 //my regular expression for email
     let x = /.+@.+\..+/i;
 // disable buttons by default
-    $("#send").prop('disabled', true);
-    $("#ve").prop('disabled', true);
-    $("#draw").prop('disabled', false);
+    $("#send").prop("disabled", true);
+    $("#ve").prop("disabled", true);
+    $("#draw").prop("disabled", false);
 //validation and outline new-input
     $("#new").on("input", function() {
         if($(this).val().trim()) {
             $("#new").css("outline-color","green");
-            $("#send").prop('disabled', false);
+            $("#send").prop("disabled", false);
         } else {
-            $("#send").prop('disabled', true);
+            $("#send").prop("disabled", true);
             $("#new").css("outline-color","brown");
         }
     })
@@ -85,89 +85,89 @@ $("#ve").click(function() { postNewValueEmailToServer(); });
 // Validation value & mail inputs for valid
     $("#value, #email").on("input", function() {
         if($("#value").val().trim()&&$("#email").val().trim()&&x.test($("#email").val())) {
-            $("#ve").prop('disabled', false);
+            $("#ve").prop("disabled", false);
         } else {
-            $("#ve").prop('disabled', true);
+            $("#ve").prop("disabled", true);
         }
     })
-//Sending to server value and email of input's textareas
+//Sending to server value and email of input"s textareas
 function postNewValueEmailToServer(){
     instance.post(`/contact`, {
         value: $("#value").val(),
         email: $("#email").val()
     })
-    .then((answer)=>{
-        $("#value, #email").val('');
+    .then((answer) => {
+        $("#value, #email").val("");
         $(".message").append(`<p> ${answer.data}</p>`);
         $(".message").css("display","flex");
         setTimeout(() => {
             $(".message").css("display","none");
         }, 3000);
-    }).catch((error)=>{
+    }).catch((error) => {
         alert(error);
     })
 }
 //Get array of points from the server
 function getChart(){
-    instance.get('/chart')
-    .then((content)=>{
+    instance.get("/chart")
+    .then((content) => {
         return content.data;
     })
-    .then((data)=>{
-        let arrayX=data.map(item=>item[0]);
-        let arrayY=data.map(item=>item[1]);
+    .then((data) => {
+        let arrayX=data.map((item) => item[0]);
+        let arrayY=data.map((item) => item[1]);
         var charts = document.getElementById("charts"),
-        ctx= charts.getContext('2d');
+        ctx= charts.getContext("2d");
         ctx.beginPath();
         ctx.lineWidth = "2";
         ctx.strokeStyle="#ff33cc";
         ctx.translate(charts.width/2,charts.height/2);
-        ctx.moveTo(arrayX[0]*7,-arrayY[0]*7)
-        for (i=1; i<arrayX.length; i++){
-            ctx.lineTo(arrayX[i]*7, -arrayY[i]*7);
+        ctx.moveTo(arrayX[0]*7,-arrayY[0]*7);
+        for (let i=1; i<arrayX.length; i++){
+            ctx.lineTo(arrayX[i]*7, - arrayY[i]*7);
             }
         ctx.stroke();
 
         ctx.beginPath();
         ctx.lineWidth = "1";
         ctx.strokeStyle="#003300";
-        ctx.moveTo(0, -charts.height/2)
-        ctx.lineTo(0, charts.height/2)
-        ctx.moveTo(-charts.width/2,0)
-        ctx.lineTo(charts.width/2,0)
+        ctx.moveTo(0, -charts.height/2);
+        ctx.lineTo(0, charts.height/2);
+        ctx.moveTo(-charts.width/2,0);
+        ctx.lineTo(charts.width/2,0);
         ctx.stroke();
         ctx.lineWidth = "1";
         ctx.strokeStyle="#003300";
-        ctx.moveTo(0,-charts.height/2)
-        ctx.lineTo(-4,-charts.height/2+10)
-        ctx.moveTo(0,-charts.height/2)
-        ctx.lineTo(4,-charts.height/2+10)
+        ctx.moveTo(0,-charts.height/2);
+        ctx.lineTo(-4,-charts.height/2+10);
+        ctx.moveTo(0,-charts.height/2);
+        ctx.lineTo(4,-charts.height/2+10);
         ctx.stroke();
         ctx.lineWidth = "1";
         ctx.strokeStyle="#003300";
-        ctx.moveTo(charts.width/2,0)
-        ctx.lineTo(charts.width/2-10,4)
-        ctx.moveTo(charts.width/2,0)
-        ctx.lineTo(charts.width/2-10,-4)
+        ctx.moveTo(charts.width/2,0);
+        ctx.lineTo(charts.width/2-10,4);
+        ctx.moveTo(charts.width/2,0);
+        ctx.lineTo(charts.width/2-10,-4);
         ctx.stroke();
         ctx.closePath();
     })
-    .catch((error)=>{
+    .catch((error) => {
         console.log(error);
     })
 }
 //Creating onclik-event for the button draw canvas
 $("#draw").click(function() {
     getChart();
-    $("#draw").prop('disabled', true);
+    $("#draw").prop("disabled", true);
 });
 //Creating authorization request
     //login password const
-    let loginTrue = 'test';
-    let passwordTrue = 'admin';
+    let loginTrue = "test";
+    let passwordTrue = "admin";
     //disable button SIGN IN by default
-    $("#signIn").prop('disabled', true);
-    //LOG/PASS-input's validation
+    $("#signIn").prop("disabled", true);
+    //LOG/PASS-input"s validation
     // validation on empty string + outline LOGIN-Input
     $("#log").on("input focus", function() {
         if($(this).val().trim()) {
@@ -187,19 +187,19 @@ $("#draw").click(function() {
     // Validation LOGIN & PASSWORD inputs for valid
     $("#log, #pas").on("input focus", function() {
         if($("#log").val().trim()&&$("#pas").val().trim()) {
-            $("#signIn").prop('disabled', false);
+            $("#signIn").prop("disabled", false);
         } else {
-            $("#signIn").prop('disabled', true);
+            $("#signIn").prop("disabled", true);
         }
     })
     //sending values by pressing button SIGN IN
     $("#signIn").click(function() { postAuthorization(); });
     // global variable "AXIOS CREATE"
     let instance ;
-     //authorization's method
+     //authorization"s method
 function postAuthorization() {
     // console.log($("#log").val(), $("#pas").val());
-    axios.post('http://192.168.1.100:3000/login',{
+    axios.post("http://192.168.1.100:3000/login",{
         login: $("#log").val(),
         password: $("#pas").val()
     })
@@ -210,16 +210,16 @@ function postAuthorization() {
     .then((key) => {
         console.log(key);
         instance = axios.create({
-            baseURL: 'http://192.168.1.100:3000/api',
-            headers: {'auth':key}
+            baseURL: "http://192.168.1.100:3000/api",
+            headers: {"auth":key}
         })
     })
-    .then(() => {
+    .then(() =>  {
         getFromServer();
     })
     .catch(error => {
         alert(error);
-    })
+    });
 }
 // Starting main method
 // getFromServer();
