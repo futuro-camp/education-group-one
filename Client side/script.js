@@ -263,12 +263,12 @@ $("#email_input").on("input", function() {
     else{
         $(this).css("outline-color", "red");
     }
-})
+});
 $("#add_btn").click(add);
 $("#email_btn").click(contact);
 $(".modal-content").click(function(event) {
     event.stopPropagation();
-})
+});
 $(".modal-btn, .modal").click(function() {
     modal.css("display", "none");
 });

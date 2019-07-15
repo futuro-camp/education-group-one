@@ -8,14 +8,18 @@ manager.addAccount("petya", "ayrep", 1654);
 manager.addAccount("kolya", "aylok", 4894);
 manager.addAccount("miha", "ahim", 9413);
 
+function callback(){
+    callback();
+}
+
 function continueCallback(){
     readline.question("Press any key to continue: ", 
     function(){
-        startCallback();
+        callback();
     });
 }
 
-function startCallback(){
+function callback(){
     console.clear();
     readline.question("List of commands:\n'Get List' - return all available accounts;\n'Get #' - get account, where # - account id;\n'Transfer # @ $' - transfer, where # - id from, @ - id where, $ - amount of money;\n", 
     function(answer){
@@ -73,4 +77,4 @@ function startCallback(){
     });
 }
 
-module.exports = startCallback;
+module.exports = callback;

@@ -8,10 +8,14 @@ managerPromise.addAccount("petya", "ayrep", 1654);
 managerPromise.addAccount("kolya", "aylok", 4894);
 managerPromise.addAccount("miha", "ahim", 9413);
 
+function promise() {
+    startPromise();
+}
+
 function continuePromise(){
     readline.question("Press any key to continue: ", 
     function(){
-        startPromise();
+        promise();
     });
 }
 

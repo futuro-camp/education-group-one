@@ -1,10 +1,10 @@
 Array.prototype.removeOdd = function(){
     return this.filter((x) => !(x % 2));
-}
+};
 
 Array.prototype.removeEven = function(){
     return this.filter((x) => x % 2);
-}
+};
 
 Array.prototype.babbleSort = function(){
     for(let i = 0; i < this.length; i++){

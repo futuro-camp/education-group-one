@@ -1,2 +1,2 @@
-const startPromise = require("./Promise.js");
-const startCallback = require("./Callback.js");
+const promise = require("./Promise.js");
+const callback = require("./Callback.js");
