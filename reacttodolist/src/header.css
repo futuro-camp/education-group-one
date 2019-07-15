@@ -1,0 +1,12 @@
+.title {
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    border: 1px solid violet;
+}
+.titleName {
+    background: none;
+    border-bottom: none;
+    outline: green;
+}
