@@ -5,14 +5,6 @@ const codeKey = [ "_", "e", "o", "`", "9", "E", "^", "N", "r", "j", "[", "J", "0
                 "l", "c", "h", "*", ".", "I", "C", " " ];
 const codeStep = 3;
 
-function encode(data){
-    return code(data, (index) => index + codeStep < codeKey.length ? index + codeStep : index + codeStep - codeKey.length);
-}
-
-function decode(data){
-    return code(data, (index) => index - codeStep >= 0 ? index - codeStep : codeKey.length + (index - codeStep));
-}
-
 function code(data, calc){
     var enData = data.split("");
     for(let i = 0; i < enData.length; i++){
@@ -21,6 +13,14 @@ function code(data, calc){
         enData[i] = codeKey[index];
     }
     return enData.join("");
+}
+
+function encode(data){
+    return code(data, (index) => index + codeStep < codeKey.length ? index + codeStep : index + codeStep - codeKey.length);
+}
+
+function decode(data){
+    return code(data, (index) => index - codeStep >= 0 ? index - codeStep : codeKey.length + (index - codeStep));
 }
 
 module.exports = {encode, decode};

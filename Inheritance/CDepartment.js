@@ -5,7 +5,6 @@ class Human {
 }
 
 class Employee extends Human {
-
     constructor(name, salary, email) {
         super(name);
         this.salary = salary;
@@ -14,31 +13,31 @@ class Employee extends Human {
 }
 
 class Department {
-
     constructor(name, employees) {
         this.name = name;
         this.employees = employees;
     }
 
-    Add(employee) {
-        if(employee instanceof Employee)
+    add(employee) {
+        if(employee instanceof Employee){
             this.employees.push(employee);
+        }
     }
 
-    Average() {
-        return Math.round(this.Sum()/this.employees.length);
+    average() {
+        return Math.round(this.sum()/this.employees.length);
     }
 
-    Sum() {
-        return this.employees.map(x => x.salary).reduce((x, y) => x + y);
+    sum() {
+        return this.employees.map((x) => x.salary).reduce((x, y) => x + y);
     }
 
-    Filter() {
-        return this.employees.filter(x => x.salary < this.Average());
+    filter() {
+        return this.employees.filter((x) => x.salary < this.average());
     }
 
-    Remove(emp) {
-        this.employees = this.employees.filter(x => x.email != mail);
+    remove(emp) {
+        this.employees = this.employees.filter((x) => x.email !== emp.email);
     }
     
 }

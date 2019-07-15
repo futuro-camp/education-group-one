@@ -1,61 +1,52 @@
 const Account = require("./Account.js");
 
-class BankManager {
-    constructor() 
-    {
+class BankManager{
+    constructor(){
         this.accounts = [];
     }
 
-    AddAccount(name, surname, money) {
+    addAccount(name, surname, money){
         this.accounts.push(new Account(this.accounts.length, money, name, surname));
     }
 
-    GetList(callback) {
+    getList(callback){
         var accounts = this.accounts;
-        setTimeout(function() {
-            if(accounts.length > 0)
-            {
+        setTimeout(function(){
+            if(accounts.length > 0){
                 callback(null, accounts.map((account) => `id: ${account.id} name: ${account.owner.name} surname: ${account.owner.surname} money: ${account.money}`));
             }
-            else
-            {
+            else{
                 callback("No accounts in the list", null);
             }
         }, 2000);
     }
 
-    Get(id, callback) {
+    get(id, callback){
         let accounts = this.accounts;
-        setTimeout(function() {
-            if(accounts[id])
-            {
+        setTimeout(function(){
+            if(accounts[id]){
                 callback(null, accounts[id]);
             }
-            else
-            {
+            else{
                 callback("No such account in the list", null);
             }
         }, 1000);
     }
 
-    Transfer(from, to, amount, callback) {
+    transfer(from, to, amount, callback){
         let accounts = this.accounts;
         setTimeout(() => {
-            if(accounts[from] && accounts[to])
-            {
-                if(accounts[from].money >= amount)
-                {
+            if(accounts[from] && accounts[to]){
+                if(accounts[from].money >= amount){
                     accounts[from].money -= amount;
                     accounts[to].money += amount;
                     callback(null, "Transfer comlete!");
                 }
-                else
-                {
+                else{
                     callback("Not enough money!", null);
                 }
             }
-            else
-            {
+            else{
                 callback("No such account in the list", null);
             }
         }, 3000);    

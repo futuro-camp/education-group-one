@@ -15,13 +15,13 @@ function viewPlacesOrTransactions(data, page){
     if(!page){
         choices.shift();
     }
-    if(page == data.length - 1){
+    if(page === data.length - 1){
         choices.splice(choices.indexOf("Next"), 1);
     }
     return inquirer.prompt([{
         type: "list",
         name: "answer",
-        message: "\n" + data[page].join("\n") + "\n",
+        message: `\n${data[page].join("\n")}\n`,
         prefix: "",
         choices
         }]);
@@ -64,4 +64,4 @@ function accountInfo(account){
     }]);
 }
 
-module.exports = {enter, viewPlacesOrTransactions, login, loginError, accountInfo}
+module.exports = {enter, viewPlacesOrTransactions, login, loginError, accountInfo};

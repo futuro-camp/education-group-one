@@ -1,89 +1,76 @@
-const readline = require('./ReadLine.js');
-const BankManager = require('./BankManager.js');
+const readline = require("./ReadLine.js");
+const BankManager = require("./BankManager.js");
 
 let manager = new BankManager();
-manager.AddAccount('danya', 'aynad', 169);
-manager.AddAccount('vasya', 'aysav', 288);
-manager.AddAccount('petya', 'ayrep', 1654);
-manager.AddAccount('kolya', 'aylok', 4894);
-manager.AddAccount('miha', 'ahim', 9413);
+manager.addAccount("danya", "aynad", 169);
+manager.addAccount("vasya", "aysav", 288);
+manager.addAccount("petya", "ayrep", 1654);
+manager.addAccount("kolya", "aylok", 4894);
+manager.addAccount("miha", "ahim", 9413);
 
-function StartCallback() {
+function continueCallback(){
+    readline.question("Press any key to continue: ", 
+    function(){
+        startCallback();
+    });
+}
+
+function startCallback(){
     console.clear();
-    readline.question("List of commands:\n'Get_List' - return all available accounts;\n'Get_#' - get account, where # - account id;\n'Transfer_#_@_$' - transfer, where # - id from, @ - id where, $ - amount of money;\n", 
-    function(answer) {
-        if(answer.includes('Get'))
-        {
-            let ar = answer.split('_');
-            if(ar.length != 2)
-            {
-                console.log('No such command!');
-                ContinueCallback();
+    readline.question("List of commands:\n'Get List' - return all available accounts;\n'Get #' - get account, where # - account id;\n'Transfer # @ $' - transfer, where # - id from, @ - id where, $ - amount of money;\n", 
+    function(answer){
+        if(answer.includes("Get")){
+            let ar = answer.split(" ");
+            if(ar.length !== 2){
+                console.log("No such command!");
+                continueCallback();
             }
-            else if(ar[1].toLowerCase() == 'list')
-            {
-                manager.GetList(function(error, data){
-                    if(error)
-                    {
+            else if(ar[1].toLowerCase() === "list"){
+                manager.getList(function(error, data){
+                    if(error){
                         console.log(error);
                     }
-                    else 
-                    {
+                    else{
                         console.log(data);
                     }
-                    ContinueCallback();
-                })
+                    continueCallback();
+                });
             }
-            else 
-            {
-                manager.Get(ar[1], function(error, data) {
-                    if(error)
-                    {
+            else {
+                manager.get(ar[1], function(error, data){
+                    if(error){
                         console.log(error);
                     }
-                    else 
-                    {
+                    else{
                         console.log(data);
                     }
-                    ContinueCallback();
+                    continueCallback();
                 });
             }
         }
-        else if(answer.includes('Transfer'))
-        {
-            let ar = answer.split('_');
-            if(ar.length != 4)
-            {
-                console.log('No such command!');
-                ContinueCallback();
+        else if(answer.includes("Transfer")){
+            let ar = answer.split(" ");
+            if(ar.length !== 4){
+                console.log("No such command!");
+                continueCallback();
             }
-            else
-            {
-                manager.Transfer(ar[1], ar[2], Number(ar[3]), function(error, data) {
-                    if(error)
-                    {
+            else{
+                manager.transfer(ar[1], ar[2], Number(ar[3]), function(error, data){
+                    if(error){
                         console.log(error);
                     }
-                    else 
-                    {
+                    else {
                         console.log(data);
                     }
-                    ContinueCallback();
+                    continueCallback();
                 });  
             }
         }
-        else {
-            console.log('No such command!');
-            ContinueCallback();
+        else{
+            console.log("No such command!");
+            continueCallback();
         }
     });
 }
 
-function ContinueCallback() {
-    readline.question("Press any key to continue: ", 
-    function() {
-        StartCallback();
-    });
-}
-
-module.exports = StartCallback;
+module.exports = startCallback;
