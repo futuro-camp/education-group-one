@@ -1,0 +1,24 @@
+.footerDiv {
+    margin: 0 5%;
+    height: 30px;
+    position: sticky;
+    top: 74px;
+    bottom: 0;
+    background-color: #fff;
+    border-top: 2px solid #333333;
+    padding: 5px 0;
+}
+
+.footerDiv input {
+    width: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-bottom: 1px solid #4c4c4c;
+}
+
+.footerDiv input:focus {
+    outline: none;
+}

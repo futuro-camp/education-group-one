@@ -1,0 +1,39 @@
+.headerDiv {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #333333;
+    width: 90%;
+    margin: 0 5%;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.headerDiv input {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-align: center;
+    border: none;
+}
+
+.headerDiv input::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.headerDiv input:focus {
+    outline: none;
+}
+
+.headerDiv p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #262626;
+    text-align: center;
+}

@@ -1,20 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function HeaderName() {
-    return <input type="text" placeholder="Name"/>;
-}
-
-function HeaderCounter(props) {
+export default function Header(props) {
     let {complited, total} = props;
-    return <p>{complited}/{total}</p>;
-}
-
-export default function Header() {
     return(
-        <div>
-            <HeaderName />
-            <HeaderCounter />
+        <div className="headerDiv">
+            <input type="text" placeholder="Name"/>
+            <p>{complited}/{total}</p>
         </div>
     );
 }
