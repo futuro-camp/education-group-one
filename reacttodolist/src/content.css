@@ -30,10 +30,6 @@ li button {
     background: transparent;
     border: 1px solid grey;
 }
-.ready {
-    text-decoration: line-through;
-    color: lightseagreen;
-}
 .checkbox {
     width: 10%;
 }
@@ -50,4 +46,8 @@ li button {
     background-color: lightcoral;
     border: none;
     color: azure;
+}
+.ready {
+    text-decoration: line-through;
+    color: lightseagreen;
 }
