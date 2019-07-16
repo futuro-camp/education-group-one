@@ -2,11 +2,16 @@
     margin: 50px auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 30%;
     border: 1px solid violet;
 }
 .titleName {
-    background: none;
-    border-bottom: none;
-    outline: green;
+    background: transparent;
+    border: none;
+    height: 30px;
+    text-align: center;
+}
+.titleName:focus{
+    outline: 1px solid green;
 }
