@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Header from  "./header";
 import Schedule from "./content";
@@ -38,14 +37,14 @@ class App extends React.Component {
         text: event.target.value,
         status: false,
         id: this.state.lastIndex+1
-      })
-      event.target.value = ""
+      });
+      event.target.value = "";
       this.setState(
         {
           list : array.list,
           lastIndex: this.state.lastIndex + 1
         }
-      )
+      );
     }
   }
   //changing checkbox

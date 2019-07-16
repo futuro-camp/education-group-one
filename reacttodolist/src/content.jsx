@@ -6,20 +6,20 @@ function Card(props) {
     return (
         <li>
             <input  type="checkbox"
+                    className="checkbox"
                     defaultChecked={status} onClick={() => {checker(id); }}/>
-
             <input  className={status ? "ready" : ""}
                     type="text"
+                    className="item"
                     defaultValue={text}/>
-
-            <button onClick={() => {remover(id);}}>Del id {id}</button>
+            <button className="button" onClick={() => {remover(id);}}>Del ID:{id}</button>
         </li>
     );
 }
 
 const Schedule = ({list, checker,remover}) => {
     return (
-        <ul>
+        <ul className="">
             {list.map((elem) => <Card   status={elem.status}
                                         text={elem.text}
                                         id={elem.id}
@@ -27,7 +27,7 @@ const Schedule = ({list, checker,remover}) => {
                                         checker={checker}
                                         remover={remover}/>)}
         </ul>
-    )
-}
+    );
+};
 
 export default Schedule;

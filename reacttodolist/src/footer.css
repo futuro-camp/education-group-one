@@ -1,5 +1,15 @@
 #add {
     margin-top: 30px;
+    margin-bottom: 100px;
     width: 30%;
     align-self: center;
+    height: 28px;
+    text-align: center;
+}
+#add:focus{
+    border-color: none;
+    outline-color:  orange;
+}
+#add:focus::placeholder{
+    color: transparent;
 }

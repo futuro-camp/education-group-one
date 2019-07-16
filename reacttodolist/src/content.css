@@ -1,16 +1,27 @@
 ul {
+    padding-left: 0;
+    padding-right: 1%;
     margin: 0 auto;
-    width: 27%;
+    width: 28%;
+    height: 40%;
     list-style: none;
     border: 1px solid lightseagreen;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+ul::-webkit-scrollbar {
+    width: 0;
 }
 li {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
 }
 li input {
     border: none;
@@ -21,4 +32,22 @@ li button {
 }
 .ready {
     text-decoration: line-through;
+    color: lightseagreen;
+}
+.checkbox {
+    width: 10%;
+}
+.item {
+    width: 65%;
+}
+.item:focus{
+    border-color: none;
+    outline-color:  orange;
+}
+.button {
+    margin-left: 5%;
+    width: 20%;
+    background-color: lightcoral;
+    border: none;
+    color: azure;
 }
