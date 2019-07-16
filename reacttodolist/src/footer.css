@@ -8,7 +8,7 @@
 }
 #add:focus{
     border-color: none;
-    outline-color:  orange;
+    outline-color:  lightgreen;
 }
 #add:focus::placeholder{
     color: transparent;
