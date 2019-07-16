@@ -3,12 +3,19 @@
     padding: 0;
     margin: 0 auto;
     list-style-type: none;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none; 
+    overflow-y: scroll;
+    max-height: 73vh;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
 }
 
 .content li {
     display: flex;
-    justify-content: flex-start;
-    justify-items: center;
+    justify-content: flex-start;    
     align-items: center;
     padding: 1vw 3vw;
 }
@@ -79,7 +86,6 @@
     height: 3vw;
     font-size: 2.5vw;
     line-height: 1;
-    background-color: transparent;
     border: none;
     text-align: center;
     color: white;

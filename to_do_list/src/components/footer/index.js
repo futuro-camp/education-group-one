@@ -6,4 +6,4 @@ export default function Footer({ addTask }){
             <input type="text" onKeyUp={addTask} placeholder="New task..."/>
         </div>
     );
-};
+}

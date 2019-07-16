@@ -70,7 +70,7 @@ class App extends Component {
       <div className="app">
         <Header name={this.state.name} 
                 changeName={this.changeName} 
-                marked={this.state.list.filter(x => x.status).length}
+                marked={this.state.list.filter((x) => x.status).length}
                 count={this.state.list.length}/>
         <Content list={this.state.list} 
                 click={this.statusChange} 

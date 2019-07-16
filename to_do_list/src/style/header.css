@@ -1,9 +1,14 @@
 .header {
+    position: fixed;
     display: flex;
     width: 80%;
-    margin: 0 auto;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    background-color: white;
     justify-content: space-around;
     align-items: center;
+    z-index: 10;
     border-bottom: 0.2vw solid rgba(54, 54, 54, 0.8);
 }
 

@@ -21,4 +21,4 @@ export default function Header({name, marked, count, changeName}){
             </p>
         </div>
     );
-};
+}
