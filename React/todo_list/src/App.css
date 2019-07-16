@@ -1,3 +1,8 @@
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
 .cardsList {
   position: relative;
   margin: 0 10% 48px;
