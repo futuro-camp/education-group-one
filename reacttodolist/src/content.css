@@ -19,3 +19,6 @@ li button {
     background: transparent;
     border: 1px solid grey;
 }
+.ready {
+    text-decoration: line-through;
+}

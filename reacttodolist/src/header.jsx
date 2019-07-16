@@ -5,8 +5,8 @@ const Header = ({title, completed, inProgress}) => {
     return (
         <div className="title">
             <input className="titleName"
-                    type="text" defaultValue={title}/>
-            <p><span> Completed {completed} </span> / Total {inProgress}</p>
+                    type="text" defaultValue={title} align="bottom"/>
+            <p>Tasks: Completed<span>  {completed} </span> / Total <span>{inProgress}</span></p>
         </div>
     )
 }

@@ -12,7 +12,7 @@ function Card(props) {
                     type="text"
                     defaultValue={text}/>
 
-            <button onClick={() => {remover(id);}}>Del case with ID {id}</button>
+            <button onClick={() => {remover(id);}}>Del id {id}</button>
         </li>
     );
 }

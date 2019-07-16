@@ -6,12 +6,11 @@ import Schedule from "./content";
 import TypingNewCase from "./footer";
 import "./footer";
 class App extends React.Component {
-
   constructor(){
     super();
     //setting default value
     this.state={
-      name: "Default List Name",
+      name: "Default to-do list",
       completed: this.completedCounter,
       inProgress: 1,
       lastIndex: 0,

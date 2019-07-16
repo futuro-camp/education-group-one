@@ -1,8 +1,8 @@
 .title {
-    margin: 50px auto;
+    margin: 50px auto 30px;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
     width: 30%;
     border: 1px solid lightslategrey;
 }
@@ -14,4 +14,14 @@
 }
 .titleName:focus{
     outline: 1px solid green;
+}
+.title p  {
+    height: 30px;
+    margin: 0;
+}
+.title p span {
+    color: lawngreen;
+}
+.title p span:nth-child(2) {
+    color: red;
 }
