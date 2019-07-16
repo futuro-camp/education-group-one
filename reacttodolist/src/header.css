@@ -7,7 +7,7 @@
     border: 1px solid lightslategrey;
 }
 .titleName:focus {
-    border-color: none;
+    border-color: transparent;
     outline-color:  orange;
 }
 .titleName {

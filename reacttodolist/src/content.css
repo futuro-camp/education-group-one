@@ -37,7 +37,7 @@ li button {
     width: 65%;
 }
 .item:focus{
-    border-color: none;
+    border-color: transparent;
     outline-color:  orange;
 }
 .button {

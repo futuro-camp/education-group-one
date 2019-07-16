@@ -7,7 +7,7 @@
     text-align: center;
 }
 #add:focus{
-    border-color: none;
+    border-color: transparent;
     outline-color:  lightgreen;
 }
 #add:focus::placeholder{
