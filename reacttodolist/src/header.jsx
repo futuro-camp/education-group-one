@@ -6,7 +6,7 @@ const Header = ({title, completed, inProgress}) => {
         <div className="title">
             <input className="titleName"
                     type="text" defaultValue={title}/>
-            <p><span> Completed {completed} </span> / In Progress {inProgress}</p>
+            <p><span> Completed {completed} </span> / Total {inProgress}</p>
         </div>
     )
 }

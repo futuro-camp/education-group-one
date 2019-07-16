@@ -4,13 +4,13 @@
     justify-content: space-around;
     align-items: center;
     width: 30%;
-    border: 1px solid violet;
+    border: 1px solid lightslategrey;
 }
 .titleName {
     background: transparent;
     border: none;
     height: 30px;
-    text-align: center;
+    text-align: left;
 }
 .titleName:focus{
     outline: 1px solid green;

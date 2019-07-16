@@ -1,0 +1,21 @@
+ul {
+    margin: 0 auto;
+    width: 27%;
+    list-style: none;
+    border: 1px solid lightseagreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+li input {
+    border: none;
+}
+li button {
+    background: transparent;
+    border: 1px solid grey;
+}
