@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0 auto;
     list-style-type: none;
-    overflow: -moz-scrollbars-none;
     -ms-overflow-style: none; 
     overflow-y: scroll;
     max-height: 73vh;
