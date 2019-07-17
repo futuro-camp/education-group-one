@@ -1,6 +1,7 @@
 import React from "react";
 import "./items.css";
-
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 class Items extends React.Component {
 
     constructor(){
@@ -8,53 +9,51 @@ class Items extends React.Component {
         this.state ={
             categories: [
                 {
-                    name: "cars",
+                    name: "Cars",
                     id: 0
                 },
                 {
-                    name: "moto",
+                    name: "Moto",
                     id: 1
                 },
                 {
-                    name: "bikes",
+                    name: "Bikes",
                     id: 2
                 },
                 {
-                    name: "skates",
+                    name: "Skates",
                     id: 3
                 }],
 
-            items: [
-                {
-                    name: "skate vans",
-                    id: 0
-                },
-                {
-                    name: "bike saturn",
-                    id: 1
-                },
-                {
-                    name: "moto yava",
-                    id: 2
-                },
-                {
-                    name: "car bmw",
-                    id: 3},]
+            items: []
         }
     }
 
     //dropDown takes categories.names
     categoriesMap(array) {
-        return array.map((element) => <li key={element.id}>{element.name}</li>)
+        return array.map((element) => {
+            console.log(element);
+            return <li key={element.id}>{element.name}</li>
+        })
+    }
+    //dropDown choose ID
+    choice(val) {
+        console.log(val);
+        console.log(val.value.key);
     }
 
     render(){
         return (
             <div>
                 <h1>Items</h1>
-                <ul>
-                    {this.categoriesMap(this.state.categories)}
-                </ul>
+                <Dropdown   placeholder="Select"
+                            options={this.categoriesMap(this.state.categories)}
+                            onChange={(value)=>this.choice(value)}
+                            className="DropDown" >
+                </Dropdown>
+                <div>
+                    {this.state.items.map(it=><p>{it.name}</p>)}
+                </div>
             </div>
         )
     }

@@ -15,7 +15,7 @@ export const Wrapper = ()=> {
             <Router>
                 <Switch>
                     <Route exact path ="/" component={Login}/>
-                    <Route component={({}) =>
+                    <Route component={({main}) =>
                         <div>
                             <Header />
                             <Switch>

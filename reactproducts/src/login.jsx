@@ -4,7 +4,6 @@ import "./login.css";
 class Input extends React.Component {
     constructor(props) {
         super(props);
-
     }
     render() {
         if (this.props.email) {
@@ -42,11 +41,9 @@ class Login extends React.Component {
         return(
             <div className="login">
                 <h1>Start Working 💻</h1>
-                {/* <Input labelName="Email 📬" type="email" autoFocus="autofocus"/> */}
-                {/* <Input labelName="Email 📬" type="email" autoFocus="autofocus"/> */}
                 <Input email ref={(input) => {this.textEmail = input;}}/>
                 <Input password ref={(input) => {this.textPassword = input;}}/>
-                <button onClick={this.Authorization}>Sign In 🔭</button>
+                <button onClick={this.Authorization}>Sign In 🪐</button>
             </div>
         )
     }
