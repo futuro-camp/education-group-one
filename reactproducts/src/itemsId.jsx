@@ -1,4 +1,11 @@
-import React from 'react';
-import './itemsId.css';
+import React from "react";
+import "./itemsId.css";
 
-export default App;
+function ItemsId() {
+    return (
+        <h1>Items with own id</h1>
+    )
+}
+
+
+export default ItemsId;

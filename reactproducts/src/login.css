@@ -16,11 +16,12 @@
 }
 .login button {
     margin-top: 2%;
-    width: 10%;
+    width: 20%;
     height: 35px;
+    font-size: 14px;
 }
 .login h1:nth-child(1) {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-bottom: 1%;
 }
 .login label:nth-child(2) {
@@ -33,5 +34,4 @@
 }
 .login button:nth-child(6) {
     margin-top: 2%;
-    margin-left: 245px;
 }

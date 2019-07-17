@@ -1,13 +1,24 @@
-import React from 'react';
-import './wrapper.css';
+import React from "react";
+import "./wrapper.css";
 import Login from "./login.jsx";
-function Wrapper() {
+import Items from "./items.jsx";
+import ItemsId from "./itemsId.jsx";
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+export const WrongPage = () =><h1>Error 404</h1>
+
+export const Wrapper = ()=> {
     return (
         <div className="wrapper-box">
-            <Login />
-        </div>
+        <Router>
+            <Switch>
+                <Route exact path ="/" component={Login}/>
+                <Route exact path ="/items" component={Items}/>
+                <Route exact path ="/items/id" component={ItemsId}/>
+                <Route component={WrongPage}/>
+            </Switch>
+        </Router>
+        {/* <Login /> */}
+    </div>
     )
 }
-
-
-export default Wrapper;
