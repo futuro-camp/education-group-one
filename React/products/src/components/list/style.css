@@ -1,0 +1,29 @@
+.itemListDiv {
+    position: relative;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.filterDropdown {
+    margin-top: 10px;
+    width: 300px;
+}
+
+.filterDropdownControl, .filterDropdownMenu {
+    background-color: #f6f6ee;
+    border-radius: 6px;
+    border-color: #8a8a5c;
+    color: #8a8a5c;
+    font-size: 16px;
+}
+
+.items {
+    margin-top: 10px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

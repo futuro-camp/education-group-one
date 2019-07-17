@@ -1,0 +1,19 @@
+input {
+    border: none;
+    border-bottom: 2px solid#8a8a5c;
+    color: #000;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    color: #c2c2a3;
+}
+
+.invalid {
+    border-color:#ff3333;
+}
