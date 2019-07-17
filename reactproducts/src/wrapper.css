@@ -1,0 +1,10 @@
+.wrapper-box {
+    width: 85vw;
+    height: 60vw;
+    margin: 3% auto 0;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
