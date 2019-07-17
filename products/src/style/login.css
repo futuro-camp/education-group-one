@@ -1,0 +1,43 @@
+.login-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.login-screen input {
+    border: none;
+    outline: none;
+    margin: 1vw;
+    padding: 0.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6vw;
+    line-height: 1.5;
+    background-color: transparent;
+}
+
+.login-screen input:focus {
+    border-radius: 1vw;
+    background-color: white;
+}
+
+.login-screen button {
+    margin: 1vw;
+    outline: none;
+    border: none;
+    padding: 0.5vw;
+    width: 20vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6vw;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.login-screen button:hover {
+    color: white;
+}

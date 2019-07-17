@@ -1,0 +1,42 @@
+@import "./style/login.css";
+@import "./style/list.css";
+@import "./style/item.css";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.content {
+    min-height: 70vh;
+    width: 80vw;
+    -ms-overflow-style: none;
+    overflow-y: scroll;
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+}
+
+
+.header {
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+}
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: black;
+}
