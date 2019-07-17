@@ -1,0 +1,17 @@
+.navigation {
+    margin-top: 5%;
+    width: 150%;
+    display: flex;
+    justify-content: flex-start;
+}
+.navigation button {
+    width: 30%;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+.navigation button:focus {
+    border: none;
+    outline: none;
+    color: orange;
+}

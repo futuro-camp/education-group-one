@@ -9,6 +9,9 @@
     height: 30px;
     font-size: 20px;
 }
+.login input:focus {
+    outline-color: red;
+}
 .login label {
     width: 30%;
     text-align: left;
@@ -19,6 +22,11 @@
     width: 20%;
     height: 35px;
     font-size: 14px;
+    background-color: bisque;
+    border: 1px solid gray;
+}
+.login button:focus {
+    outline-color: green;
 }
 .login h1:nth-child(1) {
     margin-top: 10%;

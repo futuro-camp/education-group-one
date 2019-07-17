@@ -10,19 +10,6 @@ function App() {
   return (
     <div className="App">
       <Wrapper />
-
-      {/* <Router>
-        <Switch>
-          <Route exact path ="/" component={Login}/>
-          <Route exact path ="/wrapper" component={Wrapper}>
-            <Switch>
-              <Route exact path ="/items" component={Items}/>
-              <Route exact path ="/items/id" component={ItemsId}/>
-            </Switch>
-          </Route>
-          <Route component={WrongPage}/>
-        </Switch>
-      </Router> */}
     </div>
   );
 }
