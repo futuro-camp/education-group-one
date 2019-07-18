@@ -8,6 +8,19 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 export const WrongPage = () => <h1>Error 404</h1>
 
+const Box = () => {
+    return (
+        <div>
+                                <Header />
+                                <Switch>
+                                    <Route exact path = "/items" component = {Items}/>
+                                    <Route path = "/items/" component = {ItemsId}/>
+                                    <Route component = {WrongPage}/>
+                                </Switch>
+                            </div>
+    )
+}
+
 class Wrapper extends React.Component {
     constructor() {
         super();
@@ -23,16 +36,16 @@ class Wrapper extends React.Component {
                 <Router>
                     <Switch>
                         <Route exact path = "/" component = {Login} />
-                        <Route component={({main}) =>
-                            <div>
-                                <Header />
-                                <Switch>
-                                    <Route exact path = "/items" component = {Items}/>
-                                    <Route exact path = "/items/id" component = {ItemsId}/>
-                                    <Route component = {WrongPage}/>
-                                </Switch>
-                            </div>
-                        }/>
+                        <Route component={Box}
+                            // <div>
+                            //     <Header />
+                            //     <Switch>
+                            //         <Route exact path = "/items" component = {() => <Items history={this.props.history} />}/>
+                            //         <Route exact path = "/items/id" component = {ItemsId}/>
+                            //         <Route component = {WrongPage}/>
+                            //     </Switch>
+                            // </div>
+                        />
                     </Switch>
                 </Router>
             </div>

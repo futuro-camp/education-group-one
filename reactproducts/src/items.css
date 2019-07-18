@@ -1,3 +1,16 @@
 .DropDown {
     list-style: none;
 }
+.itemsList{
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item {
+    background: #fa5a5a;
+    border: 1px solid goldenrod;
+    color: aliceblue;
+    width: 100%;
+    height: 30px;
+}
