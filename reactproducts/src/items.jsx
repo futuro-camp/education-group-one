@@ -41,7 +41,7 @@ class Items extends React.Component {
     itemsMap() {
         return this.state.items.map((element) => {
             return <OneItem history={this.props.history} key={element.id} id={element.id} title={element.name}> </OneItem>;
-        })
+        });
     }
     categoriesMap() {
         return this.state.categories.map((element) => {

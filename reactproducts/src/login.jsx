@@ -13,7 +13,7 @@ class Input extends React.Component {
                 <label>Email</label>
                 <input className="email" type="text" autoFocus="autofocus" defaultValue="test" ref={(input) => {this.textInput = input;}}/>
             </div>
-            )
+            );
         } else if (this.props.password) {
             return (
                 <div className="login">
