@@ -22,8 +22,8 @@ export default class Login extends Component {
     render() {
         return (
             <div className="loginWindow">
-                <Input ref={(input)=> { this.login = input }} placeholder="Email" text/>
-                <Input ref={(input)=> { this.password = input }} placeholder="Password" password/>
+                <Input ref={(input) => { this.login = input; }} placeholder="Email" text/>
+                <Input ref={(input) => { this.password = input; }} placeholder="Password" password/>
                 <button className="loginButton" onClick={ this.login }>Login</button>
             </div>
         );

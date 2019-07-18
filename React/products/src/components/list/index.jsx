@@ -32,7 +32,7 @@ export default class List extends Component {
             <div className="itemListDiv">
                 <Dropdown className="filterDropdown" controlClassName="filterDropdownControl" menuClassName="filterDropdownMenu"  options={this.state.filterOptions} onChange={this.onSelect} defaultOption={this.state.filterOptions[0]} placeholder="Filter"/>
                 <div className="items">
-                    {this.state.itemsList.map((element) => <ListItem key={element.id} name={element.name} description={element.description} chooseMethod={() => {this.chooseItem(element.id)}}/> )}
+                    {this.state.itemsList.map((element) => <ListItem key={element.id} name={element.name} description={element.description} chooseMethod={() => {this.chooseItem(element.id);}}/> )}
                 </div>
             </div>
         );
