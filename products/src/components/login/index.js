@@ -15,15 +15,17 @@ export default class LoginScreen extends Component {
     }
 
     onLogin(){
-        let login = this.loginInput.input.value;
-        let password = this.passwordInput.input.value;
-        axios.post("http://192.168.1.100:3000/login", {
-            login,
-            password
-        }).then((response) => {
-            localStorage.setItem("auth", response.data.key);
-            this.props.history.push("/items");
-        });
+        if(this.loginInput.valid && this.passwordInput.valid){
+            let login = this.loginInput.input.value;
+            let password = this.passwordInput.input.value;
+            axios.post("http://192.168.1.100:3000/login", {
+                login,
+                password
+            }).then((response) => {
+                localStorage.setItem("auth", response.data.key);
+                this.props.history.push("/items");
+            });
+        } 
     }
 
     render() {

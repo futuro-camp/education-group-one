@@ -7,6 +7,7 @@ export default class LoginInput extends Component {
             valid: false,
         };
         this.validate = this.validate.bind(this);
+        this.valid = false;
     }
 
     validate(e){
@@ -17,6 +18,7 @@ export default class LoginInput extends Component {
         this.setState({
             valid: /\w{3,}/.test(this.input.value.trim())
         });  
+        this.valid = /\w{3,}/.test(this.input.value.trim());
     }
     
     render(){
