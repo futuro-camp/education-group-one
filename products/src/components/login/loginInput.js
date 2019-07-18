@@ -26,14 +26,14 @@ export default class LoginInput extends Component {
             return (<input  type="text"
                             className={this.state.valid ? "" : "invalid"}
                             placeholder="Email..."
-                            onKeyUp={this.validate}
+                            onChange={this.validate}
                             ref={(input) => { this.input = input; }}
                             />);
         } else if(this.props.password){
             return (<input  type="password"
                             className={this.state.valid ? "" : "invalid"}
                             placeholder="Password..."
-                            onKeyUp={this.validate}
+                            onChange={this.validate}
                             ref={(input) => {this.input = input; }}
                             />);
         }
