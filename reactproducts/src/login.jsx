@@ -1,10 +1,6 @@
 import React from "react";
 import "./login.css";
 import axios from "axios";
-export const instance = () => axios.create({
-    baseURL: "http://192.168.1.100:3000/",
-    responseType: "json"
-});
 
 class Input extends React.Component {
     constructor(props) {
@@ -30,21 +26,27 @@ class Input extends React.Component {
 }
 
 class Login extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        console.log(props)
         this.Authorization = this.Authorization.bind(this);
     }
     //This method POST (log/pass).value to server
     //and if it=true - server gives answer-object with authorization-key
     Authorization() {
-        console.log(this.textEmail.textInput.value);
-        console.log(this.textPassword.textInput.value);
+        // console.log(this.textEmail.textInput.value);
+        // console.log(this.textPassword.textInput.value);
         axios.post("http://192.168.1.100:3000/login", {
         login: this.textEmail.textInput.value,
         password: this.textPassword.textInput.value})
         .then((obj) => {
-            console.log(obj.data.key);
-            this.props.history.push("/items");
+            // console.log(obj.data.key);
+            //pushing history to redirect on page
+            this.props.history.push("/items")
+            //writing authorization-key to the LocalStorage
+            localStorage.setItem("MyKey",obj.data.key);
+            //showing authorization-key from the LocalStorage
+            console.log(localStorage.getItem("MyKey"));
         })
         .catch((error) => {
             console.log(error);
