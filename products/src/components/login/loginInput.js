@@ -5,7 +5,7 @@ export default class LoginInput extends Component {
         super(props);
         this.state = {
             valid: false,
-        }
+        };
         this.validate = this.validate.bind(this);
     }
 
@@ -16,7 +16,7 @@ export default class LoginInput extends Component {
         }
         this.setState({
             valid: /\w{3,}/.test(this.input.value.trim())
-        })  
+        });  
     }
     
     render(){

@@ -2,7 +2,7 @@ import React from "react";
 
 export default ({options, callback}) => (
     <div className="list_dropdown">
-        <select onChange={(e) => {callback(e.target.selectedIndex)}}>
+        <select onChange={(e) => { callback(e.target.selectedIndex); }}>
             {options.map((option) => 
                 <option key={option.id}>
                     {option.name}
@@ -10,4 +10,4 @@ export default ({options, callback}) => (
             )}
         </select>
     </div>
-)
+);
