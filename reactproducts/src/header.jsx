@@ -4,9 +4,8 @@ import "./header.css";
 function CustomButton(props) {
     return (
         <button>{props.name}</button>
-    )
+    );
 }
-
 function Header() {
     return (
         <div className="navigation">

@@ -20,11 +20,10 @@ class Input extends React.Component {
                     <label>Password</label>
                     <input className="password" type="password" defaultValue="admin" ref={(input) => {this.textInput = input;}}/>
                 </div>
-            )
+            );
         }
     }
 }
-
 class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -42,7 +41,7 @@ class Login extends React.Component {
             //writing authorization-key to the LocalStorage
             localStorage.setItem("MyKey",obj.data.key);
             //showing authorization-key from the LocalStorage
-            console.log(localStorage.getItem("MyKey"));
+            // console.log(localStorage.getItem("MyKey"));
         })
         .catch((error) => this.props.history.push("/error"));
     }

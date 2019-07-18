@@ -18,10 +18,9 @@ class OneItem extends React.Component {
                     }}>
                 {this.props.title}
             </button>
-        )
+        );
     }
 }
-
 class Items extends React.Component {
     constructor(props){
         super(props);
@@ -47,7 +46,7 @@ class Items extends React.Component {
     categoriesMap() {
         return this.state.categories.map((element) => {
             return { value:element.id, label:element.name };
-        })
+        });
     }
     //dropDown get user-choice by ID
     choice(val) {

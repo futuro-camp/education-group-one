@@ -6,7 +6,7 @@ import ItemsId from "./itemsId.jsx";
 import Header  from "./header.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-export const WrongPage = () => <h1>Error 404</h1>
+export const WrongPage = () => <h1>Error 404</h1>;
 
 const Box = () => {
     return (
@@ -18,12 +18,11 @@ const Box = () => {
                                     <Route component = {WrongPage}/>
                                 </Switch>
                             </div>
-    )
+    );
 };
 class Wrapper extends React.Component {
     constructor() {
         super();
-        this.categoriesView = this.categoriesView.bind(this);
     }
     render() {
         return (
