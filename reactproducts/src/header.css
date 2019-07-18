@@ -3,6 +3,7 @@
     width: 150%;
     display: flex;
     justify-content: flex-start;
+    align-items: flex-end;
 }
 .navigation button {
     width: 30%;

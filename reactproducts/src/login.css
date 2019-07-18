@@ -10,7 +10,7 @@
     font-size: 20px;
 }
 .login input:focus {
-    outline-color: red;
+    outline-color: green;
 }
 .login label {
     width: 30%;

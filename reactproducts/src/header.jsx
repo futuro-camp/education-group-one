@@ -13,6 +13,7 @@ function Header() {
             <CustomButton name="Home"/>
             <CustomButton name="Contacts"/>
             <CustomButton name="About"/>
+            <CustomButton name="❌LogOff "/>
         </div>
     )
 }

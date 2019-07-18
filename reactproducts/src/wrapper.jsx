@@ -27,7 +27,6 @@ export const Wrapper = ()=> {
                     }/>
                 </Switch>
             </Router>
-            {/* <Login /> */}
         </div>
     )
 }
