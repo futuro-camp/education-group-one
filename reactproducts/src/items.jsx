@@ -14,7 +14,7 @@ class OneItem extends React.Component {
     render() {
         return (
             <button className="item" onClick={() => {
-                    this.props.history.push(`/items/${this.props.id}`)
+                    this.props.history.push(`/items/${this.props.id}`);
                     }}>
                 {this.props.title}
             </button>
@@ -29,7 +29,7 @@ class Items extends React.Component {
             categories: [{id:0, name:"asdasd"},{id:0, name:"asdasd"}],
             items: [],
             dropDownName: "Select category pls"
-        }
+        };
     }
     //getting from the server categories
     componentDidMount(){
@@ -41,12 +41,12 @@ class Items extends React.Component {
     //dropDown making categories.names
     itemsMap() {
         return this.state.items.map((element) => {
-            return <OneItem history={this.props.history} key={element.id} id={element.id} title={element.name}> </OneItem>
+            return <OneItem history={this.props.history} key={element.id} id={element.id} title={element.name}> </OneItem>;
         })
     }
     categoriesMap() {
         return this.state.categories.map((element) => {
-            return { value:element.id, label:element.name }
+            return { value:element.id, label:element.name };
         })
     }
     //dropDown get user-choice by ID
@@ -54,8 +54,8 @@ class Items extends React.Component {
         // console.log(val.value.key);
         axios.get(`http://192.168.1.100:3000/api/providers/${val.value}/items`, {header: {auth:localStorage.getItem("MyKey")}})
         .then((answer) => {
-            this.setState({items:answer.data, dropDownName: val.label})
-        })
+            this.setState({items:answer.data, dropDownName: val.label});
+        });
     }
     render(){
         return (
@@ -63,14 +63,14 @@ class Items extends React.Component {
                 <h1>Items</h1>
                 <Dropdown   placeholder={this.state.dropDownName}
                             options={this.categoriesMap()}
-                            onChange={(value)=>this.choice(value)}
+                            onChange={(value) => this.choice(value)}
                             className="DropDown">
                 </Dropdown>
                 <div className="itemsList">
                     {this.itemsMap()}
                 </div>
             </div>
-        )
+        );
     }
 }
 

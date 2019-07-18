@@ -15,7 +15,7 @@ function Header() {
             <CustomButton name="About"/>
             <CustomButton name="❌LogOff "/>
         </div>
-    )
+    );
 }
 
 export default Header;

@@ -4,7 +4,7 @@ import Login from "./login.jsx";
 import Items from "./items.jsx";
 import ItemsId from "./itemsId.jsx";
 import Header  from "./header.jsx";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 export const WrongPage = () => <h1>Error 404</h1>
 
@@ -19,16 +19,11 @@ const Box = () => {
                                 </Switch>
                             </div>
     )
-}
-
+};
 class Wrapper extends React.Component {
     constructor() {
         super();
         this.categoriesView = this.categoriesView.bind(this);
-    }
-    //method which get categories.array from server after Login
-    categoriesView(data) {
-        console.log(data);
     }
     render() {
         return (
@@ -36,20 +31,11 @@ class Wrapper extends React.Component {
                 <Router>
                     <Switch>
                         <Route exact path = "/" component = {Login} />
-                        <Route component={Box}
-                            // <div>
-                            //     <Header />
-                            //     <Switch>
-                            //         <Route exact path = "/items" component = {() => <Items history={this.props.history} />}/>
-                            //         <Route exact path = "/items/id" component = {ItemsId}/>
-                            //         <Route component = {WrongPage}/>
-                            //     </Switch>
-                            // </div>
-                        />
+                        <Route component={Box}/>
                     </Switch>
                 </Router>
             </div>
-        )
+        );
     }
 }
 

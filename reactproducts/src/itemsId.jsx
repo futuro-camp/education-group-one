@@ -9,7 +9,7 @@ class ItemsId extends React.Component {
         this.state ={
             name: "Default Name",
             description: "Default description"
-        }
+        };
     }
     componentWillMount() {
         //getting item's ID by history-string
@@ -24,7 +24,7 @@ class ItemsId extends React.Component {
                 this.props.history.push("/error");
             }
         })
-        .catch((error) => this.props.history.push("/error"))
+        .catch((error) => this.props.history.push("/error"));
     }
     render() {
         return (
@@ -34,7 +34,7 @@ class ItemsId extends React.Component {
                 <img src="https://programmingwithmosh.com/wp-content/uploads/2017/06/mosh-300px.png"/>
                 <h3>{this.state.description}</h3>
             </div>
-        )
+        );
     }
 }
 
