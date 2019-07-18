@@ -35,7 +35,7 @@ class Items extends React.Component {
         axios.get("http://192.168.1.100:3000/api/providers", {header: {auth:localStorage.getItem("MyKey")}})
             .then((content) => {
                 this.setState({categories: content.data});
-            })
+            });
     }
     //dropDown making categories.names
     itemsMap() {
