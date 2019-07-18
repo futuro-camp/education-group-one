@@ -1,23 +1,29 @@
 import React, {Component} from "react";
+import axios from "axios";
 
 export default class Item extends Component {
 
     constructor(){
         super();
         this.state = {
-            name: "Vasya",
-            description: `fldsfo fdslfpsd flsp lfspd lfsdpf lsdpf dsplfpsd flsdp flsd
-            fdoskf odf kdosfk dsofkdso fkdso fkdsof kdso fksdof kodskfdoskf dsokf sdofk
-            fdk sofkdsofksdofksd okfdsofk dsofksdok fosdk fosd kfodsfk osdkf doskdsokds 
-            fkd osfkdso fkosdfksdo fkdsofkdso fksdo fksdof kdsofkds ofkds ofkdsofk odkf 
-            odskfod`
+            name: "",
+            description: ""
         };
-        this.clickCallback = this.clickCallback.bind(this);
     }
 
-    clickCallback(){
-        let index = this.props.history.location.pathname.split('/').pop();
-        console.log(index);
+    componentWillMount(){
+        let index = this.props.history.location.pathname.split("/").pop();
+        axios.get(`http://192.168.1.100:3000/api/items/${index}`, {
+            head: {auth: localStorage.getItem("auth")}
+        }).then((response) => {
+            this.setState({
+                name: response.data.name,
+                description: response.data.description
+            });
+        }).catch(() => {
+            localStorage.removeItem("auth");
+            this.props.history.push("/login");
+        });
     }
 
     render() {

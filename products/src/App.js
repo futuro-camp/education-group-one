@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
 import {Login, Wrapper} from "./components";
-import './App.css';
+import "./App.css";
 
-function App() {
-  return (
+export default () => (
       <BrowserRouter>
         <Switch>
           <Route path="/login" component={Login} />
@@ -12,7 +11,4 @@ function App() {
           <Redirect from="/" to="/login" />
         </Switch>
       </BrowserRouter>
-  );
-}
-
-export default App;
+);

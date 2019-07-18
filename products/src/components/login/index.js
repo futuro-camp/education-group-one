@@ -8,6 +8,12 @@ export default class LoginScreen extends Component {
         this.onLogin = this.onLogin.bind(this);
     }
 
+    componentWillMount(){
+        if(localStorage.getItem("auth")){
+            this.props.history.push("/items");
+        }
+    }
+
     onLogin(){
         let login = this.loginInput.input.value;
         let password = this.passwordInput.input.value;
@@ -16,8 +22,8 @@ export default class LoginScreen extends Component {
             password
         }).then((response) => {
             localStorage.setItem("auth", response.data.key);
-            this.props.history.push('/items');
-        })
+            this.props.history.push("/items");
+        });
     }
 
     render() {

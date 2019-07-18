@@ -33,6 +33,25 @@
     width: 100vw;
     height: 10vh;
     background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header button {
+    margin-right: 3vw;
+    outline: none;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    background-color: transparent;
+    border: none;
+    font-size: 2.5vw;
+    line-height: 2;
+}
+
+.header button:hover {
+    color: rgba(245, 245, 245, 0.8);
 }
 
 .footer {
