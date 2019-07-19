@@ -16,14 +16,7 @@ function rootReducer(state, action) {
     if (action.type === ADD_ITEM) {
         let {idCounter, name, price, discount, list } = state;
         return { ...state,
-                    list: [ ...list,
-                        {
-                            id: idCounter,
-                            name,
-                            price,
-                            discount
-                        }
-                    ],
+                    list: [ ...list,{ id: idCounter, name, price, discount } ],
                 idCounter:idCounter+1,
                 name:"",
                 price: "",

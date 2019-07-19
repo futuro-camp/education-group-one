@@ -36,14 +36,14 @@ function Card(props) {
                     <p>Add to cart</p>
                 </div>
             </button>
-            <button className="removeFromCart" onClick={function() {props.onClickRemove(props.id)}}>
+            <button className="removeFromCart" onClick={function() {props.onClickRemove(props.id)}}>;
                 <div className="buttonTitle">
                     <p>Remove</p>
                 </div>
             </button>
         </div>
     </div>
-    )
+    );
 }
 
 //Implemented states-data (which is a storage) to Component's props
