@@ -43,7 +43,7 @@ export default (state = initialState, action) => {
                 list: state.list.map(task => {
                     if(task.id === action.payload){
                         task.status ? doneStatusCount-- : doneStatusCount++;
-                        return { id: task.id, name: task.name, status: !task.status }
+                        return { id: task.id, name: task.name, status: !task.status };
                     } else {
                         return task;
                     }
@@ -53,9 +53,9 @@ export default (state = initialState, action) => {
         case CHANGE_TASK_TITLE:
             return ({
                 ...state,
-                list: state.list.map(task => {
+                list: state.list.map((task) => {
                     if(task.id === action.payload.id){
-                        return { id: task.id, name: action.payload.value, status: task.status }
+                        return { id: task.id, name: action.payload.value, status: task.status };
                     } else {
                         return task;
                     }
@@ -70,7 +70,7 @@ export default (state = initialState, action) => {
             let doneRemoveCount = state.doneCounter;
             return ({
                 ...state,
-                list: state.list.filter(task => {
+                list: state.list.filter((task) => {
                     if(task.id === action.payload){
                         doneRemoveCount = task.status ? doneRemoveCount - 1 : doneRemoveCount;
                         return false;
@@ -83,5 +83,5 @@ export default (state = initialState, action) => {
             });
         default: 
             return state;
-    }
+    };
 }

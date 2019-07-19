@@ -10,7 +10,7 @@ const Content = ({list}) => (
                     name={task.name} 
                     status={task.status} />))}
     </ul>
-)
+);
 
 export default connect(
     (state) => ({

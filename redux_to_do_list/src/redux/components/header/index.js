@@ -31,4 +31,4 @@ export default connect(
     (dispatch) => ({
         onChange: (e) => dispatch(changeInput(e))
     })
-)(Header)
+)(Header);
