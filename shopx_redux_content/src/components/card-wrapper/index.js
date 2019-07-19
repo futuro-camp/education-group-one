@@ -15,13 +15,13 @@ const CardWrapper = (props) => (
                     type="text" 
                     name={CHANGE_NAME} 
                     value={props.name}
-                    onChange={(e) => { props.onChange(e) }}
+                    onChange={(e) => { props.onChange(e); }}
                     placeholder="name" />
             <input  className="old-price-input" 
                     type="number" 
                     name={CHANGE_OLD_PRICE}
                     value={props.oldPrice}
-                    onChange={(e) => { props.onChange(e) }} 
+                    onChange={(e) => { props.onChange(e); }} 
                     placeholder="old price" />
             <input  className="cur-price-input" 
                     type="number" 

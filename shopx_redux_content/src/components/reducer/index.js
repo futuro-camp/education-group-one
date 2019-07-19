@@ -31,7 +31,7 @@ export default (state = initialValues, action) => {
                     name: "",
                     oldPrice: "",
                     curPrice: ""
-                }
+                };
             } else {
                 return state;
             }
@@ -39,22 +39,22 @@ export default (state = initialValues, action) => {
             return {
                 ...state,
                 name: action.payload
-            }
+            };
         case CHANGE_OLD_PRICE:
             return {
                 ...state,
                 oldPrice: action.payload
-            }
+            };
         case CHANGE_CURRENT_PRICE:
             return {
                 ...state,
                 curPrice: action.payload
-            }
+            };
         case REMOVE_FROM_LIST:
             return {
                 ...state,
                 list: state.list.filter((item) => item.id !== action.payload)
-            }
+            };
         default:
             return state;
     }
