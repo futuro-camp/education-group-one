@@ -33,12 +33,12 @@ function Card(props) {
             <button className="addToCart">
                 <div className="basketImg"></div>
                 <div className="buttonTitle">
-                    <p>Add to cart</p>
+                    <p>Add</p>
                 </div>
             </button>
-            <button className="removeFromCart" onClick={function() {props.onClickRemove(props.id)}}>;
+            <button className="removeFromCart" onClick={function() {props.onClickRemove(props.id);}}>
                 <div className="buttonTitle">
-                    <p>Remove</p>
+                    <p>Del</p>
                 </div>
             </button>
         </div>

@@ -11,7 +11,7 @@ function App(props) {
       <input type="text" value={props.name} onChange={(e) => props.onChangeName(e)}/>
       <input type="text" value={props.price} onChange={(e) => props.onChangePrice(e)}/>
       <input type="text" value={props.discount} onChange={(e) => props.onChangeDiscount(e)}/>
-      <button onClick={props.onClickAdd}>Add an Item</button>
+      <button className="addItem" onClick={props.onClickAdd}>Add an Item</button>
       <ul>
         {props.list.map((el) => <Card key={el.id} id={el.id} name={el.name} price={el.price} discount={el.discount} />)}
       </ul>
