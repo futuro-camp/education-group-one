@@ -1,0 +1,10 @@
+@import "./style/card.css";
+@import "./style/card-wrapper.css";
+
+* {
+    outline: none;
+}
+  
+button {
+    cursor: pointer;
+}

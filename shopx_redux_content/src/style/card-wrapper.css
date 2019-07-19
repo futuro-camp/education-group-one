@@ -1,0 +1,44 @@
+
+.card-wrapper {
+    width: 100%;
+  }
+  
+  .card-wrapper_menu {
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card-wrapper_menu input {
+    border: none;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: sans-serif;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .card-wrapper_menu input::placeholder {
+    text-transform: uppercase;
+  }
+  
+  .card-wrapper_menu .add-card-btn {
+    background-color: transparent;
+    border: 1px solid grey;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .card-wrapper_content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
