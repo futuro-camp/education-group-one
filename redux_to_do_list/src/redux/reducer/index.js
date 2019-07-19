@@ -12,7 +12,7 @@ const initialState = {
     totalCounter: 0,
     title: "Name",
     inputValue: ""
-}
+};
 
 export default (state = initialState, action) => {
     switch(action.type) {
