@@ -1,0 +1,8 @@
+@import "./style/header.css";
+@import "./style/content.css";
+@import "./style/footer.css";
+
+.app {
+    margin-top: 5.7vw;
+    height: 100%;
+}
