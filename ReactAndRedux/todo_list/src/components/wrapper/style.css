@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cardsList {
+    position: relative;
+    margin: 0 10% 48px;
+    top: 54px;
+    bottom: 30px;
+    z-index: 0;
+  }
+  
