@@ -11,7 +11,7 @@ const initialValues = {
     name: "",
     oldPrice: "",
     curPrice: ""
-}
+};
 
 export default (state = initialValues, action) => {
     switch(action.type){
