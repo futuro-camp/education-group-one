@@ -53,9 +53,9 @@ export default (state = initialValues, action) => {
         case REMOVE_FROM_LIST:
             return {
                 ...state,
-                list: state.list.filter(item => item.id !== action.payload)
+                list: state.list.filter((item) => item.id !== action.payload)
             }
         default:
             return state;
     }
-}
+};

@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import CardWrapper from "./components/card-wrapper";
 import { Provider } from "react-redux";
 import store from "./components/store";
-import './App.css';
+import "./App.css";
 
 function App() {
   return (

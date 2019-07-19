@@ -27,7 +27,7 @@ const CardWrapper = (props) => (
                     type="number" 
                     name={CHANGE_CURRENT_PRICE} 
                     value={props.curPrice}
-                    onChange={(e) => { props.onChange(e) }}
+                    onChange={(e) => { props.onChange(e); }}
                     placeholder="current price" />
             <button className="add-card-btn" 
                     onClick={props.onClick}
