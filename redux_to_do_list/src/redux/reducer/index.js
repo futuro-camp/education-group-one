@@ -40,7 +40,7 @@ export default (state = initialState, action) => {
             let doneStatusCount = state.doneCounter;
             return ({
                 ...state,
-                list: state.list.map(task => {
+                list: state.list.map((task) => {
                     if(task.id === action.payload){
                         task.status ? doneStatusCount-- : doneStatusCount++;
                         return { id: task.id, name: task.name, status: !task.status };
@@ -83,5 +83,5 @@ export default (state = initialState, action) => {
             });
         default: 
             return state;
-    };
-}
+    }
+};
