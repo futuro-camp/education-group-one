@@ -4,12 +4,12 @@
     flex-direction: column;
 }
 .App input {
-    width: 50%;
+    width: 15%;
     margin: 0 auto 1%;
     text-align: center;
 }
 .App button {
-    width: 51%;
+    width: 15%;
     margin: 0 auto;
 }
 ul {
