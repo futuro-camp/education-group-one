@@ -1,0 +1,30 @@
+.title {
+    margin: 50px auto 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 30%;
+    border: 1px solid lightslategrey;
+}
+.titleName:focus {
+    border-color: transparent;
+    outline-color:  orange;
+}
+.titleName {
+    background: transparent;
+    border: none;
+    height: 30px;
+    text-align: center;
+    width: 50%;
+}
+.title p  {
+    height: 28px;
+    margin: 0;
+    width: 50%;
+}
+.title p span {
+    color: lightseagreen;
+}
+.title p span:nth-child(2) {
+    color: red;
+}
