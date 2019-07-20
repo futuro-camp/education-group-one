@@ -1,6 +1,7 @@
 import React from "react";
 import "./content.css";
 import {connect} from "react-redux";
+import { checkStatus, removeTask } from "../actions";
 
 function Card(props) {
     let {text,status,id,checker,remover} = props;
@@ -16,27 +17,28 @@ function Card(props) {
         </li>
     );
 }
-
 const Schedule = ({list, checker,remover}) => {
     return (
         <ul>
-            {[].map((elem) => <Card   status={elem.status}
-                                        text={elem.text}
-                                        id={elem.id}
-                                        key={elem.id}
-                                        checker={checker}
-                                        remover={remover}/>)}
+            {list.map((elem) => <Card
+                status={elem.status}
+                text={elem.name}
+                id={elem.id}
+                key={elem.id}
+                checker={checker}
+                remover={remover}/>
+            )}
         </ul>
     );
-};
-
+}
 //Implemented states-data (which is a storage) to Component's props
 const mapStateToProps = (state) => ({
-    title: state.title, completed:state.completed, total:state.total
-});
+    list:state.list
+})
   //Implemented states-functions (which is action ) to Component's props
 const dispatchToProps = (dispatch) => ({
-
+    checker: (id) => dispatch(checkStatus(id)),
+    remover: (id) => dispatch(removeTask(id))
 });
   //Connecting these to the Card-Component and export this Component
-export default connect (mapStateToProps, null)(Schedule);
+export default connect (mapStateToProps, dispatchToProps)(Schedule);

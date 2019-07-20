@@ -17,10 +17,11 @@ ul::-webkit-scrollbar {
     width: 0;
 }
 li {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 5% 15px 5%;
+    /* margin-top: 15px;
+    margin-bottom: 15px; */
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: flex-start;
 }
 li input {
@@ -35,6 +36,8 @@ li button {
 }
 .item {
     width: 65%;
+    border-bottom: 2px solid seagreen;
+
 }
 .item:focus{
     border-color: transparent;

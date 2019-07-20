@@ -1,33 +1,57 @@
 
-import { CHANGE_TITLE, CHANGE_INPUT_VALUE, ADD_TASK, CHECK_BOX} from "../actions";
+import { CHANGE_TITLE, CHANGE_INPUT_VALUE, ADD_TASK, CHECK_BOX, REMOVE_TASK} from "../actions";
 //Creating "Initial Storage"
-const initialState = { list:[ { id:0, name:"", status:false } ],
-                        idCounter:0,
-                        title:"Default",
-                        completed:0,
-                        total:0,
-                        inputValue:"" };
-
+const initialState = {
+    list:[],
+    title:"",
+    completed:0,
+    total:0,
+    inputValue:""
+};
+//Main reducer with instructions for each action
 function rootReducer(state, action) {
     if(!state) {
         return initialState;
     }
+
     if (action.type === CHANGE_TITLE) {
-        let { list, idCounter, title, completed, total, inputValue } = state;
-        return { ...state, title, completed, total};
+        const { newTitle }  = action.payload;
+        return { ...state, title:newTitle};
     }
-    else if (action.type === CHANGE_INPUT_VALUE) {
-        let { list, idCounter, title, completed, total, inputValue } = state;
-        return { ...state};
+
+    if  (action.type === CHANGE_INPUT_VALUE) {
+        const newInputValue  = action.payload;
+        return { ...state, inputValue:newInputValue};
     }
-    else if (action.type === ADD_TASK) {
-        let { list, idCounter, title, completed, total, inputValue } = state;
-        return { ...state};
+
+    if (action.type === ADD_TASK) {
+        const { list ,inputValue } = state;
+        const updatedList = [...list, {id:list.length, name:inputValue, status:false}]
+        return {...state, list:updatedList, total:updatedList.length}
     }
-    else if (action.type === CHECK_BOX) {
-        let { list, idCounter, title, completed, total, inputValue } = state;
-        return { ...state};
+
+    if (action.type === CHECK_BOX) {
+        const { list } = state;
+        const id = action.payload;
+        const newList = list.map((el) => el.id===id ? {...el, status:!el.status}:el)
+        return { ...state,
+            list:newList,
+            completed: newList.filter(it=>it.status).length
+        };
     }
+
+    if (action.type === REMOVE_TASK) {
+        const { list } = state;
+        const id = action.payload;
+        const newList = list.filter((el) => el.id!==id)
+        return {
+            ...state,
+            list:newList,
+            completed: newList.filter(it=>it.status).length,
+            total: newList.length
+        };
+    }
+    return state;
 }
 
 export default rootReducer;

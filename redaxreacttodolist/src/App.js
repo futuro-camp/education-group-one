@@ -9,9 +9,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-
       <Schedule />
-
       <TypingNewCase />
     </div>
   )
