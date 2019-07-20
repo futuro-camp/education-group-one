@@ -30,11 +30,11 @@ const Schedule = ({list, checker,remover}) => {
             )}
         </ul>
     );
-}
+};
 //Implemented states-data (which is a storage) to Component's props
 const mapStateToProps = (state) => ({
     list:state.list
-})
+});
   //Implemented states-functions (which is action ) to Component's props
 const dispatchToProps = (dispatch) => ({
     checker: (id) => dispatch(checkStatus(id)),

@@ -5,12 +5,12 @@ import { changeInputValue, addNewTask } from "../actions";
 
 function TypingNewCase(props) {
     const {inputValue, submit, changeInputValue} = props;
-    const handlePress = (e)=>{
+    const handlePress = (e) => {
       if(e.key==="Enter"){
         submit();
         changeInputValue("");
       }
-    }
+    };
     return(
         <input  id="add"
                 type="text"

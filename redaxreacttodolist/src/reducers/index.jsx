@@ -26,28 +26,28 @@ function rootReducer(state, action) {
 
     if (action.type === ADD_TASK) {
         const { list ,inputValue } = state;
-        const updatedList = [...list, {id:list.length, name:inputValue, status:false}]
-        return {...state, list:updatedList, total:updatedList.length}
+        const updatedList = [...list, {id:list.length, name:inputValue, status:false}];
+        return {...state, list:updatedList, total:updatedList.length};
     }
 
     if (action.type === CHECK_BOX) {
         const { list } = state;
         const id = action.payload;
-        const newList = list.map((el) => el.id===id ? {...el, status:!el.status}:el)
+        const newList = list.map((el) => el.id===id ? {...el, status:!el.status}:el);
         return { ...state,
             list:newList,
-            completed: newList.filter(it=>it.status).length
+            completed: newList.filter((it) => it.status).length
         };
     }
 
     if (action.type === REMOVE_TASK) {
         const { list } = state;
         const id = action.payload;
-        const newList = list.filter((el) => el.id!==id)
+        const newList = list.filter((el) => el.id!==id);
         return {
             ...state,
             list:newList,
-            completed: newList.filter(it=>it.status).length,
+            completed: newList.filter((it) => it.status).length,
             total: newList.length
         };
     }

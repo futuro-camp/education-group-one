@@ -12,7 +12,7 @@ const App = () => {
       <Schedule />
       <TypingNewCase />
     </div>
-  )
-}
+  );
+};
 
 export default App;
