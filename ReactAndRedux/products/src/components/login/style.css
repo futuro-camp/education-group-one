@@ -1,0 +1,29 @@
+.loginWindow {
+    background-color: #f6f6ee;
+    width: 400px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    margin: 10% auto;
+}
+
+.loginButton {
+    border-radius: 6px;
+    width: 80px;
+    height: 38px;
+    font-size: 18px;
+    background-color: #8a8a5c;
+    border: none;
+    color: #c2c2a3;
+}
+
+.loginButton:hover {
+    color: #000;
+}
+
+.loginButton:focus {
+    outline: none;
+}

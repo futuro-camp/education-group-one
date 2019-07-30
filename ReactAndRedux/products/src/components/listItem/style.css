@@ -1,0 +1,17 @@
+.itemButton {
+    width: 400px;
+    height: 200px;
+    background-color: #f6f6ee;
+    border:none;
+    border-radius: 6px;
+    font-size: 24px;
+    margin: 0 30px 20px;
+}
+
+.itemButton:hover {
+    background-color: #8a8a5c;
+}
+
+.itemButton:focus{
+    outline: none;
+}
