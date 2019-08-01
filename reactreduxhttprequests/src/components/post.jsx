@@ -6,10 +6,8 @@ class PostList extends Component {
     state ={
         posts : []
     }
-
     componentDidMount() {
     }
-
     render() {
         const { posts } = this.props;
         const postList = posts.map(post => {

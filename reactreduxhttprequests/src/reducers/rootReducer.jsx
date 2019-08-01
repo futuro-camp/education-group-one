@@ -1,14 +1,13 @@
+import { combineReducers } from "redux";
+import userReducer from "./userReducer";
+import categoryReducer from "./categoryReducer";
+import itemsReducer from "./itemsReducer";
+import productReducer from "./productReducer";
 
-const initState = {
-    posts: [
-        {id:1, title:"first post"},
-        {id:2, title:"second post"},
-        {id:3, title:"third post"}
-    ]
-}
+export default  combineReducers ({
+    userReducer,
+    categoryReducer,
+    itemsReducer,
+    productReducer
+});
 
-const rootReducer = (state = initState, action) => {
-    return state;
-}
-
-export default rootReducer;

@@ -1,23 +1,36 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter, Router, Route, Link, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import "./App.css";
-import PostList  from "./components/post";
+import Header  from "./components/header";
+import Login from "./components/login.jsx";
+import Items from "./components/items.jsx";
+// import ItemsId from "./components/itemsId.jsx";
 
+export const WrongPage = () => <h1>Error 404</h1>;
 class App extends Component{
   render () {
     return (
       <BrowserRouter>
         <div className="App">
-          <h1>Start Working !</h1>
-          <Route exact path="/" component={PostList} />
-          <Route exact path="/1" />
-          <Route exact path="/2" />
-          <Route exact path="/3" />
+          <h1>React-Redux with using middlewares for making HTTP requests</h1>
+          <Header />
+          <Switch>
+            <Route exact path="/" component = {Login} />
+            <Route exact path = "/api/providers" component = {Items}/>
+            <Route exact path = "/items/" />
+            <Route component = {WrongPage}/>
+          </Switch>
         </div>
       </BrowserRouter>
     );
   }
 }
 
-export default connect ()(App);
+function mapStateToProps (state) {
+  return {
+
+  }
+}
+
+export default connect (mapStateToProps, null)(App);
