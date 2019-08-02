@@ -1,5 +1,5 @@
 import axios from "axios";
-import {server_ip} from "../constants";
+import { serverIp } from "../constants";
 import getRequest from "./get";
 import failRequest from "./fail";
 
@@ -18,12 +18,12 @@ export const clearCategories = () => ({
 export default (key) => {
     return (dispatch) => {
         dispatch(getRequest());
-        axios.get(`${server_ip}/api/providers`, {
+        axios.get(`${serverIp}/api/providers`, {
             head: key
         }).then((response) => {
             dispatch(getCategoriesSuccess(response.data));
         }).catch((error) => {
             dispatch(failRequest(error));
         });
-    }
+    };
 };

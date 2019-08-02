@@ -1,5 +1,5 @@
 import axios from "axios";
-import {server_ip, history} from "../constants";
+import {serverIp, history} from "../constants";
 import { clearCategories } from "./categories";
 import { clearItems } from "./items";
 
@@ -48,7 +48,7 @@ export const loginErrorClear = () => ({
 
 export default (login, password) => (dispatch) => {
         dispatch(loginRequest());
-        axios.post(`${server_ip}/login`, {
+        axios.post(`${serverIp}/login`, {
             login,
             password
         }).then((response) => {

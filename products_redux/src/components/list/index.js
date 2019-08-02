@@ -33,7 +33,7 @@ const List = ({categories, items, getCategories, getItems}) => {
             )}
         </div>
     );
-}
+};
 
 export default connect(
     (state) => ({

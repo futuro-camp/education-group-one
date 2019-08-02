@@ -24,7 +24,7 @@ const LoginPage = ({email, password, error, fetch, changeEmailInput, changePassw
             <div className="loader"></div>
         </button> 
             :
-        <button onClick={() => { login(email, password)}}>
+        <button onClick={() => { login(email, password); }}>
             Log in
         </button>
         }

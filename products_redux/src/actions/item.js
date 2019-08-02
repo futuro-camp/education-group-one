@@ -1,5 +1,5 @@
 import axios from "axios";
-import { server_ip } from "../constants";
+import { serverIp } from "../constants";
 import getRequest from "./get";
 import failRequest from "./fail";
 
@@ -14,12 +14,12 @@ const getItemSuccess = (item) => ({
 export default (id, key) => {
     return (dispatch) => {
         dispatch(getRequest());
-        axios.get(`${server_ip}/api/items/${id}`, {
+        axios.get(`${serverIp}/api/items/${id}`, {
             head: key
         }).then((response) => {
             dispatch(getItemSuccess(response.data));
         }).catch((error) => {
             dispatch(failRequest(error));
         });
-    }
+    };
 }; 
