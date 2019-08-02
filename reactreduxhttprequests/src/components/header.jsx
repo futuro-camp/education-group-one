@@ -5,20 +5,18 @@ import {connect} from "react-redux";
 import { exit } from "../actions/loginActions";
 
 function goHome(auth) {
-    console.log("going back homepage");
     if(auth!=="not keygen from server") {
         browserHistory.push("/api/providers");
     }
-    console.log("you already on the homepage");
 }
 const CustomButton = (props) => {
     return (
-        <button onClick={() => {goHome(props.auth)}}>{props.name}</button>
+        <button onClick={() => {goHome(props.auth);}}>{props.name}</button>
     );
 }
 function CustomButtonQuit(props) {
     return (
-        <button onClick={() => {props.function()}}>{props.name}</button>
+        <button onClick={() => {props.function();}}>{props.name}</button>
     );
 }
 const Header = (props) => {
@@ -34,6 +32,6 @@ const Header = (props) => {
     );
 }
 
-const mapStateToProps = (state) => { return { userState: state.userReducer } }
-const dispatchToProps = function(dispatch) { return ( { exit: () => dispatch( exit() ) } ) };
+const mapStateToProps = (state) => { return { userState: state.userReducer } };
+const dispatchToProps = function(dispatch) { return ( { exit: () => dispatch( exit() ) } ); };
 export default connect (mapStateToProps, dispatchToProps)(Header);

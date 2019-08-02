@@ -8,7 +8,7 @@ import { browserHistory } from "../App";
 
 const OneItem = (props) => {
     return (
-        <button className="item" onClick={() => { browserHistory.push(`/items/${props.id}`) } }>
+        <button className="item" onClick={() => { browserHistory.push(`/items/${props.id}`); } }>
             {props.title}
         </button>
     )
@@ -16,7 +16,7 @@ const OneItem = (props) => {
 const Items = ({dropdownList, getItems, categories, items}) => {
     useEffect( () => {
         dropdownList();
-    }, [])
+    }, []);
 
     return (
         <div>
@@ -25,25 +25,25 @@ const Items = ({dropdownList, getItems, categories, items}) => {
                 placeholder="Select category"
                 options={
                     categories.map( (el) => {
-                        return { value:el.id, label:el.name }
+                        return { value:el.id, label:el.name };
                     })
                 }
-                onChange={ (value) => { getItems(value) } }
+                onChange={ (value) => { getItems(value); } }
                 className="DropDown"
             />
             <div className="itemsList">
                 <h1>Catalog:</h1>
                 {items.map( (obj) => {
-                    return <OneItem key={obj.id} id={obj.id} title={obj.name} />
+                    return <OneItem key={obj.id} id={obj.id} title={obj.name} /> ;
                 }) }
             </div>
         </div>
-    )
-}
+    );
+};
 
-const mapStateToProps = ({categoryReducer}) => { return { categories: categoryReducer.categories, items: categoryReducer.items } }
+const mapStateToProps = ({categoryReducer}) => { return { categories: categoryReducer.categories, items: categoryReducer.items }; }
 const dispatchToProps = (dispatch) => { return ( {
-    dropdownList: () => { dispatch( dropdownList() ) },
-    getItems: (value) => { dispatch( getItems(value) ) }
-} ) };
+    dropdownList: () => { dispatch( dropdownList() ); },
+    getItems: (value) => { dispatch( getItems(value) ); }
+} ); };
 export default connect (mapStateToProps, dispatchToProps)(Items);

@@ -16,11 +16,11 @@ const itemsReducer = (state = initState, action) => {
         };
 
         case PRODUCT_FAILURE:
-            console.log(action.payload);
+            return state;
 
         default:
             return state;
     }
-}
+};
 
 export default itemsReducer;

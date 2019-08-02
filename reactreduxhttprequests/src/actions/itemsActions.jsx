@@ -4,6 +4,12 @@ export const CATALOG_LIST = "CATALOG_LIST";
 export const CATALOG_SUCCESS = "CATALOG_SUCCESS";
 export const CATALOG_FAILURE = "CATALOG_FAILURE";
 
+export function catalogSuccess(payload) {
+    return { type: CATALOG_SUCCESS, payload };
+}
+export function catalogFailure(payload) {
+    return { type: CATALOG_FAILURE, payload };
+}
 //Parameters of action's "work"
 export function catalogList (payload) {
     return function (dispatch) {
@@ -13,11 +19,5 @@ export function catalogList (payload) {
         )
         .then(dispatch(catalogSuccess()))
         .catch(dispatch(catalogFailure()))
-    }
-}
-export function catalogSuccess(payload) {
-    return { type: CATALOG_SUCCESS, payload };
-}
-export function catalogFailure(payload) {
-    return { type: CATALOG_FAILURE, payload };
+    };
 }

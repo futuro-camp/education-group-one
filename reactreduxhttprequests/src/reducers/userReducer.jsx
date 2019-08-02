@@ -19,6 +19,7 @@ const userReducer = (state = initState, action) => {
 
         case LOGIN_FAILURE:
             console.log("login false:" + action.payload);
+            return state;
 
         case EMAIL_INPUT:
             return {...state, email: action.payload};
@@ -32,6 +33,6 @@ const userReducer = (state = initState, action) => {
         default:
             return state;
     }
-}
+};
 
 export default userReducer;

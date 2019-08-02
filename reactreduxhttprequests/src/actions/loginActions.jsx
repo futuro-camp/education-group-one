@@ -22,16 +22,16 @@ export function passwordInput(payload) {
 }
 export function exit() {
     browserHistory.push("/");
-    return{type: EXIT_FROM_ACCOUNT}
+    return{type: EXIT_FROM_ACCOUNT};
 }
 export function login(email, password) {
     return function(dispatch) {
-        console.log("request to server");
-        axios.post("http://192.168.1.100:4000/login", { login: email, password: password })
+        axios.post("http://192.168.1.100:4000/login",
+        { login: email, password: password })
         .then((answer) => {
-            dispatch(loginSuccess(answer.data.key))})
+            dispatch(loginSuccess(answer.data.key));})
         .catch((error) => {
-            dispatch(loginFailure(error))
-        })
-    }
+            dispatch(loginFailure(error));
+        });
+    };
 }

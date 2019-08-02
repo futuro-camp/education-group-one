@@ -19,6 +19,6 @@ const categoryReducer = (state = initState, action) => {
         default:
             return state;
     }
-}
+};
 
 export default categoryReducer;

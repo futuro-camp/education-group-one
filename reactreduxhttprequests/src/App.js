@@ -6,7 +6,7 @@ import Header  from "./components/header";
 import Login from "./components/login.jsx";
 import Items from "./components/items.jsx";
 import ItemsId from "./components/itemsId.jsx";
-import { createBrowserHistory } from 'history';
+import { createBrowserHistory } from "history";
 export const browserHistory = createBrowserHistory();
 
 export const WrongPage = () => <h1>Error 404</h1>;
@@ -34,7 +34,7 @@ class App extends Component{
 function mapStateToProps (state) {
   return {
     state
-  }
+  };
 }
 
 export default connect (mapStateToProps, null)(App);

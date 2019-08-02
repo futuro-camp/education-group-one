@@ -1,6 +1,5 @@
 import React, { useEffect} from "react";
 import { connect } from "react-redux";
-import "../styles/itemsId.css";
 import { choosenProduct } from "../actions/productActions";
 import { browserHistory } from "../App";
 
@@ -8,7 +7,7 @@ const ItemsId = (props) => {
     useEffect( () => {
         let id = browserHistory.location.pathname.split("/").pop();
         props.choosenProduct(id);
-    }, [])
+    }, []);
 
     return (
         <div className="itemsId">
@@ -18,10 +17,10 @@ const ItemsId = (props) => {
             <h3> {props.body} </h3>
         </div>
     );
-}
+};
 
-const mapStateToProps = ({productReducer}) => { return { title: productReducer.title, body: productReducer.body } }
+const mapStateToProps = ({productReducer}) => { return { title: productReducer.title, body: productReducer.body }; }
 const dispatchToProps = (dispatch) => { return ( {
-    choosenProduct: (id) => { dispatch( choosenProduct(id) ) }
-} ) };
+    choosenProduct: (id) => { dispatch( choosenProduct(id) ); }
+} ); };
 export default connect (mapStateToProps, dispatchToProps)(ItemsId);

@@ -5,20 +5,6 @@ export const LIST_SUCCESS = "LIST_SUCCESS";
 export const LIST_FAILURE = "LIST_FAILURE";
 export const ITEMS_SUCCESS = "ITEMS_SUCCESS";
 
-//Parameters of action's "work"
-export function dropdownList () {
-    return function (dispatch) {
-        axios.get(
-            "http://192.168.1.100:4000/api/providers",
-            {header: {auth:localStorage.getItem("MyKey") } }
-        )
-        .then( (answer) => {
-            dispatch(listSuccess(answer.data))
-        })
-        .catch(dispatch(listFailure()))
-    }
-}
-
 export function listSuccess(payload) {
     return { type: LIST_SUCCESS, payload };
 }
@@ -29,6 +15,20 @@ export function itemsSuccess(payload) {
     return { type: ITEMS_SUCCESS, payload };
 }
 
+//Parameters of action's "work"
+export function dropdownList () {
+    return function (dispatch) {
+        axios.get(
+            "http://192.168.1.100:4000/api/providers",
+            {header: {auth:localStorage.getItem("MyKey") } }
+        )
+        .then( (answer) => {
+            dispatch(listSuccess(answer.data));
+        })
+        .catch(dispatch(listFailure()));
+    }
+}
+
 export function getItems(value) {
     return function(dispatch) {
         axios.get(`http://192.168.1.100:4000/api/providers/${value.value}/items`)
@@ -36,8 +36,7 @@ export function getItems(value) {
             dispatch(itemsSuccess(response.data));
         })
         .catch( (err) => {
-            console.log(err)
-        })
+            console.log(err);
+        });
     }
 }
-
