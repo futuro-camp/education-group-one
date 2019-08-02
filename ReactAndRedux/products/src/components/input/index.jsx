@@ -1,45 +1,24 @@
-import React, {Component} from "react";
+import React from "react";
+import { connect } from "react-redux";
+import { inputUpdate } from "../redux/actions/account";
+import actions from "../redux/actions";
 import "./style.css";
 
-export default class Input extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { valid: true };
-        this.valid = false;
+const input = (props) => {
+    if(props.isText) {
+        return <input type="text" placeholder={props.placeholder} onChange={props.onChange} name={actions.LOGIN_INPUT_UPDATE} value={props.login}/>;
     }
-    
-    validateEmail = (event) => {
-        if(event.target.value.length > 0 && event.target.value.match(/.+@.+\..+/)) {
-            this.setState({ valid: true });
-            this.valid = true;
-        }
-        else {
-            this.setState({ valid: false });
-            this.valid = false;
-        }
-    }
-
-    validatePassword = (event) => {
-        if(event.target.value.length > 3) {
-            this.setState({ valid: true });
-            this.valid = true;
-        }
-        else {
-            this.setState({ valid: false });
-            this.valid = false;
-        }
-    }
-
-    render() {
-        if(this.props.email) {
-            return <input className={ this.state.valid ? "" : "invalid"} type="text" placeholder={this.props.placeholder} onChange={this.validateEmail} ref={ (input) => {this.instance = input;} }/>;
-        }
-        else if(this.props.password) {
-            return <input className={ this.state.valid ? "" : "invalid"} type="password" placeholder={this.props.placeholder} onChange={this.validatePassword} ref={ (input) => {this.instance = input;} }/>;
-        }
-        else if(this.props.text) {
-            this.valid = true;
-            return <input type="text" placeholder={this.props.placeholder} ref={ (input) => {this.instance = input;} }/>;
-        }
+    else if(props.isPassword) {
+        return <input type="password" placeholder={props.placeholder} onChange={props.onChange} name={actions.PASSWORD_INPUT_UPDATE} value={props.password}/>;
     }
 }
+
+export default connect(
+    (store) => ({
+        login: store.login,
+        password: store.password
+    }),
+    (dispatcher) => ({
+        onChange: (event) => dispatcher(inputUpdate(event))
+    })
+)(input);

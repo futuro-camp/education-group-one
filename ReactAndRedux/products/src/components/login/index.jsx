@@ -1,31 +1,27 @@
-import React, {Component} from "react";
+import React from "react";
 import Input from "../input";
-import axios from "axios";
+import { Redirect } from "react-router";
+import { connect } from "react-redux";
+import login from "../redux/actions/account";
 import "./style.css";
 
-export default class Login extends Component {
-
-    login = () => {
-        if(this.login.valid && this.password.valid) {
-            axios.post("http://192.168.1.100:3000/login", {
-                login: this.login.instance.value,
-                password: this.password.instance.value
-            }).then((answer) => {
-                if(answer.data.success) {
-                    sessionStorage.setItem("key", answer.data.key);
-                    this.props.history.push("/items");
-                }
-            });
-        }
-    }
-
-    render() {
-        return (
-            <div className="loginWindow">
-                <Input ref={(input) => { this.login = input; }} placeholder="Email" text/>
-                <Input ref={(input) => { this.password = input; }} placeholder="Password" password/>
-                <button className="loginButton" onClick={ this.login }>Login</button>
-            </div>
-        );
-    }
+const loginWindow = (props) => {
+    return props.isLogged ? <Redirect to="/items"/> : (
+        <div className="loginWindow">
+            <Input placeholder="Email" isText/>
+            <Input placeholder="Password" isPassword/>
+            <button className="loginButton" onClick={ props.onClick }>{ props.isLoading ? "Loading..." : props.error ? `${props.error}` : "Login" }</button>
+        </div>
+    );
 }
+
+export default connect(
+    (store) => ({
+        isLogged: store.accountReducer.userLogged,
+        isLoading: store.accountReducer.accountLoading,
+        error: store.accountReducer.error
+    }),
+    (dispatcher) => ({
+        onClick: () => dispatcher(login())
+    })
+)(loginWindow);

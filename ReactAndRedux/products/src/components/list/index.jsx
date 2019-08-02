@@ -1,27 +1,17 @@
 import React, { Component } from "react";
 import ListItem from "../listItem";
 import Dropdown from "react-dropdown";
-import axios from "axios";
 import "react-dropdown/style.css";
 import "./style.css";
+import { connect } from "react-redux";
+import { itemListRequest } from "../redux/actions/items";
+import categoryRequest from "../redux/actions/category";
 
-export default class List extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { filterOptions: [], itemsList: [] };
-    }
+class List extends Component {
 
     componentDidMount() {
-        axios.get("http://192.168.1.100:3000/api/providers", { headers: { auth: sessionStorage.getItem("key") } }).then((answer) => {    
-            this.setState({ filterOptions: answer.data.map((element) => ({ value: element.id, label: element.name })) });
-        });
+        this.props.onMount();
     }
-
-    onSelect = (selected) => {
-        axios.get(`http://192.168.1.100:3000/api/providers/${selected.value}/items`, { headers: { auth: sessionStorage.getItem("key") } }).then((answer) => {    
-            this.setState({ itemsList: answer.data });
-        });
-    } 
 
     chooseItem = (id) => {
         this.props.history.push(`/items/${id}`);
@@ -30,11 +20,25 @@ export default class List extends Component {
     render() {
         return (
             <div className="itemListDiv">
-                <Dropdown className="filterDropdown" controlClassName="filterDropdownControl" menuClassName="filterDropdownMenu"  options={this.state.filterOptions} onChange={this.onSelect} defaultOption={this.state.filterOptions[0]} placeholder="Filter"/>
+                <Dropdown className="filterDropdown" controlClassName="filterDropdownControl" menuClassName="filterDropdownMenu"  options={this.props.filterOptions} onChange={this.props.onSelect} placeholder={this.props.isCathegoryLoading ? "Loading..." : "Filter" }/>
                 <div className="items">
-                    {this.state.itemsList.map((element) => <ListItem key={element.id} name={element.name} description={element.description} chooseMethod={() => {this.chooseItem(element.id);}}/> )}
+                    {this.props.isListLoading ? <div>Loading...</div> : this.props.error ? <div>{`${this.props.error}`}</div> : this.props.itemsList.map((element) => <ListItem key={element.id} name={element.name} description={element.description} chooseMethod={() => {this.chooseItem(element.id);}}/> )}
                 </div>
             </div>
         );
     }
 }
+
+export default connect(
+    (store) => ({
+        filterOptions: store.categoryReducer.categoryList,
+        isCathegoryLoading: store.categoryReducer.categoryLoading,
+        itemsList: store.itemsReducer.itemList,
+        isListLoading: store.itemsReducer.listLoading,
+        error: store.accountReducer.error
+    }),
+    (dispatcher) => ({
+        onMount: () => dispatcher(categoryRequest()),
+        onSelect: (selected) => dispatcher(itemListRequest(selected.value))
+    })
+)(List);
