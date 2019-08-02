@@ -13,7 +13,7 @@ const CustomButton = (props) => {
     return (
         <button onClick={() => {goHome(props.auth);}}>{props.name}</button>
     );
-}
+};
 function CustomButtonQuit(props) {
     return (
         <button onClick={() => {props.function();}}>{props.name}</button>

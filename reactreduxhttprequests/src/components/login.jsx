@@ -16,7 +16,7 @@ const Login = (props) => {
         <button className="submit" onClick={() => {login(email, password);}}>Sign In 🪐</button>
     </div>
     );
-}
+};
 const mapStateToProps = (state) => {
     return {
         userState: state.userReducer

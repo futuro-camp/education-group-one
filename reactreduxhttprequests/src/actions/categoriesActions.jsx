@@ -26,7 +26,7 @@ export function dropdownList () {
             dispatch(listSuccess(answer.data));
         })
         .catch(dispatch(listFailure()));
-    }
+    };
 }
 
 export function getItems(value) {
