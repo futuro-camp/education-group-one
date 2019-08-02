@@ -1,0 +1,100 @@
+.login-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.login-screen input {
+    outline: none;
+    margin: 1vw;
+    box-sizing: border-box;
+    padding: 0.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6vw;
+    line-height: 1.5;
+    border-radius: 1vw;
+    background-color: transparent;
+    border: 0.1vw solid transparent;
+}
+
+.login-screen input:focus {
+    background-color: white;
+}
+
+.login-screen .invalid:focus {
+    background-color: white;
+
+}
+
+.login-screen input:hover, 
+.login-screen input:focus {
+    border-color: rgba(89, 209, 105, 0.4);
+}
+
+.login-screen .invalid:hover, 
+.login-screen .invalid:focus {
+    border-color: rgba(223, 58, 58, 0.4);
+}
+
+.login-screen button {
+    margin: 1vw;
+    outline: none;
+    border: none;
+    padding: 0.5vw;
+    width: 20vw;
+    height: 4vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6vw;
+    color: grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+.login-screen button:hover {
+    color: white;
+}
+
+.canceled {
+    opacity: 0;
+    transform: translateY(-70px);
+}
+
+.loader {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    width: 1vw;
+    height: 1vw;
+    background-color: transparent;
+    border-radius: 40%;
+    border: 1vw solid rgba(128, 128, 128, 0.4);
+    animation: round 2s linear infinite;
+}
+
+@keyframes round {
+    0% {
+        border-color: rgba(128, 128, 128, 0.4);
+        border-top-color: rgba(128, 128, 128, 0.8);
+    }
+    25% {
+        border-color: rgba(128, 128, 128, 0.4);
+        border-right-color: rgba(128, 128, 128, 0.8);
+    }
+    50% {
+        border-color: rgba(128, 128, 128, 0.4);
+        border-bottom-color: rgba(128, 128, 128, 0.8);
+    }
+    75% {
+        border-color: rgba(128, 128, 128, 0.4);
+        border-left-color: rgba(128, 128, 128, 0.8);
+    }
+    100% {
+        border-color: rgba(128, 128, 128, 0.4);
+        border-top-color: rgba(128, 128, 128, 0.8);
+    }
+}

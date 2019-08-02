@@ -1,0 +1,26 @@
+.item {
+    width: 100%;
+}
+
+.item img {
+    float: left;
+    margin-right: 1vw;
+    width: 40%;
+    min-height: 20vh;
+    background-color: black;
+}
+
+.item .name {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.item .description {
+    margin-top: 0.8vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1;
+    font-weight: 200;
+}
