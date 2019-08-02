@@ -1,23 +1,38 @@
 import React from "react";
 import "../styles/header.css";
-import { BrowserRouter, Router, Route, Link, Switch } from "react-router-dom";
+import { browserHistory } from "../App";
+import {connect} from "react-redux";
+import { exit } from "../actions/loginActions";
 
-function CustomButton(props) {
+function goHome(auth) {
+    console.log("going back homepage");
+    if(auth!=="not keygen from server") {
+        browserHistory.push("/api/providers");
+    }
+    console.log("you already on the homepage");
+}
+const CustomButton = (props) => {
     return (
-        <Link to={"/"}>
-            <button>{props.name}</button>
-        </Link>
+        <button onClick={() => {goHome(props.auth)}}>{props.name}</button>
     );
 }
-function Header() {
+function CustomButtonQuit(props) {
+    return (
+        <button onClick={() => {props.function()}}>{props.name}</button>
+    );
+}
+const Header = (props) => {
+    const { auth } = props.userState;
+    console.log("you have " + auth);
     return (
         <div className="navigation">
-            <CustomButton name="Home"/>
-            <CustomButton name="Contacts"/>
-            <CustomButton name="About"/>
-            <CustomButton name="❌LogOff "/>
+            <CustomButton auth={auth} name="Home"/>
+            <CustomButton auth={auth} name="Contacts"/>
+            <CustomButton auth={auth} name="About"/>
+            <CustomButtonQuit function={props.exit} name="LogOff ❌"/>
         </div>
     );
 }
-
-export default Header;
+const mapStateToProps = (state) => { return { userState: state.userReducer } }
+const dispatchToProps = function(dispatch) { return ( { exit: () => dispatch( exit() ) } ) };
+export default connect (mapStateToProps, dispatchToProps)(Header);

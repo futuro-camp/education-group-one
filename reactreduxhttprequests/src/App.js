@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import { BrowserRouter, Router, Route, Link, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 import "./App.css";
 import Header  from "./components/header";
 import Login from "./components/login.jsx";
 import Items from "./components/items.jsx";
 // import ItemsId from "./components/itemsId.jsx";
+import { createBrowserHistory } from 'history';
+export const browserHistory = createBrowserHistory();
 
 export const WrongPage = () => <h1>Error 404</h1>;
 class App extends Component{
   render () {
     return (
-      <BrowserRouter>
+      <Router history={browserHistory} >
         <div className="App">
-          <h1>React-Redux with using middlewares for making HTTP requests</h1>
+          <h2>React-Redux</h2>
+          <h4>using middlewares for making HTTP requests</h4>
+          <p>login: test | password: admin</p>
           <Header />
           <Switch>
             <Route exact path= "/" component = {Login} />
@@ -22,14 +26,14 @@ class App extends Component{
             <Route component = {WrongPage}/>
           </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     );
   }
 }
 
 function mapStateToProps (state) {
   return {
-
+    state
   }
 }
 
