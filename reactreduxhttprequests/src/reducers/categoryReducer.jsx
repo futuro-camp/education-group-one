@@ -3,7 +3,7 @@ import { DROPDOWN_LIST, LIST_SUCCESS, LIST_FAILURE, ITEMS_SUCCESS } from "../act
 const initState = {
     categories: [],
     items: []
-}
+};
 
 const categoryReducer = (state = initState, action) => {
     switch (action.type){

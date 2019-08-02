@@ -11,8 +11,8 @@ const OneItem = (props) => {
         <button className="item" onClick={() => { browserHistory.push(`/items/${props.id}`); } }>
             {props.title}
         </button>
-    )
-}
+    );
+};
 const Items = ({dropdownList, getItems, categories, items}) => {
     useEffect( () => {
         dropdownList();
@@ -41,7 +41,7 @@ const Items = ({dropdownList, getItems, categories, items}) => {
     );
 };
 
-const mapStateToProps = ({categoryReducer}) => { return { categories: categoryReducer.categories, items: categoryReducer.items }; }
+const mapStateToProps = ({categoryReducer}) => { return { categories: categoryReducer.categories, items: categoryReducer.items }; };
 const dispatchToProps = (dispatch) => { return ( {
     dropdownList: () => { dispatch( dropdownList() ); },
     getItems: (value) => { dispatch( getItems(value) ); }

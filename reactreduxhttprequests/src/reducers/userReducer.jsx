@@ -10,7 +10,7 @@ const initState = {
     email: "user",
     password: "pass",
     auth:"not key from the server"
-}
+};
 const userReducer = (state = initState, action) => {
     switch (action.type){
 

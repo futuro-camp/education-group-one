@@ -3,7 +3,7 @@ import { CHOOSEN_PRODUCT, PRODUCT_SUCCESS, PRODUCT_FAILURE } from "../actions/pr
 const initState = {
     title: "name",
     body: "description"
-}
+};
 
 const itemsReducer = (state = initState, action) => {
     switch (action.type){

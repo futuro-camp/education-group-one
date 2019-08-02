@@ -27,7 +27,7 @@ export function exit() {
 export function login(email, password) {
     return function(dispatch) {
         axios.post("http://192.168.1.100:4000/login",
-        { login: email, password: password })
+        { login: email, password })
         .then((answer) => {
             dispatch(loginSuccess(answer.data.key));})
         .catch((error) => {

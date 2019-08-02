@@ -2,7 +2,7 @@ import { catalogList, catalogSuccess, catalogFailure } from "../actions/itemsAct
 
 const initState = {
     catalog: []
-}
+};
 
 const itemsReducer = (state = initState, action) => {
     switch (action.type){

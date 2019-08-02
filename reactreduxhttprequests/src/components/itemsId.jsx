@@ -19,7 +19,7 @@ const ItemsId = (props) => {
     );
 };
 
-const mapStateToProps = ({productReducer}) => { return { title: productReducer.title, body: productReducer.body }; }
+const mapStateToProps = ({productReducer}) => { return { title: productReducer.title, body: productReducer.body }; };
 const dispatchToProps = (dispatch) => { return ( {
     choosenProduct: (id) => { dispatch( choosenProduct(id) ); }
 } ); };

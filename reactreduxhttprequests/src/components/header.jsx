@@ -5,9 +5,9 @@ import {connect} from "react-redux";
 import { exit } from "../actions/loginActions";
 
 function goHome(auth) {
-    if(auth!=="not keygen from server") {
+    // if(auth!=="not keygen from server") {
         browserHistory.push("/api/providers");
-    }
+    // }
 }
 const CustomButton = (props) => {
     return (
@@ -30,8 +30,8 @@ const Header = (props) => {
             <CustomButtonQuit function={props.exit} name="LogOff ❌"/>
         </div>
     );
-}
+};
 
-const mapStateToProps = (state) => { return { userState: state.userReducer } };
+const mapStateToProps = (state) => { return { userState: state.userReducer }; };
 const dispatchToProps = function(dispatch) { return ( { exit: () => dispatch( exit() ) } ); };
 export default connect (mapStateToProps, dispatchToProps)(Header);

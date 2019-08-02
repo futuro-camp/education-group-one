@@ -36,7 +36,7 @@ export function getItems(value) {
             dispatch(itemsSuccess(response.data));
         })
         .catch( (err) => {
-            console.log(err);
+            return err;
         });
-    }
+    };
 }

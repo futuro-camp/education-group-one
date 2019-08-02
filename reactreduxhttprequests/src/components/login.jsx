@@ -20,7 +20,7 @@ const Login = (props) => {
 const mapStateToProps = (state) => {
     return {
         userState: state.userReducer
-    }
+    };
 };
 const dispatchToProps = function(dispatch) { return ({
     login: (email, password) => dispatch (login(email, password)),

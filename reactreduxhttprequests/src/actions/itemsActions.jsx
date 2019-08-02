@@ -18,6 +18,6 @@ export function catalogList (payload) {
             {header: {auth:localStorage.getItem("MyKey") } }
         )
         .then(dispatch(catalogSuccess()))
-        .catch(dispatch(catalogFailure()))
+        .catch(dispatch(catalogFailure()));
     };
 }
