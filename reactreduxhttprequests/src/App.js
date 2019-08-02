@@ -16,7 +16,7 @@ class App extends Component{
           <h1>React-Redux with using middlewares for making HTTP requests</h1>
           <Header />
           <Switch>
-            <Route exact path="/" component = {Login} />
+            <Route exact path= "/" component = {Login} />
             <Route exact path = "/api/providers" component = {Items}/>
             <Route exact path = "/items/" />
             <Route component = {WrongPage}/>

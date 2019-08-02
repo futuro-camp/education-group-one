@@ -5,9 +5,6 @@ import "react-dropdown/style.css";
 import axios from "axios";
 
 class OneItem extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <button className="item" onClick={() => { this.props.history.push(`/items/${this.props.id}`); }}>
