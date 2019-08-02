@@ -23,7 +23,7 @@ function CustomButtonQuit(props) {
 }
 const Header = (props) => {
     const { auth } = props.userState;
-    console.log("you have " + auth);
+    console.log("you have : " + auth);
     return (
         <div className="navigation">
             <CustomButton auth={auth} name="Home"/>
@@ -33,6 +33,7 @@ const Header = (props) => {
         </div>
     );
 }
+
 const mapStateToProps = (state) => { return { userState: state.userReducer } }
 const dispatchToProps = function(dispatch) { return ( { exit: () => dispatch( exit() ) } ) };
 export default connect (mapStateToProps, dispatchToProps)(Header);

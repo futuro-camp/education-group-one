@@ -1,4 +1,4 @@
-import { browserHistory } from "../App";
+
 import {
     LOGIN_SUCCESS,
     LOGIN_FAILURE,
@@ -9,17 +9,12 @@ import {
 const initState = {
     email: "user",
     password: "pass",
-    auth:"not keygen from server"
+    auth:"not key from the server"
 }
 const userReducer = (state = initState, action) => {
     switch (action.type){
 
         case LOGIN_SUCCESS:
-            console.log("login done");
-            console.log(action.payload);
-            console.log("writing key to state.auth");
-            console.log("pushing URL to the next");
-            browserHistory.push("/api/providers");
             return { ...state, auth: action.payload };
 
         case LOGIN_FAILURE:
@@ -32,7 +27,6 @@ const userReducer = (state = initState, action) => {
             return {...state, password: action.payload};
 
         case EXIT_FROM_ACCOUNT:
-            browserHistory.push("/");
             return {...state, auth: "deleted key"};
 
         default:

@@ -5,7 +5,7 @@ import "./App.css";
 import Header  from "./components/header";
 import Login from "./components/login.jsx";
 import Items from "./components/items.jsx";
-// import ItemsId from "./components/itemsId.jsx";
+import ItemsId from "./components/itemsId.jsx";
 import { createBrowserHistory } from 'history';
 export const browserHistory = createBrowserHistory();
 
@@ -22,7 +22,7 @@ class App extends Component{
           <Switch>
             <Route exact path= "/" component = {Login} />
             <Route exact path = "/api/providers" component = {Items}/>
-            <Route exact path = "/items/" />
+            <Route path = "/items/" component={ItemsId} />
             <Route component = {WrongPage}/>
           </Switch>
         </div>

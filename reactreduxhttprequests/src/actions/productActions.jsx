@@ -6,13 +6,17 @@ export const PRODUCT_FAILURE = "PRODUCT_FAILURE";
 
 //Parameters of action's "work"
 export function choosenProduct (payload) {
-    return function (dispatch) {
+    return (dispatch) => {
         axios.get(
-            "http://192.168.1.100:3000/api/providers/${val.value}/items",
-            {header: {auth:localStorage.getItem("MyKey") } }
+            `http://192.168.1.100:4000/api/providers/${payload}/items`
+            // {header: {auth:localStorage.getItem("MyKey") } }
         )
-        .then(dispatch(productSuccess()))
-        .catch(dispatch(productFailure()))
+        .then( (res) => {
+            dispatch( productSuccess(res.data[0]) )
+        })
+        .catch( (err) => {
+            dispatch(productFailure(err))
+        })
     }
 }
 export function productSuccess(payload) {

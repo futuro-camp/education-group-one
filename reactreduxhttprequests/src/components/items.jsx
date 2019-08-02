@@ -1,68 +1,49 @@
-import React from "react";
+import React, { useEffect} from "react";
 import "../styles/items.css";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
-import axios from "axios";
+import { connect } from "react-redux";
+import { dropdownList, getItems } from "../actions/categoriesActions";
+import { browserHistory } from "../App";
 
-class OneItem extends React.Component {
-    render() {
-        return (
-            <button className="item" onClick={() => { this.props.history.push(`/items/${this.props.id}`); }}>
-                {this.props.title}
-            </button>
-        );
-    }
+const OneItem = (props) => {
+    return (
+        <button className="item" onClick={() => { browserHistory.push(`/items/${props.id}`) } }>
+            {props.title}
+        </button>
+    )
 }
-class Items extends React.Component {
-    constructor(props){
-        super(props);
-        this.state ={
-            categories: [{id:0, name:"asdasd"},{id:0, name:"asdasd"}],
-            items: [],
-            dropDownName: "Select category pls"
-        };
-    }
-    //getting from the server categories
-    componentDidMount(){
-        axios.get("http://192.168.1.100:3000/api/providers", {header: {auth:localStorage.getItem("MyKey")}})
-            .then((content) => {
-                this.setState({categories: content.data});
-            });
-    }
-    //dropDown making categories.names
-    itemsMap() {
-        return this.state.items.map((element) => {
-            return <OneItem history={this.props.history} key={element.id} id={element.id} title={element.name}> </OneItem>;
-        });
-    }
-    categoriesMap() {
-        return this.state.categories.map((element) => {
-            return { value:element.id, label:element.name };
-        });
-    }
-    //dropDown get user-choice by ID
-    choice(val) {
-        // console.log(val.value.key);
-        axios.get(`http://192.168.1.100:3000/api/providers/${val.value}/items`, {header: {auth:localStorage.getItem("MyKey")}})
-        .then((answer) => {
-            this.setState({items:answer.data, dropDownName: val.label});
-        });
-    }
-    render(){
-        return (
-            <div>
-                <h1>Items</h1>
-                <Dropdown   placeholder={this.state.dropDownName}
-                            options={this.categoriesMap()}
-                            onChange={(value) => this.choice(value)}
-                            className="DropDown">
-                </Dropdown>
-                <div className="itemsList">
-                    {this.itemsMap()}
-                </div>
+const Items = ({dropdownList, getItems, categories, items}) => {
+    useEffect( () => {
+        dropdownList();
+    }, [])
+
+    return (
+        <div>
+            <h1>Categories</h1>
+            <Dropdown
+                placeholder="Select category"
+                options={
+                    categories.map( (el) => {
+                        return { value:el.id, label:el.name }
+                    })
+                }
+                onChange={ (value) => { getItems(value) } }
+                className="DropDown"
+            />
+            <div className="itemsList">
+                <h1>Catalog:</h1>
+                {items.map( (obj) => {
+                    return <OneItem key={obj.id} id={obj.id} title={obj.name} />
+                }) }
             </div>
-        );
-    }
+        </div>
+    )
 }
 
-export default Items;
+const mapStateToProps = ({categoryReducer}) => { return { categories: categoryReducer.categories, items: categoryReducer.items } }
+const dispatchToProps = (dispatch) => { return ( {
+    dropdownList: () => { dispatch( dropdownList() ) },
+    getItems: (value) => { dispatch( getItems(value) ) }
+} ) };
+export default connect (mapStateToProps, dispatchToProps)(Items);

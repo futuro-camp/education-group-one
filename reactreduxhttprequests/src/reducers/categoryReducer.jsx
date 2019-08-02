@@ -1,19 +1,21 @@
-import { dropdownList, listSuccess, listFailure } from "../actions/categoriesActions";
+import { DROPDOWN_LIST, LIST_SUCCESS, LIST_FAILURE, ITEMS_SUCCESS } from "../actions/categoriesActions";
 
 const initState = {
-    categories: []
+    categories: [],
+    items: []
 }
 
 const categoryReducer = (state = initState, action) => {
     switch (action.type){
-        case listSuccess:
-            console.log(action.payload);
-            return {
-                ...state,
-                categories: action.payload
-            };
-        case listFailure:
-                console.log(action.payload);
+
+        case LIST_SUCCESS:
+            return { ...state, categories: action.payload };
+
+        case LIST_FAILURE:
+            return state;
+
+        case ITEMS_SUCCESS:
+            return { ...state, items: action.payload };
         default:
             return state;
     }

@@ -1,4 +1,4 @@
-import { choosenProduct, productSuccess, productFailure } from "../actions/productActions";
+import { CHOOSEN_PRODUCT, PRODUCT_SUCCESS, PRODUCT_FAILURE } from "../actions/productActions";
 
 const initState = {
     title: "name",
@@ -7,15 +7,17 @@ const initState = {
 
 const itemsReducer = (state = initState, action) => {
     switch (action.type){
-        case productSuccess:
+
+        case PRODUCT_SUCCESS:
+        return {
+            ...state,
+            title: action.payload.name,
+            body: action.payload.description
+        };
+
+        case PRODUCT_FAILURE:
             console.log(action.payload);
-            return {
-                ...state,
-                title: action.payload.title,
-                body: action.payload.body
-            };
-        case productFailure:
-                console.log(action.payload);
+
         default:
             return state;
     }
