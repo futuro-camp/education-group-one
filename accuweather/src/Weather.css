@@ -1,0 +1,42 @@
+* {
+    list-style: none;
+    padding: 0;
+}
+button {
+    background: none;
+    border: none;
+}
+.days {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.day {
+    margin: 0 15px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+.dayProperties {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.dayProperties li:nth-child(1) {
+    width: 100%;
+}
+.dayProperties li:nth-child(2) {
+    width: 45%;
+}
+.dayProperties li:nth-child(3) {
+    width: 45%;
+}
+.imageIcon {
+    margin-right: 20px;
+}
+
+.view {
+    border: 1px solid red;
+}
