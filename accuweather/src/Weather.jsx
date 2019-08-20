@@ -3,10 +3,11 @@ import './Weather.css';
 import { connect } from "react-redux";
 // import axios from "axios";
 // import data from "./data/five-day-weather.json";
-import { getWeather, changeDay, getDay } from "./actions/actions";
+import { getWeather, changeDay } from "./actions/actions";
+import icons from "./icons.js";
 
 
-const Content = ( { getWeather, store } ) => {
+const Content = ( { getWeather, store, changeDay } ) => {
 
     useEffect( () => {
         // request to get actual weather
@@ -23,18 +24,17 @@ const Content = ( { getWeather, store } ) => {
         // console.log(data);
         getWeather();
     }, []);
-    // console.log(store.forecast);
-
+    console.log(store);
 
     return (
         <div className="Content">
             <ul className="days">
                 { store.forecast.map( (el) =>
                     <li>
-                        <button key={el.id} className="day" onClick={ () => getDay(el.id) } >
-                            <img className="imageIcon" src="./icons/16-s.png" alt={el.id}/>
+                        <button key={el.id} className="day" onClick={ () => changeDay(el.id) } >
+                            <li> <p className="date">{el.date}</p> </li>
+                            <img className="imageIcon" src={icons[el.day.icon]} alt={el.day.icon}/>
                             <ul className="dayProperties">
-                                <li> <p className="date">{el.date}</p> </li>
                                 <li> Min: {el.temperature.min} </li>
                                 <li> Max: {el.temperature.max} </li>
                             </ul>
@@ -44,14 +44,25 @@ const Content = ( { getWeather, store } ) => {
             </ul>
             <div className="view">
                 <h2>Choosen Day</h2>
+                <div className="mainDay">
+                    {store.current.date}
+                    <div className="afternoon">
+                        <img src="" alt=""/>
+                        {/* {store.current.day.icon} */}
+                        {/* {console.log(store.current)} */}
+                    </div>
+                    <div className="night">
+                        <img src="" alt=""/>
+                    </div>
+                </div>
             </div>
         </div>
     );
 }
 
 const mapStateToProps = ( store ) => { return { store }; };
-const dispatchToProps = ( dispatch ) => { return ( {
+const dispatchToProps = ( dispatch ) => { return  {
     getWeather: () => { dispatch( getWeather() ) },
-    getDay: (id) => { dispatch( getDay(id) ) }
-} ); };
+    changeDay: (id) => { dispatch( changeDay(id) ) }
+}  };
 export default connect (mapStateToProps, dispatchToProps)(Content);

@@ -3,19 +3,19 @@ import { CHANGE_DAY, RESPONSE_TO_STORE } from "../actions/actions";
 
 const initState = {
     forecast: [],
-    current : 0
+    current : []
 }
 
 const Reducer = ( state = initState, action ) => {
     switch (action.type) {
 
-        case RESPONSE_TO_STORE:
-            return {...state, forecast: action.payload }
-
         case CHANGE_DAY:
-            console.log("button");
             console.log(action.payload);
-            return {...state, current: action.payload };
+            let main = state.forecast[action.payload];
+            return {...state, current: main };
+
+        case RESPONSE_TO_STORE:
+            return {...state, forecast: action.payload, current: action.payload[0] };
 
         default:
             return state;

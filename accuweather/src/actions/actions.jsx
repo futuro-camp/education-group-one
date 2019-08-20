@@ -3,9 +3,7 @@ import data from "../data/five-day-weather.json";
 
 export const CHANGE_DAY = "CHANGE_DAY";
 export function changeDay(payload) {
-    console.log("action");
-    console.log(payload);
-    return { type: CHANGE_DAY, payload };
+    return { type: CHANGE_DAY, payload: payload };
 }
 
 export const RESPONSE_TO_STORE = "RESPONSE_TO_STORE";
@@ -15,7 +13,7 @@ export function responseToStore(payload) {
 
 const dataFormat = (data) => {
     return data.DailyForecasts.map( (element) => ({
-        date: element.Date,
+        date: new Date(element.Date).toLocaleDateString("en-US", { day: 'numeric', month: 'long' }),
         id: data.DailyForecasts.indexOf(element),
         day: {
             icon: element.Day.Icon,
@@ -42,12 +40,6 @@ const dataFormat = (data) => {
             min: `${element.Temperature.Minimum.Value}${element.Temperature.Minimum.Unit}`
         }
     }))
-}
-
-export function getDay () {
-    return function (dispatch) {
-        dispatch ( changeDay() );
-    }
 }
 
 export function getWeather () {
