@@ -50,5 +50,5 @@ export const getWeather = () => {
         .then((response) => {
              dispatch(setWeather(dataFormat(response.data.DailyForecasts)));
         });
-    }
+    };
 };
