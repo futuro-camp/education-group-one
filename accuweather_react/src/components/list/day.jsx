@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import "../../styles/list/day.scss";
 
 export default function day(props) {
-    let { date, iconDay, iconNight, temperature, onClick, choosed } = props;
+    let { date, iconDay, iconNight, temperature, onClick } = props;
     let { max, min } = temperature;
     return (
-        <li className={choosed ? "day choosed" : "day"}>
+        <li className={props.choosed ? "day choosed" : "day"}>
             <button onClick={onClick}>
                 <h1 className="day-date">{date}</h1>
                 <div className="icon">
