@@ -1,0 +1,83 @@
+.day {
+    box-shadow: 2px 2px 20px 2px rgba(153,153,153,0.39);
+    height: 200px;
+    width: 15%;
+    transition: all 1.2s;
+
+    &:hover {
+        transform: translateY(10px);
+    }
+
+    button {
+        width: 100%;
+        height: 100%;
+        background: none;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .day-date {
+            font-family: 'Open Sans', sans-serif;
+            color: #0d0d26;
+            line-height: 1;
+            font-size: 24px;
+        }
+    
+        .icon {
+            display: flex;
+            justify-content: center;
+    
+            .day-icon-day-container {
+                width: 60px;
+                height: 70px;
+                overflow: hidden;
+    
+                .day-icon {
+                    height: 100%;
+                }
+            }
+    
+            .day-icon-night-container {
+                width: 60px;
+                height: 70px;
+                overflow: hidden;
+                
+                .day-icon {
+                    height: 100%;
+                    float: right;
+                }
+            }
+        }
+
+        .day-temperature-day {
+            font-family: 'Lexend Giga', sans-serif;
+            color: #0d0d26;
+            line-height: 1;
+            font-size: 24px;
+            display: flex;
+            align-items: flex-start;
+
+            .day-temperature-night {
+                font-family: 'Lexend Giga', sans-serif;
+                color: #61616b;
+                line-height: 1;
+                font-size: 16px;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+.choosed {
+    box-shadow: inset 2px 2px 20px 2px rgba(153,153,153,0.39);
+
+    button {
+        display: none;
+    }
+
+    &:hover {
+        transform: none;
+    }
+}

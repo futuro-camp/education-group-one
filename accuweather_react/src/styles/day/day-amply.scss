@@ -1,0 +1,121 @@
+.day-amply {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 30px;
+    box-shadow: 2px 2px 20px 2px rgba(153,153,153,0.39);
+    justify-content: space-around;
+    
+    .date {
+        width: 100%;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 42px;
+        margin: 10px 0;
+    }
+
+    .info {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        img {
+            margin: 10px 0;
+            width: 170px;
+            height: 100px;
+        }
+    }
+
+    .day-info {
+        width: 50%;
+    }
+
+    .night-info {
+        width: 50%;
+    }
+
+    .temperatyre-info {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .icon-description {
+        font-family: 'Lexend Giga', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .liquid {
+        font-family: 'Lexend Tera', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .wind {
+        font-family: 'Lexend Tera', sans-serif;
+        color: #181827;
+        line-height: 1;
+        font-size: 24px;
+        margin: 10px 0;
+    }
+
+    .day-temperature {
+        font-family: 'Lexend Giga', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 24px;
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+
+        .day-temperature-night {
+            font-family: 'Lexend Giga', sans-serif;
+            color: #61616b;
+            line-height: 1;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    .day-temperature-real {
+        font-family: 'Lexend Giga', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 24px;
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+
+        .day-temperature-night {
+            font-family: 'Lexend Giga', sans-serif;
+            color: #61616b;
+            line-height: 1;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    .day-temperature-real-shade {
+        font-family: 'Lexend Giga', sans-serif;
+        color: #0d0d26;
+        line-height: 1;
+        font-size: 24px;
+        display: flex;
+        align-items: flex-start;
+        margin: 10px 0;
+
+        .day-temperature-night {
+            font-family: 'Lexend Giga', sans-serif;
+            color: #61616b;
+            line-height: 1;
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+}
