@@ -42,7 +42,7 @@ const dataFormat = (data) => {
             min: `${element.Temperature.Minimum.Value}${element.Temperature.Minimum.Unit}`
         }
     }));
-}
+};
 
 export function getWeather () {
     return function (dispatch) {

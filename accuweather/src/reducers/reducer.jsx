@@ -4,7 +4,7 @@ import { CHANGE_DAY, RESPONSE_TO_STORE } from "../actions/actions";
 const initState = {
     forecast: [],
     current: {}
-}
+};
 
 const Reducer = ( state = initState, action ) => {
     switch (action.type) {
