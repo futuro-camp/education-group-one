@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "../../../style/day.scss";
 import { dataArray } from "../../constants/index";
+import PropTypes from 'prop-types';
 
 const Day = ({curDay}) => (curDay ?
     <div className="choosen">
@@ -39,6 +40,10 @@ const Day = ({curDay}) => (curDay ?
         </div>
     </div> : <div className="loading"></div>
 );
+
+Day.propTypes = {
+    curDay: PropTypes.object.isRequired
+}
 
 export default connect(
     ({weather, curNumb}) => ({
