@@ -21,7 +21,7 @@ function mapDispatchToProps(dispatch) {
 
 class weather extends Component {
 
-    componentWillMount() {
+    componentDidMount() {
         this.props.onMount();
     }
     render() {
@@ -36,7 +36,8 @@ class weather extends Component {
 
 weather.propTypes = {
     loading: PropTypes.bool,
-    error: PropTypes.string
+    error: PropTypes.string,
+    onMount: PropTypes.func
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(weather);

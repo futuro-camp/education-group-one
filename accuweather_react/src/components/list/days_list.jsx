@@ -32,7 +32,8 @@ class days_list extends Component {
 
 days_list.propTypes = {
     daysData: PropTypes.array,
-    currentChoosed: PropTypes.number    
+    currentChoosed: PropTypes.number,
+    onClick: PropTypes.func  
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(days_list);

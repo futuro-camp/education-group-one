@@ -28,4 +28,5 @@ day.propTypes = {
     iconDay: PropTypes.string,
     iconNight: PropTypes.string,
     temperature: PropTypes.number,
+    choosed: PropTypes.bool
 };
