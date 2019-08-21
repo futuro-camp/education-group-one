@@ -1,5 +1,7 @@
 // import axios from "axios";
 import data from "../data/five-day-weather.json";
+import axios from "axios";
+
 
 export const CHANGE_DAY = "CHANGE_DAY";
 export function changeDay(payload) {
@@ -44,16 +46,16 @@ const dataFormat = (data) => {
 
 export function getWeather () {
     return function (dispatch) {
-        dispatch( responseToStore ( dataFormat(data) ) );
+        // dispatch( responseToStore ( dataFormat(data) ) );
 
         // request to get actual weather
-        // axios.get ( "http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true" )
-        // .then( (res) => {
-        //     console.log(res);
-        //     dispatch( responseToStore(res.data) )
-        // } )
-        // .catch ( (err) => {
-        //     console.log(err);
-        // } )
+        axios.get ( "http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true" )
+        .then( (res) => {
+            console.log(res);
+            dispatch( responseToStore(dataFormat(res.data)) )
+        } )
+        .catch ( (err) => {
+            console.log(err);
+        } )
     }
 }

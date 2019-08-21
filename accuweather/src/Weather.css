@@ -1,6 +1,7 @@
 * {
     list-style: none;
     padding: 0;
+    font-family: 'Hepta Slab', serif;
 }
 button {
     background: none;
@@ -10,38 +11,71 @@ button {
 .days {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
 }
 .day {
     margin: 0 15px;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
+.date {
+    font-size: 25px;
+}
 .dayProperties {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.view {
-    border: 1px solid red;
-}
 .mainDay {
     display: flex;
-    border: 1px solid red;
     justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.general-info {
+    width: 60%;
+}
+.info {
+    display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
 }
+.category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.category li:nth-child(1) {
+    margin-bottom: 10px;
+}
+.heading {
+    width: 100%;
+}
+.value {
+    width: 45%;
+}
 .afternoon {
-    border: 1px solid red;
-
+    width: 21%;
+    display: flex;
+    justify-content: center;
 }
 .night {
-    border: 1px solid red;
-
+    width: 21%;
+    display: flex;
+    justify-content: center;
+}
+.day-time-values {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.secondary-img {
+    object-fit: cover;
+    margin-right: 10px;
 }
