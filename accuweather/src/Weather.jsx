@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import './Weather.css';
+import React, { useEffect } from "react";
+import "./Weather.css";
 import { connect } from "react-redux";
 // import axios from "axios";
 // import data from "./data/five-day-weather.json";
@@ -78,11 +78,11 @@ const Content = ( { getWeather, store, changeDay } ) => {
             }
         </div>
     );
-}
+};
 
 const mapStateToProps = ( store ) => { return { store }; };
 const dispatchToProps = ( dispatch ) => { return  {
-    getWeather: () => { dispatch( getWeather() ) },
-    changeDay: (id) => { dispatch( changeDay(id) ) }
-}  };
+    getWeather: () => { dispatch( getWeather() ); },
+    changeDay: (id) => { dispatch( changeDay(id) ); }
+};  };
 export default connect (mapStateToProps, dispatchToProps)(Content);

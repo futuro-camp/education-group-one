@@ -1,11 +1,11 @@
 // import axios from "axios";
-import data from "../data/five-day-weather.json";
+// import data from "../data/five-day-weather.json";
 import axios from "axios";
 
 
 export const CHANGE_DAY = "CHANGE_DAY";
 export function changeDay(payload) {
-    return { type: CHANGE_DAY, payload: payload };
+    return { type: CHANGE_DAY, payload };
 }
 
 export const RESPONSE_TO_STORE = "RESPONSE_TO_STORE";
@@ -15,7 +15,7 @@ export function responseToStore(payload) {
 
 const dataFormat = (data) => {
     return data.DailyForecasts.map( (element) => ({
-        date: new Date(element.Date).toLocaleDateString("en-US", { day: 'numeric', month: 'long' }),
+        date: new Date(element.Date).toLocaleDateString("en-US", { day: "numeric", month: "long" }),
         id: data.DailyForecasts.indexOf(element),
         day: {
             icon: element.Day.Icon,
@@ -41,7 +41,7 @@ const dataFormat = (data) => {
             max: `${element.Temperature.Maximum.Value}${element.Temperature.Maximum.Unit}`,
             min: `${element.Temperature.Minimum.Value}${element.Temperature.Minimum.Unit}`
         }
-    }))
+    }));
 }
 
 export function getWeather () {
@@ -51,11 +51,10 @@ export function getWeather () {
         // request to get actual weather
         axios.get ( "http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true" )
         .then( (res) => {
-            console.log(res);
-            dispatch( responseToStore(dataFormat(res.data)) )
+            dispatch( responseToStore(dataFormat(res.data)) );
         } )
         .catch ( (err) => {
-            console.log(err);
-        } )
-    }
+            // console.log(err);
+        } );
+    };
 }
