@@ -43,7 +43,7 @@ const Day = ({curDay}) => (curDay ?
 
 Day.propTypes = {
     curDay: PropTypes.object
-}
+};
 
 export default connect(
     ({weather, curNumb}) => ({
