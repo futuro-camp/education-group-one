@@ -4,9 +4,9 @@ import { connect } from "react-redux";
 import Day from "./components/day";
 import Choice from "./components/choice";
 import { getWeather } from "./actions/actions";
+import PropTypes from 'prop-types';
 
-
-const Content = ( { getWeather, store, changeDay } ) => {
+const Content = ( { getWeather } ) => {
 
     useEffect( () => {
         getWeather();
@@ -20,6 +20,9 @@ const Content = ( { getWeather, store, changeDay } ) => {
             <Choice />
         </div>
     );
+};
+Content.propTypes = {
+    current: PropTypes.func
 };
 
 const mapStateToProps = ( store ) => { return { store }; };

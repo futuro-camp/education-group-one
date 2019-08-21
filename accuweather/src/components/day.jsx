@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { changeDay } from "../actions/actions";
 import icons from "../icons";
+import PropTypes from 'prop-types';
 
 const Day = ( { store, changeDay } ) => {
     return (
@@ -22,6 +23,10 @@ const Day = ( { store, changeDay } ) => {
             </ul>
         </div>
     )
+};
+
+Day.propTypes = {
+    current: PropTypes.array
 };
 
 const mapStateToProps = ( store ) => { return { store }; };
