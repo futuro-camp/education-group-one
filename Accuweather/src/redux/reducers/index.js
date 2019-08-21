@@ -11,14 +11,16 @@ const InitialState = {
 export default (state = InitialState, action) => {
     switch(action.type) {
         case DAY_SELECT:
-            console.log("day selected ", action.payload);
-            break;
+            return {
+                ...state,
+                curNumb: action.payload
+            }
         case SET_WEATHER:
-            console.log("set weather"); 
             return {
                 ...state,
                 weather: action.payload
             }
+        default: 
+            return state;
     }
-    return state;
 };

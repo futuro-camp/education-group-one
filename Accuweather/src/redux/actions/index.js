@@ -16,13 +16,13 @@ const setWeather = (payload) => ({
 
 export const getWeather = () => {
     return (dispatch) => {
-        dispatch(setWeather(dataFormat(weatherData.DailyForecasts)));
-        // axios.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true")
-        // .then((response) => {
-        //      dispatch(setWeather(dataFormat(response.data.DailyForecasts));
-        // }).catch((error) => {
-        //     console.log(error);
-        // })
+        // dispatch(setWeather(dataFormat(weatherData.DailyForecasts)));
+        axios.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true")
+        .then((response) => {
+             dispatch(setWeather(dataFormat(response.data.DailyForecasts)));
+        }).catch((error) => {
+            console.log(error);
+        })
     }
 }
 

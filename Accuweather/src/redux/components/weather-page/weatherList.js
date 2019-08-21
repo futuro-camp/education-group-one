@@ -4,11 +4,11 @@ import { daySelect } from "../../actions";
 import { dataArray } from "../../constants";
 import "../../../style/list.scss";
 
-const List = ({ weather, daySelect }) => (
+const List = ({ weather, curNumb, daySelect }) => (
     <ul className="nav">
         {weather.map((element) => (
-            <li key={element.id} className="nav-item">
-                <button className="nav-btn">
+            <li key={element.id} className={`nav-item ${element.id == curNumb ? "nav-item-selected" : ""}`}>
+                <button className="nav-btn" onClick={() => { daySelect(element.id) }}>
                     <p className="nav-date">{element.date}</p>
                     <div className="nav-icon">
                         <div className="nav-dayIcon"><img src={dataArray[element.day.icon]}/></div>
@@ -22,8 +22,9 @@ const List = ({ weather, daySelect }) => (
 );
 
 export default connect(
-    ({ weather }) => ({
-        weather
+    ({ weather, curNumb }) => ({
+        weather,
+        curNumb
     }),
     (dispatch) => ({
         daySelect: (id) => { dispatch(daySelect(id)); }

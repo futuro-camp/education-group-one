@@ -1,0 +1,80 @@
+.choosen {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+
+    .top {
+        display: flex;
+        height: 40vh;
+
+        .day:after {
+            content: "";
+            position: absolute;
+            left: 100%;
+            top: 0.1vh;
+            height: 40vh;
+            width: 0.2vw;
+            background-color: whitesmoke;
+        }
+
+        .day,
+        .night {
+            position: relative;
+            width: 50vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            .icon {
+                position: absolute;
+                z-index: -1;
+                left: 10%;
+                width: 16vw;
+                height: 8vw;
+            }
+
+            p {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1.5vw;
+            }
+
+            .headline {
+                font-weight: bold;
+                font-size: 1.8vw;
+            }
+        }
+    }
+
+    .bottom {
+        display: flex;
+        height: 30vh;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+        border-top: 0.2vw solid whitesmoke;
+
+        > div {
+            text-align: center;
+
+            .headline {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 1.7vw;
+            }
+
+            .temperature {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 1.5vw;
+                line-height: 2;
+            }
+
+        }
+    }
+}
+
+.loading {
+    height: 70vh;
+    width: 100vw;
+    background-color: black;    
+}

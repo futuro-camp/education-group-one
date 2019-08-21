@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getWeather } from "../../actions/index";
 import List from "./weatherList";
+import Day from "./choosenDay";
 
 const WeatherPage = ({ getWeather }) => {
 
@@ -12,6 +13,7 @@ const WeatherPage = ({ getWeather }) => {
     return (
         <div>
             <List />
+            <Day />
         </div>
     );
 }
