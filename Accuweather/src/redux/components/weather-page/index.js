@@ -8,7 +8,7 @@ const WeatherPage = ({ getWeather }) => {
 
     useEffect(() => {
         getWeather();
-    }, [getWeather])
+    }, [getWeather]);
 
     return (
         <div>
@@ -16,7 +16,7 @@ const WeatherPage = ({ getWeather }) => {
             <Day />
         </div>
     );
-}
+};
 
 export default connect(
     null,

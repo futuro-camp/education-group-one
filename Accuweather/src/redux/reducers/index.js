@@ -14,12 +14,12 @@ export default (state = InitialState, action) => {
             return {
                 ...state,
                 curNumb: action.payload
-            }
+            };
         case SET_WEATHER:
             return {
                 ...state,
                 weather: action.payload
-            }
+            };
         default: 
             return state;
     }

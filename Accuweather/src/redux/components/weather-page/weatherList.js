@@ -7,8 +7,8 @@ import "../../../style/list.scss";
 const List = ({ weather, curNumb, daySelect }) => (
     <ul className="nav">
         {weather.map((element) => (
-            <li key={element.id} className={`nav-item ${element.id == curNumb ? "nav-item-selected" : ""}`}>
-                <button className="nav-btn" onClick={() => { daySelect(element.id) }}>
+            <li key={element.id} className={`nav-item ${element.id === curNumb ? "nav-item-selected" : ""}`}>
+                <button className="nav-btn" onClick={() => { daySelect(element.id); }}>
                     <p className="nav-date">{element.date}</p>
                     <div className="nav-icon">
                         <div className="nav-dayIcon"><img src={dataArray[element.day.icon]}/></div>

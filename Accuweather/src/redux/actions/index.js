@@ -1,5 +1,4 @@
 import axios from "axios";
-import weatherData from "../constants/five-day-weather.json";
 
 export const DAY_SELECT = "DAY_SELECT";
 export const SET_WEATHER = "GET_WEATHER";
@@ -14,21 +13,9 @@ const setWeather = (payload) => ({
     payload
 });
 
-export const getWeather = () => {
-    return (dispatch) => {
-        // dispatch(setWeather(dataFormat(weatherData.DailyForecasts)));
-        axios.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true")
-        .then((response) => {
-             dispatch(setWeather(dataFormat(response.data.DailyForecasts)));
-        }).catch((error) => {
-            console.log(error);
-        })
-    }
-}
-
 const dataFormat = (data) => {
     return data.map((element) => ({
-        date: new Date(element.Date).toLocaleDateString("en-US", { day: 'numeric', month: 'long' }),
+        date: new Date(element.Date).toLocaleDateString("en-US", { day: "numeric", month: "long" }),
         id: data.indexOf(element),
         day: {
             icon: element.Day.Icon,
@@ -54,5 +41,14 @@ const dataFormat = (data) => {
             max: `${element.Temperature.Maximum.Value}${element.Temperature.Maximum.Unit}`,
             min: `${element.Temperature.Minimum.Value}${element.Temperature.Minimum.Unit}`
         }
-    }))
+    }));
+};
+
+export const getWeather = () => {
+    return (dispatch) => {
+        axios.get("http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true")
+        .then((response) => {
+             dispatch(setWeather(dataFormat(response.data.DailyForecasts)));
+        });
+    }
 }
