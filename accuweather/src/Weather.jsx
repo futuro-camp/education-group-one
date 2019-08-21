@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import Day from "./components/day";
 import Choice from "./components/choice";
 import { getWeather } from "./actions/actions";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Content = ( { getWeather } ) => {
 

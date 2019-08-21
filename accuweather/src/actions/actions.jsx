@@ -46,15 +46,16 @@ const dataFormat = (data) => {
 
 export function getWeather () {
     return function (dispatch) {
-        dispatch( responseToStore ( dataFormat(data) ) );
+        // request to get forecast from local .json
+        // dispatch( responseToStore ( dataFormat(data) ) );
 
-        // request to get actual weather
-        // axios.get ( "http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true" )
-        // .then( (res) => {
-        //     dispatch( responseToStore(dataFormat(res.data)) );
-        // } )
-        // .catch ( (err) => {
-        //     // console.log(err);
-        // } );
+        // request to get actual forecast from server
+        axios.get ( "http://dataservice.accuweather.com/forecasts/v1/daily/5day/323903?apikey=Wb4iGdUapbWfL5nQSxLEgmtdoNLQy751&details=true&metric=true" )
+        .then( (res) => {
+            dispatch( responseToStore(dataFormat(res.data)) );
+        } )
+        .catch ( (err) => {
+            // console.log(err);
+        } );
     };
 }

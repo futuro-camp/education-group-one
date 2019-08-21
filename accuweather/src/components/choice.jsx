@@ -1,7 +1,7 @@
 import React  from "react";
 import { connect } from "react-redux";
 import icons from "../icons";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Choice = ( { current } ) => {
     return (
@@ -52,7 +52,7 @@ const Choice = ( { current } ) => {
                 <div className="view"></div>
             }
         </div>
-    )
+    );
 };
 
 Choice.propTypes = {
