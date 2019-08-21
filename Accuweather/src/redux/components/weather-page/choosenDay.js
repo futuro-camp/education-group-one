@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "../../../style/day.scss";
 import { dataArray } from "../../constants/index";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const Day = ({curDay}) => (curDay ?
     <div className="choosen">
@@ -11,14 +11,14 @@ const Day = ({curDay}) => (curDay ?
                 <p className="headline">Day</p>
                 <p className="text">{curDay.day.text}</p>
                 <p className="liquid">Liquid: {curDay.day.liquid}</p>
-                <img className="icon" src={dataArray[curDay.day.icon]}/>
+                <img className="icon" src={dataArray[curDay.day.icon]} alt=""/>
                 <p className="wind">Wind: {curDay.day.wind}</p>
             </div>
             <div className="night">
                 <p className="headline">Night</p>
                 <p className="text">{curDay.night.text}</p>
                 <p className="liquid">Liquid: {curDay.night.liquid}</p>
-                <img className="icon" src={dataArray[curDay.night.icon]}/>
+                <img className="icon" src={dataArray[curDay.night.icon]} alt=""/>
                 <p className="wind">Wind: {curDay.night.wind}</p>
             </div>
         </div>
@@ -42,7 +42,7 @@ const Day = ({curDay}) => (curDay ?
 );
 
 Day.propTypes = {
-    curDay: PropTypes.object.isRequired
+    curDay: PropTypes.object
 }
 
 export default connect(

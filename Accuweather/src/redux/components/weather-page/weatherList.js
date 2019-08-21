@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 import ListItem from "./weatherListItem";
 import "../../../style/list.scss";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const List = ({ weather }) => (
     <ul className="nav">
         {weather.map((element) => (
-            <ListItem element={element} />
+            <ListItem key={element.id} element={element} />
         ))}
     </ul>
 );
