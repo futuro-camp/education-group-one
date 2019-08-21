@@ -1,0 +1,5 @@
+export enum ActionType {
+    CATEGORIES_REQUEST,
+    CATEGORIES_SUCCESS,
+    CATEGORIES_REJECT
+}
