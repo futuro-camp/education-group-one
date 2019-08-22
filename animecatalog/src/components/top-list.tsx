@@ -30,7 +30,6 @@ const TopList = (props: any) => {
                                                         : <img src="https://s3.amazonaws.com/www-inside-design/uploads/2017/07/Accurate-and-editable-radial-progress-bars-in-Sketch-feature-284x402.jpg" />
                                                 }
                                         </picture>
-                                        <button className="addToLibrary">Add To Library</button>
                                         <div className="info">
                                             <div className="title">
                                                 <p>{elem.canonicalTitle}</p>
@@ -46,6 +45,7 @@ const TopList = (props: any) => {
                                                 </p>
                                             </div>
                                             <p>{elem.synopsis}</p>
+                                            <button className="addToLibrary">Add To Library</button>
                                         </div>
                                     </div>
                                 </a>
