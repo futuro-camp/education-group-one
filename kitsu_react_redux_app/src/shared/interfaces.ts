@@ -6,7 +6,13 @@ export interface ICathegoriesStore {
     errorMessage: string
 }
 
+export interface IAnimeStore {
+    anime: Array<object>,
+    isLoaded: boolean,
+    errorMessage: string
+}
+
 export interface IAction {
     type: ActionType,
-    payload?: object
+    payload?: any
 }

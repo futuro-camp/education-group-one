@@ -10,6 +10,6 @@ export function categoriesSuccess(data:any) : IAction {
 }
 
 export function categoriesReject(error:any) : IAction {
-    return { type: ActionType.CATEGORIES_REJECT, payload:error }
+    return { type: ActionType.CATEGORIES_REJECT, payload: error }
 }
 

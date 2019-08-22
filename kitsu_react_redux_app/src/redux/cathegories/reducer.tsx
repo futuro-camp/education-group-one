@@ -1,13 +1,13 @@
 import { ICathegoriesStore, IAction } from "../../shared/interfaces";
 import { ActionType } from "../../shared/enums";
 
-const initialState:ICathegoriesStore = {
+const initialState: ICathegoriesStore = {
     categories: [],
     isLoaded: false,
     errorMessage: ""
 }
 
-export default function (state: object = initialState, action: IAction) {
+export default function (state: any = initialState, action: IAction) {
     switch(action.type) {
         case(ActionType.CATEGORIES_REQUEST):
             return{
@@ -18,7 +18,8 @@ export default function (state: object = initialState, action: IAction) {
         case(ActionType.CATEGORIES_SUCCESS):
             return{
                 ...state,
-                isLoaded: true
+                isLoaded: true,
+                categories: action.payload.data.data.map((element: any) => ({ id: element.id, name: element.attributes.title, nsfw: element.attributes.nsfw, description: element.attributes.description, slug: element.attributes.slug }))
             };
         
         case(ActionType.CATEGORIES_REJECT): 
