@@ -29,6 +29,19 @@ const TopList = (props: any) => {
                                         </picture>
                                         <button className="addToLibrary">Add To Library</button>
                                         <div className="info">
+                                            <div className="title">
+                                                <p>{elem.canonicalTitle}</p>
+                                                <p>
+                                                    <span role="img" aria-label="Love">💗</span>#{elem.popularityRank} Popularity Rank
+                                                    {elem.averageRaiting?
+                                                        <span>{elem.averageRaiting} %</span> : <span></span>
+                                                    }
+                                                </p>
+                                                <p>
+                                                    <span role="img" aria-label="Love">⭐</span>#{elem.ratingRank} Highest Rated
+                                                    <span>{elem.startDate}</span>
+                                                </p>
+                                            </div>
                                             <p>{elem.synopsis}</p>
                                         </div>
                                     </div>

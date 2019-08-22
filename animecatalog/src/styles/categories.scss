@@ -11,7 +11,6 @@
     background: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
     border: 1px solid rgba(0,0,0,.09);
-    margin-top: 80px;
 
         .heading {
             width: 100%;
@@ -22,7 +21,7 @@
             display: flex;
             flex-flow: column wrap;
             max-height: 375px;
-            width: 258px;
+            width: 325px;
             margin-bottom: 10px;
             font-size: 12px;
             font-weight: 600;
@@ -33,6 +32,7 @@
                     width: 107px;
                         a {
                             color: lightslategrey;
+                            font-size: 13px;
                         }
                 }
         }

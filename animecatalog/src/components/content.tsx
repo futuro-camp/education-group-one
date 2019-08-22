@@ -12,6 +12,11 @@ const Content = (props:any) => {
 
     return (
         <div className="Content">
+            <div className="buttons">
+                <button>Top</button>
+                <button>Top</button>
+                <button>Top</button>
+            </div>
             <TopList name="Highest Rated Anime" />
         </div>
     );

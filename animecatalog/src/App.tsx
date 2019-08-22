@@ -13,7 +13,7 @@ const App = (props:any) => {
     props.getData();
     props.getAnime();
   }, []);
-  console.log(props.mainPage.content);
+  // console.log(props.mainPage.content);
 
   return (
     <div className="main">
