@@ -29,8 +29,8 @@ const App = (props:any) => {
 const mapStateToProps = (store:any) => { return { mainPage: store.mainPage }; };
 const dispatchToProps = (dispatch:any)  => { return (
     {
-      getData: (payload) => { dispatch( getData(payload) ); },
-      getAnime: (payload) => { dispatch( getAnime(payload) ); }
+      getData: () => { dispatch( getData() ); },
+      getAnime: () => { dispatch( getAnime() ); }
   }
   ); };
 export default connect (mapStateToProps, dispatchToProps)(App);

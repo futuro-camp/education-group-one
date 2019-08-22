@@ -15,21 +15,21 @@
         .heading {
             width: 100%;
             text-align: left;
-            margin: 10px 15px;
+            margin: 10px 25px;
         }
         .link-container {
             display: flex;
-            flex-flow: column wrap;
-            max-height: 375px;
-            width: 325px;
+            flex-flow: column;
+            align-items: flex-start;
+            height: 375px;
+            max-width: 250px;
             margin-bottom: 10px;
             font-size: 12px;
             font-weight: 600;
-            overflow: hidden;
+            overflow-y: scroll;
+            overflow-x: hidden;
                 li {
-                    margin-right: 15px;
-                    margin-left: 15px;
-                    width: 107px;
+                    margin: 5px 25px;
                         a {
                             color: lightslategrey;
                             font-size: 13px;
@@ -37,6 +37,7 @@
                 }
         }
         .moreCategories {
+            display: none;
             text-align: right;
             width: 100%;
             margin-bottom: 10px;

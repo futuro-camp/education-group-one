@@ -1,9 +1,9 @@
-import { GET_DATA, GET_DATA_SUCCESS, GET_DATA_ANIME, GET_DATA_ANIME_SUCCESS } from "../actions/index";
+import { GET_DATA, GET_DATA_SUCCESS, GET_DATA_ANIME, GET_DATA_ANIME_SUCCESS, GET_TOP_ANIME, GET_TOP_ANIME_SUCCESS  } from "../actions/index";
 
 const initState = {
     categories: [],
-    content: []
-
+    content: [],
+    name: ""
 };
 
 const mainPage = (state = initState, action:any) => {
@@ -19,12 +19,17 @@ const mainPage = (state = initState, action:any) => {
             return state;
 
         case GET_DATA_ANIME_SUCCESS:
-            return { ...state, content: action.payload };
+            return { ...state, content: action.payload, name: "Highest Rated Anime" };
+
+        case GET_TOP_ANIME:
+            return state;
+
+        case GET_TOP_ANIME_SUCCESS:
+            return { ...state, content: action.payload, name: "Anime created at 2001"};
 
         default:
             return state;
     }
-
 };
 
 export default mainPage;

@@ -5,11 +5,11 @@ import mainPage from '../reducers/main-page';
 import "../styles/top-list.scss";
 
 const TopList = (props: any) => {
-    let { name, mainPage } = props;
-    let { content } = mainPage;
+    let { mainPage } = props;
+    let {name, content} = mainPage;
     useEffect( () => {
     }, []);
-    // {console.log(mainPage)}
+    // {console.log(mainPage.name)}
 
     return (
         <div className="TopList">
@@ -17,7 +17,7 @@ const TopList = (props: any) => {
             <div className="animeRow">
                 <ul className="anime">
                     {
-                        mainPage.content? mainPage.content.map( (elem) => (
+                        mainPage.content? content.map( (elem) => (
                             <li key={elem.id}>
                                 <a href="#">
                                     <div className="card">
@@ -25,7 +25,10 @@ const TopList = (props: any) => {
                                                 {/* <source media ="(min-width: 1440px)" srcset={elem.posterImage.large} />
                                                 <source media="(min-width: 1024px)" srcset={elem.posterImage.medium} />
                                                 <source media="(min-width: 320px)" srcset={elem.posterImage.small} /> */}
-                                                <img src={elem.posterImage.small} alt="_" />
+                                                { elem.posterImage?
+                                                    <img src={elem.posterImage.small} />
+                                                        : <img src="https://s3.amazonaws.com/www-inside-design/uploads/2017/07/Accurate-and-editable-radial-progress-bars-in-Sketch-feature-284x402.jpg" />
+                                                }
                                         </picture>
                                         <button className="addToLibrary">Add To Library</button>
                                         <div className="info">
