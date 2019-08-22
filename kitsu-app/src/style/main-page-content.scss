@@ -1,0 +1,140 @@
+.main-page-content {
+    width: 70vw;
+    margin: 0 auto;
+
+    .search {
+        position: relative;
+        width: 60%;
+        height: 15%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        input {
+            border-radius: 0.3vw;
+            font-size: 1.7vw;
+            border: none;
+            padding: 0.4vw 0.8vw;
+        }
+
+        &-pages {
+            display: flex;
+            justify-content: space-around;
+
+            button {
+                font-size: 1.3vw;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    .cards {
+        position: relative;
+        height: 85%;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0.1vw;
+            width: 100%;
+            background-color: rgba(211, 211, 211, 0.8);
+        }
+
+        &-inner {
+            padding: 0 10vw 2vw 0;
+            margin-right: -10vw;
+            overflow-y: scroll;
+            height: 100%;
+
+
+            ul {
+                height: auto;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+    
+                li {
+                    list-style-type: none;
+                    text-align: center;
+                    position: relative;
+                    overflow: hidden;
+                    margin: 3vw 0;
+                    width: 18vw;
+                    height: 25vw;
+                    transition: all 0.7s;
+                    transition-delay: 0.3s;
+        
+                    .hiddenInfo {
+                        padding: 1vw;
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        transition: all 0.7s;
+                        text-align: left;
+                        opacity: 0;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top: 100%;
+                            transform: translateY(-100%);
+                            left: 0;
+                            opacity: 1;
+                            z-index: 2;
+                            height: 4vw;
+                            background: linear-gradient(rgba(211, 211, 211, 0.1), rgba(211, 211, 211, 1));
+                            width: 100%;
+                        }
+
+                        .title {
+                            font-size: 1.3vw;
+                            line-height: 1.5;
+                            text-align: center;
+                            font-weight: bold;
+                        }
+                    }
+
+                    &:hover {
+                        
+                        background-color: rgba(105, 160, 73, 0.377);
+        
+                        img {
+                            transform: rotateY(180deg);
+                            opacity: 0;
+                        }
+
+                        .hiddenInfo {
+                            opacity: 1;
+                        }
+                        
+        
+                    }
+        
+                    img {
+                        margin: 0 auto;
+                        transition: all 1s;
+                        height: 100%;
+                    }
+        
+                }
+            }
+        }
+
+
+
+    }
+}
