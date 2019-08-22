@@ -1,4 +1,19 @@
-div {
-    display: flex;
-    justify-content: center;
+.main {
+    background: whitesmoke;
+        .pageHeading {
+            margin-bottom: 40px;
+            width: 100%;
+            text-align: center;
+            background: #FFF;
+        }
+        .App {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            width: 1140px;
+            margin: 0 auto;
+
+        }
 }

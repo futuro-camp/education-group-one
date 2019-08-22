@@ -2,6 +2,7 @@ import { GET_DATA, GET_DATA_SUCCESS } from "../actions/index";
 
 const initState = {
     content: []
+
 };
 
 const mainPage = (state = initState, action:any) => {
@@ -11,9 +12,7 @@ const mainPage = (state = initState, action:any) => {
             return state;
 
         case GET_DATA_SUCCESS:
-            console.log("i have");
             return { ...state, content: action.payload };
-
 
         default:
             return state;

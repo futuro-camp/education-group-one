@@ -5,7 +5,7 @@ import App from './App';
 import thunk from "redux-thunk";
 import createSagaMiddleware from "redux-saga";
 import { put, takeEvery, all } from "redux-saga/effects";
-import { saga } from "./actions/index";
+import { saga } from "./saga/saga";
 import {createStore, applyMiddleware} from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers/index";
