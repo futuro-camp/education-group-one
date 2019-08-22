@@ -1,6 +1,7 @@
-import { GET_DATA, GET_DATA_SUCCESS } from "../actions/index";
+import { GET_DATA, GET_DATA_SUCCESS, GET_DATA_ANIME, GET_DATA_ANIME_SUCCESS } from "../actions/index";
 
 const initState = {
+    categories: [],
     content: []
 
 };
@@ -12,6 +13,12 @@ const mainPage = (state = initState, action:any) => {
             return state;
 
         case GET_DATA_SUCCESS:
+            return { ...state, categories: action.payload };
+
+        case GET_DATA_ANIME:
+            return state;
+
+        case GET_DATA_ANIME_SUCCESS:
             return { ...state, content: action.payload };
 
         default:

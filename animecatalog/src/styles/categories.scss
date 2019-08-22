@@ -11,11 +11,12 @@
     background: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
     border: 1px solid rgba(0,0,0,.09);
+    margin-top: 80px;
+
         .heading {
             width: 100%;
             text-align: left;
-            margin-bottom: 10px;
-            margin-left: 15px;
+            margin: 10px 15px;
         }
         .link-container {
             display: flex;
@@ -38,6 +39,7 @@
         .moreCategories {
             text-align: right;
             width: 100%;
+            margin-bottom: 10px;
                 a {
                     color: lightcoral;
                     margin-right: 15px;

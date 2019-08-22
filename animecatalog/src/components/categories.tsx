@@ -4,18 +4,18 @@ import { connect } from "react-redux";
 import mainPage from '../reducers/main-page';
 import "../styles/categories.scss";
 
-const Categories: React.FC = (props:any) => {
+const Categories = (props:any) => {
 
     useEffect( () => {
     }, []);
-    console.log(props.mainPage.content);
+    // console.log(props.mainPage.categories);
 
     return (
         <div className="Categories">
             <h2 className="heading">Categories: </h2>
             <ul className="link-container">
                 {
-                    props.mainPage.content? props.mainPage.content.map( (el) =>
+                    props.mainPage.categories? props.mainPage.categories.map( (el) =>
                     <li key={el.id}>
                         <a href="#"> {el.title} </a>
                     </li>
