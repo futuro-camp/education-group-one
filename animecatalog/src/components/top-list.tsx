@@ -3,6 +3,8 @@ import { Dispatch } from 'redux';
 import { connect } from "react-redux";
 import mainPage from '../reducers/main-page';
 import "../styles/top-list.scss";
+import { getManga,  }  from "../actions/index";
+
 
 const TopList = (props: any) => {
     let { mainPage } = props;
@@ -55,10 +57,16 @@ const TopList = (props: any) => {
                     }
                 </ul>
             </div>
+            {
+                content.length>15 ?
+                    <button className="showMore" onClick={ () => {props.getManga();} } >Show More</button> : <button></button>
+            }
         </div>
     );
 }
 
 const mapStateToProps = (store:any) => { return { mainPage: store.mainPage }; };
-const dispatchToProps = (dispatch:any)  => { return { }; };
+const dispatchToProps = (dispatch:any)  => { return {
+    getManga: (params) => { dispatch( getManga(params) ); },
+}; };
 export default connect (mapStateToProps, dispatchToProps)(TopList);

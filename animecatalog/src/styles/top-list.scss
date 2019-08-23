@@ -4,7 +4,6 @@
     text-decoration: none;
     margin: 0;
 }
-
 .TopList {
     display: flex;
     flex-direction: column;
@@ -14,26 +13,23 @@
     h2 {
         text-align: left;
         width: 100%;
-        margin: 20px 0 20px 50px;
+        margin: 20px 0;
     }
     .animeRow {
         .anime {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
                 li {
                     display: flex;
-                    margin: 10px 0;
+                    margin: 5px 5px 5px 0;
                         .card {
                             transition: transform 1.5s;
                             position: relative;
-
-
                         }
                         .info {
                             position: relative;
                             background: gray;
-                            opacity: 0.75;
+                            opacity: 0.9;
                             display: none;
                             position: absolute;
                             z-index: 2;
@@ -45,7 +41,6 @@
                                     flex-direction: column;
                                     align-items: flex-start;
                                     width: 100%;
-
                                         & p:nth-child(1) {
                                             font-size: 15px;
                                             font-weight: bold;
@@ -57,7 +52,7 @@
                                             color: #FFF;
                                             width: 100%;
                                                 span {
-                                                    color: black;
+                                                    color: greenyellow;
                                                 }
                                                 & span:nth-child(2) {
                                                     margin-left: 12%;
@@ -92,8 +87,7 @@
                 li:hover {
                     .card {
                         z-index: 1;
-                    transform: rotateY(180deg);
-
+                        transform: rotateY(180deg);
                     }
                     .info {
                         display: unset;
@@ -116,9 +110,16 @@
                             }
                     }
                 }
-
-
         }
+    }
+    .showMore {
+        border: 1px solid whitesmoke;
+        background: #16a085;
+        color: whitesmoke;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 5px 10px;
+        margin: 20px 0;
     }
 }
 

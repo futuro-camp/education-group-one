@@ -11,6 +11,7 @@
     background: #FFF;
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
     border: 1px solid rgba(0,0,0,.09);
+    margin-top: 110px;
 
         .heading {
             width: 100%;
@@ -23,14 +24,16 @@
             align-items: flex-start;
             height: 375px;
             max-width: 250px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             font-size: 12px;
             font-weight: 600;
             overflow-y: scroll;
             overflow-x: hidden;
                 li {
                     margin: 5px 25px;
-                        a {
+                        button {
+                            background: transparent;
+                            border: none;
                             color: lightslategrey;
                             font-size: 13px;
                         }

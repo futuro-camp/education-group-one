@@ -5,17 +5,15 @@
     justify-content: center;
         .buttons {
             display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
+            justify-content: flex-start;
                 button {
-                    background: lightblue;
-                    border: none;
-                    color: #ffffff;
-                    border-radius: 10%;
-                    font-size: 25px;
+                    background: #ffffff;
+                    border: 1px solid forestgreen;
+                    color: forestgreen;
+                    font-size: 15px;
                     font-weight: bold;
                     min-width: 150px;
-                    height: 50px;
+                    padding: 5px 10px;
                 }
         }
 }

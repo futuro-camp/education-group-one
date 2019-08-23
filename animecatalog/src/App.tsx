@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.scss';
-import { getData, getAnime }  from "./actions/index";
+import { getCategories, getAnime }  from "./actions/index";
 import { Dispatch } from 'redux';
 import { connect } from "react-redux";
 import mainPage from './reducers/main-page';
@@ -8,10 +8,9 @@ import Categories from "./components/categories";
 import Content from "./components/content";
 
 const App = (props:any) => {
-
   useEffect( () => {
-    props.getData();
-    props.getAnime();
+    props.getCategories();
+    props.getAnime(props.mainPage);
   }, []);
   // console.log(props.mainPage.content);
 
@@ -28,9 +27,9 @@ const App = (props:any) => {
 
 const mapStateToProps = (store:any) => { return { mainPage: store.mainPage }; };
 const dispatchToProps = (dispatch:any)  => { return (
-    {
-      getData: () => { dispatch( getData() ); },
-      getAnime: () => { dispatch( getAnime() ); }
+  {
+    getCategories: () => { dispatch( getCategories() ); },
+    getAnime: (params) => { dispatch( getAnime(params) ); }
   }
-  ); };
+); };
 export default connect (mapStateToProps, dispatchToProps)(App);

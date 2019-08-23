@@ -3,6 +3,7 @@ import { Dispatch } from 'redux';
 import { connect } from "react-redux";
 import mainPage from '../reducers/main-page';
 import "../styles/categories.scss";
+import { getFiltered }  from "../actions/index";
 
 const Categories = (props:any) => {
 
@@ -17,17 +18,19 @@ const Categories = (props:any) => {
                 {
                     props.mainPage.categories? props.mainPage.categories.map( (el) =>
                     <li key={el.id}>
-                        <a href="#"> {el.title} </a>
+                        <button onClick={ () => {props.getFiltered(el);} }>
+                            {el.title}
+                        </button>
                     </li>
                     ) : <li></li>
                 }
-
             </ul>
-            <p className="moreCategories"> <a  href="#"> More Categories.. </a> </p>
         </div>
     );
 }
 
 const mapStateToProps = (store:any) => { return { mainPage: store.mainPage }; };
-const dispatchToProps = (dispatch:any)  => { return { }; };
+const dispatchToProps = (dispatch:any)  => { return {
+    getFiltered: (object) => { dispatch( getFiltered(object) ); },
+}; };
 export default connect (mapStateToProps, dispatchToProps)(Categories);
