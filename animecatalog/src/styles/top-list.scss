@@ -19,6 +19,7 @@
         .anime {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-around;
                 li {
                     display: flex;
                     margin: 5px 5px 5px 0;
@@ -117,9 +118,18 @@
         background: #16a085;
         color: whitesmoke;
         font-weight: bold;
-        font-size: 20px;
-        padding: 5px 10px;
+        font-size: 40px;
+        padding: 10px 10px;
         margin: 20px 0;
+        transform: translate(-400%);
+        transition: 1.5s;
+    }
+    .showMore:hover {
+        color: lightgreen;
+        transform: rotateY(180deg) translate(400%);
+            p {
+                transform: scale(-1, 1)
+            }
     }
 }
 

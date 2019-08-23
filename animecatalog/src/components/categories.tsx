@@ -13,13 +13,13 @@ const Categories = (props:any) => {
 
     return (
         <div className="Categories">
-            <h2 className="heading">Categories: </h2>
+            <h2 className="heading">&ensp;Categories: </h2>
             <ul className="link-container">
                 {
                     props.mainPage.categories? props.mainPage.categories.map( (el) =>
                     <li key={el.id}>
                         <button onClick={ () => {props.getFiltered(el);} }>
-                            {el.title}
+                        &emsp;{el.title}
                         </button>
                     </li>
                     ) : <li></li>

@@ -56,7 +56,9 @@ const TopList = (props: any) => {
                 </ul>
             </div>
             { content.length>15 ?
-                <button className="showMore" onClick={ () => {props.showMore(props.mainPage);} } >Show More</button> : <button></button>
+                <button className="showMore" onClick={ () => {props.showMore(props.mainPage);} } >
+                    <p>Show More</p>
+                </button> : <button></button>
             }
         </div>
     );

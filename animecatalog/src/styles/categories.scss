@@ -22,23 +22,27 @@
             display: flex;
             flex-flow: column;
             align-items: flex-start;
-            height: 375px;
-            max-width: 250px;
+            height: 575px;
+            max-width: 350px;
             margin-bottom: 20px;
             font-size: 12px;
             font-weight: 600;
             overflow-y: scroll;
             overflow-x: hidden;
+            padding: 5px 25px;
                 li {
-                    margin: 5px 25px;
+                    width: 100%;
                         button {
                             background: transparent;
                             border: none;
                             color: lightslategrey;
-                            font-size: 13px;
+                            font-size: 20px;
+                            width: 100%;
+                            text-align: left;
                         }
                 }
         }
+
         .moreCategories {
             display: none;
             text-align: right;
@@ -49,4 +53,10 @@
                     margin-right: 15px;
                 }
         }
+}
+.Categories:hover {
+    background: lightgray;
+    li:hover {
+        background: #FFF;
+    }
 }
