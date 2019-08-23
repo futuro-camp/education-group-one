@@ -4,15 +4,16 @@ import {
     GET_TOP_ANIME, GET_TOP_ANIME_SUCCESS,
     GET_DATA_MANGA, GET_DATA_MANGA_SUCCESS,
     GET_CHAPTERS_MANGA, GET_CHAPTERS_MANGA_SUCCESS,
-    GET_FILTERED, GET_FILTERED_SUCCESS
+    GET_FILTERED, GET_FILTERED_SUCCESS,
+    GET_SHOWMORE, GET_SHOWMORE_SUCCESS
 } from "../actions/index";
 
 const initState = {
     categories: [],
     content: [],
     name: "",
-    offset: 1,
-    adress: "https://kitsu.io/api/edge/anime"
+    offset: 0,
+    adress: "anime"
 };
 
 const mainPage = (state = initState, action:any) => {
@@ -31,31 +32,42 @@ const mainPage = (state = initState, action:any) => {
             return { ...state, content: action.payload };
 
         case GET_DATA_ANIME:
-            return state;
+            action.payload.adress = "anime";
+            return {...state, adress: action.payload.adress };
 
         case GET_DATA_ANIME_SUCCESS:
             return { ...state, content: action.payload, name: "Highest Rated Anime" };
 
         case GET_TOP_ANIME:
-            return state;
+            action.payload.adress = "anime";
+            return {...state, adress: action.payload.adress };
 
         case GET_TOP_ANIME_SUCCESS:
-            return { ...state, content: action.payload, name: "Anime created at 2001"};
+            return { ...state, content: action.payload, name: "Anime created at 2001" };
 
         case GET_DATA_MANGA:
-            return state;
+            action.payload.adress = "manga";
+            return {...state, adress: action.payload.adress };
 
         case GET_DATA_MANGA_SUCCESS:
             return { ...state, content: action.payload, name: "Highest Rated Manga" };
 
         case GET_CHAPTERS_MANGA:
-            return state;
+            action.payload.adress = "manga";
+            return {...state, adress: action.payload.adress };
 
         case GET_CHAPTERS_MANGA_SUCCESS:
-            return { ...state, content: action.payload, name: "Manga with 10 chapsters"};
+            return { ...state, content: action.payload, name: "Manga with 10 chapsters" };
+
+        case GET_SHOWMORE:
+            action.payload.offset+=16;
+            return {...state, offset: action.payload.offset };
+
+        case GET_SHOWMORE_SUCCESS:
+            return { ...state, content: [...state.content, ...action.payload] };
 
         default:
-            return state;
+            return {...state, };
     }
 };
 

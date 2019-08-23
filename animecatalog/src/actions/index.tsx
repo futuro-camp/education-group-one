@@ -27,8 +27,7 @@ export const getAnimeSuccess= (payload) => {
 }
 export const GET_TOP_ANIME = "GET_TOP_ANIME";
 export function getTopAnime(payload) {
-    console.log(payload)
-    return { type: GET_TOP_ANIME };
+    return { type: GET_TOP_ANIME, payload };
 }
 export const GET_TOP_ANIME_SUCCESS = "GET_TOP_ANIME_SUCCESS";
 export const  getTopAnimeSuccess = (payload) => {
@@ -36,7 +35,7 @@ export const  getTopAnimeSuccess = (payload) => {
 }
 export const GET_DATA_MANGA = "GET_DATA_MANGA";
 export function getManga(payload) {
-    return { type: GET_DATA_MANGA };
+    return { type: GET_DATA_MANGA, payload };
 }
 export const GET_DATA_MANGA_SUCCESS = "GET_DATA_MANGA_SUCCESS";
 export const getMangaSuccess= (payload) => {
@@ -44,9 +43,18 @@ export const getMangaSuccess= (payload) => {
 }
 export const GET_CHAPTERS_MANGA = "GET_CHAPTERS_MANGA";
 export function getTopManga(payload) {
-    return { type: GET_CHAPTERS_MANGA };
+    return { type: GET_CHAPTERS_MANGA, payload };
 }
 export const GET_CHAPTERS_MANGA_SUCCESS = "GET_CHAPTERS_MANGA_SUCCESS";
 export const  getChapstersMangaSuccess = (payload) => {
     return { type: GET_CHAPTERS_MANGA_SUCCESS, payload };
+}
+
+export const GET_SHOWMORE = "GET_SHOWMORE";
+export function showMore(payload) {
+    return { type: GET_SHOWMORE, payload };
+}
+export const GET_SHOWMORE_SUCCESS = "GET_SHOWMORE_SUCCESS";
+export const  showMoreSuccess = (payload) => {
+    return { type: GET_SHOWMORE_SUCCESS, payload };
 }

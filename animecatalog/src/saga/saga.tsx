@@ -6,7 +6,8 @@ import {
     GET_TOP_ANIME, GET_TOP_ANIME_SUCCESS,
     GET_DATA_MANGA, GET_DATA_MANGA_SUCCESS,
     GET_CHAPTERS_MANGA, GET_CHAPTERS_MANGA_SUCCESS,
-    GET_FILTERED, GET_FILTERED_SUCCESS
+    GET_FILTERED, GET_FILTERED_SUCCESS,
+    GET_SHOWMORE, GET_SHOWMORE_SUCCESS
 } from "../actions/index";
 import {
     getCategoriesSuccess,
@@ -14,7 +15,8 @@ import {
     getTopAnimeSuccess,
     getMangaSuccess,
     getChapstersMangaSuccess,
-    getFilteredSuccess
+    getFilteredSuccess,
+    showMoreSuccess
 } from "../actions/index";
 // SAGA workers !!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* categoryList() {
@@ -61,7 +63,7 @@ export function* categoryFilter(payload) {
 }
 export function* defaultCatalogAnime(payload) {
     try {
-        let data = yield call(axios.get, `${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=16&sort=-averageRating`);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=16&sort=-averageRating`);
         // console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -83,9 +85,8 @@ export function* defaultCatalogAnime(payload) {
     }
 }
 export function* topCatalogAnime(payload) {
-    console.log(payload)
     try {
-        let data = yield call(axios.get, "https://kitsu.io/api/edge/anime?filter%5BseasonYear%5D=2001&page%5Blimit%5D=16");
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BseasonYear%5D=2001&page%5Blimit%5D=16`);
         // console.log(data.data.data);
         let sortedTopAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -106,9 +107,9 @@ export function* topCatalogAnime(payload) {
         console.log(e);
     }
 }
-export function* defaultCatalogManga() {
+export function* defaultCatalogManga(payload) {
     try {
-        let data = yield call(axios.get, "https://kitsu.io/api/edge/manga?page%5Blimit%5D=16&sort=-averageRating");
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Blimit%5D=16&sort=-averageRating`);
         // console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -129,9 +130,9 @@ export function* defaultCatalogManga() {
         console.log(e);
     }
 }
-export function* chaptersCatalogManga() {
+export function* chaptersCatalogManga(payload) {
     try {
-        let data = yield call(axios.get, "https://kitsu.io/api/edge/manga?filter%5BchapterCount%5D=10&page%5Blimit%5D=16");
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BchapterCount%5D=10&page%5Blimit%5D=16`);
         // console.log(data.data.data);
         let sortedTopAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -152,12 +153,36 @@ export function* chaptersCatalogManga() {
         console.log(e);
     }
 }
+export function* showMore(payload) {
+    try {
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload.offset}&page%5Blimit%5D=16&sort=-averageRating`);
+        // console.log(data.data.data);
+        let sortedTopAnimeData = data.data.data.map( (el:any) => ({
+            id: el.id,
+            startDate: new Date(el.attributes.createdAt).toLocaleString(`en-EU`, {year: 'numeric'}),
+            ageRating: el.attributes.childCount,
+            showType: el.attributes.showType,
+            canonicalTitle: el.attributes.canonicalTitle,
+            averageRaiting: el.attributes.averageRating,
+            posterImage: el.attributes.posterImage,
+            popularityRank: el.attributes.popularityRank,
+            ratingRank: el.attributes.ratingRank,
+            synopsis: el.attributes.synopsis,
+            userCount: el.attributes.userCount,
+            slug: el.attributes.slug
+        }) );
+        yield put( showMoreSuccess(sortedTopAnimeData) );
+    } catch (e) {
+        console.log(e);
+    }
+}
 //SAGA watcher !!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* saga() {
     yield takeLatest(GET_CATEGORIES, categoryList);
+    yield takeLatest(GET_FILTERED, categoryFilter);
     yield takeLatest(GET_DATA_ANIME, defaultCatalogAnime);
     yield takeLatest(GET_TOP_ANIME, topCatalogAnime);
     yield takeLatest(GET_DATA_MANGA, defaultCatalogManga);
     yield takeLatest(GET_CHAPTERS_MANGA, chaptersCatalogManga);
-    yield takeLatest(GET_FILTERED, categoryFilter);
+    yield takeLatest(GET_SHOWMORE, showMore);
 }
