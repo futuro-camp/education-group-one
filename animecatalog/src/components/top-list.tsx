@@ -51,14 +51,12 @@ const TopList = (props: any) => {
                                 </div>
                             </a>
 
-                        </li> )) : <li></li>
+                        </li> )) : <h1>Category is empty :(</h1>
                     }
                 </ul>
             </div>
-            { content.length>15 ?
-                <button className="showMore" onClick={ () => {props.showMore(props.mainPage);} } >
-                    <p>Show More</p>
-                </button> : <button></button>
+            { content.length>3 ?
+                <button className="showMore" onClick={ () => {props.showMore(props.mainPage);} } > <p>Show More</p> </button> : <button></button>
             }
         </div>
     );

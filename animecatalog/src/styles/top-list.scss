@@ -121,14 +121,13 @@
         font-size: 40px;
         padding: 10px 10px;
         margin: 20px 0;
-        transform: translate(-400%);
-        transition: 1.5s;
+        transition: 0.5s;
     }
     .showMore:hover {
         color: lightgreen;
-        transform: rotateY(180deg) translate(400%);
+        transform: rotateX(180deg);
             p {
-                transform: scale(-1, 1)
+                transform: scale(1, -1)
             }
     }
 }

@@ -5,6 +5,7 @@ import mainPage from '../reducers/main-page';
 import "../styles/content.scss";
 import TopList from "./top-list";
 import { getAnime, getTopAnime, getManga, getTopManga  }  from "../actions/index";
+import { chaptersCatalogManga } from '../saga/saga';
 
 const Content = (props:any) => {
     useEffect( () => {
@@ -16,7 +17,7 @@ const Content = (props:any) => {
                 <button onClick={ () => {props.getAnime(props.mainPage);} }>Highest Rated Anime</button>
                 <button onClick={ () => {props.getTopAnime(props.mainPage);} }>Anime Released in 2001</button>
                 <button onClick={ () => {props.getManga(props.mainPage);} }>Highest Rated Manga</button>
-                <button onClick={ () => {props.getTopManga(props.mainPage);} }>Manga Released in 2001</button>
+                <button onClick={ () => {props.getTopManga(props.mainPage);} }>Manga with 10 chapters</button>
             </div>
             <TopList />
         </div>

@@ -38,9 +38,10 @@ export function* categoryList() {
     }
 }
 export function* categoryFilter(payload) {
+    console.log(payload)
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/anime?filter%5Bcategories%5D=${payload.payload.slug}&page%5Blimit%5D=16&sort=popularity_rank`);
-        // console.log(data.data.data);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/anime?filter%5Bcategories%5D=${payload.payload.slug}&page%5Blimit%5D=4&%5Bsort%5D=id`);
+        console.log(data.data.data);
         // this entry form like  (x) => { return { object } }
         let sortedData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -63,8 +64,8 @@ export function* categoryFilter(payload) {
 }
 export function* defaultCatalogAnime(payload) {
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=16&sort=-averageRating`);
-        // console.log(data.data.data);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=4&sort=id`);
+        console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
             startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),
@@ -86,7 +87,7 @@ export function* defaultCatalogAnime(payload) {
 }
 export function* topCatalogAnime(payload) {
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BseasonYear%5D=2001&page%5Blimit%5D=16`);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BseasonYear%5D=2001&page%5Blimit%5D=4`);
         // console.log(data.data.data);
         let sortedTopAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -109,7 +110,7 @@ export function* topCatalogAnime(payload) {
 }
 export function* defaultCatalogManga(payload) {
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Blimit%5D=16&sort=-averageRating`);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Blimit%5D=4&sort=-averageRating`);
         // console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -132,7 +133,7 @@ export function* defaultCatalogManga(payload) {
 }
 export function* chaptersCatalogManga(payload) {
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BchapterCount%5D=10&page%5Blimit%5D=16`);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?filter%5BchapterCount%5D=10&page%5Blimit%5D=4`);
         // console.log(data.data.data);
         let sortedTopAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
@@ -155,8 +156,8 @@ export function* chaptersCatalogManga(payload) {
 }
 export function* showMore(payload) {
     try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload.offset}&page%5Blimit%5D=16&sort=-averageRating`);
-        // console.log(data.data.data);
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?${payload.payload.filter}${payload.payload.choosedCategory}&page%5Boffset%5D=${payload.payload.offset}&page%5Blimit%5D=4&sort=-averageRating`);
+        console.log(data.data.data);
         let sortedTopAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
             startDate: new Date(el.attributes.createdAt).toLocaleString(`en-EU`, {year: 'numeric'}),

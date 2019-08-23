@@ -13,7 +13,9 @@ const initState = {
     content: [],
     name: "",
     offset: 0,
-    adress: "anime"
+    adress: "anime",
+    filter: "filter%5Bcategories%5D=",
+    choosedCategory: ""
 };
 
 const mainPage = (state = initState, action:any) => {
@@ -26,7 +28,7 @@ const mainPage = (state = initState, action:any) => {
             return { ...state, categories: action.payload };
 
         case GET_FILTERED:
-            return {...state, name: `Filtered by Slug: ${action.payload.title}`};
+            return {...state, name: `Filtered by Slug: ${action.payload.title}`, choosedCategory: action.payload.slug };
 
         case GET_FILTERED_SUCCESS:
             return { ...state, content: action.payload };
@@ -36,35 +38,35 @@ const mainPage = (state = initState, action:any) => {
             return {...state, adress: action.payload.adress };
 
         case GET_DATA_ANIME_SUCCESS:
-            return { ...state, content: action.payload, name: "Highest Rated Anime" };
+            return { ...state, content: action.payload, name: "Highest Rated Anime", filter:"" };
 
         case GET_TOP_ANIME:
             action.payload.adress = "anime";
             return {...state, adress: action.payload.adress };
 
         case GET_TOP_ANIME_SUCCESS:
-            return { ...state, content: action.payload, name: "Anime created at 2001" };
+            return { ...state, content: action.payload, name: "Anime created at 2001", filter:"" };
 
         case GET_DATA_MANGA:
             action.payload.adress = "manga";
             return {...state, adress: action.payload.adress };
 
         case GET_DATA_MANGA_SUCCESS:
-            return { ...state, content: action.payload, name: "Highest Rated Manga" };
+            return { ...state, content: action.payload, name: "Highest Rated Manga", filter:"" };
 
         case GET_CHAPTERS_MANGA:
             action.payload.adress = "manga";
             return {...state, adress: action.payload.adress };
 
         case GET_CHAPTERS_MANGA_SUCCESS:
-            return { ...state, content: action.payload, name: "Manga with 10 chapsters" };
+            return { ...state, content: action.payload, name: "Manga with 10 chapsters", filter:"" };
 
         case GET_SHOWMORE:
-            action.payload.offset+=16;
+            action.payload.offset+=4;
             return {...state, offset: action.payload.offset };
 
         case GET_SHOWMORE_SUCCESS:
-            return { ...state, content: [...state.content, ...action.payload] };
+            return { ...state, content: [...state.content, ...action.payload], filter:"" };
 
         default:
             return {...state, };
