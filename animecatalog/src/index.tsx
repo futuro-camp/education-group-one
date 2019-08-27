@@ -9,8 +9,14 @@ import { saga } from "./saga/saga";
 import {createStore, applyMiddleware} from "redux";
 import { Provider } from "react-redux";
 import rootReducer from "./reducers/index";
+
+import createHistory from 'history/createBrowserHistory';
+import { Router, Route, Switch } from 'react-router';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+export const history = createHistory();
+
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore( rootReducer,  applyMiddleware(sagaMiddleware) );
+const store = createStore( rootReducer,  applyMiddleware(sagaMiddleware,  routerMiddleware(history)) );
 
 sagaMiddleware.run(saga);
 

@@ -6,6 +6,11 @@ import { connect } from "react-redux";
 import mainPage from './reducers/main-page';
 import Categories from "./components/categories";
 import Content from "./components/content";
+import SingleAnime from "./components/singleAnime";
+
+import { Router, Route, Switch, Redirect } from 'react-router';
+import { routerReducer, routerMiddleware } from 'react-router-redux';
+import { history } from "./index";
 
 const App = (props:any) => {
   useEffect( () => {
@@ -16,10 +21,20 @@ const App = (props:any) => {
 
   return (
     <div className="main">
-      <h1 className="pageHeading">Anime=Life <span role="img" aria-label="Love">💗</span></h1>
+      <h1 className="pageHeading">
+        Anime=Life <span role="img" aria-label="Love">💗</span>
+      </h1>
       <div className="App">
-        <Content />
-        <Categories />
+        <Router history={history} >
+          <Switch>
+            <Route exact path="/" render={ () => ( <Redirect to="/home"/> ) } />
+            <Route path="/home" component={Content} />
+            <Route path="/category/*" component={Content} />
+            <Route path="/s" component={SingleAnime} />
+            <Route path="/error" component={() => 'NOT FOUND'} />
+          </Switch>
+          <Categories />
+        </Router>
       </div>
     </div>
   );

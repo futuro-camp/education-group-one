@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
-import { Dispatch } from 'redux';
+import React, {useEffect} from "react";
+import { Dispatch } from "redux";
 import { connect } from "react-redux";
-import mainPage from '../reducers/main-page';
+import mainPage from "../reducers/main-page";
 import "../styles/content.scss";
 import TopList from "./top-list";
 import { getAnime, getTopAnime, getManga, getTopManga  }  from "../actions/index";
-import { chaptersCatalogManga } from '../saga/saga';
+import { chaptersCatalogManga } from "../saga/saga";
 
 const Content = (props:any) => {
     useEffect( () => {
-    }, []);
+    });
 
     return (
         <div className="Content">

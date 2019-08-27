@@ -1,3 +1,4 @@
+import { history } from '../index';
 
 export const GET_CATEGORIES = "GET_CATEGORIES";
 export function getCategories() {
@@ -7,7 +8,6 @@ export const GET_CATEGORIES_SUCCESS = "GET_CATEGORIES_SUCCESS";
 export const getCategoriesSuccess= (payload) => {
     return { type: GET_CATEGORIES_SUCCESS, payload };
 }
-
 export const GET_FILTERED = "GET_FILTERED";
 export const getFiltered= (payload) => {
     return { type: GET_FILTERED, payload };
@@ -16,7 +16,6 @@ export const GET_FILTERED_SUCCESS = "GET_FILTERED_SUCCESS";
 export const getFilteredSuccess= (payload) => {
     return { type: GET_FILTERED_SUCCESS, payload };
 }
-
 export const GET_DATA_ANIME = "GET_DATA_ANIME";
 export function getAnime(payload) {
     return { type: GET_DATA_ANIME, payload };

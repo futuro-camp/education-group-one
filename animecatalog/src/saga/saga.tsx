@@ -23,7 +23,6 @@ export function* categoryList() {
     try {
         let data = yield call(axios.get, "https://kitsu.io/api/edge/categories?page%5Blimit%5D=217&sort=-total_media_count");
         // console.log(data.data.data);
-        // this entry form like  (x) => { return { object } }
         let sortedData = data.data.data.map( (el:any) => ({
             id: el.id,
             title: el.attributes.title,
@@ -38,11 +37,9 @@ export function* categoryList() {
     }
 }
 export function* categoryFilter(payload) {
-    console.log(payload)
     try {
         let data = yield call(axios.get, `https://kitsu.io/api/edge/anime?filter%5Bcategories%5D=${payload.payload.slug}&page%5Blimit%5D=4&%5Bsort%5D=id`);
-        console.log(data.data.data);
-        // this entry form like  (x) => { return { object } }
+        // console.log(data.data.data);
         let sortedData = data.data.data.map( (el:any) => ({
             id: el.id,
             startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),
@@ -65,7 +62,7 @@ export function* categoryFilter(payload) {
 export function* defaultCatalogAnime(payload) {
     try {
         let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=4&sort=id`);
-        console.log(data.data.data);
+        // console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
             startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),

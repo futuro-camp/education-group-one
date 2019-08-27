@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import mainPage from '../reducers/main-page';
 import "../styles/top-list.scss";
 import { showMore,  }  from "../actions/index";
+import { Link } from 'react-router-dom';
+
 
 
 const TopList = (props: any) => {
@@ -20,7 +22,7 @@ const TopList = (props: any) => {
                 <ul className="anime">
                     { mainPage.content.length>0? content.map( (elem) => (
                         <li key={elem.id}>
-                            <a href="#">
+                            <Link to="/s">
                                 <div className="card">
                                     <picture>
                                             {/* <source media ="(min-width: 1440px)" srcset={elem.posterImage.large} />
@@ -37,7 +39,7 @@ const TopList = (props: any) => {
                                             <p>
                                                 <span role="img" aria-label="Love">💗</span>#{elem.popularityRank} Popularity Rank
                                                 {elem.averageRaiting?
-                                                    <span>{elem.averageRaiting} %</span> : <span></span>
+                                                    <span>{elem.averageRaiting}%</span> : <span></span>
                                                 }
                                             </p>
                                             <p>
@@ -49,8 +51,7 @@ const TopList = (props: any) => {
                                         <button className="addToLibrary">Add To Library</button>
                                     </div>
                                 </div>
-                            </a>
-
+                            </Link>
                         </li> )) : <h1>Category is empty :(</h1>
                     }
                 </ul>
