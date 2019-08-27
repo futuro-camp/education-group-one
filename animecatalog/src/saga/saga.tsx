@@ -1,5 +1,5 @@
 import axios from "axios";
-import { put, takeLatest, call } from "redux-saga/effects";
+import { put, takeLatest, call, select } from "redux-saga/effects";
 import {
     GET_CATEGORIES, GET_CATEGORIES_SUCCESS,
     GET_DATA_ANIME, GET_DATA_ANIME_SUCCESS,
@@ -18,6 +18,8 @@ import {
     getFilteredSuccess,
     showMoreSuccess
 } from "../actions/index";
+import { history } from '../index';
+
 // SAGA workers !!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* categoryList() {
     try {
@@ -37,27 +39,29 @@ export function* categoryList() {
     }
 }
 export function* categoryFilter(payload) {
-    try {
-        let data = yield call(axios.get, `https://kitsu.io/api/edge/anime?filter%5Bcategories%5D=${payload.payload.slug}&page%5Blimit%5D=4&%5Bsort%5D=id`);
-        // console.log(data.data.data);
-        let sortedData = data.data.data.map( (el:any) => ({
-            id: el.id,
-            startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),
-            ageRating: el.attributes.ageRating,
-            showType: el.attributes.showType,
-            canonicalTitle: el.attributes.canonicalTitle,
-            averageRaiting: el.attributes.averageRating,
-            posterImage: el.attributes.posterImage,
-            popularityRank: el.attributes.popularityRank,
-            ratingRank: el.attributes.ratingRank,
-            synopsis: el.attributes.synopsis,
-            userCount: el.attributes.userCount,
-            slug: el.attributes.slug
-        }) );
-        yield put( getFilteredSuccess(sortedData) );
-    } catch (e) {
-        console.log(e);
-    }
+    let store = yield select ();
+        try {
+            let data = yield call(axios.get, `https://kitsu.io/api/edge/anime?filter%5Bcategories%5D=${store.mainPage.choosedCategory}&page%5Blimit%5D=4&%5Bsort%5D=id`);
+            // console.log(data.data.data);
+            let sortedData = data.data.data.map( (el:any) => ({
+                id: el.id,
+                startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),
+                ageRating: el.attributes.ageRating,
+                showType: el.attributes.showType,
+                canonicalTitle: el.attributes.canonicalTitle,
+                averageRaiting: el.attributes.averageRating,
+                posterImage: el.attributes.posterImage,
+                popularityRank: el.attributes.popularityRank,
+                ratingRank: el.attributes.ratingRank,
+                synopsis: el.attributes.synopsis,
+                userCount: el.attributes.userCount,
+                slug: el.attributes.slug
+            }) );
+            yield put( getFilteredSuccess(sortedData) );
+        } catch (e) {
+            console.log(e);
+        }
+
 }
 export function* defaultCatalogAnime(payload) {
     try {
@@ -174,6 +178,7 @@ export function* showMore(payload) {
         console.log(e);
     }
 }
+
 //SAGA watcher !!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* saga() {
     yield takeLatest(GET_CATEGORIES, categoryList);

@@ -10,6 +10,7 @@ export const getCategoriesSuccess= (payload) => {
 }
 export const GET_FILTERED = "GET_FILTERED";
 export const getFiltered= (payload) => {
+    console.log(payload)
     return { type: GET_FILTERED, payload };
 }
 export const GET_FILTERED_SUCCESS = "GET_FILTERED_SUCCESS";
@@ -48,7 +49,6 @@ export const GET_CHAPTERS_MANGA_SUCCESS = "GET_CHAPTERS_MANGA_SUCCESS";
 export const  getChapstersMangaSuccess = (payload) => {
     return { type: GET_CHAPTERS_MANGA_SUCCESS, payload };
 }
-
 export const GET_SHOWMORE = "GET_SHOWMORE";
 export function showMore(payload) {
     return { type: GET_SHOWMORE, payload };

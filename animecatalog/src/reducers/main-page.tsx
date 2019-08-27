@@ -7,6 +7,7 @@ import {
     GET_FILTERED, GET_FILTERED_SUCCESS,
     GET_SHOWMORE, GET_SHOWMORE_SUCCESS
 } from "../actions/index";
+import { history } from "../index";
 
 const initState = {
     categories: [],
@@ -28,7 +29,8 @@ const mainPage = (state = initState, action:any) => {
             return { ...state, categories: action.payload };
 
         case GET_FILTERED:
-            return {...state, name: `Filtered by Slug: ${action.payload.title}`, choosedCategory: action.payload.slug };
+                // : ${action.payload.title}
+            return {...state, name: `Filtered by Slug`,choosedCategory: action.payload.slug ? action.payload.slug : action.payload };
 
         case GET_FILTERED_SUCCESS:
             return { ...state, content: action.payload };
