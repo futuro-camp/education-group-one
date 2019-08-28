@@ -1,6 +1,6 @@
 
 .SingleAnime {
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,8 +15,9 @@
     .info {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        width: 85%;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 50px;
             .image {
                 position: fixed;
                 top: 310px;
@@ -31,7 +32,8 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 85%;
+                width: 71%;
+                margin-left: 8%;
                     h1 {
                         width: 70%;
                         text-align: left;
@@ -67,6 +69,7 @@
                 height: 100%;
                 background-color: #ffffff;
                 padding: 20px 15px;
+                margin-right: 5%;
                     li {
                         width: 100%;
                         font-size: 18px;
