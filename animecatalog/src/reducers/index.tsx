@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 import mainPage from "./main-page";
 
-export default  combineReducers ({
+export default combineReducers ({
     mainPage
 });

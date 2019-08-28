@@ -10,7 +10,6 @@ export const getCategoriesSuccess= (payload) => {
 }
 export const GET_FILTERED = "GET_FILTERED";
 export const getFiltered= (payload) => {
-    console.log(payload)
     return { type: GET_FILTERED, payload };
 }
 export const GET_FILTERED_SUCCESS = "GET_FILTERED_SUCCESS";
@@ -56,4 +55,13 @@ export function showMore(payload) {
 export const GET_SHOWMORE_SUCCESS = "GET_SHOWMORE_SUCCESS";
 export const  showMoreSuccess = (payload) => {
     return { type: GET_SHOWMORE_SUCCESS, payload };
+}
+
+export const GET_SINGLE_ANIME = "GET_SINGLE_ANIME";
+export function getSingle(payload) {
+    return { type: GET_SINGLE_ANIME, payload };
+}
+export const GET_SINGLE_ANIME_SUCCESS = "GET_SINGLE_ANIME_SUCCESS";
+export const  getSingleSuccess = (payload) => {
+    return { type: GET_SINGLE_ANIME_SUCCESS, payload };
 }

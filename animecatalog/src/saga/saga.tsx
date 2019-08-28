@@ -7,7 +7,8 @@ import {
     GET_DATA_MANGA, GET_DATA_MANGA_SUCCESS,
     GET_CHAPTERS_MANGA, GET_CHAPTERS_MANGA_SUCCESS,
     GET_FILTERED, GET_FILTERED_SUCCESS,
-    GET_SHOWMORE, GET_SHOWMORE_SUCCESS
+    GET_SHOWMORE, GET_SHOWMORE_SUCCESS,
+    GET_SINGLE_ANIME, GET_SINGLE_ANIME_SUCCESS
 } from "../actions/index";
 import {
     getCategoriesSuccess,
@@ -16,7 +17,8 @@ import {
     getMangaSuccess,
     getChapstersMangaSuccess,
     getFilteredSuccess,
-    showMoreSuccess
+    showMoreSuccess,
+    getSingleSuccess
 } from "../actions/index";
 import { history } from '../index';
 
@@ -66,7 +68,7 @@ export function* categoryFilter(payload) {
 export function* defaultCatalogAnime(payload) {
     try {
         let data = yield call(axios.get, `https://kitsu.io/api/edge/${payload.payload.adress}?page%5Boffset%5D=${payload.payload}&page%5Blimit%5D=4&sort=id`);
-        // console.log(data.data.data);
+        console.log(data.data.data);
         let sortedAnimeData = data.data.data.map( (el:any) => ({
             id: el.id,
             startDate: new Date(el.attributes.startDate).toLocaleString(`en-EU`, {year: 'numeric'}),
@@ -79,7 +81,8 @@ export function* defaultCatalogAnime(payload) {
             ratingRank: el.attributes.ratingRank,
             synopsis: el.attributes.synopsis,
             userCount: el.attributes.userCount,
-            slug: el.attributes.slug
+            slug: el.attributes.slug,
+            selfLink: el.links.self,
         }) );
         yield put( getAnimeSuccess(sortedAnimeData) );
     } catch (e) {
@@ -178,6 +181,17 @@ export function* showMore(payload) {
         console.log(e);
     }
 }
+export function* singleAnime(payload) {
+    try {
+        let data = yield call(axios.get, `https://kitsu.io/api/edge/anime/${payload.payload}`);
+        console.log(data.data.data);
+        let sortedTopAnimeData = data.data.data;
+        console.log(sortedTopAnimeData);
+        yield put( getSingleSuccess(sortedTopAnimeData) );
+    } catch (e) {
+        console.log(e);
+    }
+}
 
 //SAGA watcher !!!!!!!!!!!!!!!!!!!!!!!!!!!
 export function* saga() {
@@ -188,4 +202,5 @@ export function* saga() {
     yield takeLatest(GET_DATA_MANGA, defaultCatalogManga);
     yield takeLatest(GET_CHAPTERS_MANGA, chaptersCatalogManga);
     yield takeLatest(GET_SHOWMORE, showMore);
+    yield takeLatest(GET_SINGLE_ANIME, singleAnime);
 }

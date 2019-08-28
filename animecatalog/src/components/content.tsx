@@ -7,6 +7,8 @@ import TopList from "./top-list";
 import { getAnime, getTopAnime, getManga, getTopManga, getFiltered }  from "../actions/index";
 import { chaptersCatalogManga } from "../saga/saga";
 import { history } from "../index";
+import { Link } from 'react-router-dom';
+import Categories from "./categories";
 
 
 interface IContent {
@@ -18,16 +20,20 @@ interface IContent {
     getFiltered: (any) => void;
 }
 export class Content extends React.Component<IContent> {
+    componentDidMount() {
+        this.props.getAnime(this.props.mainPage);
+    }
+
     componentDidUpdate() {
         let part = history.location.pathname.split("/")[2];
         if (part) {
             if (part !== this.props.mainPage.choosedCategory) {
                 this.props.getFiltered(part);
             }
-            // return part !== this.props.mainPage.choosedCategory?
-            // this.props.getFiltered(part) : null;
         }
-        else {  return "" !== this.props.mainPage.choosedCategory ? this.props.getFiltered("") : null;  }
+        else {
+            return "" !== this.props.mainPage.choosedCategory ? this.props.getAnime(this.props.mainPage) : null;
+        }
     }
 
     render() {
@@ -40,6 +46,7 @@ export class Content extends React.Component<IContent> {
                     <button onClick={ () => {this.props.getTopManga(this.props.mainPage);} }>Manga with 10 chapters</button>
                 </div>
                 <TopList />
+                <Categories />
             </div>
         );
     }

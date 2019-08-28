@@ -6,13 +6,16 @@
             width: 100%;
             text-align: center;
             background: #FFF;
+                a {
+                    color: lightseagreen;
+                }
         }
         .App {
             display: flex;
             flex-direction: row;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: flex-start;
             margin: 0 auto;
-            width: 88%;
+            width: 100%;
         }
 }
