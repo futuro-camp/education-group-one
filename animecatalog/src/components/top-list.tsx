@@ -3,7 +3,7 @@ import { Dispatch } from 'redux';
 import { connect } from "react-redux";
 import mainPage from '../reducers/main-page';
 import "../styles/top-list.scss";
-import { getSingle }  from "../actions/index";
+import { getSingle, showMore }  from "../actions/index";
 import { Link } from 'react-router-dom';
 import { history } from "../index";
 
@@ -67,5 +67,6 @@ const TopList = (props: any) => {
 const mapStateToProps = (store:any) => { return { mainPage: store.mainPage }; };
 const dispatchToProps = (dispatch:any)  => { return {
     getSingle: (object) => { dispatch( getSingle(object) ); },
+    showMore: (object) => { dispatch( showMore(object) ); },
 }; };
 export default connect (mapStateToProps, dispatchToProps)(TopList);

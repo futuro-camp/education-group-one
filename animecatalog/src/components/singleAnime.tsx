@@ -22,12 +22,21 @@ const SingleAnime = (props:any) => {
         <div className="SingleAnime">
             {/* <h1>SINGLE ANIME </h1> */}
             {attributes?
-                attributes.coverImage? <img className="cover" src={attributes.coverImage.large}/> : <img className="cover" src="" alt="no image" /> : <img className="cover" src="" alt="no image" />
+                attributes.coverImage?
+                <img className="cover" src={attributes.coverImage.large}/>
+                    : <img className="cover" src="" alt="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;no image" />
+                : <img className="cover" src="" alt="&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;no image" />
             }
             {attributes?
                 <div className="info">
                     <div className="image">
                         <img className="card" src={attributes.posterImage.tiny}/>
+                        <div className="buttons-bar">
+                            <h6>Add to Library</h6>
+                            <button>Completed</button>
+                            <button>Want to Watch</button>
+                            <button>Started Watching</button>
+                        </div>
                     </div>
 
                     <div className="description">
@@ -37,7 +46,9 @@ const SingleAnime = (props:any) => {
                         {attributes.averageRating? <h4> {attributes.averageRating}% &emsp;Community Approval</h4> : <h4></h4> }
                         <span> {attributes.ageRatingGuide} </span>
                         <p>{attributes.synopsis}</p>
-                        <h6></h6>
+                        {attributes.youtubeVideoId? <iframe width="635" height="415"
+                                src={`https://www.youtube.com/embed/${attributes.youtubeVideoId}`}>
+                        </iframe> : <div></div> }
                     </div>
 
                     <ul className="details">
