@@ -1,0 +1,115 @@
+.anime-details {
+
+    .anime-details-view {
+        width: 100%;
+
+        .cover-image {
+            width: 100%;
+            height: 600px;
+            position: relative;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .title {
+                position: absolute;
+                z-index: 10;
+                top: 185px;
+                text-align: center;
+                width: 100%;
+                text-shadow: 3px 3px 3px black;
+                font-size: 45px;
+                color: white;
+            }
+        }
+
+        .anime-info {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .posterImage {
+                width: 400px;
+                height: 650px;
+                object-fit: cover;
+                border: 2px solid white;
+                box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+                position: absolute;
+                top: -325px;
+            }
+
+            .show-info {
+                margin-top: 350px;
+                
+                .type {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                .status {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    text-align: center;
+                }
+
+                .rating {
+
+                    .rank {
+                        margin-top: 5px;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+    
+                    .popularity {
+                        margin-top: 5px;
+                        font-size: 20px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            .video {
+                margin-top: 10px;
+                border: none;
+                box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.75);
+            }
+
+            .description {
+                margin: 30px 0;
+                width: 70%;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
+
+    .loading {
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text {
+            animation: loading 2s linear infinite;
+        }
+    }
+
+    @keyframes loading {
+        0% {
+            color: rgba(0,0,0,0.75);
+        }
+        50% {
+            color: rgba(0,0,0,0.25);
+        }
+        100% {
+            color: rgba(0,0,0,0.75);
+        }
+    }
+}
