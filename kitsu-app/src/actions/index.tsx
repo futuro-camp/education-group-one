@@ -5,21 +5,29 @@ export enum Actions {
     GET_ANIME_SUCCESS = "GET_ANIME_SUCCESS",
     UPDATE_ANIME = "UPDATE_ANIME",
     UPDATE_ANIME_SUCCESS = "UPDATE_ANIME_SUCCESS",
-    CHANGE_ANIME_PAGE = "CHANGE_ANIME_PAGE",
+    CHANGE_CATEGORY = "CHANGE_CATEGORY",
+    GET_ANIME_PAGE = "GET_ANIME_PAGE",
+    GET_ANIME_PAGE_SUCCESS = "GET_ANIME_PAGE_SUCCESS",
     Error = "ERROR"
 };
+
+export const getAnimePage = (payload: string) => ({
+    type: Actions.GET_ANIME_PAGE,
+    payload
+});
 
 export const getCategories = () => ({
     type: Actions.GET_CATEGORIES
 });
 
-export const getTrendingAnime = () => ({
-    type: Actions.GET_ANIME
+export const changeCategory = (payload: string) => ({
+    type: Actions.CHANGE_CATEGORY,
+    payload
 });
 
-export const changeAnimePage = (page: string) => ({
-    type: Actions.CHANGE_ANIME_PAGE,
-    payload: page
+export const getAnime = (payload = "") => ({
+    type: Actions.GET_ANIME,
+    payload
 });
 
 export const updateAnime = () => ({

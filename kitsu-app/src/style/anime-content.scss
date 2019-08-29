@@ -1,0 +1,82 @@
+.anime-content {
+    position: relative;
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+
+    &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: whitesmoke;
+        pointer-events: none;
+        z-index: -2;
+        box-shadow: 0px 0px 3vw 0px rgba(0, 0, 0, 0.4);
+    }
+
+    .left-bar {
+        position: relative;
+        width: 30%;
+        height: 100%;
+
+        img {
+            border: 0.1vw solid rgba(0, 0, 0, 0.4);
+            padding: 1vw;
+            background-color: whitesmoke;
+            display: block;
+            margin: 0 auto;
+            width: 20vw;
+            height: 25vw;
+        }
+
+        p {
+            margin-left: 3vw;
+            font-weight: bold;
+            font-size: 1.8vw;
+            line-height: 2;
+        }
+    }
+
+    .main-bar {
+        position: relative;
+        padding: 15vh 3vw 5vh 3vw;
+        width: 70%;
+        height: 100%;
+        overflow: hidden;
+
+
+        div {
+            padding-right: 10vw;
+            margin-right: -10vw;
+            height: 100%;
+            overflow-y: scroll;
+            
+            z-index: 10;
+            position: relative;
+
+            p {
+                line-height: 2;
+            }
+
+            iframe {
+                width: 80%;
+                height: 20vw;
+            }
+
+            .date {
+                margin-right: 1vw;
+                display: inline;
+            }
+
+            .youtube {
+                p {
+                    font-weight: bold;
+                    font-size: 1.8vw;
+                }
+            }
+        }
+    }
+
+}

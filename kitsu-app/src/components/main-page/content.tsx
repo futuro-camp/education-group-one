@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getTrendingAnime, updateAnime, changeAnimePage } from "../../actions";
+import { history } from "../../constants";
+import { getAnime, updateAnime, changeCategory } from "../../actions";
 import { NavItems } from "../../constants";
 import Cards from "./cards";
 import "../../style/main-page-content.scss";
 
 interface ContentProps {
-    getTrendingAnime: () => void,
+    getAnime: (props?: string) => void,
+    changeCategory: (id: string) => void,
     updateAnime: () => void,
-    changePage: (page: string) => void,
     anime: [],
-    animePage: string
-
+    animePage: string,
+    categoryId: string
 }
 
 class Content extends React.Component<ContentProps> {
@@ -22,23 +23,33 @@ class Content extends React.Component<ContentProps> {
         super(props);
         this.scrollTopElement = React.createRef();
         this.checkScrollBottom = this.checkScrollBottom.bind(this);
+        this.changeCategoryToHistoryId = this.changeCategoryToHistoryId.bind(this);
     }
 
     componentDidMount() {
-        this.props.getTrendingAnime();
+        this.changeCategoryToHistoryId();
+    }
+
+    componentDidUpdate() {
+        this.changeCategoryToHistoryId();
+    }
+
+    changeCategoryToHistoryId() {
+        let id = history.location.search.split("=")[1];
+        if(id){
+            return id !== this.props.categoryId ? this.props.changeCategory(id) : null; 
+        } else {
+            return "-1" !== this.props.categoryId ? this.props.changeCategory("-1") : null; 
+        }
     }
 
     checkScrollBottom() {
         if(this.props.animePage === NavItems.all || this.props.animePage === NavItems.highRated){
             if((this.scrollTopElement.current.scrollTop + this.scrollTopElement.current.offsetHeight >= this.scrollTopElement.current.scrollHeight - 250)) {
+                console.log("scrolling");
                 this.props.updateAnime();
             }
         }
-    }
-
-    changeAnimePage(page: NavItems) {
-        // this.scrollTopElement.current.scrollTop = 0;
-        this.props.changePage(page);
     }
 
     render() {
@@ -47,12 +58,12 @@ class Content extends React.Component<ContentProps> {
                 <div className="search">
                     <input type="text" placeholder="search..." />
                     <div className="search-pages">
-                        <button onClick={() => { this.changeAnimePage(NavItems.all); }}>All</button>
-                        <button onClick={() => { this.changeAnimePage(NavItems.thrending); }}>Trending</button>
-                        <button onClick={() => { this.changeAnimePage(NavItems.highRated); }}>High Ranked</button>
+                        <button onClick={() => { this.props.getAnime(); }}>All</button>
+                        <button onClick={() => { this.props.getAnime(`${this.props.categoryId !== "-1" ? "" : `&filter%5Bstatus%5D=finished`}&sort=-start_date`); }}>Newly released</button>
+                        <button onClick={() => { this.props.getAnime("&sort=-averageRating"); }}>High Ranked</button>
                     </div>
                 </div>
-                <Cards />
+                <Cards updateAnime={this.checkScrollBottom} />
             </div>
         );
     }
@@ -61,11 +72,12 @@ class Content extends React.Component<ContentProps> {
 export default connect(
     (state: any) => ({
         anime: state.anime,
-        animePage: state.animePage
+        animePage: state.animePage,
+        categoryId: state.categoryId
     }),
     (dispatch) => ({
-        getTrendingAnime: () => { dispatch(getTrendingAnime()); },
-        updateAnime: () => { dispatch(updateAnime()); },
-        changePage: (page: string) => { dispatch(changeAnimePage(page)); }
+        getAnime: (props?: string) => { dispatch(getAnime(props)); },
+        changeCategory: (id: string) => { dispatch(changeCategory(id)); },
+        updateAnime: () => { dispatch(updateAnime()); }
     })
 )(Content);

@@ -17,6 +17,14 @@
         background-color: rgba(211, 211, 211, 0.5);
     }
 
+    .all-headline {
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        font-size: 2vw;
+        line-height: 2;
+    }
+
     &-headline {
         position: relative;
         font-weight: bold;
@@ -36,12 +44,19 @@
 
     &-inner {
         position: relative;
+        display: flex;
+        flex-direction: column;
         padding: 1vw 10vw 1vw 0;
         margin-right: -10vw;
         overflow-y: scroll;
 
-        p {
+        a {
             font-family: Exo;
+            text-decoration: none;
+            color: black;
+            text-align: left;
+            border: none;
+            background-color: transparent;
             font-size: 1.3vw;
             line-height: 2;
             cursor: pointer;
