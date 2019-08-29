@@ -6,7 +6,7 @@ import "../styles/categories.scss";
 import { getFiltered }  from "../actions/index";
 import { Link } from 'react-router-dom';
 import { history } from "../index";
-
+// TODO: Errors
 
 const Categories = (props:any) => {
 
@@ -20,9 +20,9 @@ const Categories = (props:any) => {
                 { props.mainPage.categories? props.mainPage.categories.map( (el) =>
                     <li key={el.id}>
                         <Link to={`${history.location.search}/category/${el.slug}`}>
-                            <button
-                                onClick={ () => {props.getFiltered(el);} }
-                            > &emsp;{el.title} </button>
+                        <button
+                            onClick={ () => {props.getFiltered(el);} }
+                        > &emsp;{el.title} </button>
                         </Link>
                     </li>
                     ) : <li></li> }

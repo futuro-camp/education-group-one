@@ -9,7 +9,13 @@ import {
     GET_SINGLE_ANIME, GET_SINGLE_ANIME_SUCCESS
 } from "../actions/index";
 import { history } from "../index";
+// TODO: interface
+// interface IInitial {
+//     categoies: Array<Object>;
 
+// }
+
+// const initState: IInitial = {
 const initState = {
     categories: [],
     content: [],
